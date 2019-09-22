@@ -1,0 +1,10 @@
+{
+  "name": "drupal/ui_patterns_bootstrap",
+  "description": "UI Patterns Bootstrap",
+  "keywords": ["drupal", "web", "ui"],
+  "type": "drupal-theme",
+  "license": "GPL-2.0-or-later",
+  "require": {
+    "drupal/bootstrap_barrio": "^1.0@RC"
+  }
+}
