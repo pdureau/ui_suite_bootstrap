@@ -1,0 +1,41 @@
+jumbotron:
+  label: "Jumbotron"
+  description: "A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site. https://getbootstrap.com/docs/4.3/components/jumbotron/"
+  variants:
+    default:
+      label: Default
+    fluid:
+      label: Fluid
+      description: This is a modified jumbotron that occupies the entire horizontal space of its parent, and without rounded corners.
+  fields:
+    content:
+      type: "render"
+      label: "Content"
+      description: "Jumbotron content"
+      preview:
+        - type: html_tag
+          tag: h1
+          value: "Hello, world!"
+          attributes:
+            class:
+              - "display-4"
+        - type: html_tag
+          tag: p
+          value: "This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information."
+          attributes:
+            class:
+              - "lead"
+        - type: html_tag
+          tag: hr
+          attributes:
+            class:
+              - "my-4"
+        - type: html_tag
+          tag: p
+          value: "It uses utility classes for typography and spacing to space content out within the larger container."
+        - type: "pattern"
+          id: "button"
+          variant: "primary__lg"
+          fields:
+            label: "Learn more"
+            url: "#"

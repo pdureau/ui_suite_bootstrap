@@ -1,0 +1,78 @@
+card:
+  label: "Card"
+  description: "A card component. https://getbootstrap.com/docs/4.3/components/card/"
+  variants:
+    default:
+      label: Default
+    overlay:
+      label: Image overlay
+    horizontal:
+      label: Horizontal
+  fields:
+    # Specific variant?
+    setting_bg_color:
+      type: "text"
+      label: "Card background color"
+      description: "Card border color: primary, secondary, success, danger, warning..."
+      preview: ""
+    setting_border_color:
+      type: "text"
+      label: "Card border color"
+      description: "Card border color: primary, secondary, success, danger, warning..."
+      preview: ""
+    setting_image_position:
+      type: "text"
+      label: "Image position"
+      description: "Image position: top (default) or bottom. Only for default variant."
+      preview: top
+    image_src:
+      type: "text"
+      label: "Image source"
+      description: "Card image source URL."
+      preview: "http://lorempixel.com/400/200/nature/2"
+    image_alt:
+      type: "text"
+      label: "Image alt text"
+      description: "Card image alternative text."
+      preview: "&copy; 2017 John Smith photography"
+    header:
+      type: "render"
+      label: "Header"
+      description: "Card header."
+    title:
+      type: "text"
+      label: "Title"
+      description: "Card title."
+      preview: "Card title"
+    text:
+      type: "text"
+      label: "Text"
+      description: "Card text."
+      preview: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+    body:
+      type: "render"
+      label: "Body"
+      description: "Card body."
+      preview:
+        - type: "pattern"
+          id: "button"
+          variant: "primary"
+          fields:
+            label: "Go somewhere"
+    links:
+      type: "array"
+      label: "Links"
+      description: "Array of links (target & label for each)"
+      preview:
+        - target: "#"
+          label: Card link
+        - target: "#"
+          label: Another link
+    footer:
+      type: "render"
+      label: "Footer"
+      description: "Card footer."
+      preview:
+        - type: html_tag
+          tag: "span"
+          value: "2 days ago"

@@ -1,0 +1,14 @@
+modal:
+  label: "Modal"
+  description: "Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults."
+  fields:
+    title:
+      type: "text"
+      label: "Title"
+      description: "Modal title."
+      preview: "Here is your modal title"
+    body:
+      type: "text"
+      label: "Modal body"
+      description: "Modal description."
+      preview: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo."

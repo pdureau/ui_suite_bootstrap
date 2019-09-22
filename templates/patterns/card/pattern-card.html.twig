@@ -1,0 +1,9 @@
+<div class="card">
+  {% if image_src and setting_image_position != 'bottom' %}
+    <img src="{{ image_src }}" class="card-img-top" alt="{{ image_alt }}"/>
+  {% endif %}
+  {{ include('@ddsp_bootstrap/patterns/card/_card-content.html.twig') }}
+  {% if image_src and setting_image_position == 'bottom' %}
+    <img src="{{ image_src }}" class="card-img-top" alt="{{ image_alt }}"/>
+  {% endif %}
+</div>

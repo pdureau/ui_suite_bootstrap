@@ -1,0 +1,8 @@
+<div class="card bg-dark text-white">
+  {% if image_src %}
+    <img src="{{ image_src }}" class="card-img" alt="{{ image_alt }}"/>
+  {% endif %}
+  <div class="card-img-overlay">
+    {{ include('@ddsp_bootstrap/patterns/card/_card-content.html.twig') }}
+  </div>
+</div>

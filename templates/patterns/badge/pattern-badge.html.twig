@@ -1,0 +1,19 @@
+{#
+/**
+ * @file
+ * Button pattern.
+ */
+#}
+
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('badge-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% if "link_" in variant or attributes.href %}
+  <a {{ attributes.addClass('badge') }}>{{ label }}</a>
+{% else %}
+  <span {{ attributes.addClass('badge') }}>{{ label }}</span>
+{% endif %}

@@ -1,0 +1,12 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('btn-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% if "link_" in variant or attributes.href %}
+  <button {{ attributes.addClass('btn') }}>{{ label }}</button>
+{% else %}
+  <span {{ attributes.addClass('btn') }}>{{ label }}</span>
+{% endif %}

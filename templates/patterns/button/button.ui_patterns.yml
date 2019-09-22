@@ -1,0 +1,59 @@
+button:
+  label: Button
+  description: A simple button.
+  variants:
+    primary:
+      label: Primary
+    secondary:
+      label: Secondary
+    success:
+      label: Success
+    danger:
+      label: Danger
+    warning:
+      label: Warning
+    info:
+      label: Info
+    light:
+      label: Light
+    dark:
+      label: Dark
+    link:
+      label: Link
+    outline_primary:
+      label: Outline Primary
+    outline_secondary:
+      label: Outline Secondary
+    outline_success:
+      label: Outline Success
+    outline_danger:
+      label: Outline Danger
+    outline_warning:
+      label: Outline Warning
+    outline_info:
+      label: Outline Info
+    outline_light:
+      label: Outline Light
+    outline_dark:
+      label: Outline Dark
+    primary__lg:
+      label: Large Primary
+    secondary__lg:
+      label: Large Secondary
+    primary__sm:
+      label: Small Primary
+    secondary__sm:
+      label: Small Secondary
+    link_primary:
+      label: Link Primary
+  fields:
+    label:
+      type: text
+      label: Label
+      description: The button label
+      preview: Submit
+    url:
+      type: text
+      label: URL
+      description: The button URL
+      preview: http://example.com

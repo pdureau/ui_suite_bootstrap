@@ -1,0 +1,12 @@
+<div class="card mb-3">
+  <div class="row no-gutters">
+    <div class="col-md-4">
+    {% if image_src %}
+      <img src="{{ image_src }}" class="card-img-top" alt="{{ image_alt }}"/>
+    {% endif %}
+    </div>
+    <div class="col-md-8">
+    {{ include('@ddsp_bootstrap/patterns/card/_card-content.html.twig') }}
+    </div>
+  </div>
+</div>
