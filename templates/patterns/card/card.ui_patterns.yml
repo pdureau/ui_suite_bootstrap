@@ -25,16 +25,14 @@ card:
       label: "Image position"
       description: "Image position: top (default) or bottom. Only for default variant."
       preview: top
-    image_src:
-      type: "text"
-      label: "Image source"
-      description: "Card image source URL."
-      preview: "http://lorempixel.com/400/200/nature/2"
-    image_alt:
-      type: "text"
-      label: "Image alt text"
-      description: "Card image alternative text."
-      preview: "&copy; 2017 John Smith photography"
+    image:
+      type: "render"
+      label: "Image"
+      description: "Card image."
+      preview:
+        - theme: "image"
+          uri: "http://lorempixel.com/400/200/nature/2"
+          alt: "&copy; 2017 John Smith photography"
     header:
       type: "render"
       label: "Header"

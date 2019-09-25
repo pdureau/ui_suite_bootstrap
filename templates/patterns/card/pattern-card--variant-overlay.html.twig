@@ -1,7 +1,5 @@
 <div class="card bg-dark text-white">
-  {% if image_src %}
-    <img src="{{ image_src }}" class="card-img" alt="{{ image_alt }}"/>
-  {% endif %}
+  {{ image }}
   <div class="card-img-overlay">
     {{ include('@ui_patterns_bootstrap/patterns/card/_card-content.html.twig') }}
   </div>

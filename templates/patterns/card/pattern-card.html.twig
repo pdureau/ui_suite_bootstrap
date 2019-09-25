@@ -1,9 +1,9 @@
 <div class="card">
-  {% if image_src and setting_image_position != 'bottom' %}
-    <img src="{{ image_src }}" class="card-img-top" alt="{{ image_alt }}"/>
+  {% if image and setting_image_position != 'bottom' %}
+    {{ image }}
   {% endif %}
   {{ include('@ui_patterns_bootstrap/patterns/card/_card-content.html.twig') }}
-  {% if image_src and setting_image_position == 'bottom' %}
-    <img src="{{ image_src }}" class="card-img-top" alt="{{ image_alt }}"/>
+  {% if image and setting_image_position == 'bottom' %}
+    {{ image }}
   {% endif %}
 </div>
