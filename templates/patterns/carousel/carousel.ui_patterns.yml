@@ -1,18 +1,52 @@
 carousel:
   label: "Carousel"
   description: "A slideshow component for cycling through elements, like a carousel."
+  variants:
+    default:
+      label: Default
+    crossfade:
+      label: Crossfade, animate slides with a fade transition instead of a slide.
   fields:
+    settings_with_indicators:
+      type: "boolean"
+      label: "With indicators?"
+      preview: true
+    settings_with_controls:
+      type: "boolean"
+      label: "With controls?"
+      preview: true
     slides:
-      type: "collection"
+      type: "array"
       label: "Slides"
       description: "Each slide is a collection of title, subtitle and slide image."
       preview:
-        - title: "Vestibulum rutrum mi nec"
-          subtitle: "In ac felis quis tortor malesuada pretium. Aenean commodo ligula eget dolor."
-          image: "http://lorempixel.com/900/500/sports/1"
-        - title: "Donec orci lectus"
-          subtitle: "Integer tincidunt. Ut a nisl id ante tempus hendrerit."
-          image: "http://lorempixel.com/900/500/sports/2"
-        - title: "Quisque ut nisi"
-          subtitle: "Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae."
-          image: "http://lorempixel.com/900/500/sports/6"
+        - image:
+            - theme: "image"
+              uri: "http://lorempixel.com/900/500/sports/1"
+          caption:
+            - type: html_tag
+              tag: h5
+              value: "First slide label"
+            - type: html_tag
+              tag: p
+              value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+        - image:
+            - theme: "image"
+              uri: "http://lorempixel.com/900/500/sports/2"
+          caption:
+            - type: html_tag
+              tag: h5
+              value: "Second slide label"
+            - type: html_tag
+              tag: p
+              value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+        - image:
+            - theme: "image"
+              uri: "http://lorempixel.com/900/500/sports/"
+          caption:
+            - type: html_tag
+              tag: h5
+              value: "Third slide label"
+            - type: html_tag
+              tag: p
+              value: "Nulla vitae elit libero, a pharetra augue mollis interdum."

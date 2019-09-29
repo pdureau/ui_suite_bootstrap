@@ -1,32 +1,39 @@
-<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('carousel-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
 
-  <!-- Indicators -->
+{% set id = 'carousel-' ~ random(1000) %}
+
+<div{{ attributes.addClass('carousel').addClass('slide') }} id="{{ id }}" data-ride="carousel">
+
+  {% if settings_with_indicators %}
   <ol class="carousel-indicators">
     {% for slide in slides %}
     <li data-target="#carousel-example-generic" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
     {% endfor %}
   </ol>
+  {% endif %}
 
-  <!-- Wrapper for slides -->
   <div class="carousel-inner" role="listbox">
     {% for slide in slides %}
       <div class="carousel-item{% if loop.first %} active{% endif %}">
-        <img src="{{ slide.image }}">
+        {{ slide.image }}
         <div class="carousel-caption">
-          <h3>{{ slide.title }}</h3>
-          <p>{{ slide.subtitle }}</p>
+          {{ slide.caption }}
         </div>
       </div>
     {% endfor %}
   </div>
 
-  <!-- Controls -->
-  <a class="carousel-control-prev" href="#carousel-example-generic" role="button" data-slide="prev">
+  {% if settings_with_controls %}
+  <a class="carousel-control-prev" href="#{{ id }}" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="carousel-control-next" href="#carousel-example-generic" role="button" data-slide="next">
+  <a class="carousel-control-next" href="#{{ id }}" role="button" data-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
     <span class="sr-only">Next</span>
   </a>
+  {% endif %}
+
 </div>
