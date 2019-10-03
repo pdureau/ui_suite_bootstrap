@@ -9,17 +9,6 @@ card:
     horizontal:
       label: Horizontal
   fields:
-    # Specific variant?
-    setting_bg_color:
-      type: "text"
-      label: "Card background color"
-      description: "Card border color: primary, secondary, success, danger, warning..."
-      preview: ""
-    setting_border_color:
-      type: "text"
-      label: "Card border color"
-      description: "Card border color: primary, secondary, success, danger, warning..."
-      preview: ""
     setting_image_position:
       type: "text"
       label: "Image position"

@@ -22,7 +22,7 @@ carousel:
       preview:
         - image:
             - theme: "image"
-              uri: "http://lorempixel.com/900/500/sports/1"
+              uri: "http://lorempixel.com/800/400/sports/1"
           caption:
             - type: html_tag
               tag: h5
@@ -32,21 +32,21 @@ carousel:
               value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
         - image:
             - theme: "image"
-              uri: "http://lorempixel.com/900/500/sports/2"
+              uri: "http://lorempixel.com/800/400/sports/2"
           caption:
             - type: html_tag
               tag: h5
               value: "Second slide label"
             - type: html_tag
               tag: p
-              value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+              value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         - image:
             - theme: "image"
-              uri: "http://lorempixel.com/900/500/sports/"
+              uri: "http://lorempixel.com/800/400/sports/3"
           caption:
             - type: html_tag
               tag: h5
               value: "Third slide label"
             - type: html_tag
               tag: p
-              value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+              value: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."

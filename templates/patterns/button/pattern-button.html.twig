@@ -5,8 +5,9 @@
   {% endfor %}
 {% endif %}
 
-{% if "link_" in variant or attributes.href %}
-  <button {{ attributes.addClass('btn') }}>{{ label }}</button>
+{% if url or attributes.href %}
+  {% set url = url ?: attributes.href %}
+  <a{{ attributes.addClass('btn').setAttribute('href', url) }}>{{ label }}</a>
 {% else %}
-  <span {{ attributes.addClass('btn') }}>{{ label }}</span>
+  <span{{ attributes.addClass('btn') }}>{{ label }}</span>
 {% endif %}
