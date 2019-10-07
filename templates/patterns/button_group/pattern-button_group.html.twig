@@ -1,0 +1,9 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('btn-group-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+<div{{ attributes.addClass('btn-group').setAttribute('role', 'group').setAttribute('aria-label', label) }}>
+  {% for button in buttons %}
+    {{ button }}
+  {% endfor %}
+</div>
