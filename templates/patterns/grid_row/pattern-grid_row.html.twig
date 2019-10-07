@@ -1,0 +1,16 @@
+{% if settings_with_container %}
+  <div class="container">
+{% endif %}
+
+<div{{ attributes.addClass('row') }}>
+  {% for item in content %}
+    {% set col_sizes = cycle(cols_sizes_cycle, loop.index0) %}
+    <div{{ create_attribute({'class': col_sizes}) }}>
+      {{ item }}
+    </div>
+  {% endfor %}
+</div>
+
+{% if settings_with_container %}
+  </div>
+{% endif %}

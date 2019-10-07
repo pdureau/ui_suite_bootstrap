@@ -1,0 +1,51 @@
+grid_row:
+  label: "Grid Row"
+  description: "The grid system uses a series of containers, rows, and columns to layout and align content https://getbootstrap.com/docs/4.3/layout/grid/"
+  fields:
+    settings_with_container:
+      type: "boolean"
+      label: "With container?"
+      preview: false
+      description: "is the row wrapped in a container? Containers provide a means to center and horizontally pad your site’s contents."
+    cols_sizes_cycle:
+      type: "array"
+      label: "Cols sizes cycle"
+      description: "The sizes of each column, looping in a cycle. Examples with same sizes for all columns: ['col-md-4'], ['col-md-4 col-sm-6']. Examples with different sizes: ['col-md-4', 'col-md-2'], ['col-md-4 col-sm-6', 'col-md-2 co-sm-3']"
+      preview: ["col-md-4", "col-md-2"]
+    content:
+      type: "render"
+      label: "Content"
+      description: "The content of each column"
+      preview:
+        - type: pattern
+          id: card
+          fields:
+            title: "Card example"
+            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+            body:
+              - type: "pattern"
+                id: "button"
+                variant: "primary"
+                fields:
+                  label: "Go somewhere"
+        - type: pattern
+          id: card
+          fields:
+            title: "Small card"
+            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+        - type: pattern
+          id: card
+          fields:
+            title: "Card example"
+            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+            body:
+              - type: "pattern"
+                id: "button"
+                variant: "primary"
+                fields:
+                  label: "Go somewhere"
+        - type: pattern
+          id: card
+          fields:
+            title: "Small card"
+            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
