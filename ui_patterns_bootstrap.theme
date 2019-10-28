@@ -36,3 +36,17 @@ function _ui_patterns_bootstrap_add_card_image_class(&$item, $variant) {
     }
   }
 }
+
+/**
+ * Implements hook_theme_suggestions_HOOK_alter for blocks.
+ */
+function ui_patterns_bootstrap_theme_suggestions_block_alter(&$suggestions, $variables) {
+  if ($variables['elements']['#configuration']['provider'] === 'layout_builder') {
+    $route_name = \Drupal::routeMatch()->getRouteName();
+    if (strpos($route_name, 'layout_builder') !== 0) {
+      // We are not in a layout_builder build & preview page.
+      // So, we don't need & want the markup wrappers.
+      $suggestions[] = 'block__nowrapper';
+    }
+  }
+}
