@@ -48,6 +48,10 @@ button:
       label: Small Outline Primary
     outline_secondary__sm:
       label: Small Outline Secondary
+    outline_primary__lg:
+      label: Large Outline Primary
+    outline_secondary__lg:
+      label: Large Outline Secondary
     link_primary:
       label: Link Primary
   fields:
