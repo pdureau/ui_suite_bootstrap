@@ -1,0 +1,33 @@
+list_group:
+  label: List Group
+  description: "List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within. https://getbootstrap.com/docs/4.3/components/list-group/"
+  variants:
+    default:
+      label: Default
+      description: The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+    flush:
+      label: Flush
+      description: Add .list-group-flush to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+    horizontal:
+      label: Horizontal
+      description: "Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints. Currently horizontal list groups cannot be combined with flush list groups. Only with Bootstrap 4.3+"
+  fields:
+    items:
+      type: array
+      label: Items
+      description: An array of items.
+      preview:
+        - label: "Cras justo odio"
+          active: FALSE
+        - label: "Dapibus ac facilisis in"
+          active: TRUE
+          disabled: TRUE
+        - label: "Morbi leo risus"
+          target: ""
+          active: FALSE
+        - label: "Porta ac consectetur ac"
+          target: ""
+          active: FALSE
+        - label: "Vestibulum at eros"
+          target: ""
+          active: FALSE

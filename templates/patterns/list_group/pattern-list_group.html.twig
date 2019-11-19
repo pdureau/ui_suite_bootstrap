@@ -1,0 +1,11 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('list-group-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+<ul{{ attributes.addClass('list-group') }}>
+  {% for item in items %}
+    {% set item_attribute = create_attribute({'class': ['list-group-item']}) %}
+    {% set item_attribute = item.active ? item_attribute.addClass('active') : item_attribute %}
+    <li{{item_attribute}}>{{ item.label }}</li>
+  {% endfor %}
+</ul>
