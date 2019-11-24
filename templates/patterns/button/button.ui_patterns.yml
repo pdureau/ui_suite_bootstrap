@@ -38,8 +38,10 @@ button:
       label: Outline Dark
     primary__lg:
       label: Large Primary
-    secondary__lg:
-      label: Large Secondary
+    primary__lg__block:
+      label: Large Primary Block
+    secondary__lg__block:
+      label: Large Secondary Block
     primary__sm:
       label: Small Primary
     secondary__sm:
@@ -50,8 +52,10 @@ button:
       label: Small Outline Secondary
     outline_primary__lg:
       label: Large Outline Primary
-    outline_secondary__lg:
-      label: Large Outline Secondary
+    outline_primary__lg__block:
+      label: Large Outline Primary Block
+    outline_secondary__lg__block:
+      label: Large Outline Secondary Block
     link_primary:
       label: Link Primary
   fields:
