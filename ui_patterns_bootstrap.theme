@@ -9,7 +9,7 @@
  * https://getbootstrap.com/docs/4.3/components/card/.
  */
 function ui_patterns_bootstrap_preprocess_pattern_card(array &$variables) {
-  if (array_key_exists('image', $variables)) {
+  if (array_key_exists('image', $variables) && is_array($variables['image'])) {
     foreach ($variables['image'] as &$item) {
       _ui_patterns_bootstrap_add_card_image_class($item, $variables['variant']);
     }
