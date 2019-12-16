@@ -6,7 +6,7 @@
 
 <div{{ attributes.addClass('carousel').addClass('slide') }} id="{{ id }}" data-ride="carousel">
 
-  {% if settings_with_indicators %}
+  {% if with_indicators %}
   <ol class="carousel-indicators">
     {% for slide in slides %}
     <li data-target="#carousel-example-generic" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
@@ -25,7 +25,7 @@
     {% endfor %}
   </div>
 
-  {% if settings_with_controls %}
+  {% if with_controls %}
   <a class="carousel-control-prev" href="#{{ id }}" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
     <span class="sr-only">Previous</span>

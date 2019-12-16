@@ -1,12 +1,18 @@
 grid_row:
   label: "Grid Row"
   description: "The grid system uses a series of containers, rows, and columns to layout and align content https://getbootstrap.com/docs/4.3/layout/grid/"
-  fields:
-    settings_with_container:
+  settings:
+    with_container:
       type: "boolean"
       label: "With container?"
       preview: false
-      description: "is the row wrapped in a container? Containers provide a means to center and horizontally pad your site’s contents."
+      description: "Is the row wrapped in a container? Containers provide a means to center and horizontally pad your site’s contents."
+    no_gutters:
+      type: "boolean"
+      label: "No gutters?"
+      preview: false
+      description: "The gutters between columns in our predefined grid classes can be removed with .no-gutters. This removes the negative margins from .row and the horizontal padding from all immediate children columns."
+  fields:
     cols_sizes_cycle:
       type: "array"
       label: "Cols sizes cycle"

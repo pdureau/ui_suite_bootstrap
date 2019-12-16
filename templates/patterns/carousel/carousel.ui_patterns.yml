@@ -6,15 +6,16 @@ carousel:
       label: Default
     crossfade:
       label: Crossfade, animate slides with a fade transition instead of a slide.
-  fields:
-    settings_with_indicators:
-      type: "boolean"
+  settings:
+    with_indicators:
+      type: boolean
       label: "With indicators?"
       preview: true
-    settings_with_controls:
-      type: "boolean"
+    with_controls:
+      type: boolean
       label: "With controls?"
       preview: true
+  fields:
     slides:
       type: "array"
       label: "Slides"

@@ -1,6 +1,8 @@
-{% if settings_with_container %}
+{% if with_container %}
   <div class="container">
 {% endif %}
+
+{% set attributes = no_gutters ? attributes.addClass('no-gutters') : attributes %}
 
 <div{{ attributes.addClass('row') }}>
   {% for item in content %}
@@ -11,6 +13,6 @@
   {% endfor %}
 </div>
 
-{% if settings_with_container %}
+{% if with_container %}
   </div>
 {% endif %}
