@@ -1,0 +1,39 @@
+media:
+  label: "Media Object"
+  description: "Complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. https://getbootstrap.com/docs/4.4/components/media-object/"
+  settings:
+    image_position:
+      type: select
+      label: "Image position"
+      options:
+        before: Before (Default)
+        after: After
+      preview: before
+    image_margin:
+      type: select
+      label: "Image margin"
+      options:
+        0: 0 (Default)
+        1: 1
+        2: 2
+        3: 3
+      preview: 3
+  fields:
+    image_url:
+      type: text
+      label: "Image URL"
+      preview: "https://bulma.io/images/placeholders/64x64.png"
+    body:
+      type: "render"
+      label: "Body"
+      description: "Media body"
+      preview:
+        - type: html_tag
+          tag: h5
+          value: "Media heading"
+          attributes:
+            class:
+              - "mt-0"
+        - type: html_tag
+          tag: span
+          value: "Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus."
