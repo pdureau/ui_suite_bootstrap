@@ -1,9 +1,22 @@
 <?php
 
+use Drupal\Core\Template\Attribute;
+
 /**
  * @file
  * The ui_patterns_bootstrap hooks.
  */
+
+
+
+/**
+ * Implements hook_preprocess_HOOK() for page templates.
+ */
+function ui_patterns_bootstrap_preprocess_page(&$variables) {
+  // TODO: It would be better to have a setting, like bootstrap_barrio do with 
+  // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
+  $variables['container'] = 'container';
+}
 
 /**
  * Implements hook_preprocess_HOOK() for card patterns.
@@ -52,3 +65,4 @@ function ui_patterns_bootstrap_theme_suggestions_block_alter(&$suggestions, $var
     $suggestions[] = 'block__nowrapper';
   }
 }
+
