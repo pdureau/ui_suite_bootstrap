@@ -1,0 +1,145 @@
+# An experimental attempt of generating layout_builder_style entities from the
+# theme.
+
+# https://getbootstrap.com/docs/4.4/utilities/borders/#border
+borders_border:
+  label: Border
+  styles:
+    border: Additive All
+    border-top: Additive Top
+    border-right: Additive Right
+    border-bottom: Additive Bottom
+    border-left: Additive Left
+    border-0: Subtractive All
+    border-top-0: Subtractive Top
+    border-right-0: Subtractive Right
+    border-bottom-0: Subtractive Bottom
+    border-left-0: Subtractive Left
+
+# https://getbootstrap.com/docs/4.4/utilities/borders/#border-color
+borders_border_color:
+  label: Border color
+  styles:
+    border-primary: Primary
+    border-secondary: Secondary
+    border-success: Success
+    border-danger: Danger
+    border-warning: Warning
+    border-info: Info
+    border-light: Light
+    border-dark: Dark
+    border-white: White
+
+# https://getbootstrap.com/docs/4.4/utilities/borders/#border-radius
+borders_border_radius:
+  label: Border radius
+  styles:
+    rounded: Rounded
+    rounded-top: Rounded Top
+    rounded-right: Rounded Right
+    rounded-bottom: Rounded Bottom
+    rounded-left: Rounded Left
+    rounded-circle: Rounded Circle
+    rounded-0: Rounded Susbtrative
+
+# https://getbootstrap.com/docs/4.4/utilities/colors/#background-color
+colors_background_color:
+  label: Background color
+  styles:
+    bg-primary: Primary
+    bg-secondary: Secondary
+    bg-success: Success
+    bg-danger: Danger
+    bg-warning: Warning
+    bg-info: Info
+    bg-light: Light
+    bg-dark: Dark
+    bg-white: White
+    bg-transparent: Transparent
+
+# https://getbootstrap.com/docs/4.4/utilities/colors/#color
+colors_color:
+  label: Color
+  styles:
+    text-primary: Primary
+    text-secondary: Secondary
+    text-success: Success
+    text-danger: Danger
+    text-warning: Warning
+    text-info: Info
+    text-light: Light
+    text-dark: Dark
+    text-body: Body
+    text-muted: Muted
+    text-white: White
+    text-black-50: Black 50
+    text-white-50: White 50
+
+# https://getbootstrap.com/docs/4.4/utilities/text/#font-weight-and-italics
+text_font_weight:
+  label: Font weight
+  styles:
+    font-weight-bold: Bold
+    font-weight-normal: Normal
+    font-weight-light: Light
+
+# https://getbootstrap.com/docs/4.4/utilities/text/#font-weight-and-italics
+text_font_italics:
+  label: Font italics
+  styles:
+    font-italic: Italic
+
+# https://getbootstrap.com/docs/4.4/utilities/shadows/
+shadows:
+  label: Shadows
+  styles:
+    shadow-none: None
+    shadow-sm: Small
+    shadow: Normal
+    shadow-lg: Large
+
+# https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering
+spacing_horizontal_centering:
+  label: Horizontal centering
+  styles:
+    mx-auto: Horizontal centering
+
+# https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment
+text_text_alignment:
+  label: Text alignment
+  styles:
+    text-justify: Justify
+    text-left: Left
+    text-center: Center
+    text-right: Right
+
+# https://getbootstrap.com/docs/4.4/utilities/text/#text-transform
+text_text_transform:
+  label: Text transform
+  styles:
+    text-lowercase: Lowercase
+    text-uppercase: Uppercase
+    text-capitalize: Capitalize
+
+# https://getbootstrap.com/docs/4.4/content/typography/
+typography:
+  label: Typography
+  styles:
+    h1: Heading 1
+    h2: Heading 2
+    h3: Heading 3
+    h4: Heading 4
+    h5: Heading 5
+    h6: Heading 6
+    display-1: Display heading 1
+    display-2: Display heading 2
+    display-3: Display heading 3
+    display-4: Display heading 4
+    lead: Lead
+
+# https://getbootstrap.com/docs/4.4/content/typography/#lists
+typography_lists:
+  label: List style
+  styles:
+    list-unstyled: Unstyled
+    list-inline: Inline

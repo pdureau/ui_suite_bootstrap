@@ -5,6 +5,7 @@
   "type": "drupal-theme",
   "license": "GPL-2.0-or-later",
   "require": {
-    "twbs/bootstrap": "^4.4"
+    "twbs/bootstrap": "^4.4",
+    "drupal/ui_patterns": "^1.1"
   }
 }
