@@ -17,7 +17,7 @@ carousel:
       preview: true
   fields:
     slides:
-      type: "array"
+      type: render
       label: "Slides"
       description: "Each slide is a collection of title, subtitle and slide image."
       preview:

@@ -18,7 +18,7 @@ button_group:
       description: The group label. Visually hidden. Used with assistive technologies.
       preview: Basic example
     buttons:
-      type: array
+      type: render
       label: Buttons
       description: An array of 'button' patterns. Or an array of arrays of 'button' patterns, if 'toolbar'variant.
       preview:
