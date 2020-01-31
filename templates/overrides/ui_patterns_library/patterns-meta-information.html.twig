@@ -8,11 +8,12 @@
 {% if pattern is not empty %}
 
   {# Pattern name and desciption. #}
-  <h3 class="pattern-preview__label">{{ pattern.label }}</h3>
+  <h3 class="pattern-preview__label mt-5">{{ pattern.label }}</h3>
   <p class="pattern-preview__description">{{ pattern.description }}</p>
 
   {# Pattern fields descriptions. #}
-  <table class="pattern-preview__fields">
+  {% if pattern.fields %}
+  <table class="pattern-preview__fields table">
     <thead>
     <tr>
       <th>{{ "Field"|t }}</th>
@@ -32,9 +33,11 @@
     {% endfor %}
     </tbody>
   </table>
+  {% endif %}
 
   {# Pattern settings descriptions. #}
-  <table class="pattern-preview__fields">
+  {% if pattern.additional.settings %}
+  <table class="pattern-preview__fields table">
     <thead>
     <tr>
       <th>{{ "Setting"|t }}</th>
@@ -56,5 +59,6 @@
     {% endfor %}
     </tbody>
   </table>
+  {% endif %}
 
 {% endif %}
