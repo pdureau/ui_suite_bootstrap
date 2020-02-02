@@ -1,0 +1,35 @@
+blockquote:
+  label: "Blockquote"
+  description: "For quoting blocks of content from another source within your document. https://getbootstrap.com/docs/4.4/content/typography/#blockquotes"
+  variants:
+    default:
+      label: Default
+    fluid:
+      label: Fluid
+      description: This is a modified jumbotron that occupies the entire horizontal space of its parent, and without rounded corners.
+  fields:
+    content:
+      type: "render"
+      label: "Content"
+      description: "The quote"
+      preview:
+        - type: html_tag
+          tag: p
+          value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante."
+          attributes:
+            class:
+              - "mb-0"
+    footer:
+      type: "render"
+      label: "Footer"
+      description: "For identifying the source. Wrap the name of the source work in <cite>."
+      preview:
+        - type: html_tag
+          tag: span
+          value: "Someone famous in "
+        - type: html_tag
+          tag: cite
+          value: "Source Title"
+          attributes:
+            title:
+              - "Source Title"

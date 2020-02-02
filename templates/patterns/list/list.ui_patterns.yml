@@ -1,0 +1,35 @@
+list:
+  label: List
+  description: "https://getbootstrap.com/docs/4.4/content/typography/#lists"
+  variants:
+    default:
+      label: Default
+    unstyled:
+      label: Unstyled
+      description: Remove the default list-style and left margin on list items (immediate children only). This only applies to immediate children list items, meaning you will need to add the class for any nested lists as well.
+    inline:
+      label: Inline
+      description: Remove a list’s bullets and apply some light margin with a combination of two classes, .list-inline and .list-inline-item.
+  settings:
+    list_type:
+      type: select
+      label: "List type"
+      options:
+        ul: ul (Default)
+        ol: ol
+      preview: ul
+  fields:
+    items:
+      type: render
+      label: Items
+      description: An array of 'button' patterns. Or an array of arrays of 'button' patterns, if 'toolbar'variant.
+      preview:
+        - type: html_tag
+          tag: span
+          value: "Lorem ipsum"
+        - type: html_tag
+          tag: span
+          value: "Phasellus iaculis"
+        - type: html_tag
+          tag: span
+          value: "Nulla volutpat"

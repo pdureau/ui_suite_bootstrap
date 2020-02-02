@@ -136,10 +136,3 @@ typography:
     display-3: Display heading 3
     display-4: Display heading 4
     lead: Lead
-
-# https://getbootstrap.com/docs/4.4/content/typography/#lists
-typography_lists:
-  label: List style
-  styles:
-    list-unstyled: Unstyled
-    list-inline: Inline

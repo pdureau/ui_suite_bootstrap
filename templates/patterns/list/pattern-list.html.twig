@@ -1,0 +1,15 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('list-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+{% set list_type = list_type ?: 'ul' %}
+
+<{{ list_type }}{{ attributes }}>
+  {% for item in items %}
+    {% if variant == 'inline'  %}
+    <li class="list-inline-item">{{ item }}</li>
+    {% else %}
+    <li>{{ item }}</li>
+    {% endif %}
+  {% endfor %}
+</{{ list_type }}>
