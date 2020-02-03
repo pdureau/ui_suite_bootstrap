@@ -1,0 +1,15 @@
+{#
+/**
+ * @file
+ * UI Pattern library standalone page, override this in your theme.
+ */
+#}
+
+{% if pattern is not empty %}
+  <div class="pattern-preview pattern-preview__{{ pattern.definition.id }} mb-5">
+    {{ pattern.meta }}
+
+    {# Rendered pattern preview. #}
+    {{ pattern.rendered }}
+  </div>
+{% endif %}

@@ -8,39 +8,16 @@
 {% if pattern is not empty %}
 
   {# Pattern name and desciption. #}
-  <h3 class="pattern-preview__label mt-5">{{ pattern.label }}</h3>
+  <h3 class="pattern-preview__label display-3">{{ pattern.label }}</h3>
   <p class="pattern-preview__description">{{ pattern.description }}</p>
 
   {# Pattern fields descriptions. #}
-  {% if pattern.fields %}
+  {% if pattern.fields or pattern.additional.settings %}
   <table class="pattern-preview__fields table">
     <thead>
     <tr>
-      <th>{{ "Field"|t }}</th>
-      <th>{{ "Label"|t }}</th>
-      <th>{{ "Type"|t }}</th>
-      <th>{{ "Description"|t }}</th>
-    </tr>
-    </thead>
-    <tbody>
-    {% for field in pattern.fields %}
-      <tr>
-        <td><code>{{ field.name }}</code></td>
-        <td>{{ field.label }}</td>
-        <td><code>{{ field.type }}</code></td>
-        <td>{{ field.description }}</td>
-      </tr>
-    {% endfor %}
-    </tbody>
-  </table>
-  {% endif %}
-
-  {# Pattern settings descriptions. #}
-  {% if pattern.additional.settings %}
-  <table class="pattern-preview__fields table">
-    <thead>
-    <tr>
-      <th>{{ "Setting"|t }}</th>
+      <td></td>
+      <th>{{ "Name"|t }}</th>
       <th>{{ "Label"|t }}</th>
       <th>{{ "Type"|t }}</th>
       <th>{{ "Description"|t }}</th>
@@ -48,8 +25,19 @@
     </tr>
     </thead>
     <tbody>
+    {% for field in pattern.fields %}
+      <tr>
+        <td>{{ "Field"|t }}</td>
+        <td><code>{{ field.name }}</code></td>
+        <td>{{ field.label }}</td>
+        <td><code>{{ field.type }}</code></td>
+        <td>{{ field.description }}</td>
+        <td></td>
+      </tr>
+    {% endfor %}
     {% for name, setting in pattern.additional.settings %}
       <tr>
+        <td>{{ "Setting"|t }}</td>
         <td><code>{{ name }}</code></td>
         <td>{{ setting.label }}</td>
         <td><code>{{ setting.type }}</code></td>
