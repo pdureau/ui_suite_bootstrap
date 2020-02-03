@@ -22,7 +22,7 @@ list:
     items:
       type: render
       label: Items
-      description: An array of 'button' patterns. Or an array of arrays of 'button' patterns, if 'toolbar'variant.
+      description: An array of render arrays.
       preview:
         - type: html_tag
           tag: span

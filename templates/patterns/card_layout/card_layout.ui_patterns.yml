@@ -15,7 +15,7 @@ card_layout:
     cards:
       type: "render"
       label: "Cards"
-      description: "The cards"
+      description: "An array of card patterns."
       preview:
         - type: pattern
           id: card

@@ -4,8 +4,9 @@
 
 <ul{{ attributes.addClass('list-group') }}>
   {% for item in items %}
-    {% set item_attribute = create_attribute({'class': ['list-group-item']}) %}
-    {% set item_attribute = item.active ? item_attribute.addClass('active') : item_attribute %}
-    <li{{item_attribute}}>{{ item.label }}</li>
+    {% set item_attributes = create_attribute({'class': ['list-group-item']}) %}
+    {% set item_attributes = item['#active'] ? item_attributes.addClass('active') : item_attributes %}
+    {% set item_attributes = item['#disabled'] ? item_attributes.addClass('disabled') : item_attributes %}
+    <li{{item_attributes}}>{{ item }}</li>
   {% endfor %}
 </ul>

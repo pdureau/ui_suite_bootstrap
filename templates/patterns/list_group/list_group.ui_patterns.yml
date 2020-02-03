@@ -13,21 +13,27 @@ list_group:
       description: "Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints. Currently horizontal list groups cannot be combined with flush list groups. Only with Bootstrap 4.3+"
   fields:
     items:
-      type: array
+      type: render
       label: Items
-      description: An array of items.
+      description: "An array of render arrays, with 2 specific optional properties: active & disabled"
       preview:
-        - label: "Cras justo odio"
+        - type: html_tag
+          tag: span
+          value: "Cras justo odio"
           active: FALSE
-        - label: "Dapibus ac facilisis in"
+        - type: html_tag
+          tag: span
+          value: "Dapibus ac facilisis in (active)"
           active: TRUE
+          disabled: FALSE
+        - type: html_tag
+          tag: span
+          value: "Morbi leo risus"
+          active: FALSE
+        - type: html_tag
+          tag: span
+          value: "Porta ac consectetur ac (disabled)"
           disabled: TRUE
-        - label: "Morbi leo risus"
-          target: ""
-          active: FALSE
-        - label: "Porta ac consectetur ac"
-          target: ""
-          active: FALSE
-        - label: "Vestibulum at eros"
-          target: ""
-          active: FALSE
+        - type: html_tag
+          tag: span
+          value: "Vestibulum at eros"
