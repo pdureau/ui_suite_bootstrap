@@ -42,7 +42,15 @@
         <td>{{ setting.label }}</td>
         <td><code>{{ setting.type }}</code></td>
         <td>{{ setting.description }}</td>
-        <td>{{ setting.options ? setting.options|json_encode() : '' }}</td>
+        <td>
+        {% if setting.options %}
+        <ul>
+        {% for key, label in setting.options %}
+          <li>{{ key }}: {{ label }}</li>
+        {% endfor %}
+        </ul>
+        {% endif %}
+        </td>
       </tr>
     {% endfor %}
     </tbody>
