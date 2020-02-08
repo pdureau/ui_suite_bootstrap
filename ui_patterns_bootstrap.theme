@@ -21,7 +21,7 @@ function ui_patterns_bootstrap_preprocess_page(&$variables) {
 /**
  * Implements hook_preprocess_HOOK() for card patterns.
  *
- * See also: https://getbootstrap.com/docs/4.3/components/card/.
+ * See also: https://getbootstrap.com/docs/4.4/components/card/.
  */
 function ui_patterns_bootstrap_preprocess_pattern_card(array &$variables) {
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
@@ -50,6 +50,26 @@ function _ui_patterns_bootstrap_add_card_image_class(&$item, $variant) {
   if (is_array($item)) {
     foreach ($item as &$next) {
       _ui_patterns_bootstrap_add_card_image_class($next, $variant);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for carousel patterns.
+ *
+ * See also: https://getbootstrap.com/docs/4.4/components/carousel/.
+ */
+function ui_patterns_bootstrap_preprocess_pattern_carousel(array &$variables) {
+  if ($variables['context']->getType() == 'preview') {
+    // Nicer preview with fixed width and local backgrounds.
+    $variables['attributes']['style'] = "width: 800px";
+    $base_path = drupal_get_path('theme', 'ui_patterns_bootstrap');
+    foreach ($variables['slides'] as $i => $slide) {
+      if (isset($slide['image']) && is_array($slide['image'])) {
+        $image = $slide['image'][0];
+        $uri = isset($image['#uri']) ? join('/', ['', $base_path, $image['#uri']]) : '';
+        $variables['slides'][$i]['image'][0]['#uri'] = $uri;
+      }
     }
   }
 }

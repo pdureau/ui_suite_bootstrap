@@ -4,17 +4,19 @@ carousel:
   variants:
     default:
       label: Default
-    crossfade:
+    fade:
       label: Crossfade
       description: Animate slides with a fade transition instead of a slide.
   settings:
-    with_indicators:
-      type: boolean
-      label: "With indicators?"
-      preview: true
     with_controls:
       type: boolean
       label: "With controls?"
+      description: "Adding in the previous and next controls"
+      preview: true
+    with_indicators:
+      type: boolean
+      label: "With indicators?"
+      description: "You can also add the indicators to the carousel, alongside the controls, too."
       preview: true
   fields:
     slides:
@@ -24,7 +26,7 @@ carousel:
       preview:
         - image:
             - theme: "image"
-              uri: "http://lorempixel.com/800/400/sports/1"
+              uri: "assets/slide-1.svg"
           caption:
             - type: html_tag
               tag: h5
@@ -34,7 +36,7 @@ carousel:
               value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
         - image:
             - theme: "image"
-              uri: "http://lorempixel.com/800/400/sports/2"
+              uri: "/assets/slide-2.svg"
           caption:
             - type: html_tag
               tag: h5
@@ -44,7 +46,7 @@ carousel:
               value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         - image:
             - theme: "image"
-              uri: "http://lorempixel.com/800/400/sports/3"
+              uri: "/assets/slide-3.svg"
           caption:
             - type: html_tag
               tag: h5
