@@ -1,10 +1,7 @@
-# An experimental attempt of generating layout_builder_style entities from the
-# theme.
-
 # https://getbootstrap.com/docs/4.4/utilities/borders/#border
 borders_border:
   label: Border
-  styles:
+  options:
     border: Additive All
     border-top: Additive Top
     border-right: Additive Right
@@ -19,7 +16,7 @@ borders_border:
 # https://getbootstrap.com/docs/4.4/utilities/borders/#border-color
 borders_border_color:
   label: Border color
-  styles:
+  options:
     border-primary: Primary
     border-secondary: Secondary
     border-success: Success
@@ -29,11 +26,13 @@ borders_border_color:
     border-light: Light
     border-dark: Dark
     border-white: White
+  previewed_with:
+    - border
 
 # https://getbootstrap.com/docs/4.4/utilities/borders/#border-radius
 borders_border_radius:
   label: Border radius
-  styles:
+  options:
     rounded: Rounded
     rounded-top: Rounded Top
     rounded-right: Rounded Right
@@ -41,11 +40,13 @@ borders_border_radius:
     rounded-left: Rounded Left
     rounded-circle: Rounded Circle
     rounded-0: Rounded Susbtrative
+  previewed_with:
+    - border
 
 # https://getbootstrap.com/docs/4.4/utilities/colors/#background-color
 colors_background_color:
   label: Background color
-  styles:
+  options:
     bg-primary: Primary
     bg-secondary: Secondary
     bg-success: Success
@@ -60,7 +61,7 @@ colors_background_color:
 # https://getbootstrap.com/docs/4.4/utilities/colors/#color
 colors_color:
   label: Color
-  styles:
+  options:
     text-primary: Primary
     text-secondary: Secondary
     text-success: Success
@@ -78,7 +79,7 @@ colors_color:
 # https://getbootstrap.com/docs/4.4/utilities/text/#font-weight-and-italics
 text_font_weight:
   label: Font weight
-  styles:
+  options:
     font-weight-bold: Bold
     font-weight-normal: Normal
     font-weight-light: Light
@@ -86,13 +87,13 @@ text_font_weight:
 # https://getbootstrap.com/docs/4.4/utilities/text/#font-weight-and-italics
 text_font_italics:
   label: Font italics
-  styles:
+  options:
     font-italic: Italic
 
 # https://getbootstrap.com/docs/4.4/utilities/shadows/
 shadows:
   label: Shadows
-  styles:
+  options:
     shadow-none: None
     shadow-sm: Small
     shadow: Normal
@@ -101,7 +102,7 @@ shadows:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_margin_top:
   label: Margin top
-  styles:
+  options:
     mt-0: 0
     mt-1: 1
     mt-2: 2
@@ -113,7 +114,7 @@ spacing_margin_top:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_margin_bottom:
   label: Margin bottom
-  styles:
+  options:
     mb-0: 0
     mb-1: 1
     mb-2: 2
@@ -125,7 +126,7 @@ spacing_margin_bottom:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_margin_left:
   label: Margin left
-  styles:
+  options:
     ml-0: 0
     ml-1: 1
     ml-2: 2
@@ -137,7 +138,7 @@ spacing_margin_left:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_margin_right:
   label: Margin right
-  styles:
+  options:
     mr-0: 0
     mr-1: 1
     mr-2: 2
@@ -149,7 +150,7 @@ spacing_margin_right:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_padding_top:
   label: Padding top
-  styles:
+  options:
     pt-0: 0
     pt-1: 1
     pt-2: 2
@@ -161,7 +162,7 @@ spacing_padding_top:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_padding_bottom:
   label: Padding bottom
-  styles:
+  options:
     pb-0: 0
     pb-1: 1
     pb-2: 2
@@ -173,7 +174,7 @@ spacing_padding_bottom:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_padding_left:
   label: Padding left
-  styles:
+  options:
     pl-0: 0
     pl-1: 1
     pl-2: 2
@@ -185,7 +186,7 @@ spacing_padding_left:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
 spacing_padding_right:
   label: Padding right
-  styles:
+  options:
     pr-0: 0
     pr-1: 1
     pr-2: 2
@@ -197,13 +198,13 @@ spacing_padding_right:
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering
 spacing_horizontal_centering:
   label: Horizontal centering
-  styles:
+  options:
     mx-auto: Horizontal centering
 
 # https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment
 text_text_alignment:
   label: Text alignment
-  styles:
+  options:
     text-justify: Justify
     text-left: Left
     text-center: Center
@@ -212,7 +213,7 @@ text_text_alignment:
 # https://getbootstrap.com/docs/4.4/utilities/text/#text-transform
 text_text_transform:
   label: Text transform
-  styles:
+  options:
     text-lowercase: Lowercase
     text-uppercase: Uppercase
     text-capitalize: Capitalize
@@ -220,7 +221,7 @@ text_text_transform:
 # https://getbootstrap.com/docs/4.4/content/typography/
 typography:
   label: Typography
-  styles:
+  options:
     h1: Heading 1
     h2: Heading 2
     h3: Heading 3
