@@ -24,33 +24,27 @@ carousel:
       label: "Slides"
       description: "Each slide is a collection of title, subtitle and slide image."
       preview:
-        - image:
-            - theme: "image"
-              uri: "assets/slide-1.svg"
-          caption:
-            - type: html_tag
-              tag: h5
-              value: "First slide label"
-            - type: html_tag
-              tag: p
-              value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
-        - image:
-            - theme: "image"
-              uri: "/assets/slide-2.svg"
-          caption:
-            - type: html_tag
-              tag: h5
-              value: "Second slide label"
-            - type: html_tag
-              tag: p
-              value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        - image:
-            - theme: "image"
-              uri: "/assets/slide-3.svg"
-          caption:
-            - type: html_tag
-              tag: h5
-              value: "Third slide label"
-            - type: html_tag
-              tag: p
-              value: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
+        - - theme: "image"
+            uri: "assets/slide-1.svg"
+          - type: html_tag
+            tag: h5
+            value: "First slide label"
+          - type: html_tag
+            tag: p
+            value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
+        - - theme: "image"
+            uri: "/assets/slide-2.svg"
+          - type: html_tag
+            tag: h5
+            value: "Second slide label"
+          - type: html_tag
+            tag: p
+            value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        - - theme: "image"
+            uri: "/assets/slide-3.svg"
+          - type: html_tag
+            tag: h5
+            value: "Third slide label"
+          - type: html_tag
+            tag: p
+            value: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."

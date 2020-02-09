@@ -19,7 +19,7 @@
       <div class="carousel-item{% if loop.first %} active{% endif %}">
         {{ slide.image }}
         <div class="carousel-caption">
-          {{ slide.caption }}
+          {{ slide|without('image') }}
         </div>
       </div>
     {% endfor %}
