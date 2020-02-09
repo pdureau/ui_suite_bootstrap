@@ -20,8 +20,7 @@
       <th>{{ "Name"|t }}</th>
       <th>{{ "Label"|t }}</th>
       <th>{{ "Type"|t }}</th>
-      <th>{{ "Description"|t }}</th>
-      <th>{{ "Options"|t }}</th>
+      <th>{{ "Description"|t }} / {{ "Options"|t }}</th>
     </tr>
     </thead>
     <tbody>
@@ -32,7 +31,6 @@
         <td>{{ field.label }}</td>
         <td><code>{{ field.type }}</code></td>
         <td>{{ field.description }}</td>
-        <td></td>
       </tr>
     {% endfor %}
     {% for name, setting in pattern.additional.settings %}
@@ -41,8 +39,7 @@
         <td><code>{{ name }}</code></td>
         <td>{{ setting.label }}</td>
         <td><code>{{ setting.type }}</code></td>
-        <td>{{ setting.description }}</td>
-        <td>
+        <td>{{ setting.description }}
         {% if setting.options %}
         <ul>
         {% for key, label in setting.options %}
