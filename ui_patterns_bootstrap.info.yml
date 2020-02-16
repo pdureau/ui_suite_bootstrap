@@ -3,6 +3,7 @@ type: theme
 description: "A Bootstrap4 theme using UI Patterns."
 version: 1.x-dev
 core: 8.x
+core_version_requirement: ^8 || ^9
 base theme: false
 libraries:
   - ui_patterns_bootstrap/bootstrap

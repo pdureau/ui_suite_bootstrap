@@ -1,0 +1,142 @@
+layout_option_definitions:
+  # Sections options.
+  with_container:
+    title: "With container?"
+    description: "Is the row wrapped in a container? Containers provide a means to center and horizontally pad your site’s contents."
+    default: ""
+    plugin: layout_options_class_radios
+    multi: false
+    layout: true
+    regions: false
+    inline: true
+    options:
+      "with-container": "True"
+      "": "False"
+  no_gutters:
+    title: "No gutters?"
+    description: "The gutters between columns in our predefined grid classes can be removed with .no-gutters. This removes the negative margins from .row and the horizontal padding from all immediate children columns."
+    default: ""
+    plugin: layout_options_class_radios
+    multi: false
+    layout: true
+    regions: false
+    inline: true
+    options:
+      "no-gutters": "True"
+      "": "False"
+  # Regions options.
+  col_xs:
+    title: "All (Extra small)"
+    description: ""
+    default: ""
+    plugin: layout_options_class_select
+    multi: false
+    layout: false
+    regions: true
+    options:
+      col-1: "1"
+      col-2: "2"
+      col-3: "3"
+      col-4: "4"
+      col-5: "5"
+      col-6: "6"
+      col-7: "7"
+      col-8: "8"
+      col-9: "9"
+      col-10: "10"
+      col-11: "11"
+      col-12: "12"
+  col_sm:
+    title: "Small"
+    description: ""
+    default: ""
+    plugin: layout_options_class_select
+    multi: false
+    layout: false
+    regions: true
+    options:
+      col-sm-1: "1"
+      col-sm-2: "2"
+      col-sm-3: "3"
+      col-sm-4: "4"
+      col-sm-5: "5"
+      col-sm-6: "6"
+      col-sm-7: "7"
+      col-sm-8: "8"
+      col-sm-9: "9"
+      col-sm-10: "10"
+      col-sm-11: "11"
+      col-sm-12: "12"
+  col_md:
+    title: "Medium"
+    description: ""
+    default: ""
+    plugin: layout_options_class_select
+    multi: false
+    layout: false
+    regions: true
+    options:
+      col-md-1: "1"
+      col-md-2: "2"
+      col-md-3: "3"
+      col-md-4: "4"
+      col-md-5: "5"
+      col-md-6: "6"
+      col-md-7: "7"
+      col-md-8: "8"
+      col-md-9: "9"
+      col-md-10: "10"
+      col-md-11: "11"
+      col-md-12: "12"
+  col_lg:
+    title: "Large"
+    description: ""
+    default: ""
+    plugin: layout_options_class_select
+    multi: false
+    layout: false
+    regions: true
+    options:
+      col-lg-1: "1"
+      col-lg-2: "2"
+      col-lg-3: "3"
+      col-lg-4: "4"
+      col-lg-5: "5"
+      col-lg-6: "6"
+      col-lg-7: "7"
+      col-lg-8: "8"
+      col-lg-9: "9"
+      col-lg-10: "10"
+      col-lg-11: "11"
+      col-lg-12: "12"
+  col_xl:
+    title: "Extra large"
+    description: ""
+    default: ""
+    plugin: layout_options_class_select
+    multi: false
+    layout: false
+    regions: true
+    options:
+      col-xl-1: "1"
+      col-xl-2: "2"
+      col-xl-3: "3"
+      col-xl-4: "4"
+      col-xl-5: "5"
+      col-xl-6: "6"
+      col-xl-7: "7"
+      col-xl-8: "8"
+      col-xl-9: "9"
+      col-xl-10: "10"
+      col-xl-11: "11"
+      col-xl-12: "12"
+
+layout_options:
+  global:
+    with_container: {}
+    no_gutters: {}
+    col_xs: {}
+    col_sm: {}
+    col_md: {}
+    col_lg: {}
+    col_xl: {}

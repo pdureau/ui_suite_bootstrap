@@ -1,0 +1,63 @@
+bootstrap_grid_row_1:
+  label: "Grid row (1 col) [Bootstrap]"
+  path: templates
+  template: layout--grid
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: "Columns: 1"
+  default_region: main
+  icon_map:
+    - [main]
+  regions:
+    main:
+      label: Main
+
+bootstrap_grid_row_2:
+  label: "Grid row (2 cols) [Bootstrap]"
+  path: templates
+  template: layout--grid
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: "Columns: 2"
+  default_region: main
+  icon_map:
+    - [main, second]
+  regions:
+    main:
+      label: Main
+    second:
+      label: Second
+
+bootstrap_grid_row_3:
+  label: "Grid row (3 cols) [Bootstrap]"
+  path: templates
+  template: layout--grid
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: "Columns: 3"
+  default_region: main
+  icon_map:
+    - [main, second, third]
+  regions:
+    main:
+      label: Main
+    second:
+      label: Second
+    third:
+      label: Third
+
+bootstrap_grid_row_4:
+  label: "Grid row (4 cols) [Bootstrap]"
+  path: templates
+  template: layout--grid
+  class: '\Drupal\layout_options\Plugin\Layout\LayoutOptions'
+  category: "Columns: 4"
+  default_region: main
+  icon_map:
+    - [main, second, third, fourth]
+  regions:
+    main:
+      label: Main
+    second:
+      label: Second
+    third:
+      label: Third
+    fourth:
+      label: Fourth

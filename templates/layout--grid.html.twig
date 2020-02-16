@@ -1,0 +1,37 @@
+{#
+/**
+ * @file
+ * Template for a grid layout.
+ */
+#}
+{%
+  set classes = [
+    'layout',
+    'layout--' ~ layout.id|clean_class,
+    'row',
+  ]
+%}
+{% set with_container = attributes.hasClass('with-container') %}
+{% set attributes = attributes.removeClass('with-container') %}
+
+{% if content %}
+
+{% if with_container %}
+  <div class="container">
+{% endif %}
+
+  <div{{ attributes.addClass(classes) }}>
+    {% for region in layout.getRegionNames %}
+      {% if content[region] %}
+        <div {{ region_attributes[region].addClass('layout__region', 'layout__region--' ~ region|clean_class, 'col') }}>
+          {{ content[region] }}
+        </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+{% if with_container %}
+  </div>
+{% endif %}
+
+{% endif %}
