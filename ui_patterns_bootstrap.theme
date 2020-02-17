@@ -23,9 +23,19 @@ function ui_patterns_bootstrap_preprocess_page(&$variables) {
  */
 function ui_patterns_bootstrap_preprocess_pattern_card(array &$variables) {
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
-    foreach ($variables['image'] as &$item) {
+    foreach ($variables['image'] as $i => &$item) {
       _ui_patterns_bootstrap_add_card_image_class($item, $variables['variant']);
+      if ($variables['context']->getType() == 'preview') {
+        $base_path = drupal_get_path('theme', 'ui_patterns_bootstrap');
+        $uri = isset($item['#uri']) ? join('/', ['', $base_path, $item['#uri']]) : '';
+        $item['#uri'] = $uri;
+      }
     }
+  }
+  if (array_key_exists('links', $variables) && is_array($variables['links'])) {
+    foreach ($variables['links'] as &$item) {
+      _ui_patterns_bootstrap_add_card_link_class($item);
+   }
   }
 }
 
@@ -48,6 +58,26 @@ function _ui_patterns_bootstrap_add_card_image_class(&$item, $variant) {
   if (is_array($item)) {
     foreach ($item as &$next) {
       _ui_patterns_bootstrap_add_card_image_class($next, $variant);
+    }
+  }
+}
+
+/**
+ * Add expected class in card's link.
+ */
+function _ui_patterns_bootstrap_add_card_link_class(&$item) {
+  $class = 'card-link';
+  if (is_array($item) && array_key_exists('#type', $item)) {
+    if ($item['#type'] === 'link') {
+      $item['#attributes']['class'][] = $class;
+    }
+    if ($item['#type'] === 'html_tag' && $item['#tag'] === 'a') {
+      $item['#attributes']['class'][] = $class;
+    }
+  }
+  if (is_array($item)) {
+    foreach ($item as &$next) {
+      _ui_patterns_bootstrap_add_card_link_class($next);
     }
   }
 }

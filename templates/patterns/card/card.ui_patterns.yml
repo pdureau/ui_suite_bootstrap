@@ -1,6 +1,6 @@
 card:
   label: "Card"
-  description: "A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. https://getbootstrap.com/docs/4.3/components/card/"
+  description: "A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. https://getbootstrap.com/docs/4.4/components/card/"
   variants:
     default:
       label: Default
@@ -17,6 +17,16 @@ card:
         top: Top (Default)
         bottom: Bottom
       preview: top
+    heading_level:
+      type: select
+      label: "Heading level"
+      options:
+        2: h2
+        3: h3
+        4: h4
+        5: h5 (Default)
+        6: h6
+      preview: 5
   fields:
     image:
       type: "render"
@@ -24,7 +34,7 @@ card:
       description: "Card image."
       preview:
         - theme: "image"
-          uri: "http://lorempixel.com/400/200/nature/2"
+          uri: "assets/card-image.svg"
           alt: "&copy; 2017 John Smith photography"
     header:
       type: "render"
@@ -33,12 +43,17 @@ card:
     title:
       type: "text"
       label: "Title"
-      description: "Card title."
+      description: "Card title. Plain text."
       preview: "Card title"
+    subtitle:
+      type: "text"
+      label: "Subtitle"
+      description: "Card subtitle. Plain text."
+      preview: "Card subtitle"
     text:
       type: "text"
       label: "Text"
-      description: "Card text."
+      description: "Card text. Plain text."
       preview: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
     body:
       type: "render"
@@ -51,14 +66,18 @@ card:
           fields:
             label: "Go somewhere"
     links:
-      type: "array"
+      type: "render"
       label: "Links"
-      description: "Array of links (target & label for each)"
+      description: "Array of link elements"
       preview:
-        - target: "#"
-          label: Card link
-        - target: "#"
-          label: Another link
+        - type: "link"
+          url: "#"
+          title: Card link
+        - type: "html_tag"
+          tag: "a"
+          attributes:
+            href: "#"
+            title: Another link
     footer:
       type: "render"
       label: "Footer"
