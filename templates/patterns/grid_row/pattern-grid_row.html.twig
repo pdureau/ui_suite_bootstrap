@@ -6,7 +6,7 @@
 
 <div{{ attributes.addClass('row') }}>
   {% for item in content %}
-    {% set col_sizes = cycle(cols_sizes_cycle, loop.index0) %}
+    {% set col_sizes = [col_xs, col_sm, col_md, col_lg, col_xl, spacing_margin_bottom] %}
     <div{{ create_attribute({'class': col_sizes}) }}>
       {{ item }}
     </div>

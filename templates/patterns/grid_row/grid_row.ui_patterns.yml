@@ -1,6 +1,6 @@
 grid_row:
   label: "Grid Row"
-  description: "The grid system uses a series of containers, rows, and columns to layout and align content https://getbootstrap.com/docs/4.3/layout/grid/"
+  description: "The grid system uses a series of containers, rows, and columns to layout and align content https://getbootstrap.com/docs/4.3/layout/grid/ For simple use cases only. For more powerful needs, please use bootstrap_grid_row_* layouts."
   settings:
     with_container:
       type: "boolean"
@@ -12,12 +12,104 @@ grid_row:
       label: "No gutters?"
       preview: false
       description: "The gutters between columns in our predefined grid classes can be removed with .no-gutters. This removes the negative margins from .row and the horizontal padding from all immediate children columns."
+    col_xs:
+      label: "All (Extra small)"
+      type: "select"
+      preview: ""
+      options:
+        col-1: "1"
+        col-2: "2"
+        col-3: "3"
+        col-4: "4"
+        col-5: "5"
+        col-6: "6"
+        col-7: "7"
+        col-8: "8"
+        col-9: "9"
+        col-10: "10"
+        col-11: "11"
+        col-12: "12"
+    col_sm:
+      label: "Small"
+      type: "select"
+      preview: ""
+      options:
+        col-sm-1: "1"
+        col-sm-2: "2"
+        col-sm-3: "3"
+        col-sm-4: "4"
+        col-sm-5: "5"
+        col-sm-6: "6"
+        col-sm-7: "7"
+        col-sm-8: "8"
+        col-sm-9: "9"
+        col-sm-10: "10"
+        col-sm-11: "11"
+        col-sm-12: "12"
+    col_md:
+      label: "Medium"
+      type: "select"
+      preview: "col-md-3"
+      options:
+        col-md-1: "1"
+        col-md-2: "2"
+        col-md-3: "3"
+        col-md-4: "4"
+        col-md-5: "5"
+        col-md-6: "6"
+        col-md-7: "7"
+        col-md-8: "8"
+        col-md-9: "9"
+        col-md-10: "10"
+        col-md-11: "11"
+        col-md-12: "12"
+    col_lg:
+      label: "Large"
+      type: "select"
+      preview: ""
+      options:
+        col-lg-1: "1"
+        col-lg-2: "2"
+        col-lg-3: "3"
+        col-lg-4: "4"
+        col-lg-5: "5"
+        col-lg-6: "6"
+        col-lg-7: "7"
+        col-lg-8: "8"
+        col-lg-9: "9"
+        col-lg-10: "10"
+        col-lg-11: "11"
+        col-lg-12: "12"
+    col_xl:
+      label: "Extra large"
+      type: "select"
+      preview: ""
+      options:
+        col-xl-1: "1"
+        col-xl-2: "2"
+        col-xl-3: "3"
+        col-xl-4: "4"
+        col-xl-5: "5"
+        col-xl-6: "6"
+        col-xl-7: "7"
+        col-xl-8: "8"
+        col-xl-9: "9"
+        col-xl-10: "10"
+        col-xl-11: "11"
+        col-xl-12: "12"
+    spacing_margin_bottom:
+      label: Cols margin bottom
+      type: "select"
+      preview: ""
+      options:
+        mb-0: "0"
+        mb-1: "1"
+        mb-2: "2"
+        mb-3: "3"
+        mb-4: "4"
+        mb-5: "5"
+        mb-auto: "Auto"
   fields:
-    cols_sizes_cycle:
-      type: "array"
-      label: "Cols sizes cycle"
-      description: "The sizes of each column, looping in a cycle. Examples with same sizes for all columns: ['col-md-4'], ['col-md-4 col-sm-6']. Examples with different sizes: ['col-md-4', 'col-md-2'], ['col-md-4 col-sm-6', 'col-md-2 co-sm-3']"
-      preview: ["col-md-4", "col-md-2"]
     content:
       type: "render"
       label: "Content"
