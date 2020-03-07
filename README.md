@@ -1,6 +1,6 @@
-# UI Patterns Bootstrap
+# UI Bootstrap
 
-Integrates [Bootstrap](https://getbootstrap.com/) 4 design framework with Drupal 8, using [UI Patterns](https://www.drupal.org/project/ui_patterns), [UI Styles](https://github.com/pdureau/ui_styles) and [Layout Options](https://www.drupal.org/project/layout_options) modules:
+Integrates [Bootstrap](https://getbootstrap.com/) 4 framework with Drupal 8, using [UI Patterns](https://www.drupal.org/project/ui_patterns), [UI Styles](https://github.com/pdureau/ui_styles) and [Layout Options](https://www.drupal.org/project/layout_options) modules:
 
 ![Overview](doc/schema.png)
 

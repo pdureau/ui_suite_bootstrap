@@ -1,11 +1,10 @@
 {
-  "name": "drupal/ui_patterns_bootstrap",
-  "description": "UI Patterns Bootstrap",
+  "name": "drupal/ui_bootstrap",
+  "description": "UI Bootstrap",
   "keywords": ["drupal", "web", "ui"],
   "type": "drupal-theme",
   "license": "GPL-2.0-or-later",
   "require": {
-    "twbs/bootstrap": "^4.4",
-    "drupal/ui_patterns": "^1.1"
+    "twbs/bootstrap": "^4.4"
   }
 }
