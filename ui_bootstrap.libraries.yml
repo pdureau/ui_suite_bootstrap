@@ -10,3 +10,18 @@ bootstrap:
       /libraries/bootstrap/css/bootstrap.min.css: {}
   dependencies:
     - core/jquery
+
+carousel_example:
+  css:
+    theme:
+      css/carousel_example.css: {}
+
+album_example:
+  css:
+    theme:
+      css/album_example.css: {}
+
+pricing_example:
+  css:
+    theme:
+      css/pricing_example.css: {}

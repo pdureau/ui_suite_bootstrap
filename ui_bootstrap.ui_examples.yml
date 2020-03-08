@@ -1,0 +1,1100 @@
+album:
+  label: Bootstrap Album
+  description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/4.4/examples/album/"
+  render:
+    "#attached":
+      "library":
+        - ui_bootstrap/album_example
+    "1":
+      "#type": pattern
+      "#id": jumbotron
+      "#attributes":
+        class:
+          - text-center
+      "#fields":
+        content:
+          - "#type": html_tag
+            "#tag": h1
+            "#value": Album example
+          - "#type": html_tag
+            "#tag": p
+            "#value": >-
+              Something short and leading about the collection below—its contents,
+              the creator, etc. Make it short and sweet, but not too short so folks
+              don't simply skip over it entirely.
+            "#attributes":
+              class:
+                - lead
+                - text-muted
+          - "#type": pattern
+            "#id": button
+            "#variant": primary
+            "#fields":
+              label: Main call to action
+              url: "#"
+            "#attributes":
+              class:
+                - my-2
+          - "#type": pattern
+            "#id": button
+            "#variant": secondary
+            "#fields":
+              label: Secondary action
+              url: "#"
+            "#attributes":
+              class:
+                - my-2
+    "2":
+      "0":
+        "#type": pattern
+        "#id": grid_row
+        "#fields":
+          content:
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                image:
+                  "#theme": image
+                  "#uri": >-
+                    data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22348%22%20height%3D%22225%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20348%20225%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d930824bb%20text%20%7B%20fill%3A%23eceeef%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A17pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d930824bb%22%3E%3Crect%20width%3D%22348%22%20height%3D%22225%22%20fill%3D%22%2355595c%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22116.25%22%20y%3D%22120.3%22%3EThumbnail%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+                text: >-
+                  This is a wider card with supporting text below as a natural
+                  lead-in to additional content. This content is a little bit
+                  longer.
+                body:
+                  "0":
+                    "#type": pattern
+                    "#id": button_group
+                    "#fields":
+                      buttons:
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: View
+                          "#attributes":
+                            class:
+                              - my-2
+                        - "#type": pattern
+                          "#id": button
+                          "#variant": outline_secondary__sm
+                          "#fields":
+                            label: Edit
+                          "#attributes":
+                            class:
+                              - my-2
+                  "1":
+                    "#type": html_tag
+                    "#tag": small
+                    "#value": 9 mins
+                    "#attributes":
+                      class:
+                        - text-muted
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+        "#settings":
+          col_md: col-md-4
+      "#type": html_tag
+      "#tag": div
+      "#attributes":
+        class:
+          - album
+          - py-5
+          - bg-light
+
+carousel:
+  label: Bootstrap Carousel
+  description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/4.4/examples/carousel/"
+  render:
+    "#attached":
+      "library":
+        - ui_bootstrap/carousel_example
+    "1":
+      "#type": pattern
+      "#id": carousel
+      "#settings":
+        with_indicators: true
+        with_controls: true
+      "#fields":
+        slides:
+          - image:
+              "#theme": image
+              "#uri": >-
+                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+            caption:
+              - "#type": html_tag
+                "#tag": h1
+                "#value": Example headline.
+                "#attributes":
+                  class:
+                    - text-left
+              - "#type": html_tag
+                "#tag": p
+                "#value": >-
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus. Nullam id dolor id
+                  nibh ultricies vehicula ut id elit.
+                "#attributes":
+                  class:
+                    - text-left
+              - "0":
+                  "#type": pattern
+                  "#id": button
+                  "#variant": primary__lg
+                  "#fields":
+                    label: Sign up today
+                    url: "#"
+                "#type": html_tag
+                "#tag": p
+                "#attributes":
+                  class:
+                    - text-left
+          - image:
+              "#theme": image
+              "#uri": >-
+                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+            caption:
+              - "#type": html_tag
+                "#tag": h1
+                "#value": Another example headline.
+              - "#type": html_tag
+                "#tag": p
+                "#value": >-
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus. Nullam id dolor id
+                  nibh ultricies vehicula ut id elit.
+              - "0":
+                  "#type": pattern
+                  "#id": button
+                  "#variant": primary__lg
+                  "#fields":
+                    label: Learn more
+                    url: "#"
+                "#type": html_tag
+                "#tag": p
+          - image:
+              "#theme": image
+              "#uri": >-
+                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+            caption:
+              - "#type": html_tag
+                "#tag": h1
+                "#value": One more for good measure.
+                "#attributes":
+                  class:
+                    - text-right
+              - "#type": html_tag
+                "#tag": p
+                "#value": >-
+                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                  id elit non mi porta gravida at eget metus. Nullam id dolor id
+                  nibh ultricies vehicula ut id elit.
+                "#attributes":
+                  class:
+                    - text-right
+              - "0":
+                  "#type": pattern
+                  "#id": button
+                  "#variant": primary__lg
+                  "#fields":
+                    label: Browse gallery
+                    url: "#"
+                "#type": html_tag
+                "#tag": p
+                "#attributes":
+                  class:
+                    - text-right
+    "2":
+      "#type": pattern
+      "#id": grid_row
+      "#attributes":
+        class:
+          - marketing
+      "#settings":
+        with_container: true
+        col_lg: col-lg-4
+      "#fields":
+        content:
+          - - "#theme": image
+              "#uri": >-
+                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+              "#attributes":
+                class:
+                  - rounded-circle
+                width: 140
+                height: 140
+            - "#type": html_tag
+              "#tag": h2
+              "#value": Heading
+            - "#type": html_tag
+              "#tag": p
+              "#value": >-
+                Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod.
+                Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo
+                risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
+                cursus magna.
+            - "0":
+                "#type": pattern
+                "#id": button
+                "#variant": secondary
+                "#fields":
+                  label: View details »
+                  url: "#"
+              "#type": html_tag
+              "#tag": p
+          - - "#theme": image
+              "#uri": >-
+                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+              "#attributes":
+                class:
+                  - rounded-circle
+                width: 140
+                height: 140
+            - "#type": html_tag
+              "#tag": h2
+              "#value": Heading
+            - "#type": html_tag
+              "#tag": p
+              "#value": >-
+                Duis mollis, est non commodo luctus, nisi erat porttitor ligula,
+                eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
+                amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor
+                mauris condimentum nibh.
+            - "0":
+                "#type": pattern
+                "#id": button
+                "#variant": secondary
+                "#fields":
+                  label: View details »
+                  url: "#"
+              "#type": html_tag
+              "#tag": p
+          - - "#theme": image
+              "#uri": >-
+                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+              "#attributes":
+                class:
+                  - rounded-circle
+                width: 140
+                height: 140
+            - "#type": html_tag
+              "#tag": h2
+              "#value": Heading
+            - "#type": html_tag
+              "#tag": p
+              "#value": >-
+                Donec sed odio dui. Cras justo odio, dapibus ac facilisis in,
+                egestas eget quam. Vestibulum id ligula porta felis euismod semper.
+                Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
+                nibh, ut fermentum massa justo sit amet risus.
+            - "0":
+                "#type": pattern
+                "#id": button
+                "#variant": secondary
+                "#fields":
+                  label: View details »
+                  url: "#"
+              "#type": html_tag
+              "#tag": p
+    "3":
+      - "#type": html_tag
+        "#tag": hr
+        "#attributes":
+          class:
+            - featurette-divider
+      - "#type": pattern
+        "#id": grid_row
+        "#attributes":
+          class:
+            - featurette
+        "#settings":
+          cols_sizes_cycle:
+            - col-md-7
+            - col-md-5
+        "#fields":
+          content:
+            - - "0":
+                  "#plain_text": "First featurette heading. "
+                "1":
+                  "#type": html_tag
+                  "#tag": span
+                  "#attributes":
+                    class:
+                      - text-muted
+                  "#value": It’ll blow your mind.
+                "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - featurette-heading
+              - "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - lead
+                "#value": >-
+                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+                  ligula porta felis euismod semper. Praesent commodo cursus magna,
+                  vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                  commodo.
+            - "#theme": image
+              "#uri": >-
+                data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+              "#attributes":
+                class:
+                  - featurette-image
+                  - img-fluid
+                  - mx-auto
+      - "#type": html_tag
+        "#tag": hr
+        "#attributes":
+          class:
+            - featurette-divider
+      - "#type": pattern
+        "#id": grid_row
+        "#attributes":
+          class:
+            - featurette
+        "#settings":
+          cols_sizes_cycle:
+            - col-md-7 order-md-2
+            - col-md-5 order-md-1
+        "#fields":
+          content:
+            - - "0":
+                  "#plain_text": "Oh yeah, it's that good. "
+                "1":
+                  "#type": html_tag
+                  "#tag": span
+                  "#attributes":
+                    class:
+                      - text-muted
+                  "#value": See for yourself.
+                "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - featurette-heading
+              - "#type": html_tag
+                "#tag": p
+                "#attributes":
+                  class:
+                    - lead
+                "#value": >-
+                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+                  ligula porta felis euismod semper. Praesent commodo cursus magna,
+                  vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                  commodo.
+            - "#theme": image
+              "#uri": >-
+                data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+              "#attributes":
+                class:
+                  - featurette-image
+                  - img-fluid
+                  - mx-auto
+      - "#type": html_tag
+        "#tag": hr
+        "#attributes":
+          class:
+            - featurette-divider
+      - "#type": pattern
+        "#id": grid_row
+        "#attributes":
+          class:
+            - featurette
+        "#settings":
+          cols_sizes_cycle:
+            - col-md-7
+            - col-md-5
+        "#fields":
+          content:
+            - - "0":
+                  "#plain_text": "And lastly, this one. "
+                "1":
+                  "#type": html_tag
+                  "#tag": span
+                  "#attributes":
+                    class:
+                      - text-muted
+                  "#value": Checkmate.
+                "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - featurette-heading
+              - "#type": html_tag
+                "#tag": p
+                "#attributes":
+                  class:
+                    - lead
+                "#value": >-
+                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+                  ligula porta felis euismod semper. Praesent commodo cursus magna,
+                  vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+                  commodo.
+            - "#theme": image
+              "#uri": >-
+                data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+              "#attributes":
+                class:
+                  - featurette-image
+                  - img-fluid
+                  - mx-auto
+      - "#type": html_tag
+        "#tag": hr
+        "#attributes":
+          class:
+            - featurette-divider
+
+pricing:
+  label: Bootstrap Pricing
+  description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/4.4/examples/pricing/"
+  render:
+    "#attached":
+      "library":
+        - ui_bootstrap/pricing_example
+    "1":
+      - "0":
+          "#type": html_tag
+          "#tag": h1
+          "#value": Pricing
+          "#attributes":
+            class:
+              - display-4
+        "1":
+          "#type": html_tag
+          "#tag": p
+          "#value": >-
+            Quickly build an effective pricing table for your potential customers
+            with this Bootstrap example. It’s built with default Bootstrap
+            components and utilities with little customization.
+          "#attributes":
+            class:
+              - lead
+        "#type": html_tag
+        "#tag": div
+        "#attributes":
+          class:
+            - pricing-header
+            - px-3
+            - py-3
+            - pt-md-5
+            - pb-md-4
+            - mx-auto
+            - text-center
+      - "0":
+          "#type": pattern
+          "#id": card_layout
+          "#variant": deck
+          "#attributes":
+            class:
+              - mb-3
+              - text-center
+          "#fields":
+            cards:
+              - "#type": pattern
+                "#id": card
+                "#attributes":
+                  class:
+                    - mb-4
+                    - shadow-sm
+                "#fields":
+                  header:
+                    "#type": html_tag
+                    "#tag": h4
+                    "#value": Free
+                    "#attributes":
+                      class:
+                        - my-0
+                        - font-weight-normal
+                  body:
+                    - - "0":
+                          "#plain_text": "$0 "
+                        "1":
+                          "#type": html_tag
+                          "#tag": small
+                          "#attributes":
+                            class:
+                              - text-muted
+                          "#value": / mo
+                        "#type": html_tag
+                        "#tag": h1
+                        "#attributes":
+                          class:
+                            - card-title
+                            - pricing-card-title
+                      - "0":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": 10 users included
+                        "1":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": 2 GB of storage
+                        "2":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": Email support
+                        "3":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": Help center access
+                        "#type": html_tag
+                        "#tag": ul
+                        "#attributes":
+                          class:
+                            - list-unstyled
+                            - mt-3 mb-4
+                      - "#type": pattern
+                        "#id": button
+                        "#variant": outline_primary__lg
+                        "#attributes":
+                          class:
+                            - btn-block
+                        "#fields":
+                          label: Sign up for free
+              - "#type": pattern
+                "#id": card
+                "#attributes":
+                  class:
+                    - mb-4
+                    - shadow-sm
+                "#fields":
+                  header:
+                    "#type": html_tag
+                    "#tag": h4
+                    "#value": Pro
+                    "#attributes":
+                      class:
+                        - my-0
+                        - font-weight-normal
+                  body:
+                    - - "0":
+                          "#plain_text": "$15 "
+                        "1":
+                          "#type": html_tag
+                          "#tag": small
+                          "#attributes":
+                            class:
+                              - text-muted
+                          "#value": / mo
+                        "#type": html_tag
+                        "#tag": h1
+                        "#attributes":
+                          class:
+                            - card-title
+                            - pricing-card-title
+                      - "0":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": 20 users included
+                        "1":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": 10 GB of storage
+                        "2":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": Priority Email support
+                        "3":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": Help center access
+                        "#type": html_tag
+                        "#tag": ul
+                        "#attributes":
+                          class:
+                            - list-unstyled
+                            - mt-3 mb-4
+                      - "#type": pattern
+                        "#id": button
+                        "#variant": primary__lg
+                        "#attributes":
+                          class:
+                            - btn-block
+                        "#fields":
+                          label: Get started
+              - "#type": pattern
+                "#id": card
+                "#attributes":
+                  class:
+                    - mb-4
+                    - shadow-sm
+                "#fields":
+                  header:
+                    "#type": html_tag
+                    "#tag": h4
+                    "#value": Enterprise
+                    "#attributes":
+                      class:
+                        - my-0
+                        - font-weight-normal
+                  body:
+                    - - "0":
+                          "#plain_text": "$29 "
+                        "1":
+                          "#type": html_tag
+                          "#tag": small
+                          "#attributes":
+                            class:
+                              - text-muted
+                          "#value": / mo
+                        "#type": html_tag
+                        "#tag": h1
+                        "#attributes":
+                          class:
+                            - card-title
+                            - pricing-card-title
+                      - "0":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": 30 users included
+                        "1":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": 15 GB of storage
+                        "2":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": Phone and email support
+                        "3":
+                          "#type": html_tag
+                          "#tag": li
+                          "#value": Help center access
+                        "#type": html_tag
+                        "#tag": ul
+                        "#attributes":
+                          class:
+                            - list-unstyled
+                            - mt-3 mb-4
+                      - "#type": pattern
+                        "#id": button
+                        "#variant": primary__lg
+                        "#attributes":
+                          class:
+                            - btn-block
+                        "#fields":
+                          label: Contact us
+        "#type": html_tag
+        "#tag": div
+        "#attributes":
+          class:
+            - container
