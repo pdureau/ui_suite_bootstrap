@@ -1,6 +1,6 @@
 {
-  "name": "drupal/ui_bootstrap",
-  "description": "UI Bootstrap",
+  "name": "drupal/ui_suite_bootstrap",
+  "description": "UI Suite Bootstrap",
   "keywords": ["drupal", "web", "ui"],
   "type": "drupal-theme",
   "license": "GPL-2.0-or-later",

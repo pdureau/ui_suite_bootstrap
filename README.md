@@ -1,6 +1,6 @@
-# UI Bootstrap
+# UI Suite Bootstrap
 
-Integrates [Bootstrap](https://getbootstrap.com/) 4 framework with Drupal 8, using [UI Patterns](https://www.drupal.org/project/ui_patterns), [UI Styles](https://github.com/pdureau/ui_styles) and [Layout Options](https://www.drupal.org/project/layout_options) modules:
+A site-builder friendly [Bootstrap](https://getbootstrap.com/) 4 theme, using the UI Suite: [UI Patterns](https://www.drupal.org/project/ui_patterns), [UI Styles](https://github.com/pdureau/ui_styles), [Layout Options](https://www.drupal.org/project/layout_options) and [UI Examples](https://github.com/pdureau/ui_examples) modules.
 
 ![Overview](doc/schema.png)
 
@@ -13,4 +13,3 @@ If you install this theme from composer, it will install [twbs/bootstrap](https:
 
 You need to do a symbolic link from 
  `/web/libraries/bootstrap`, or  `/libraries/bootstrap`, to`/vendor/twbs/bootstrap/dist`.
-

@@ -4,7 +4,7 @@ album:
   render:
     "#attached":
       "library":
-        - ui_bootstrap/album_example
+        - ui_suite_bootstrap/album_example
     "1":
       "#type": pattern
       "#id": jumbotron
@@ -525,7 +525,7 @@ carousel:
   render:
     "#attached":
       "library":
-        - ui_bootstrap/carousel_example
+        - ui_suite_bootstrap/carousel_example
     "1":
       "#type": pattern
       "#id": carousel
@@ -870,7 +870,7 @@ pricing:
   render:
     "#attached":
       "library":
-        - ui_bootstrap/pricing_example
+        - ui_suite_bootstrap/pricing_example
     "1":
       - "0":
           "#type": html_tag

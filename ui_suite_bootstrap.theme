@@ -4,13 +4,13 @@ use Drupal\Core\Template\Attribute;
 
 /**
  * @file
- * The ui_bootstrap hooks.
+ * The ui_suite_bootstrap hooks.
  */
 
 /**
  * Implements hook_preprocess_HOOK() for page templates.
  */
-function ui_bootstrap_preprocess_page(&$variables) {
+function ui_suite_bootstrap_preprocess_page(&$variables) {
   // TODO: It would be better to have a setting, like bootstrap_barrio do with 
   // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
   $variables['container'] = 'container';
@@ -21,12 +21,12 @@ function ui_bootstrap_preprocess_page(&$variables) {
  *
  * See also: https://getbootstrap.com/docs/4.4/components/card/.
  */
-function ui_bootstrap_preprocess_pattern_card(array &$variables) {
+function ui_suite_bootstrap_preprocess_pattern_card(array &$variables) {
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
     foreach ($variables['image'] as $i => &$item) {
-      _ui_bootstrap_add_card_image_class($item, $variables['variant']);
+      _ui_suite_bootstrap_add_card_image_class($item, $variables['variant']);
       if ($variables['context']->getType() == 'preview') {
-        $base_path = drupal_get_path('theme', 'ui_bootstrap');
+        $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
         $uri = isset($item['#uri']) ? join('/', ['', $base_path, $item['#uri']]) : '';
         $item['#uri'] = $uri;
       }
@@ -34,7 +34,7 @@ function ui_bootstrap_preprocess_pattern_card(array &$variables) {
   }
   if (array_key_exists('links', $variables) && is_array($variables['links'])) {
     foreach ($variables['links'] as &$item) {
-      _ui_bootstrap_add_card_link_class($item);
+      _ui_suite_bootstrap_add_card_link_class($item);
    }
   }
 }
@@ -42,7 +42,7 @@ function ui_bootstrap_preprocess_pattern_card(array &$variables) {
 /**
  * Add expected class in card's image.
  */
-function _ui_bootstrap_add_card_image_class(&$item, $variant) {
+function _ui_suite_bootstrap_add_card_image_class(&$item, $variant) {
   $class = 'card-img-top';
   if ($variant === 'overlay') {
     $class = 'card-img';
@@ -57,7 +57,7 @@ function _ui_bootstrap_add_card_image_class(&$item, $variant) {
   }
   if (is_array($item)) {
     foreach ($item as &$next) {
-      _ui_bootstrap_add_card_image_class($next, $variant);
+      _ui_suite_bootstrap_add_card_image_class($next, $variant);
     }
   }
 }
@@ -65,7 +65,7 @@ function _ui_bootstrap_add_card_image_class(&$item, $variant) {
 /**
  * Add expected class in card's link.
  */
-function _ui_bootstrap_add_card_link_class(&$item) {
+function _ui_suite_bootstrap_add_card_link_class(&$item) {
   $class = 'card-link';
   if (is_array($item) && array_key_exists('#type', $item)) {
     if ($item['#type'] === 'link') {
@@ -77,7 +77,7 @@ function _ui_bootstrap_add_card_link_class(&$item) {
   }
   if (is_array($item)) {
     foreach ($item as &$next) {
-      _ui_bootstrap_add_card_link_class($next);
+      _ui_suite_bootstrap_add_card_link_class($next);
     }
   }
 }
@@ -87,19 +87,19 @@ function _ui_bootstrap_add_card_link_class(&$item) {
  *
  * See also: https://getbootstrap.com/docs/4.4/components/carousel/.
  */
-function ui_bootstrap_preprocess_pattern_carousel(array &$variables) {
+function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables) {
 
   // Move first image of each slide in a specific array key.
   if (array_key_exists('slides', $variables) && is_array($variables['slides'])) {
     foreach ($variables['slides'] as &$slide) {
-      $slide['image'] = _ui_bootstrap_extract_carousel_image($slide);
+      $slide['image'] = _ui_suite_bootstrap_extract_carousel_image($slide);
     }
   }
 
   // Nicer preview with fixed width and local backgrounds.
   if ($variables['context']->getType() == 'preview') {
     $variables['attributes']['style'] = "width: 800px";
-    $base_path = drupal_get_path('theme', 'ui_bootstrap');
+    $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
     foreach ($variables['slides'] as $i => $slide) {
       if (isset($slide['image']) && is_array($slide['image'])) {
         $image = $slide['image'];
@@ -114,7 +114,7 @@ function ui_bootstrap_preprocess_pattern_carousel(array &$variables) {
 /**
  * Extract image from carousel slide.
  */
-function _ui_bootstrap_extract_carousel_image(&$item) {
+function _ui_suite_bootstrap_extract_carousel_image(&$item) {
   if (is_array($item) && array_key_exists('#theme', $item)) {
     if ($item['#theme'] === 'image' || $item['#theme'] === 'image_formatter') {
       $image = $item;
@@ -124,7 +124,7 @@ function _ui_bootstrap_extract_carousel_image(&$item) {
   }
   if (isset($item) && is_array($item)) {
     foreach ($item as &$next) {
-      $dig = _ui_bootstrap_extract_carousel_image($next);
+      $dig = _ui_suite_bootstrap_extract_carousel_image($next);
       if ($dig) {
         return $dig;
       }
@@ -136,7 +136,7 @@ function _ui_bootstrap_extract_carousel_image(&$item) {
 /**
  * Implements hook_theme_suggestions_HOOK_alter() for blocks.
  */
-function ui_bootstrap_theme_suggestions_block_alter(&$suggestions, $variables) {
+function ui_suite_bootstrap_theme_suggestions_block_alter(&$suggestions, $variables) {
   $route_name = \Drupal::routeMatch()->getRouteName();
   if (strpos($route_name, 'layout_builder') !== 0) {
     // We are not in a layout_builder build & preview page.
