@@ -1,0 +1,16 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ *
+ * @ingroup themeable
+ */
+#}
+{% if breadcrumb %}
+  {{ pattern('breadcrumb', {
+  'items': breadcrumb
+}) }}
+{% endif %}
