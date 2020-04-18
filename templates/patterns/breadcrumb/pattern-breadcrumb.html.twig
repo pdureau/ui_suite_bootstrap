@@ -1,5 +1,5 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
+  <ol{{ attributes.addClass('breadcrumb') }}>
     {% for item in items %}
       {% if item.url %}
         <li class="breadcrumb-item">
