@@ -1,0 +1,51 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('navbar-' ~ variant|lower|replace({'_': '-'})) %}
+  {% set attributes = attributes.addClass('bg-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+{% import _self as menus %}
+
+<nav{{ attributes.addClass(['navbar', 'navbar-expand-lg', 'bg-light']) }}>
+  {% if brand %}
+  <span class="navbar-brand" href="#">{{ brand }}</span>
+  {% endif %}
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  {{ menus.menu_links(items, attributes, 0) }}
+  </div>
+  {% if text %}
+  <span class="navbar-text">{{ text }}</span>
+  {% endif %}
+</nav>
+
+{% macro menu_links(items, attributes, menu_level) %}
+  {% import _self as menus %}
+  {% if items %}
+    {% if menu_level == 0 %}
+      <ul class="navbar-nav">
+      {% for item in items %}
+          {% if item.below %}
+          <li{{ item.attributes.addClass(['nav-item', 'dropdown']) }}>
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              {{ item.title }}
+            </a>
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          </li>
+          {% else %}
+          <li{{ item.attributes.addClass('nav-item') }}>
+            <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+          </li>
+          {% endif %}
+      {% endfor %}
+      </ul>
+    {% else %}
+      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+      {% for item in items %}
+        <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+      </div>
+    {% endif %}
+  {% endif %}
+{% endmacro %}
