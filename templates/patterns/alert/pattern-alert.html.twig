@@ -1,0 +1,25 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('alert-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% if dismissible %}
+  {% set attributes = attributes.addClass(['alert-dismissible', 'fade', 'show']) %}
+{% endif %}
+
+<div{{ attributes.addClass('alert').setAttribute('role', alert) }}>
+  {% if heading %}
+  <h4 class="alert-heading">{{ heading }}</h4>
+  {% endif %}
+  {{ message }}
+  {% if dismissible %}
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  {% endif %}
+</div>
+
+
+
