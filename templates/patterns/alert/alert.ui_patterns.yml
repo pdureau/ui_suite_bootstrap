@@ -28,10 +28,10 @@ alert:
     heading:
       type: text
       label: Heading
-      description: The badge label
+      description: The alert heading. Optional.
       preview: Well done!
     message:
       type: render
       label: Message
-      description: The badge URL. Optional.
+      description: The alert message.
       preview: " A simple alert—check it out! "
