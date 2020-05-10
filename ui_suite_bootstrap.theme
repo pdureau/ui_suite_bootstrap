@@ -132,16 +132,3 @@ function _ui_suite_bootstrap_extract_carousel_image(&$item) {
   }
   return FALSE;
 }
-
-/**
- * Implements hook_theme_suggestions_HOOK_alter() for blocks.
- */
-function ui_suite_bootstrap_theme_suggestions_block_alter(&$suggestions, $variables) {
-  $route_name = \Drupal::routeMatch()->getRouteName();
-  if (strpos($route_name, 'layout_builder') !== 0) {
-    // We are not in a layout_builder build & preview page.
-    // So, we don't need & want the markup wrappers.
-    $suggestions[] = 'block__nowrapper';
-  }
-}
-
