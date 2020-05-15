@@ -7,6 +7,7 @@
   "require": {
     "twbs/bootstrap": "^4.4",
     "drupal/ui_patterns": "1.x",
+    "drupal/ui_patterns_settings": "^1.0@beta",
     "drupal/layout_options": "^1.0@RC",
     "drupal/ui_examples": "^1.0@beta",
     "drupal/ui_styles": "^1.0@beta"
