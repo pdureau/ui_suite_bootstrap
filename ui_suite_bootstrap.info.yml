@@ -7,9 +7,9 @@ core_version_requirement: ^8 || ^9
 base theme: false
 libraries:
   - ui_suite_bootstrap/bootstrap
-dependencies:
-  - ui_patterns:ui_patterns
-  - ui_patterns_settings:ui_patterns_settings
-  - ui_styles:ui_styles
-  - ui_examples:ui_examples
-  - layout_options:layout_options
+#dependencies:
+#  - ui_patterns:ui_patterns
+#  - ui_patterns_settings:ui_patterns_settings
+#  - ui_styles:ui_styles
+#  - ui_examples:ui_examples
+#  - layout_options:layout_options
