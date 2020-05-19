@@ -1,6 +1,10 @@
 # UI Suite Bootstrap
 
-A site-builder friendly [Bootstrap](https://getbootstrap.com/) 4 theme for Drupal 8, using the [UI Suite](https://www.drupal.org/project/ui_suite)
+A site-builder friendly [Bootstrap](https://getbootstrap.com/) 4 theme for Drupal 8, using the [UI Suite](https://www.drupal.org/project/ui_suite).
+
+Use Bootstrap directly from Drupal backoffice (layout builder, manage display, views, blocks, flags...).
+
+![Overview](doc/screenshot.png)
 
 Because we are targeting Bootstrap 4.x, this is not a fork of Nuvole's [Bootstrap Patterns](https://github.com/nuvoleweb/bootstrap_patterns) theme.
 
@@ -14,17 +18,17 @@ Each component is a folder in templates/pattern/.
 
 You can browse the pattern libraries directly inside Drupal: /patterns ; for example, the 'card' pattern is available here: /patterns/card.
 
-Thanks to the ui_patterns ecosystem, patterns are automatically available directly for site buidling in many Drupal entities, as [layout plugins](https://ui-patterns.readthedocs.io/en/8.x-1.x/content/layout-plugin.html), [views row plugins](https://ui-patterns.readthedocs.io/en/8.x-1.x/content/views.html), field formatter plugins, views styles plugins...
+Thanks to the ui_patterns ecosystem, patterns are automatically available directly for site buidling in many Drupal entities, as [layout plugins](https://ui-patterns.readthedocs.io/en/8.x-1.x/content/layout-plugin.html), [views row plugins](https://ui-patterns.readthedocs.io/en/8.x-1.x/content/views.html), [field formatter plugins](https://www.drupal.org/project/ui_patterns_field_formatters/), [views styles plugins](https://www.drupal.org/project/ui_patterns_views_style)...
 
 ## Utilities chapter implemented with [UI Styles](https://github.com/pdureau/ui_styles)
 
-Utilities are implemenetd as styles in ui_suite_bootstrap.ui_styles.yml
+Utilities are implemented as styles in ui_suite_bootstrap.ui_styles.yml
 
 You can browse the styles libraries directly inside Drupal: /styles.
 
-The styles qill automatically available for site building inside layout builder's components (blocks) & sections (layouts).
+The styles are automatically available for site building inside layout builder's components (blocks) & sections (layouts).
 
-## Layouts section implemented with [Layout Options](https://www.drupal.org/project/layout_options)
+## Layouts chapter implemented with [Layout Options](https://www.drupal.org/project/layout_options)
 
 A simple grid_row component is already set as a pattern for simple use cases.
 
@@ -39,6 +43,9 @@ Those layouts are automaticaly avilable as configurable layout plugins.
 - [https://getbootstrap.com/docs/4.5/examples/album/](https://getbootstrap.com/docs/4.5/examples/album/)
 - [https://getbootstrap.com/docs/4.5/examples/pricing/](https://getbootstrap.com/docs/4.5/examples/pricing/)
 - [https://getbootstrap.com/docs/4.5/examples/carousel/](https://getbootstrap.com/docs/4.5/examples/carousel/)
+
+
+You can browse the example pages directly inside Drupal: /examples
 
 # Installation
 
