@@ -1,6 +1,6 @@
 # UI Suite Bootstrap
 
-A site-builder friendly [Bootstrap](https://getbootstrap.com/) 4 theme for Drupal 8, using the [UI Suite](https://www.drupal.org/project/ui_suite).
+A site-builder friendly [Bootstrap](https://getbootstrap.com/) 4 theme for Drupal 8 and 9, using the [UI Suite](https://www.drupal.org/project/ui_suite).
 
 Use Bootstrap directly from Drupal backoffice (layout builder, manage display, views, blocks, flags...).
 
@@ -20,7 +20,7 @@ You can browse the pattern libraries directly inside Drupal: /patterns ; for exa
 
 Thanks to the ui_patterns ecosystem, patterns are automatically available directly for site buidling in many Drupal entities, as [layout plugins](https://ui-patterns.readthedocs.io/en/8.x-1.x/content/layout-plugin.html), [views row plugins](https://ui-patterns.readthedocs.io/en/8.x-1.x/content/views.html), [field formatter plugins](https://www.drupal.org/project/ui_patterns_field_formatters/), [views styles plugins](https://www.drupal.org/project/ui_patterns_views_style)...
 
-## Utilities chapter implemented with [UI Styles](https://github.com/pdureau/ui_styles)
+## Utilities chapter implemented with [UI Styles](https://www.drupal.org/project/ui_styles)
 
 Utilities are implemented as styles in ui_suite_bootstrap.ui_styles.yml
 
@@ -36,13 +36,13 @@ For more complex use cases, layouts are implemented in ui_suite_bootstrap.layout
 
 Those layouts are automaticaly avilable as configurable layout plugins.
 
-## Examples section implemented with [UI Examples](https://github.com/pdureau/ui_examples)
+## Examples section implemented with [UI Examples](hhttps://www.drupal.org/project/ui_examples)
 
 4 example pages are integrated using only render arrays, inside ui_suite_bootstrap.ui_examples.yml:
 
-- [https://getbootstrap.com/docs/4.5/examples/album/](https://getbootstrap.com/docs/4.5/examples/album/)
-- [https://getbootstrap.com/docs/4.5/examples/pricing/](https://getbootstrap.com/docs/4.5/examples/pricing/)
-- [https://getbootstrap.com/docs/4.5/examples/carousel/](https://getbootstrap.com/docs/4.5/examples/carousel/)
+- [album](https://getbootstrap.com/docs/4.5/examples/album/)
+- [pricing](https://getbootstrap.com/docs/4.5/examples/pricing/)
+- [carousel](https://getbootstrap.com/docs/4.5/examples/carousel/)
 
 
 You can browse the example pages directly inside Drupal: /examples
