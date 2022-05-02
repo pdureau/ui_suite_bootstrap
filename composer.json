@@ -1,15 +1,19 @@
 {
-  "name": "drupal/ui_suite_bootstrap",
-  "description": "UI Suite Bootstrap",
-  "keywords": ["drupal", "web", "ui"],
-  "type": "drupal-theme",
-  "license": "GPL-2.0-or-later",
-  "require": {
-    "twbs/bootstrap": "^4.4",
-    "drupal/ui_patterns": "1.x",
-    "drupal/ui_patterns_settings": "^1.0@beta",
-    "drupal/layout_options": "^1.0@RC",
-    "drupal/ui_examples": "^1.0@beta",
-    "drupal/ui_styles": "^1.0@beta"
-  }
+    "name": "drupal/ui_suite_bootstrap",
+    "description": "UI Suite Bootstrap",
+    "license": "GPL-2.0-or-later",
+    "type": "drupal-theme",
+    "keywords": [
+        "drupal",
+        "web",
+        "ui"
+    ],
+    "require": {
+        "drupal/layout_options": "^1.0",
+        "drupal/ui_examples": "^1.0",
+        "drupal/ui_patterns": "^1.0",
+        "drupal/ui_patterns_settings": ">=1.0",
+        "drupal/ui_styles": "^1.0",
+        "twbs/bootstrap": "^4.4"
+    }
 }
