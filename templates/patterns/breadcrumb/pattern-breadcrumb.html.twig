@@ -1,13 +1,14 @@
-<nav aria-label="breadcrumb">
+<nav aria-label="{{ 'You are here:'|t }}">
   <ol{{ attributes.addClass('breadcrumb') }}>
     {% for item in items %}
       {% if item.url %}
         <li class="breadcrumb-item">
-        <a href="{{ item.url }}">{{ item.text }}</a>
-        </a>
+          <a href="{{ item.url }}">{{ item.text }}</a>
+        </li>
       {% else %}
         <li class="breadcrumb-item active" aria-current="page">
-        {{ item.text }}
+          {{ item.text }}
+        </li>
       {% endif %}
     {% endfor %}
   </ol>
