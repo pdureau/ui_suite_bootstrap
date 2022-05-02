@@ -12,7 +12,7 @@
         "drupal/layout_options": "^1.0",
         "drupal/ui_examples": "^1.0",
         "drupal/ui_patterns": "^1.0",
-        "drupal/ui_patterns_settings": ">=1.0",
+        "drupal/ui_patterns_settings": "^1.0 || ^2.0",
         "drupal/ui_styles": "^1.0",
         "twbs/bootstrap": "^4.4"
     }

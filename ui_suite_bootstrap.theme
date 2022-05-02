@@ -1,33 +1,37 @@
 <?php
 
-use Drupal\Core\Template\Attribute;
-
 /**
  * @file
- * The ui_suite_bootstrap hooks.
+ * Functions to support theming in the ui_suite_bootstrap theme.
  */
 
+declare(strict_types = 1);
+
 /**
- * Implements hook_preprocess_HOOK() for page templates.
+ * Implements hook_preprocess_HOOK() for 'page'.
  */
-function ui_suite_bootstrap_preprocess_page(&$variables) {
-  // TODO: It would be better to have a setting, like bootstrap_barrio do with 
+function ui_suite_bootstrap_preprocess_page(array &$variables): void {
+  // @todo It would be better to have a setting, like bootstrap_barrio do with
   // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
   $variables['container'] = 'container';
 }
 
 /**
- * Implements hook_preprocess_HOOK() for card patterns.
+ * Implements hook_preprocess_HOOK() for 'pattern_card'.
  *
  * See also: https://getbootstrap.com/docs/4.5/components/card/.
  */
-function ui_suite_bootstrap_preprocess_pattern_card(array &$variables) {
+function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
-    foreach ($variables['image'] as $i => &$item) {
+    foreach ($variables['image'] as &$item) {
       _ui_suite_bootstrap_add_card_image_class($item, $variables['variant']);
       if ($variables['context']->getType() == 'preview') {
         $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
-        $uri = isset($item['#uri']) ? join('/', ['', $base_path, $item['#uri']]) : '';
+        $uri = isset($item['#uri']) ? implode('/', [
+          '',
+          $base_path,
+          $item['#uri'],
+        ]) : '';
         $item['#uri'] = $uri;
       }
     }
@@ -35,14 +39,14 @@ function ui_suite_bootstrap_preprocess_pattern_card(array &$variables) {
   if (array_key_exists('links', $variables) && is_array($variables['links'])) {
     foreach ($variables['links'] as &$item) {
       _ui_suite_bootstrap_add_card_link_class($item);
-   }
+    }
   }
 }
 
 /**
  * Add expected class in card's image.
  */
-function _ui_suite_bootstrap_add_card_image_class(&$item, $variant) {
+function _ui_suite_bootstrap_add_card_image_class(&$item, string $variant): void {
   $class = 'card-img-top';
   if ($variant === 'overlay') {
     $class = 'card-img';
@@ -65,9 +69,9 @@ function _ui_suite_bootstrap_add_card_image_class(&$item, $variant) {
 /**
  * Add expected class in card's link.
  */
-function _ui_suite_bootstrap_add_card_link_class(&$item) {
-  $class = 'card-link';
+function _ui_suite_bootstrap_add_card_link_class(&$item): void {
   if (is_array($item) && array_key_exists('#type', $item)) {
+    $class = 'card-link';
     if ($item['#type'] === 'link') {
       $item['#attributes']['class'][] = $class;
     }
@@ -83,11 +87,11 @@ function _ui_suite_bootstrap_add_card_link_class(&$item) {
 }
 
 /**
- * Implements hook_preprocess_HOOK() for carousel patterns.
+ * Implements hook_preprocess_HOOK() for 'pattern_carousel'.
  *
  * See also: https://getbootstrap.com/docs/4.5/components/carousel/.
  */
-function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables) {
+function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
 
   // Move first image of each slide in a specific array key.
   if (array_key_exists('slides', $variables) && is_array($variables['slides'])) {
@@ -103,7 +107,11 @@ function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables) {
     foreach ($variables['slides'] as $i => $slide) {
       if (isset($slide['image']) && is_array($slide['image'])) {
         $image = $slide['image'];
-        $uri = isset($image['#uri']) ? join('/', ['', $base_path, $image['#uri']]) : '';
+        $uri = isset($image['#uri']) ? implode('/', [
+          '',
+          $base_path,
+          $image['#uri'],
+        ]) : '';
         $variables['slides'][$i]['image']['#uri'] = $uri;
       }
     }

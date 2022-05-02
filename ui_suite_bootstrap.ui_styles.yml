@@ -47,7 +47,7 @@ borders_border_radius:
     rounded-bottom: Rounded Bottom
     rounded-left: Rounded Left
     rounded-circle: Rounded Circle
-    rounded-0: Rounded Susbtrative
+    rounded-0: Rounded Subtractive
   previewed_with:
     - border
     - p-2
