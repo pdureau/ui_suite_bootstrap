@@ -1,0 +1,43 @@
+pagination:
+  label: Pagination
+  description: Indicate a series of related content exists across multiple pages. https://getbootstrap.com/docs/4.0/components/pagination/
+  variants:
+    default:
+      label: Default
+    lg:
+      label: Larger
+    sm:
+      label: Smaller
+  fields:
+    items:
+      type: array
+      label: Pagination items.
+      description: "List of pager items. The list is keyed by the following elements: first: Item for the first page; not present on the first page of results. previous: Item for the previous page; not present on the first page of results. next: Item for the next page; not present on the last page of results. last: Item for the last page; not present on the last page of results. pages: List of pages, keyed by page number. List of pages. Each item is an array containing the following elements: href: URL with appropriate query parameters for the item. attributes: A keyed list of HTML attributes for the item. text: The visible text used for the item link, such as Previous or Next."
+      preview:
+        first:
+          href: "#"
+          text: "« First"
+        previous:
+          href: "#"
+          text: "‹ Previous"
+        next:
+          href: "#"
+          text: "Next ›"
+        last:
+          href: "#"
+          text: "Last »"
+        pages:
+          1:
+            href: "#"
+            text: "1"
+          2:
+            href: "#"
+            text: "2"
+          3:
+            href: "#"
+            text: "3"
+    current:
+      type: "integer"
+      label: "Current page number"
+      description: "The page number of the current page."
+      preview: 2

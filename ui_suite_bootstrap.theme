@@ -140,3 +140,12 @@ function _ui_suite_bootstrap_extract_carousel_image(&$item) {
   }
   return FALSE;
 }
+
+/*
+ * Implements hook_preprocess_HOOK() for 'pattern_pagination'.
+ *
+ * See also: https://getbootstrap.com/docs/4.5/components/pagination/.
+ */
+function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): void {
+  $variables['current'] = (int) (string) $variables['current'];
+}
