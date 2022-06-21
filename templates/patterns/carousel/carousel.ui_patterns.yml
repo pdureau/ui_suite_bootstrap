@@ -3,48 +3,63 @@ carousel:
   description: "A slideshow component for cycling through elements, like a carousel. https://getbootstrap.com/docs/5.2/components/carousel/"
   variants:
     default:
-      label: Default
+      label: "Default"
     fade:
-      label: Crossfade
-      description: Animate slides with a fade transition instead of a slide.
+      label: "Crossfade"
+      description: "Animate slides with a fade transition instead of a slide."
+    dark:
+      label: "Dark"
+      description: "For darker controls, indicators, and captions."
+    fade__dark:
+      label: "Crossfade dark"
   settings:
     with_controls:
-      type: boolean
+      type: "boolean"
       label: "With controls?"
       description: "Adding in the previous and next controls"
       preview: true
     with_indicators:
-      type: boolean
+      type: "boolean"
       label: "With indicators?"
       description: "You can also add the indicators to the carousel, alongside the controls, too."
       preview: true
+    with_touch:
+      type: "boolean"
+      label: "With touch swiping?"
+      description: "Carousels support swiping left/right on touchscreen devices to move between slides."
+      default_value: true
+    interval:
+      type: "number"
+      label: "Interval"
+      description: "The amount of time to delay between automatically cycling to the next item. In ms. 0 to disable autoplay."
+      default_value: 5000
   fields:
     slides:
-      type: render
+      type: "render"
       label: "Slides"
       description: "Each slide is a collection of title, subtitle and slide image."
       preview:
         - - theme: "image"
-            uri: "assets/slide-1.svg"
-          - type: html_tag
-            tag: h5
+            uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogRmlyc3Qgc2xpZGUiPjx0aXRsZT5QbGFjZWhvbGRlcjwvdGl0bGU+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjNTU1IiBkeT0iLjNlbSI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+Cg=="
+          - type: "html_tag"
+            tag: "h5"
             value: "First slide label"
-          - type: html_tag
-            tag: p
+          - type: "html_tag"
+            tag: "p"
             value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
         - - theme: "image"
-            uri: "/assets/slide-2.svg"
-          - type: html_tag
-            tag: h5
+            uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogU2Vjb25kIHNsaWRlIj48dGl0bGU+UGxhY2Vob2xkZXI8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiM2NjYiPjwvcmVjdD48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzQ0NCIgZHk9Ii4zZW0iPlNlY29uZCBzbGlkZTwvdGV4dD48L3N2Zz4K"
+          - type: "html_tag"
+            tag: "h5"
             value: "Second slide label"
-          - type: html_tag
-            tag: p
+          - type: "html_tag"
+            tag: "p"
             value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
         - - theme: "image"
-            uri: "/assets/slide-3.svg"
-          - type: html_tag
-            tag: h5
+            uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogVGhpcmQgc2xpZGUiPjx0aXRsZT5QbGFjZWhvbGRlcjwvdGl0bGU+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMzMzIiBkeT0iLjNlbSI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+Cg=="
+          - type: "html_tag"
+            tag: "h5"
             value: "Third slide label"
-          - type: html_tag
-            tag: p
+          - type: "html_tag"
+            tag: "p"
             value: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."

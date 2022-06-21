@@ -1,31 +1,18 @@
 card_layout:
   label: "Card Layout"
   description: "In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, these layout options are not yet responsive. https://getbootstrap.com/docs/5.2/components/card/#card-layout"
-  variants:
-    default:
-      label: Card group (default)
-      description: "Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use display: flex; to achieve their uniform sizing. https://getbootstrap.com/docs/5.2/components/card/#card-groups"
   fields:
     cards:
       type: "render"
       label: "Cards"
       description: "An array of card patterns."
       preview:
-        - type: pattern
-          id: card
-          fields:
-            title: "Card title"
-            text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            footer: "Last updated 3 mins ago"
-        - type: pattern
-          id: card
-          fields:
-            title: "Card title"
-            text: "This card has supporting text below as a natural lead-in to additional content."
-            footer: "Last updated 3 mins ago"
-        - type: pattern
-          id: card
-          fields:
-            title: "Card title"
-            text: "This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer."
-            footer: "Last updated 3 mins ago"
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"

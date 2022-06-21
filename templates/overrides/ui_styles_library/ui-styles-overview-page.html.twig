@@ -7,21 +7,19 @@
 
 {% if styles is not empty %}
 <div class="row">
-<div class="col-lg-2">
-  <h2 class="hidden">{{ "Available styles"|t }}</h2>
-
-  {# List of available styles with anchor links. #}
-  <ul class="list-unstyled">
+  <div class="col-lg-2">
+    <h2 class="visually-hidden">{{ "Available styles"|t }}</h2>
+    {# List of available styles with anchor links. #}
+    <ul class="list-unstyled">
     {% for style in styles %}
       <li>
         <a href="#{{ style.id }}">{{ style.label }}</a>
       </li>
     {% endfor %}
-  </ul>
+    </ul>
+  </div>
 
-</div>
-<div class="col-lg-10">
-
+  <div class="col-lg-10">
   {% for style in styles %}
     <h3 id="{{ style.id }}" class="display-3">{{ style.label }}</h3>
     {% if style.description %}
@@ -33,8 +31,6 @@
     {% endfor %}
     <hr>
   {% endfor %}
-{% endif %}
-
-</div>
+  </div>
 </diV>
-
+{% endif %}

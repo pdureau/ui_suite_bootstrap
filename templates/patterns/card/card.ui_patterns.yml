@@ -3,30 +3,18 @@ card:
   description: "A card is a flexible and extensible content container. It includes options for headers and footers, a wide variety of content, contextual background colors, and powerful display options. https://getbootstrap.com/docs/5.2/components/card/"
   variants:
     default:
-      label: Default
-    overlay:
-      label: Image overlay
+      label: "Default"
     horizontal:
-      label: Horizontal
+      label: "Horizontal"
   settings:
     image_position:
-      type: select
+      type: "select"
       label: "Image position"
       description: "Only for default variant."
       options:
-        top: Top (Default)
-        bottom: Bottom
-      preview: top
-    heading_level:
-      type: select
-      label: "Heading level"
-      options:
-        2: h2
-        3: h3
-        4: h4
-        5: h5 (Default)
-        6: h6
-      preview: 5
+        top: "Top (Default)"
+        bottom: "Bottom"
+      preview: "top"
   fields:
     image:
       type: "render"
@@ -34,55 +22,45 @@ card:
       description: "Card image."
       preview:
         - theme: "image"
-          uri: "assets/card-image.svg"
+          uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAxLjEyNXJlbTsgdGV4dC1hbmNob3I6IG1pZGRsZTsgdXNlci1zZWxlY3Q6IG5vbmU7IiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIyNTQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQgc2xpY2UiIGZvY3VzYWJsZT0iZmFsc2UiIHJvbGU9ImltZyIgYXJpYS1sYWJlbD0iUGxhY2Vob2xkZXI6IEltYWdlIGNhcCI+PHRpdGxlPlBsYWNlaG9sZGVyPC90aXRsZT48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjODY4ZTk2Ij48L3JlY3Q+PHRleHQgeD0iNTAlIiB5PSI1MCUiIGZpbGw9IiNkZWUyZTYiIGR5PSIuM2VtIj5JbWFnZSBjYXA8L3RleHQ+PC9zdmc+Cg=="
           alt: "&copy; 2017 John Smith photography"
     header:
       type: "render"
       label: "Header"
       description: "Card header."
-    title:
-      type: "text"
-      label: "Title"
-      description: "Card title. Plain text."
-      preview: "Card title"
-    subtitle:
-      type: "text"
-      label: "Subtitle"
-      description: "Card subtitle. Plain text."
-      preview: "Card subtitle"
-    text:
-      type: "text"
-      label: "Text"
-      description: "Card text. Plain text."
-      preview: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
-    body:
+      preview: "Featured"
+    content:
       type: "render"
-      label: "Body"
+      label: "Content"
       description: "Card body."
       preview:
         - type: "pattern"
-          id: "button"
-          variant: "primary"
+          id: "card_body"
+          variant: "body"
           fields:
-            label: "Go somewhere"
-    links:
-      type: "render"
-      label: "Links"
-      description: "Array of link elements"
-      preview:
-        - type: "link"
-          url: "#"
-          title: Card link
-        - type: "html_tag"
-          tag: "a"
-          attributes:
-            href: "#"
-            title: Another link
+            title: "Card title"
+            subtitle: "Card subtitle"
+            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
+            content:
+             - type: "pattern"
+               id: "button"
+               variant: "primary"
+               fields:
+                 label: "Go somewhere"
+            links:
+              - type: "link"
+                url: "#"
+                title: "Card link"
+              - type: "html_tag"
+                tag: "a"
+                attributes:
+                  href: "#"
+                  title: "Another link"
     footer:
       type: "render"
       label: "Footer"
       description: "Card footer."
       preview:
-        - type: html_tag
+        - type: "html_tag"
           tag: "span"
           value: "2 days ago"

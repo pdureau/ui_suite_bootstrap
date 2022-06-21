@@ -15,13 +15,13 @@
   {% if pattern.fields or pattern.additional.settings %}
   <table class="pattern-preview__fields table">
     <thead>
-    <tr>
-      <td></td>
-      <th>{{ "Name"|t }}</th>
-      <th>{{ "Label"|t }}</th>
-      <th>{{ "Type"|t }}</th>
-      <th>{{ "Description"|t }} / {{ "Options"|t }}</th>
-    </tr>
+      <tr>
+        <td></td>
+        <th>{{ "Name"|t }}</th>
+        <th>{{ "Label"|t }}</th>
+        <th>{{ "Type"|t }}</th>
+        <th>{{ "Description"|t }} / {{ "Options"|t }}</th>
+      </tr>
     </thead>
     <tbody>
     {% for field in pattern.fields %}

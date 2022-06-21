@@ -1,49 +1,12 @@
 badge:
-  label: Badge
-  description: A small count and labeling component. Badges scale to match the size of the immediate parent element by using relative font sizing and em units. https://getbootstrap.com/docs/5.2/components/badge/
+  label: "Badge"
+  description: "A small count and labeling component. Badges scale to match the size of the immediate parent element by using relative font sizing and em units. https://getbootstrap.com/docs/5.2/components/badge/"
   variants:
-    primary:
-      label: Primary
-    secondary:
-      label: Secondary
-    success:
-      label: Success
-    danger:
-      label: Danger
-    warning:
-      label: Warning
-    info:
-      label: Info
-    light:
-      label: Light
-    dark:
-      label: Dark
-    pill__primary:
-      label: Pill Primary
-    pill___secondary:
-      label: Pill Secondary
-    pill__success:
-      label: Pill Success
-    pill__danger:
-      label: Pill Danger
-    pill__warning:
-      label: Pill Warning
-    pill__info:
-      label: Pill Info
-    pill__light:
-      label: Pill Light
-    pill__dark:
-      label: Pill Dark
-    link__primary:
-      label: Link Primary
+    default:
+      label: "Default"
   fields:
     label:
-      type: text
-      label: Label
-      description: The badge label
-      preview: New
-    url:
-      type: text
-      label: URL
-      description: The badge URL. Optional.
-      preview: ""
+      type: "text"
+      label: "Label"
+      description: "The badge's label."
+      preview: "New"

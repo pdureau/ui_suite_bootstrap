@@ -1,11 +1,10 @@
 {% if variant != '' and variant|lower != 'default' %}
   {% set attributes = attributes.addClass('navbar-' ~ variant|lower|replace({'_': '-'})) %}
-  {% set attributes = attributes.addClass('bg-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
 {% import _self as menus %}
 
-<nav{{ attributes.addClass(['navbar', 'navbar-expand-lg', 'bg-light']) }}>
+<nav{{ attributes.addClass(['navbar', 'navbar-expand-lg']) }}>
   {% if brand %}
   <span class="navbar-brand" href="#">{{ brand }}</span>
   {% endif %}

@@ -3,15 +3,46 @@ grid_row:
   description: "The grid system uses a series of containers, rows, and columns to layout and align content https://getbootstrap.com/docs/5.2/layout/grid/ For simple use cases only. For more powerful needs, please use bootstrap_grid_row_* layouts."
   settings:
     with_container:
-      type: "boolean"
       label: "With container?"
-      preview: false
       description: "Is the row wrapped in a container? Containers provide a means to center and horizontally pad your site’s contents."
-    no_gutters:
       type: "boolean"
-      label: "No gutters?"
       preview: false
+    gutters:
+      label: "Gutters"
       description: "The gutters between columns in our predefined grid classes can be removed with .no-gutters. This removes the negative margins from .row and the horizontal padding from all immediate children columns."
+      type: "select"
+      preview: "g-0"
+      options:
+        g-0: "0"
+        g-1: "1"
+        g-2: "2"
+        g-3: "3"
+        g-4: "4"
+        g-5: "5"
+    gutters_horizontal:
+      label: "Horizontal gutters"
+      description: ".gx-* classes can be used to control the horizontal gutter widths. The .container or .container-fluid parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility."
+      type: "select"
+      preview: ""
+      options:
+        gx-0: "0"
+        gx-1: "1"
+        gx-2: "2"
+        gx-3: "3"
+        gx-4: "4"
+        gx-5: "5"
+    gutters_vertical:
+      label: "Vertical gutters"
+      description: ".gy-* classes can be used to control the vertical gutter widths. Like the horizontal gutters, the vertical gutters can cause some overflow below the .row at the end of a page. If this occurs, you add a wrapper around .row with the .overflow-hidden class."
+      type: "select"
+      preview: ""
+      options:
+        gy-0: "0"
+        gy-1: "1"
+        gy-2: "2"
+        gy-3: "3"
+        gy-4: "4"
+        gy-5: "5"
     col_xs:
       label: "All (Extra small)"
       type: "select"
@@ -97,8 +128,25 @@ grid_row:
         col-xl-10: "10"
         col-xl-11: "11"
         col-xl-12: "12"
+    col_xxl:
+      label: "Extra extra large"
+      type: "select"
+      preview: ""
+      options:
+        col-xxl-1: "1"
+        col-xxl-2: "2"
+        col-xxl-3: "3"
+        col-xxl-4: "4"
+        col-xxl-5: "5"
+        col-xxl-6: "6"
+        col-xxl-7: "7"
+        col-xxl-8: "8"
+        col-xxl-9: "9"
+        col-xxl-10: "10"
+        col-xxl-11: "11"
+        col-xxl-12: "12"
     spacing_margin_bottom:
-      label: Cols margin bottom
+      label: "Cols margin bottom"
       type: "select"
       preview: ""
       options:
@@ -115,35 +163,15 @@ grid_row:
       label: "Content"
       description: "The content of each column"
       preview:
-        - type: pattern
-          id: card
-          fields:
-            title: "Card example"
-            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
-            body:
-              - type: "pattern"
-                id: "button"
-                variant: "primary"
-                fields:
-                  label: "Go somewhere"
-        - type: pattern
-          id: card
-          fields:
-            title: "Small card"
-            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
-        - type: pattern
-          id: card
-          fields:
-            title: "Card example"
-            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
-            body:
-              - type: "pattern"
-                id: "button"
-                variant: "primary"
-                fields:
-                  label: "Go somewhere"
-        - type: pattern
-          id: card
-          fields:
-            title: "Small card"
-            text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"
+        - type: "pattern_preview"
+          id: "card"
+          variant: "default"

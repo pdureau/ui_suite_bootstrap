@@ -1,37 +1,37 @@
 alert:
-  label: Alert
-  description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. https://getbootstrap.com/docs/5.2/components/alerts/
+  label: "Alert"
+  description: "Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. https://getbootstrap.com/docs/5.2/components/alerts/"
   variants:
     primary:
-      label: Primary
+      label: "Primary"
     secondary:
-      label: Secondary
+      label: "Secondary"
     success:
-      label: Success
+      label: "Success"
     danger:
-      label: Danger
+      label: "Danger"
     warning:
-      label: Warning
+      label: "Warning"
     info:
-      label: Info
+      label: "Info"
     light:
-      label: Light
+      label: "Light"
     dark:
-      label: Dark
+      label: "Dark"
   settings:
     dismissible:
-      type: boolean
-      label: Dismissible?
-      description: It’s possible to dismiss any alert inline
+      type: "boolean"
+      label: "Dismissible?"
+      description: "It is possible to dismiss any alert inline."
       preview: True
   fields:
     heading:
-      type: text
-      label: Heading
-      description: The alert heading. Optional.
-      preview: Well done!
+      type: "text"
+      label: "Heading"
+      description: "The alert heading. Optional."
+      preview: "Well done!"
     message:
-      type: render
-      label: Message
-      description: The alert message.
-      preview: " A simple alert—check it out! "
+      type: "render"
+      label: "Message"
+      description: "The alert message."
+      preview: "A simple alert. Check it out!"

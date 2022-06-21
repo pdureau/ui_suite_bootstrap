@@ -1,20 +1,42 @@
 {% if variant != '' and variant|lower != 'default' %}
-  {% set attributes = attributes.addClass('carousel-' ~ variant|lower|replace({'_': '-'})) %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('carousel-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
 {% endif %}
 
-{% set id = 'carousel-' ~ random(1000) %}
+{% if not with_touch %}
+  {% set attributes = attributes.setAttribute('data-bs-touch', 'false') %}
+{% endif %}
 
-<div{{ attributes.addClass('carousel').addClass('slide') }} id="{{ id }}" data-ride="carousel">
+{% set interval = interval|default(5000) %}
+{% set data_bs_ride = 'carousel' %}
+{% if interval == 0 %}
+  {% set interval = 'false' %}
+  {% set data_bs_ride = false %}
+{% endif %}
+{% set attributes = attributes.setAttribute('data-bs-interval', interval) %}
+{% set attributes = attributes.setAttribute('data-bs-ride', data_bs_ride) %}
+
+<div{{ attributes.addClass('carousel').addClass('slide').setAttribute('id', carousel_id) }}>
 
   {% if with_indicators %}
-  <ol class="carousel-indicators">
+  <div class="carousel-indicators">
     {% for slide in slides %}
-    <li data-target="#carousel-example-generic" data-slide-to="{{ loop.index0 }}"{% if loop.first %} class="active"{% endif %}></li>
+    <button type="button"
+            data-bs-target="#{{ carousel_id }}"
+            data-bs-slide-to="{{ loop.index0 }}"
+            aria-label="{{ 'Slide @slide_number'|t({'@slide_number': loop.index}) }}"
+      {% if loop.first %}
+      class="active"
+      aria-current="true"
+      {% endif %}>
+    </button>
     {% endfor %}
-  </ol>
+  </div>
   {% endif %}
 
-  <div class="carousel-inner" role="listbox">
+  <div class="carousel-inner">
     {% for slide in slides %}
       <div class="carousel-item{% if loop.first %} active{% endif %}">
         {{ slide.image }}
@@ -26,14 +48,14 @@
   </div>
 
   {% if with_controls %}
-  <a class="carousel-control-prev" href="#{{ id }}" role="button" data-slide="prev">
+  <button class="carousel-control-prev" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="sr-only">{{ 'Previous'|t }}</span>
-  </a>
-  <a class="carousel-control-next" href="#{{ id }}" role="button" data-slide="next">
+    <span class="visually-hidden">{{ 'Previous'|t }}</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#{{ carousel_id }}" data-bs-slide="next">
     <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="sr-only">{{ 'Next'|t }}</span>
-  </a>
+    <span class="visually-hidden">{{ 'Next'|t }}</span>
+  </button>
   {% endif %}
 
 </div>

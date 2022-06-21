@@ -1,0 +1,8 @@
+{#
+/**
+ * For preview, to avoid warnings due to preview value transformed as markup
+ * object.
+ */
+#}
+{% set attributes = attributes.addClass('bg-primary') %}
+{{ include('@ui_suite_bootstrap/patterns/badge/pattern-badge.html.twig') }}

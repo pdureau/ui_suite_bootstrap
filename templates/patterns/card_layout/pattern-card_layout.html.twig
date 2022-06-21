@@ -1,6 +1,3 @@
-{% set class = (variant == 'deck') ? 'card-deck' : 'card-group' %}
-{% set class = (variant == 'columns') ? 'card-columns' : class %}
-
-<div{{ attributes.addClass(class) }}>
+<div{{ attributes.addClass('card-group') }}>
   {{ cards }}
 </div>

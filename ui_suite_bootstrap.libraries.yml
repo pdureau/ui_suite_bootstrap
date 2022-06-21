@@ -14,14 +14,4 @@ bootstrap:
 carousel_example:
   css:
     theme:
-      css/carousel_example.css: {}
-
-album_example:
-  css:
-    theme:
-      css/album_example.css: {}
-
-pricing_example:
-  css:
-    theme:
-      css/pricing_example.css: {}
+      assets/css/carousel_example.css: {}

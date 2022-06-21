@@ -1,36 +1,34 @@
 navbar:
-  label: Navbar
-  description: Powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin. https://getbootstrap.com/docs/5.2/components/navbar/
+  label: "Navbar"
+  description: "Powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin. https://getbootstrap.com/docs/5.2/components/navbar/"
   variants:
     default:
-      label: Default
-    light:
-      label: Light
+      label: "Default"
     dark:
-      label: Dark
+      label: "Dark"
   fields:
     brand:
-      type: text
-      label: Brand title
-      description: Your company, product, or project name.
+      type: "text"
+      label: "Brand title"
+      description: "Your company, product, or project name."
       preview: "Brand title"
     items:
-      type: render
-      label: Menu items
-      description: Full-height and lightweight navigation (including support for dropdowns).
+      type: "render"
+      label: "Menu items"
+      description: "Full-height and lightweight navigation (including support for dropdowns)."
       preview:
-        - title: Home
+        - title: "Home"
           url: "#"
-        - title: Library
+        - title: "Library"
           url: "#"
           below:
-            - title: Sub 1
+            - title: "Sub 1"
               url: "#"
-            - title: Sub 2
+            - title: "Sub 2"
               url: "#"
-        - title: Data
+        - title: "Data"
     text:
-      type: text
-      label: Text
-      description: Vertically centered strings of text.
+      type: "text"
+      label: "Text"
+      description: "Vertically centered strings of text."
       preview: " Navbar text with an inline element "

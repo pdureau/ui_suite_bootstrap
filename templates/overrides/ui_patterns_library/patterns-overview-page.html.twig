@@ -7,26 +7,21 @@
 
 {% if patterns is not empty %}
 <div class="row">
-<div class="col-lg-2">
-  <h2 class="hidden">{{ "Available patterns"|t }}</h2>
-
-  {# List of available patterns with anchor links. #}
-  <ul class="list-unstyled">
+  <div class="col-lg-2">
+    <h2 class="visually-hidden">{{ "Available patterns"|t }}</h2>
+    {# List of available patterns with anchor links. #}
+    <ul class="list-unstyled">
     {% for pattern_name, pattern in patterns %}
       <li>
         <a href="#{{ pattern_name }}">{{ pattern.label }}</a>
       </li>
     {% endfor %}
-  </ul>
+    </ul>
+  </div>
 
-</div>
-<div class="col-lg-10">
-
-  {% for pattern_name, pattern in patterns %}
-
-    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }}">
-      {# Pattern name and description. #}
-      <a name="{{ pattern_name }}"></a>
+  <div class="col-lg-10">
+    {% for pattern_name, pattern in patterns %}
+    <div class="pattern-preview pattern-preview__{{ pattern.definition.id }}" id="{{ pattern_name }}">
       {{ pattern.meta }}
 
       {# Link to standalone pattern preview page.#}
@@ -38,15 +33,10 @@
 
       {# Rendered pattern preview. #}
       {{ pattern.rendered }}
-
     </div>
 
     <hr class="my-5">
-  {% endfor %}
-
+    {% endfor %}
+  </div>
 </div>
-
 {% endif %}
-
-
-

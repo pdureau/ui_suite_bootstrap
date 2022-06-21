@@ -1,36 +1,65 @@
 # https://getbootstrap.com/docs/5.2/utilities/borders/#border
 borders_border:
-  label: Border
-  description: Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.
+  label: "Border"
+  description: "Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time."
   options:
-    border: Additive All
-    border-top: Additive Top
-    border-right: Additive Right
-    border-bottom: Additive Bottom
-    border-left: Additive Left
-    border-0: Subtractive All
-    border-top-0: Subtractive Top
-    border-right-0: Subtractive Right
-    border-bottom-0: Subtractive Bottom
-    border-left-0: Subtractive Left
+    border: "Additive All"
+    border-top: "Additive Top"
+    border-end: "Additive End"
+    border-bottom: "Additive Bottom"
+    border-start: "Additive Start"
+    border-0: "Subtractive All"
+    border-top-0: "Subtractive Top"
+    border-end-0: "Subtractive End"
+    border-bottom-0: "Subtractive Bottom"
+    border-start-0: "Subtractive Start"
   previewed_with:
     - p-2
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#color
 borders_border_color:
-  label: Border color
-  description: Change the border color using utilities built on our theme colors.
+  label: "Border color"
+  description: "Change the border color using utilities built on our theme colors."
   options:
-    border-primary: Primary
-    border-secondary: Secondary
-    border-success: Success
-    border-danger: Danger
-    border-warning: Warning
-    border-info: Info
-    border-light: Light
-    border-dark: Dark
-    border-white: White
+    border-primary: "Primary"
+    border-secondary: "Secondary"
+    border-success: "Success"
+    border-danger: "Danger"
+    border-warning: "Warning"
+    border-info: "Info"
+    border-light: "Light"
+    border-dark: "Dark"
+    border-white: "White"
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/borders/#opacity
+borders_border_opacity:
+  label: "Border opacity"
+  description: "This allows for real-time color changes without compilation and dynamic alpha transparency changes."
+  options:
+    border-opacity-10: "0.10"
+    border-opacity-25: "0.25"
+    border-opacity-50: "0.50"
+    border-opacity-75: "0.75"
+    border-opacity-100: "1"
+  previewed_with:
+    - border
+    - border-success
+    - p-2
+
+# https://getbootstrap.com/docs/5.2/utilities/borders/#width
+borders_border_width:
+  label: "Border width"
+  options:
+    border-1: "1"
+    border-2: "2"
+    border-3: "3"
+    border-4: "4"
+    border-5: "5"
   previewed_with:
     - border
     - p-2
@@ -38,16 +67,22 @@ borders_border_color:
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#radius
 borders_border_radius:
-  label: Border radius
-  description: Add classes to an element to easily round its corners.
+  label: "Border radius"
+  description: "Add classes to an element to easily round its corners."
   options:
-    rounded: Rounded
-    rounded-top: Rounded Top
-    rounded-right: Rounded Right
-    rounded-bottom: Rounded Bottom
-    rounded-left: Rounded Left
-    rounded-circle: Rounded Circle
-    rounded-0: Rounded Subtractive
+    rounded: "Rounded"
+    rounded-top: "Rounded Top"
+    rounded-end: "Rounded End"
+    rounded-bottom: "Rounded Bottom"
+    rounded-start: "Rounded Start"
+    rounded-circle: "Rounded Circle"
+    rounded-pill: "Rounded Pill"
+    rounded-0: "Rounded reset"
+    rounded-1: "Rounded size 1"
+    rounded-2: "Rounded size 2"
+    rounded-3: "Rounded size 3"
+    rounded-4: "Rounded size 4"
+    rounded-5: "Rounded size 5"
   previewed_with:
     - border
     - p-2
@@ -55,67 +90,99 @@ borders_border_radius:
 
 # https://getbootstrap.com/docs/5.2/utilities/background/#background-color
 colors_background_color:
-  label: Background color
-  description: Similar to the contextual text color classes, easily set the background of an element to any contextual class.
+  label: "Background color"
+  description: "Similar to the contextual text color classes, easily set the background of an element to any contextual class."
   options:
-    bg-primary: Primary
-    bg-secondary: Secondary
-    bg-success: Success
-    bg-danger: Danger
-    bg-warning: Warning
-    bg-info: Info
-    bg-light: Light
-    bg-dark: Dark
-    bg-white: White
-    bg-transparent: Transparent
+    bg-primary: "Primary"
+    bg-secondary: "Secondary"
+    bg-success: "Success"
+    bg-danger: "Danger"
+    bg-warning: "Warning"
+    bg-info: "Info"
+    bg-light: "Light"
+    bg-dark: "Dark"
+    bg-body: "Body"
+    bg-white: "White"
+    bg-transparent: "Transparent"
   previewed_with:
     - border
     - p-2
 
 # https://getbootstrap.com/docs/5.2/utilities/colors/#colors
 colors_color:
-  label: Color
-  description: Convey meaning through color with a handful of color utility classes.
+  label: "Color"
+  description: "Convey meaning through color with a handful of color utility classes."
   options:
-    text-primary: Primary
-    text-secondary: Secondary
-    text-success: Success
-    text-danger: Danger
-    text-warning: Warning
-    text-info: Info
-    text-light: Light
-    text-dark: Dark
-    text-body: Body
-    text-muted: Muted
-    text-white: White
-    text-black-50: Black 50
-    text-white-50: White 50
+    text-primary: "Primary"
+    text-secondary: "Secondary"
+    text-success: "Success"
+    text-danger: "Danger"
+    text-warning: "Warning"
+    text-info: "Info"
+    text-light: "Light"
+    text-dark: "Dark"
+    text-body: "Body"
+    text-muted: "Muted"
+    text-reset: "Reset"
+    text-white: "White"
+    text-black-50: "Black 50"
+    text-white-50: "White 50"
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_weight:
-  label: Font weight
-  description: Quickly change the weight (boldness) of text.
+  label: "Font weight"
+  description: "Quickly change the weight (boldness) of text."
   options:
-    font-weight-bold: Bold
-    font-weight-normal: Normal
-    font-weight-light: Light
+    fw-bold: "Bold"
+    fw-bolder: "Bolder (relative to the parent element)"
+    fw-semibold: "Semibold"
+    fw-normal: "Normal"
+    fw-light: "Light"
+    fw-lighter: "Lighter (relative to the parent element)"
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_italics:
-  label: Font italics
-  description: Quickly italicize text.
+  label: "Font italics"
+  description: "Quickly italicize text."
   options:
-    font-italic: Italic
+    fst-italic: "Italic"
+    fst-normal: "Normal"
+
+# https://getbootstrap.com/docs/5.2/utilities/text/#line-height
+text_line_height:
+  label: "Line height"
+  description: "Change the line height."
+  options:
+    lh-1: "1"
+    lh-sm: "Small"
+    lh-base: "Base"
+    lh-lg: "Large"
+
+# https://getbootstrap.com/docs/5.2/utilities/text/#monospace
+text_font_monospace:
+  label: "Monospace"
+  description: "Change a selection to the monospace font stack."
+  options:
+    font-monospace: "Monospace"
+
+# https://getbootstrap.com/docs/5.2/utilities/text/#text-decoration
+text_text_decoration:
+  label: "Text decoration"
+  description: "Decorate text in components with text decoration classes."
+  options:
+    text-decoration-underline: "Underline"
+    text-decoration-line-through: "Line through"
+    text-decoration-none: "None"
 
 # https://getbootstrap.com/docs/5.2/utilities/shadows/
 shadows:
-  label: Shadows
-  description: Add or remove shadows to elements with box-shadow utilities.
+  label: "Shadows"
+  description: "Add or remove shadows to elements with box-shadow utilities."
   options:
-    shadow-none: None
-    shadow-sm: Small
-    shadow: Normal
-    shadow-lg: Large
+    shadow-none: "None"
+    shadow-sm: "Small"
+    shadow: "Normal"
+    shadow-lg: "Large"
   previewed_with:
     - border
     - p-2
@@ -124,15 +191,21 @@ shadows:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_top:
-  label: Margin top
+  label: "Margin top"
   options:
-    mt-0: 0
-    mt-1: 1
-    mt-2: 2
-    mt-3: 3
-    mt-4: 4
-    mt-5: 5
-    mt-auto: Auto
+    mt-0: "0"
+    mt-1: "1"
+    mt-2: "2"
+    mt-3: "3"
+    mt-4: "4"
+    mt-5: "5"
+    mt-auto: "Auto"
+    mt-n0: "Negative 0"
+    mt-n1: "Negative 1"
+    mt-n2: "Negative 2"
+    mt-n3: "Negative 3"
+    mt-n4: "Negative 4"
+    mt-n5: "Negative 5"
   previewed_with:
     - border
     - p-2
@@ -140,47 +213,65 @@ spacing_margin_top:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_bottom:
-  label: Margin bottom
+  label: "Margin bottom"
   options:
-    mb-0: 0
-    mb-1: 1
-    mb-2: 2
-    mb-3: 3
-    mb-4: 4
-    mb-5: 5
-    mb-auto: Auto
+    mb-0: "0"
+    mb-1: "1"
+    mb-2: "2"
+    mb-3: "3"
+    mb-4: "4"
+    mb-5: "5"
+    mb-auto: "Auto"
+    mb-n0: "Negative 0"
+    mb-n1: "Negative 1"
+    mb-n2: "Negative 2"
+    mb-n3: "Negative 3"
+    mb-n4: "Negative 4"
+    mb-n5: "Negative 5"
   previewed_with:
     - border
     - p-2
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
-spacing_margin_left:
-  label: Margin left
+spacing_margin_start:
+  label: "Margin start"
   options:
-    ml-0: 0
-    ml-1: 1
-    ml-2: 2
-    ml-3: 3
-    ml-4: 4
-    ml-5: 5
-    ml-auto: Auto
+    ms-0: "0"
+    ms-1: "1"
+    ms-2: "2"
+    ms-3: "3"
+    ms-4: "4"
+    ms-5: "5"
+    ms-auto: "Auto"
+    ms-n0: "Negative 0"
+    ms-n1: "Negative 1"
+    ms-n2: "Negative 2"
+    ms-n3: "Negative 3"
+    ms-n4: "Negative 4"
+    ms-n5: "Negative 5"
   previewed_with:
     - border
     - p-2
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
-spacing_margin_right:
-  label: Margin right
+spacing_margin_end:
+  label: "Margin end"
   options:
-    mr-0: 0
-    mr-1: 1
-    mr-2: 2
-    mr-3: 3
-    mr-4: 4
-    mr-5: 5
-    mr-auto: Auto
+    me-0: "0"
+    me-1: "1"
+    me-2: "2"
+    me-3: "3"
+    me-4: "4"
+    me-5: "5"
+    me-auto: "Auto"
+    me-n0: "Negative 0"
+    me-n1: "Negative 1"
+    me-n2: "Negative 2"
+    me-n3: "Negative 3"
+    me-n4: "Negative 4"
+    me-n5: "Negative 5"
   previewed_with:
     - border
     - p-2
@@ -188,80 +279,100 @@ spacing_margin_right:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_top:
-  label: Padding top
+  label: "Padding top"
   options:
-    pt-0: 0
-    pt-1: 1
-    pt-2: 2
-    pt-3: 3
-    pt-4: 4
-    pt-5: 5
-    pt-auto: Auto
+    pt-0: "0"
+    pt-1: "1"
+    pt-2: "2"
+    pt-3: "3"
+    pt-4: "4"
+    pt-5: "5"
+    pt-auto: "Auto"
   previewed_with:
     - border
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_bottom:
-  label: Padding bottom
+  label: "Padding bottom"
   options:
-    pb-0: 0
-    pb-1: 1
-    pb-2: 2
-    pb-3: 3
-    pb-4: 4
-    pb-5: 5
-    pb-auto: Auto
+    pb-0: "0"
+    pb-1: "1"
+    pb-2: "2"
+    pb-3: "3"
+    pb-4: "4"
+    pb-5: "5"
+    pb-auto: "Auto"
   previewed_with:
     - border
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
-spacing_padding_left:
-  label: Padding left
+spacing_padding_start:
+  label: "Padding start"
   options:
-    pl-0: 0
-    pl-1: 1
-    pl-2: 2
-    pl-3: 3
-    pl-4: 4
-    pl-5: 5
-    pl-auto: Auto
+    ps-0: "0"
+    ps-1: "1"
+    ps-2: "2"
+    ps-3: "3"
+    ps-4: "4"
+    ps-5: "5"
+    ps-auto: "Auto"
   previewed_with:
     - border
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
-spacing_padding_right:
-  label: Padding right
+spacing_padding_end:
+  label: "Padding end"
   options:
-    pr-0: 0
-    pr-1: 1
-    pr-2: 2
-    pr-3: 3
-    pr-4: 4
-    pr-5: 5
-    pr-auto: Auto
+    pe-0: "0"
+    pe-1: "1"
+    pe-2: "2"
+    pe-3: "3"
+    pe-4: "4"
+    pe-5: "5"
+    pe-auto: "Auto"
   previewed_with:
     - border
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#horizontal-centering
 spacing_horizontal_centering:
-  label: Horizontal centering
+  label: "Horizontal centering"
   description: "An .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto."
   options:
-    mx-auto: Horizontal centering
+    mx-auto: "Horizontal centering"
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#text-alignment
 text_text_alignment:
-  label: Text alignment
-  description: Easily realign text to components with text alignment classes.
+  label: "Text alignment"
+  description: "Easily realign text to components with text alignment classes."
   options:
-    text-justify: Justify
-    text-left: Left
-    text-center: Center
-    text-right: Right
+    text-start: "Start"
+    text-center: "Center"
+    text-end: "End"
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow
+text_text_wrapping:
+  label: "Text wrapping and overflow"
+  options:
+    text-wrap: "Wrap"
+    text-nowrap: "No wrap"
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/text/#word-break
+text_text_word_break:
+  label: "Word break"
+  options:
+    text-break: "Break"
   previewed_with:
     - border
     - p-2
@@ -269,26 +380,40 @@ text_text_alignment:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#text-transform
 text_text_transform:
-  label: Text transform
-  description: Transform text in components with text capitalization classes.
+  label: "Text transform"
+  description: "Transform text in components with text capitalization classes."
   options:
-    text-lowercase: Lowercase
-    text-uppercase: Uppercase
-    text-capitalize: Capitalize
+    text-lowercase: "Lowercase"
+    text-uppercase: "Uppercase"
+    text-capitalize: "Capitalize"
+
+# https://getbootstrap.com/docs/5.2/utilities/text/#font-size
+text_text_font_size:
+  label: "Font size"
+  description: "Quickly change the font-size of text. While our heading classes (e.g., .h1–.h6) apply font-size, font-weight, and line-height, these utilities only apply font-size. Sizing for these utilities matches HTML’s heading elements, so as the number increases, their size decreases."
+  options:
+    fs-1: "1"
+    fs-2: "2"
+    fs-3: "3"
+    fs-4: "4"
+    fs-5: "5"
+    fs-6: "6"
 
 # https://getbootstrap.com/docs/5.2/content/typography/
 typography:
-  label: Typography
+  label: "Typography"
   description: ".h1 through .h6 classes are available, for when you want to match the font styling of a heading but cannot use the associated HTML element. Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default."
   options:
-    h1: Heading 1
-    h2: Heading 2
-    h3: Heading 3
-    h4: Heading 4
-    h5: Heading 5
-    h6: Heading 6
-    display-1: Display heading 1
-    display-2: Display heading 2
-    display-3: Display heading 3
-    display-4: Display heading 4
-    lead: Lead
+    h1: "Heading 1"
+    h2: "Heading 2"
+    h3: "Heading 3"
+    h4: "Heading 4"
+    h5: "Heading 5"
+    h6: "Heading 6"
+    display-1: "Display heading 1"
+    display-2: "Display heading 2"
+    display-3: "Display heading 3"
+    display-4: "Display heading 4"
+    display-5: "Display heading 5"
+    display-6: "Display heading 6"
+    lead: "Lead"

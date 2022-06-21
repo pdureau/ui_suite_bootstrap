@@ -2,11 +2,13 @@
   <div class="container">
 {% endif %}
 
-{% set attributes = no_gutters ? attributes.addClass('no-gutters') : attributes %}
+{% set attributes = gutters ? attributes.addClass(gutters) : attributes %}
+{% set attributes = gutters_horizontal ? attributes.addClass(gutters_horizontal) : attributes %}
+{% set attributes = gutters_vertical ? attributes.addClass(gutters_vertical) : attributes %}
 
 <div{{ attributes.addClass('row') }}>
   {% for item in content %}
-    {% set col_sizes = [col_xs, col_sm, col_md, col_lg, col_xl, spacing_margin_bottom] %}
+    {% set col_sizes = [col_xs, col_sm, col_md, col_lg, col_xl, col_xxl, spacing_margin_bottom] %}
     <div{{ create_attribute({'class': col_sizes}) }}>
       {{ item }}
     </div>

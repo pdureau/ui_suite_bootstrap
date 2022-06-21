@@ -31,7 +31,7 @@
        {{ pagination.item(key, item.href, items.attributes) }}
       {% endif %}
     {% endfor %}
-    
+
     {# Print next item if we are not on the last page. #}
     {% if items.next %}
       {{ pagination.item(items.next.text|default('Next ›'|t), items.next.href, items.next.attributes, 'Next'|t) }}
@@ -41,15 +41,15 @@
     {% if items.last %}
       {{ pagination.item(items.last.text|default('Last »'|t), items.last.href, items.last.attributes, 'Last'|t) }}
     {% endif %}
-    
+
   </ul>
 </nav>
 {% endif %}
 
 {% macro item(text, href, attributes, aria_label = '') %}
 <li class="page-item">
-  {% set attributes =  attributes ?: create_attribute() %}
-  {% set attributes =  aria_label ? attributes.setAttribute('aria-label', aria_label) : attributes %}
+  {% set attributes = attributes ?: create_attribute() %}
+  {% set attributes = aria_label ? attributes.setAttribute('aria-label', aria_label) : attributes %}
   <a {{ attributes.addClass('page-link').setAttribute('href', href) }}>
     {% if aria_label is not empty %}
     <span aria-hidden="true">{{ text }}</span>

@@ -5,9 +5,20 @@
   {% endfor %}
 {% endif %}
 
+{% set attributes = attributes.addClass('btn') %}
+
 {% if url or attributes.href %}
   {% set url = url ?: attributes.href %}
-  <a{{ attributes.addClass('btn').setAttribute('href', url) }}>{{ label }}</a>
+  {% set attributes = attributes.setAttribute('href', url) %}
+  {% if disabled %}
+    {% set attributes = attributes.setAttribute('href', false).setAttribute('tabindex', '-1').setAttribute('aria-disabled', 'true').addClass('disabled') %}
+  {% endif %}
+
+  <a{{ attributes.setAttribute('role', 'button') }}>{{ label }}</a>
 {% else %}
-  <span{{ attributes.addClass('btn') }}>{{ label }}</span>
+  {% if disabled %}
+    {% set attributes = attributes.setAttribute('disabled', '') %}
+  {% endif %}
+
+  <span{{ attributes }}>{{ label }}</span>
 {% endif %}

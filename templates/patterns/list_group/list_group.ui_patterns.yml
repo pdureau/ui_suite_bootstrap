@@ -1,39 +1,57 @@
 list_group:
-  label: List Group
+  label: "List Group"
   description: "List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within. https://getbootstrap.com/docs/5.2/components/list-group/"
   variants:
     default:
-      label: Default
-      description: The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed.
+      label: "Default"
+      description: "The most basic list group is an unordered list with list items and the proper classes. Build upon it with the options that follow, or with your own CSS as needed."
     flush:
-      label: Flush
-      description: Add .list-group-flush to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
+      label: "Flush"
+      description: "Add .list-group-flush to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards)."
+    numbered:
+      label: "Numbered"
+      description: "Add the .list-group-numbered modifier class (and optionally use an <ol> element) to opt into numbered list group items."
     horizontal:
-      label: Horizontal
-      description: "Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints. Currently horizontal list groups cannot be combined with flush list groups. Only with Bootstrap 4.3+"
+      label: "Horizontal"
+      description: "Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints. Currently horizontal list groups cannot be combined with flush list groups."
+    horizontal_sm:
+      label: "Horizontal Small"
+      description: "Horizontal starts at breakpoint small."
+    horizontal_md:
+      label: "Horizontal Small"
+      description: "Horizontal starts at breakpoint medium."
+    horizontal_lg:
+      label: "Horizontal Small"
+      description: "Horizontal starts at breakpoint large."
+    horizontal_xl:
+      label: "Horizontal Small"
+      description: "Horizontal starts at breakpoint extra large."
+    horizontal_xxl:
+      label: "Horizontal Small"
+      description: "Horizontal starts at breakpoint extra extra large."
   fields:
     items:
-      type: render
-      label: Items
+      type: "render"
+      label: "Items"
       description: "An array of render arrays, with 2 specific optional properties: active & disabled"
       preview:
-        - type: html_tag
-          tag: span
+        - type: "html_tag"
+          tag: "span"
           value: "Cras justo odio"
           active: FALSE
-        - type: html_tag
-          tag: span
+        - type: "html_tag"
+          tag: "span"
           value: "Dapibus ac facilisis in (active)"
           active: TRUE
           disabled: FALSE
-        - type: html_tag
-          tag: span
+        - type: "html_tag"
+          tag: "span"
           value: "Morbi leo risus"
           active: FALSE
-        - type: html_tag
-          tag: span
+        - type: "html_tag"
+          tag: "span"
           value: "Porta ac consectetur ac (disabled)"
           disabled: TRUE
-        - type: html_tag
-          tag: span
+        - type: "html_tag"
+          tag: "span"
           value: "Vestibulum at eros"

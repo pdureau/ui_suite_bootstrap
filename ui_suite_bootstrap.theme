@@ -7,6 +7,8 @@
 
 declare(strict_types = 1);
 
+use Drupal\Component\Utility\Html;
+
 /**
  * Implements hook_preprocess_HOOK() for 'page'.
  */
@@ -18,27 +20,26 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
 
 /**
  * Implements hook_preprocess_HOOK() for 'pattern_card'.
- *
- * See also: https://getbootstrap.com/docs/5.2/components/card/.
  */
 function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
+  // @todo If header, parse its content and if nav pattern found, add class
+  // matching the variant.
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
-    foreach ($variables['image'] as &$item) {
-      _ui_suite_bootstrap_add_card_image_class($item, $variables['variant']);
-      if ($variables['context']->getType() == 'preview') {
-        $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
-        $uri = isset($item['#uri']) ? implode('/', [
-          '',
-          $base_path,
-          $item['#uri'],
-        ]) : '';
-        $item['#uri'] = $uri;
-      }
+    $image_class = '';
+    if ($variables['variant'] === 'default' && $variables['image_position'] === 'top') {
+      $image_class = 'card-img-top';
     }
-  }
-  if (array_key_exists('links', $variables) && is_array($variables['links'])) {
-    foreach ($variables['links'] as &$item) {
-      _ui_suite_bootstrap_add_card_link_class($item);
+    elseif ($variables['variant'] === 'default' && $variables['image_position'] === 'bottom') {
+      $image_class = 'card-img-bottom';
+    }
+    elseif ($variables['variant'] === 'horizontal') {
+      $image_class = 'img-fluid rounded-start';
+    }
+
+    if (!empty($image_class)) {
+      foreach ($variables['image'] as &$item) {
+        _ui_suite_bootstrap_add_card_image_class($item, $image_class);
+      }
     }
   }
 }
@@ -46,22 +47,29 @@ function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
 /**
  * Add expected class in card's image.
  */
-function _ui_suite_bootstrap_add_card_image_class(&$item, string $variant): void {
-  $class = 'card-img-top';
-  if ($variant === 'overlay') {
-    $class = 'card-img';
-  }
+function _ui_suite_bootstrap_add_card_image_class(&$item, string $image_class): void {
   if (is_array($item) && array_key_exists('#theme', $item)) {
     if ($item['#theme'] === 'image') {
-      $item['#attributes']['class'][] = $class;
+      $item['#attributes']['class'][] = $image_class;
     }
     if ($item['#theme'] === 'image_formatter') {
-      $item['#item_attributes']['class'][] = $class;
+      $item['#item_attributes']['class'][] = $image_class;
     }
   }
   if (is_array($item)) {
     foreach ($item as &$next) {
-      _ui_suite_bootstrap_add_card_image_class($next, $variant);
+      _ui_suite_bootstrap_add_card_image_class($next, $image_class);
+    }
+  }
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'pattern_card_body'.
+ */
+function ui_suite_bootstrap_preprocess_pattern_card_body(array &$variables): void {
+  if (array_key_exists('links', $variables) && is_array($variables['links'])) {
+    foreach ($variables['links'] as &$item) {
+      _ui_suite_bootstrap_add_card_link_class($item);
     }
   }
 }
@@ -92,6 +100,7 @@ function _ui_suite_bootstrap_add_card_link_class(&$item): void {
  * See also: https://getbootstrap.com/docs/5.2/components/carousel/.
  */
 function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
+  $variables['carousel_id'] = Html::getUniqueId('bootstrap-carousel');
 
   // Move first image of each slide in a specific array key.
   if (array_key_exists('slides', $variables) && is_array($variables['slides'])) {
@@ -103,20 +112,7 @@ function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void
   // Nicer preview with fixed width and local backgrounds.
   if ($variables['context']->getType() == 'preview') {
     $variables['attributes']['style'] = "width: 800px";
-    $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
-    foreach ($variables['slides'] as $i => $slide) {
-      if (isset($slide['image']) && is_array($slide['image'])) {
-        $image = $slide['image'];
-        $uri = isset($image['#uri']) ? implode('/', [
-          '',
-          $base_path,
-          $image['#uri'],
-        ]) : '';
-        $variables['slides'][$i]['image']['#uri'] = $uri;
-      }
-    }
   }
-
 }
 
 /**

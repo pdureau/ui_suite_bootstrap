@@ -1,17 +1,17 @@
 pagination:
-  label: Pagination
-  description: Indicate a series of related content exists across multiple pages. https://getbootstrap.com/docs/5.2/components/pagination/
+  label: "Pagination"
+  description: "Indicate a series of related content exists across multiple pages. https://getbootstrap.com/docs/5.2/components/pagination/"
   variants:
-    default:
-      label: Default
-    lg:
-      label: Larger
     sm:
-      label: Smaller
+      label: "Smaller"
+    default:
+      label: "Default"
+    lg:
+      label: "Larger"
   fields:
     items:
-      type: array
-      label: Pagination items.
+      type: "array"
+      label: "Pagination items."
       description: "List of pager items. The list is keyed by the following elements: first: Item for the first page; not present on the first page of results. previous: Item for the previous page; not present on the first page of results. next: Item for the next page; not present on the last page of results. last: Item for the last page; not present on the last page of results. pages: List of pages, keyed by page number. List of pages. Each item is an array containing the following elements: href: URL with appropriate query parameters for the item. attributes: A keyed list of HTML attributes for the item. text: The visible text used for the item link, such as Previous or Next."
       preview:
         first:
