@@ -1,15 +1,12 @@
 # UI Suite Bootstrap
 
 A site-builder friendly [Bootstrap](https://getbootstrap.com/) theme for
-Drupal 8 and 9, using the [UI Suite](https://www.drupal.org/project/ui_suite).
+Drupal, using the [UI Suite](https://www.drupal.org/project/ui_suite).
 
 Use Bootstrap directly from Drupal backoffice (layout builder, manage display,
 views, blocks, flags...).
 
 ![Overview](doc/screenshot.png)
-
-Because we are targeting Bootstrap 4.x, this is not a fork of Nuvole's
-[Bootstrap Patterns](https://github.com/nuvoleweb/bootstrap_patterns) theme.
 
 # How it works
 
@@ -52,9 +49,9 @@ Those layouts are automatically available as configurable layout plugins.
 4 example pages are integrated using only render arrays, inside
 ui_suite_bootstrap.ui_examples.yml:
 
-- [album](https://getbootstrap.com/docs/4.5/examples/album/)
-- [pricing](https://getbootstrap.com/docs/4.5/examples/pricing/)
-- [carousel](https://getbootstrap.com/docs/4.5/examples/carousel/)
+- [album](https://getbootstrap.com/docs/5.2/examples/album/)
+- [pricing](https://getbootstrap.com/docs/5.2/examples/pricing/)
+- [carousel](https://getbootstrap.com/docs/5.2/examples/carousel/)
 
 You can browse the example pages directly inside Drupal: /examples
 
@@ -69,7 +66,7 @@ You need to place the Bootstrap library in the `libraries` folder.
 ```json
 {
   "require": {
-    "asset/bootstrap": "4.6.1",
+    "asset/bootstrap": "5.1.3",
     "composer/installers": "2.*"
   },
   "repositories": {
@@ -77,15 +74,15 @@ You need to place the Bootstrap library in the `libraries` folder.
       "type": "package",
       "package": {
         "name": "asset/bootstrap",
-        "version": "4.6.1",
+        "version": "5.1.3",
         "type": "drupal-library",
         "extra": {
           "installer-name": "bootstrap"
         },
         "dist": {
           "type": "zip",
-          "url": "https://api.github.com/repos/twbs/bootstrap/zipball/043a03c95a2ad6738f85b65e53b9dbdfb03b8d10",
-          "reference": "043a03c95a2ad6738f85b65e53b9dbdfb03b8d10"
+          "url": "https://api.github.com/repos/twbs/bootstrap/zipball/1a6fdfae6be09b09eaced8f0e442ca6f7680a61e",
+          "reference": "1a6fdfae6be09b09eaced8f0e442ca6f7680a61e"
         }
       }
     }
@@ -108,7 +105,7 @@ composer.json can be like:
 ```json
 {
   "require": {
-    "asset/bootstrap": "4.6.1",
+    "asset/bootstrap": "5.1.3",
     "composer/installers": "2.*",
     "oomphinc/composer-installers-extender": "2.*"
   },

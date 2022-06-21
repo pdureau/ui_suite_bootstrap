@@ -19,7 +19,7 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
 /**
  * Implements hook_preprocess_HOOK() for 'pattern_card'.
  *
- * See also: https://getbootstrap.com/docs/4.5/components/card/.
+ * See also: https://getbootstrap.com/docs/5.2/components/card/.
  */
 function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
@@ -89,7 +89,7 @@ function _ui_suite_bootstrap_add_card_link_class(&$item): void {
 /**
  * Implements hook_preprocess_HOOK() for 'pattern_carousel'.
  *
- * See also: https://getbootstrap.com/docs/4.5/components/carousel/.
+ * See also: https://getbootstrap.com/docs/5.2/components/carousel/.
  */
 function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
 
@@ -144,7 +144,7 @@ function _ui_suite_bootstrap_extract_carousel_image(&$item) {
 /*
  * Implements hook_preprocess_HOOK() for 'pattern_pagination'.
  *
- * See also: https://getbootstrap.com/docs/4.5/components/pagination/.
+ * See also: https://getbootstrap.com/docs/5.2/components/pagination/.
  */
 function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): void {
   $variables['current'] = (int) (string) $variables['current'];

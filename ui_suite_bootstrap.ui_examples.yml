@@ -1,49 +1,10 @@
 album:
   label: Bootstrap Album
-  description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/4.4/examples/album/"
+  description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/5.2/examples/album/"
   render:
     "#attached":
       "library":
         - ui_suite_bootstrap/album_example
-    "1":
-      "#type": pattern
-      "#id": jumbotron
-      "#attributes":
-        class:
-          - text-center
-      "#fields":
-        content:
-          - "#type": html_tag
-            "#tag": h1
-            "#value": Album example
-          - "#type": html_tag
-            "#tag": p
-            "#value": >-
-              Something short and leading about the collection below—its contents,
-              the creator, etc. Make it short and sweet, but not too short so folks
-              don't simply skip over it entirely.
-            "#attributes":
-              class:
-                - lead
-                - text-muted
-          - "#type": pattern
-            "#id": button
-            "#variant": primary
-            "#fields":
-              label: Main call to action
-              url: "#"
-            "#attributes":
-              class:
-                - my-2
-          - "#type": pattern
-            "#id": button
-            "#variant": secondary
-            "#fields":
-              label: Secondary action
-              url: "#"
-            "#attributes":
-              class:
-                - my-2
     "2":
       "0":
         "#type": pattern
@@ -521,7 +482,7 @@ album:
 
 carousel:
   label: Bootstrap Carousel
-  description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/4.4/examples/carousel/"
+  description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/5.2/examples/carousel/"
   render:
     "#attached":
       "library":
@@ -866,7 +827,7 @@ carousel:
 
 pricing:
   label: Bootstrap Pricing
-  description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/4.4/examples/pricing/"
+  description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/5.2/examples/pricing/"
   render:
     "#attached":
       "library":

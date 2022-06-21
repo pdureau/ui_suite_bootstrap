@@ -1,6 +1,6 @@
 pagination:
   label: Pagination
-  description: Indicate a series of related content exists across multiple pages. https://getbootstrap.com/docs/4.0/components/pagination/
+  description: Indicate a series of related content exists across multiple pages. https://getbootstrap.com/docs/5.2/components/pagination/
   variants:
     default:
       label: Default

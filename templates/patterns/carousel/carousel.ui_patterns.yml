@@ -1,6 +1,6 @@
 carousel:
   label: "Carousel"
-  description: "A slideshow component for cycling through elements, like a carousel. https://getbootstrap.com/docs/4.3/components/carousel/"
+  description: "A slideshow component for cycling through elements, like a carousel. https://getbootstrap.com/docs/5.2/components/carousel/"
   variants:
     default:
       label: Default

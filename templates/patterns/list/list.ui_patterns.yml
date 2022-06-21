@@ -1,6 +1,6 @@
 list:
   label: List
-  description: "https://getbootstrap.com/docs/4.4/content/typography/#lists"
+  description: "https://getbootstrap.com/docs/5.2/content/typography/#lists"
   variants:
     default:
       label: Default

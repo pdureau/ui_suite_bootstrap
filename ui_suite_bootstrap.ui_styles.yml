@@ -1,4 +1,4 @@
-# https://getbootstrap.com/docs/4.4/utilities/borders/#border
+# https://getbootstrap.com/docs/5.2/utilities/borders/#border
 borders_border:
   label: Border
   description: Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.
@@ -17,7 +17,7 @@ borders_border:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/borders/#border-color
+# https://getbootstrap.com/docs/5.2/utilities/borders/#color
 borders_border_color:
   label: Border color
   description: Change the border color using utilities built on our theme colors.
@@ -36,7 +36,7 @@ borders_border_color:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/borders/#border-radius
+# https://getbootstrap.com/docs/5.2/utilities/borders/#radius
 borders_border_radius:
   label: Border radius
   description: Add classes to an element to easily round its corners.
@@ -53,7 +53,7 @@ borders_border_radius:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/colors/#background-color
+# https://getbootstrap.com/docs/5.2/utilities/background/#background-color
 colors_background_color:
   label: Background color
   description: Similar to the contextual text color classes, easily set the background of an element to any contextual class.
@@ -72,7 +72,7 @@ colors_background_color:
     - border
     - p-2
 
-# https://getbootstrap.com/docs/4.4/utilities/colors/#color
+# https://getbootstrap.com/docs/5.2/utilities/colors/#colors
 colors_color:
   label: Color
   description: Convey meaning through color with a handful of color utility classes.
@@ -91,7 +91,7 @@ colors_color:
     text-black-50: Black 50
     text-white-50: White 50
 
-# https://getbootstrap.com/docs/4.4/utilities/text/#font-weight-and-italics
+# https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_weight:
   label: Font weight
   description: Quickly change the weight (boldness) of text.
@@ -100,14 +100,14 @@ text_font_weight:
     font-weight-normal: Normal
     font-weight-light: Light
 
-# https://getbootstrap.com/docs/4.4/utilities/text/#font-weight-and-italics
+# https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_italics:
   label: Font italics
   description: Quickly italicize text.
   options:
     font-italic: Italic
 
-# https://getbootstrap.com/docs/4.4/utilities/shadows/
+# https://getbootstrap.com/docs/5.2/utilities/shadows/
 shadows:
   label: Shadows
   description: Add or remove shadows to elements with box-shadow utilities.
@@ -122,7 +122,7 @@ shadows:
     - bg-light
     - m-3
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_top:
   label: Margin top
   options:
@@ -138,7 +138,7 @@ spacing_margin_top:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_bottom:
   label: Margin bottom
   options:
@@ -154,7 +154,7 @@ spacing_margin_bottom:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_left:
   label: Margin left
   options:
@@ -170,7 +170,7 @@ spacing_margin_left:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_right:
   label: Margin right
   options:
@@ -186,7 +186,7 @@ spacing_margin_right:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_top:
   label: Padding top
   options:
@@ -201,7 +201,7 @@ spacing_padding_top:
     - border
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_bottom:
   label: Padding bottom
   options:
@@ -216,7 +216,7 @@ spacing_padding_bottom:
     - border
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_left:
   label: Padding left
   options:
@@ -231,7 +231,7 @@ spacing_padding_left:
     - border
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#notation
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_right:
   label: Padding right
   options:
@@ -246,14 +246,14 @@ spacing_padding_right:
     - border
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#horizontal-centering
 spacing_horizontal_centering:
   label: Horizontal centering
   description: "An .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto."
   options:
     mx-auto: Horizontal centering
 
-# https://getbootstrap.com/docs/4.4/utilities/text/#text-alignment
+# https://getbootstrap.com/docs/5.2/utilities/text/#text-alignment
 text_text_alignment:
   label: Text alignment
   description: Easily realign text to components with text alignment classes.
@@ -267,7 +267,7 @@ text_text_alignment:
     - p-2
     - bg-light
 
-# https://getbootstrap.com/docs/4.4/utilities/text/#text-transform
+# https://getbootstrap.com/docs/5.2/utilities/text/#text-transform
 text_text_transform:
   label: Text transform
   description: Transform text in components with text capitalization classes.
@@ -276,7 +276,7 @@ text_text_transform:
     text-uppercase: Uppercase
     text-capitalize: Capitalize
 
-# https://getbootstrap.com/docs/4.4/content/typography/
+# https://getbootstrap.com/docs/5.2/content/typography/
 typography:
   label: Typography
   description: ".h1 through .h6 classes are available, for when you want to match the font styling of a heading but cannot use the associated HTML element. Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default."

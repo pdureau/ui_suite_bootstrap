@@ -1,6 +1,6 @@
 button_group:
   label: Button Group
-  description: "Group a series of buttons together on a single line with the button group, and super-power them with JavaScript. https://getbootstrap.com/docs/4.3/components/button-group/"
+  description: "Group a series of buttons together on a single line with the button group, and super-power them with JavaScript. https://getbootstrap.com/docs/5.2/components/button-group/"
   variants:
     default:
       label: Default
