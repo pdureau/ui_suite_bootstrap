@@ -4,10 +4,10 @@ bootstrap:
     name: MIT
     gpl-compatible: false
   js:
-    /libraries/bootstrap/js/bootstrap.min.js: { minified: true }
+    /libraries/bootstrap/dist/js/bootstrap.min.js: { minified: true }
   css:
     theme:
-      /libraries/bootstrap/css/bootstrap.min.css: {}
+      /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
   dependencies:
     - core/jquery
 

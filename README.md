@@ -47,7 +47,7 @@ and ui_suite_bootstrap.layout_options.yml
 
 Those layouts are automatically available as configurable layout plugins.
 
-## Examples section implemented with [UI Examples](hhttps://www.drupal.org/project/ui_examples)
+## Examples section implemented with [UI Examples](https://www.drupal.org/project/ui_examples)
 
 4 example pages are integrated using only render arrays, inside
 ui_suite_bootstrap.ui_examples.yml:
@@ -60,8 +60,77 @@ You can browse the example pages directly inside Drupal: /examples
 
 # Installation
 
-If you install this theme from composer, it will install
-[twbs/bootstrap](https://packagist.org/packages/twbs/bootstrap) too.
+## Manually
 
-You need to do a symbolic link from
-`/web/libraries/bootstrap`, or `/libraries/bootstrap`, to`/vendor/twbs/bootstrap/dist`.
+You need to place the Bootstrap library in the `libraries` folder.
+
+## With Composer
+
+```json
+{
+  "require": {
+    "asset/bootstrap": "4.6.1",
+    "composer/installers": "2.*"
+  },
+  "repositories": {
+    "asset-bootstrap": {
+      "type": "package",
+      "package": {
+        "name": "asset/bootstrap",
+        "version": "4.6.1",
+        "type": "drupal-library",
+        "extra": {
+          "installer-name": "bootstrap"
+        },
+        "dist": {
+          "type": "zip",
+          "url": "https://api.github.com/repos/twbs/bootstrap/zipball/043a03c95a2ad6738f85b65e53b9dbdfb03b8d10",
+          "reference": "043a03c95a2ad6738f85b65e53b9dbdfb03b8d10"
+        }
+      }
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "app/libraries/{$name}": [
+        "type:drupal-library"
+      ]
+    }
+  }
+}
+```
+
+### Asset Packagist
+
+If you are using the website [Asset Packagist](https://asset-packagist.org), the
+composer.json can be like:
+
+```json
+{
+  "require": {
+    "asset/bootstrap": "4.6.1",
+    "composer/installers": "2.*",
+    "oomphinc/composer-installers-extender": "2.*"
+  },
+  "repositories": {
+    "asset-packagist": {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  },
+  "extra": {
+    "installer-paths": {
+      "app/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ]
+
+    },
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ]
+  }
+}
+```
