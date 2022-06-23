@@ -7,7 +7,9 @@
 
 declare(strict_types = 1);
 
+use Drupal\Component\Render\MarkupInterface;
 use Drupal\Component\Utility\Html;
+use Drupal\Core\Render\Markup;
 
 /**
  * Implements hook_preprocess_HOOK() for 'page'.
@@ -16,6 +18,49 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
   // @todo It would be better to have a setting, like bootstrap_barrio do with
   // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
   $variables['container'] = 'container';
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'status_messages'.
+ */
+function ui_suite_bootstrap_preprocess_status_messages(&$variables): void {
+  foreach ($variables['message_list'] as $message_type => $message_list) {
+    foreach ($message_list as $message_key => $message) {
+      if ($message instanceof MarkupInterface) {
+        $message = (string) $message;
+        $dom = Html::load($message);
+
+        $emphasises = $dom->getElementsByTagName('em');
+        foreach ($emphasises as $emphasise) {
+          // Remove 'placeholder' class.
+          $existing_class = $emphasise->getAttribute('class');
+          $classes = explode(' ', $existing_class);
+          $placeholder_key = array_search('placeholder', $classes);
+          if ($placeholder_key !== FALSE) {
+            unset($classes[$placeholder_key]);
+          }
+          if (empty($classes)) {
+            $emphasise->removeAttribute('class');
+          }
+          else {
+            $emphasise->setAttribute('class', implode(' ', $classes));
+          }
+        }
+
+        $links = $dom->getElementsByTagName('a');
+        foreach ($links as $link) {
+          // Add 'alert-link' class.
+          $existing_class = $link->getAttribute('class');
+          $classes = explode(' ', $existing_class);
+          $classes = array_filter($classes);
+          $classes[] = 'alert-link';
+          $link->setAttribute('class', implode(' ', $classes));
+        }
+
+        $variables['message_list'][$message_type][$message_key] = Markup::create(Html::serialize($dom));
+      }
+    }
+  }
 }
 
 /**
