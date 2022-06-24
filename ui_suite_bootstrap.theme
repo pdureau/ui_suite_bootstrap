@@ -7,186 +7,69 @@
 
 declare(strict_types = 1);
 
-use Drupal\Component\Render\MarkupInterface;
-use Drupal\Component\Utility\Html;
-use Drupal\Core\Render\Markup;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCard;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCardBody;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCarousel;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessStatusMessages;
 
 /**
  * Implements hook_preprocess_HOOK() for 'page'.
  */
 function ui_suite_bootstrap_preprocess_page(array &$variables): void {
-  // @todo It would be better to have a setting, like bootstrap_barrio do with
-  // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
-  $variables['container'] = 'container';
-}
-
-/**
- * Implements hook_preprocess_HOOK() for 'status_messages'.
- */
-function ui_suite_bootstrap_preprocess_status_messages(&$variables): void {
-  foreach ($variables['message_list'] as $message_type => $message_list) {
-    foreach ($message_list as $message_key => $message) {
-      if ($message instanceof MarkupInterface) {
-        $message = (string) $message;
-        $dom = Html::load($message);
-
-        $emphasises = $dom->getElementsByTagName('em');
-        foreach ($emphasises as $emphasise) {
-          // Remove 'placeholder' class.
-          $existing_class = $emphasise->getAttribute('class');
-          $classes = explode(' ', $existing_class);
-          $placeholder_key = array_search('placeholder', $classes);
-          if ($placeholder_key !== FALSE) {
-            unset($classes[$placeholder_key]);
-          }
-          if (empty($classes)) {
-            $emphasise->removeAttribute('class');
-          }
-          else {
-            $emphasise->setAttribute('class', implode(' ', $classes));
-          }
-        }
-
-        $links = $dom->getElementsByTagName('a');
-        foreach ($links as $link) {
-          // Add 'alert-link' class.
-          $existing_class = $link->getAttribute('class');
-          $classes = explode(' ', $existing_class);
-          $classes = array_filter($classes);
-          $classes[] = 'alert-link';
-          $link->setAttribute('class', implode(' ', $classes));
-        }
-
-        $variables['message_list'][$message_type][$message_key] = Markup::create(Html::serialize($dom));
-      }
-    }
-  }
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPage::class);
+  $instance->preprocess($variables);
 }
 
 /**
  * Implements hook_preprocess_HOOK() for 'pattern_card'.
  */
 function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
-  // @todo If header, parse its content and if nav pattern found, add class
-  // matching the variant.
-  if (array_key_exists('image', $variables) && is_array($variables['image'])) {
-    $image_class = '';
-    if ($variables['variant'] === 'default' && $variables['image_position'] === 'top') {
-      $image_class = 'card-img-top';
-    }
-    elseif ($variables['variant'] === 'default' && $variables['image_position'] === 'bottom') {
-      $image_class = 'card-img-bottom';
-    }
-    elseif ($variables['variant'] === 'horizontal') {
-      $image_class = 'img-fluid rounded-start';
-    }
-
-    if (!empty($image_class)) {
-      foreach ($variables['image'] as &$item) {
-        _ui_suite_bootstrap_add_card_image_class($item, $image_class);
-      }
-    }
-  }
-}
-
-/**
- * Add expected class in card's image.
- */
-function _ui_suite_bootstrap_add_card_image_class(&$item, string $image_class): void {
-  if (is_array($item) && array_key_exists('#theme', $item)) {
-    if ($item['#theme'] === 'image') {
-      $item['#attributes']['class'][] = $image_class;
-    }
-    if ($item['#theme'] === 'image_formatter') {
-      $item['#item_attributes']['class'][] = $image_class;
-    }
-  }
-  if (is_array($item)) {
-    foreach ($item as &$next) {
-      _ui_suite_bootstrap_add_card_image_class($next, $image_class);
-    }
-  }
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCard $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternCard::class);
+  $instance->preprocess($variables);
 }
 
 /**
  * Implements hook_preprocess_HOOK() for 'pattern_card_body'.
  */
 function ui_suite_bootstrap_preprocess_pattern_card_body(array &$variables): void {
-  if (array_key_exists('links', $variables) && is_array($variables['links'])) {
-    foreach ($variables['links'] as &$item) {
-      _ui_suite_bootstrap_add_card_link_class($item);
-    }
-  }
-}
-
-/**
- * Add expected class in card's link.
- */
-function _ui_suite_bootstrap_add_card_link_class(&$item): void {
-  if (is_array($item) && array_key_exists('#type', $item)) {
-    $class = 'card-link';
-    if ($item['#type'] === 'link') {
-      $item['#attributes']['class'][] = $class;
-    }
-    if ($item['#type'] === 'html_tag' && $item['#tag'] === 'a') {
-      $item['#attributes']['class'][] = $class;
-    }
-  }
-  if (is_array($item)) {
-    foreach ($item as &$next) {
-      _ui_suite_bootstrap_add_card_link_class($next);
-    }
-  }
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCardBody $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternCardBody::class);
+  $instance->preprocess($variables);
 }
 
 /**
  * Implements hook_preprocess_HOOK() for 'pattern_carousel'.
- *
- * See also: https://getbootstrap.com/docs/5.2/components/carousel/.
  */
 function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
-  $variables['carousel_id'] = Html::getUniqueId('bootstrap-carousel');
-
-  // Move first image of each slide in a specific array key.
-  if (array_key_exists('slides', $variables) && is_array($variables['slides'])) {
-    foreach ($variables['slides'] as &$slide) {
-      $slide['image'] = _ui_suite_bootstrap_extract_carousel_image($slide);
-    }
-  }
-
-  // Nicer preview with fixed width and local backgrounds.
-  if ($variables['context']->getType() == 'preview') {
-    $variables['attributes']['style'] = "width: 800px";
-  }
-}
-
-/**
- * Extract image from carousel slide.
- */
-function _ui_suite_bootstrap_extract_carousel_image(&$item) {
-  if (is_array($item) && array_key_exists('#theme', $item)) {
-    if ($item['#theme'] === 'image' || $item['#theme'] === 'image_formatter') {
-      $image = $item;
-      $item = [];
-      return $image;
-    }
-  }
-  if (isset($item) && is_array($item)) {
-    foreach ($item as &$next) {
-      $dig = _ui_suite_bootstrap_extract_carousel_image($next);
-      if ($dig) {
-        return $dig;
-      }
-    }
-  }
-  return FALSE;
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCarousel $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternCarousel::class);
+  $instance->preprocess($variables);
 }
 
 /*
  * Implements hook_preprocess_HOOK() for 'pattern_pagination'.
- *
- * See also: https://getbootstrap.com/docs/5.2/components/pagination/.
  */
 function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): void {
-  $variables['current'] = (int) (string) $variables['current'];
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternPagination::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'status_messages'.
+ */
+function ui_suite_bootstrap_preprocess_status_messages(&$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessStatusMessages $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessStatusMessages::class);
+  $instance->preprocess($variables);
 }
