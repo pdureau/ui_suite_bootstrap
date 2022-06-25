@@ -104,12 +104,20 @@ button:
       label: "Outline Light large"
     outline_dark__lg:
       label: "Outline Dark large"
+    dropdown_item:
+      label: "(Dropdown item)"
   settings:
     disabled:
       type: "boolean"
       label: "Disabled?"
       description: "Is the button disabled?"
       preview: true
+      allow_expose: true
+    label_visually_hidden:
+      type: "boolean"
+      label: "Hide button label?"
+      description: "Is the button's label hidden?"
+      preview: false
       allow_expose: true
   fields:
     label:

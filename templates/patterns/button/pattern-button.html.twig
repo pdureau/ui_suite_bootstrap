@@ -1,11 +1,20 @@
-{% if variant != '' and variant|lower != 'default' %}
+{% if variant != '' and variant|lower != 'dropdown_item' %}
   {% set variants = variant|split('__') %}
   {% for variant in variants %}
     {% set attributes = attributes.addClass('btn-' ~ variant|lower|replace({'_': '-'})) %}
   {% endfor %}
+  {% set attributes = attributes.addClass('btn') %}
 {% endif %}
 
-{% set attributes = attributes.addClass('btn') %}
+{% set attributes = variant|lower == 'dropdown_item' ? attributes.addClass('dropdown-item') : attributes %}
+
+{% if label_visually_hidden %}
+  {% set label %}
+    <span class="visually-hidden">
+      {{ label }}
+    </span>
+  {% endset %}
+{% endif %}
 
 {% if url or attributes.href %}
   {% set url = url ?: attributes.href %}
@@ -20,5 +29,5 @@
     {% set attributes = attributes.setAttribute('disabled', '') %}
   {% endif %}
 
-  <span{{ attributes }}>{{ label }}</span>
+  <button{{ attributes.setAttribute('type', 'button') }}>{{ label }}</button>
 {% endif %}

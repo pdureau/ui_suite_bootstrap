@@ -13,6 +13,7 @@ use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCard;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCardBody;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCarousel;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternDropdown;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessStatusMessages;
 use Drupal\ui_suite_bootstrap\HookHandler\ThemeSuggestionsAlter;
@@ -64,6 +65,16 @@ function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCarousel $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessPatternCarousel::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'pattern_dropdown'.
+ */
+function ui_suite_bootstrap_preprocess_pattern_dropdown(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternDropdown $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternDropdown::class);
   $instance->preprocess($variables);
 }
 

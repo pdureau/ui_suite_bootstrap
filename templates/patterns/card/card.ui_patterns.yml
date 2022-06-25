@@ -15,6 +15,7 @@ card:
         top: "Top (Default)"
         bottom: "Bottom"
       preview: "top"
+      allow_expose: true
   fields:
     image:
       type: "render"

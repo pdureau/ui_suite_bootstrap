@@ -24,6 +24,7 @@ alert:
       label: "Dismissible?"
       description: "It is possible to dismiss any alert inline."
       preview: True
+      allow_expose: true
   fields:
     heading:
       type: "text"

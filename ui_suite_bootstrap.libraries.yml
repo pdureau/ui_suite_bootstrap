@@ -9,7 +9,7 @@ bootstrap:
     theme:
       /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
   dependencies:
-    - core/jquery
+    - core/popperjs
 
 carousel_example:
   css:

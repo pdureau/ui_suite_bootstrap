@@ -1,0 +1,127 @@
+dropdown:
+  label: "Dropdown"
+  description: "Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is an intentional design decision. https://getbootstrap.com/docs/5.2/components/dropdowns/"
+  variants:
+    dropdown:
+      label: "Dropdown"
+    dropdown_center:
+      label: "Dropdown centered"
+    btn_group:
+      label: "Button group"
+    btn_group__dropup:
+      label: "Button group dropup"
+    btn_group__dropend:
+      label: "Button group dropend"
+    btn_group__dropstart:
+      label: "Button group dropstart"
+  settings:
+    button_type:
+      type: "select"
+      label: "Dropdown button type"
+      options:
+        button: "Button (Default)"
+        a: "Link"
+      preview: "button"
+      allow_expose: true
+    button_color:
+      type: "select"
+      label: "Dropdown button color"
+      options:
+        primary: "Primary"
+        secondary: "Secondary (Default)"
+        success: "Success"
+        danger: "Danger"
+        warning: "Warning"
+        info: "Info"
+        light: "Light"
+        dark: "Dark"
+      preview: "secondary"
+      allow_expose: true
+    button_size:
+      type: "select"
+      label: "Dropdown button size"
+      description: "Button dropdowns work with buttons of all sizes, including default and split dropdown buttons."
+      options:
+        sm: "Small"
+        default: "Default"
+        lg: "Large"
+      preview: "default"
+      allow_expose: true
+    button_split:
+      type: "boolean"
+      label: "Split"
+      description: "Create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of .dropdown-toggle-split for proper spacing around the dropdown caret."
+      preview: false
+      allow_expose: true
+    dark:
+      type: "boolean"
+      label: "Dark"
+      description: "Opt into darker dropdowns to match a dark navbar or custom style."
+      preview: false
+      allow_expose: true
+    auto_close:
+      type: "select"
+      label: "Auto close"
+      description: "By default, the dropdown menu is closed when clicking inside or outside the dropdown menu. You can use the autoClose option to change this behavior of the dropdown."
+      options:
+        'true': "Default"
+        'inside': "When click inside"
+        'outside': "When click outside"
+        'false': "Manual close"
+      preview: "true"
+      allow_expose: true
+  fields:
+    title:
+      type: "text"
+      label: "Title"
+      description: "The dropdown button title. Plain text."
+      preview: "Dropdown button"
+    content:
+      type: "list"
+      label: "Content"
+      description: "The list of elements using dropdown item pattern."
+      preview:
+        - type: "pattern"
+          id: "dropdown_item"
+          variant: "dropdown_header"
+          content: "Dropdown header"
+          heading_level: 6
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Action"
+          url: '#'
+        - type: "pattern"
+          id: "dropdown_item"
+          variant: "dropdown_item_text"
+          content: "Dropdown item text"
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Another action"
+          url: '#'
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Something else here"
+          url: '#'
+        - type: "pattern"
+          id: "dropdown_item"
+          variant: "dropdown_divider"
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Separated link"
+          url: '#'
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Action (button)"
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Another action (button)"
+        - type: "pattern"
+          id: "button"
+          variant: "dropdown_item"
+          label: "Something else here (button)"

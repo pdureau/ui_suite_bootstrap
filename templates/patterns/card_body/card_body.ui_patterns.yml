@@ -1,5 +1,5 @@
 card_body:
-  label: "Card body"
+  label: "(Card body)"
   description: "Internal: to be used in the 'Card' component. https://getbootstrap.com/docs/5.2/components/card/"
   settings:
     heading_level:
@@ -12,6 +12,7 @@ card_body:
         5: "h5 (Default)"
         6: "h6"
       preview: 5
+      allow_expose: true
   fields:
     title:
       type: "text"

@@ -1,0 +1,78 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass(variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% set button_type = button_type|default('button') %}
+{% set button_color = button_color|default('secondary') %}
+{% set button_size = button_size|default('default') %}
+{% set button_split = button_split|default(false) %}
+{% set dark = dark|default(false) %}
+{% set auto_close = auto_close|default('true') %}
+{# Force button_type as button when splitting. #}
+{% set button_type = button_split ? 'button' : button_type %}
+{% set button_variant = button_size == 'default' ? button_color : button_color ~ '__' ~ button_size %}
+
+{% set button_attributes = create_attribute({
+  'class': [
+    'dropdown-toggle'
+  ],
+  'id': dropdown_id,
+  'data-bs-toggle': 'dropdown',
+  'data-bs-auto-close': auto_close,
+  'aria-expanded': 'false'
+}) %}
+{% set button_attributes = button_type == 'a' ? button_attributes.setAttribute('href', '#') : button_attributes %}
+
+{% set list_attributes = create_attribute({
+  'class': [
+    'dropdown-menu',
+    dark ? 'dropdown-menu-dark'
+  ],
+  'aria-labelledby': dropdown_id
+}) %}
+
+<div {{ attributes }}>
+  {% if button_split %}
+    {% set split_button_attributes = create_attribute({
+      'id': dropdown_id
+    }) %}
+
+    {% if variant|lower != 'btn_group__dropstart' %}
+      {{ pattern('button', {
+        label: title,
+        attributes: split_button_attributes
+      }, button_variant) }}
+    {% endif %}
+
+    {{ pattern('button', {
+      label: 'Toggle Dropdown'|t,
+      label_visually_hidden: true,
+      attributes: button_attributes.addClass('dropdown-toggle-split').setAttribute('id', false)
+    }, button_variant) }}
+  {% else %}
+    {{ pattern('button', {
+      label: title,
+      attributes: button_attributes
+    }, button_variant) }}
+  {% endif %}
+
+  {% if content %}
+    <ul {{ list_attributes }}>
+      {% for item in content %}
+        <li>
+          {{ item }}
+        </li>
+      {% endfor %}
+    </ul>
+  {% endif %}
+
+  {% if button_split and variant|lower == 'btn_group__dropstart' %}
+    {{ pattern('button', {
+      label: title,
+      attributes: split_button_attributes
+    }, button_variant) }}
+  {% endif %}
+</div>

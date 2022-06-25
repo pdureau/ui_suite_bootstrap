@@ -18,6 +18,7 @@ list:
         ul: "ul (Default)"
         ol: "ol"
       preview: "ul"
+      allow_expose: true
   fields:
     items:
       type: "render"
