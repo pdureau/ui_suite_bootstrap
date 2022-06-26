@@ -4,31 +4,105 @@ navbar:
   variants:
     default:
       label: "Default"
+    expand_sm:
+      label: "Expand small"
+    expand_md:
+      label: "Expand medium"
+    expand_lg:
+      label: "Expand large"
+    expand_xl:
+      label: "Expand extra large"
+    expand_xxl:
+      label: "Expand extra extra large"
     dark:
       label: "Dark"
+    dark__expand_sm:
+      label: "Dark expand small"
+    dark__expand_md:
+      label: "Dark expand medium"
+    dark__expand_lg:
+      label: "Dark expand large"
+    dark__expand_xl:
+      label: "Dark expand extra large"
+    dark__expand_xxl:
+      label: "Dark expand extra extra large"
+  settings:
+    container_class:
+      type: "select"
+      label: "Container class"
+      options:
+        container: "Container"
+        container-sm: "Container small"
+        container-md: "Container medium"
+        container-lg: "Container large"
+        container-xl: "Container extra large"
+        container-xxl: "Container extra extra large"
+        container-fluid: "Container fluid (Default)"
+      preview: "container-fluid"
+      allow_expose: true
+    placement:
+      type: "select"
+      label: "Placement"
+      options:
+        default: "Default"
+        fixed-top: "Fixed top"
+        fixed-bottom: "Fixed bottom"
+        sticky-top: "Sticky top"
+        sticky-bottom: "Sticky bottom"
+      preview: "default"
+      allow_expose: true
+    toggler_position:
+      type: "select"
+      label: "Toggler position"
+      description: "Navbar togglers are left-aligned by default, but should they follow a sibling element like a .navbar-brand, they’ll automatically be aligned to the far right. Reversing your markup will reverse the placement of the toggler"
+      options:
+        start: "Start"
+        end: "End"
+      preview: "start"
+      allow_expose: true
+    toggle_action:
+      type: "select"
+      label: "Toggle action"
+      description: "Transform your expanding and collapsing navbar into an offcanvas drawer with the offcanvas plugin."
+      options:
+        collapse: "Collapse (default)"
+        offcanvas: "Offcanvas"
+      preview: "collapse"
+      allow_expose: true
+    offcanvas_position:
+      type: "select"
+      label: "Offcanvas position"
+      options:
+        start: "Start"
+        end: "End (default)"
+      preview: "end"
+      allow_expose: true
   fields:
-    brand:
-      type: "text"
-      label: "Brand title"
-      description: "Your company, product, or project name."
-      preview: "Brand title"
-    items:
+    navigation:
       type: "render"
-      label: "Menu items"
-      description: "Full-height and lightweight navigation (including support for dropdowns)."
-      preview:
-        - title: "Home"
-          url: "#"
-        - title: "Library"
-          url: "#"
-          below:
-            - title: "Sub 1"
-              url: "#"
-            - title: "Sub 2"
-              url: "#"
-        - title: "Data"
-    text:
+      label: "Navigation"
+      description: "Navigation elements (brand, text, etc.) displayed even on small screens."
+    navigation_collapsible:
+      type: "render"
+      label: "Navigation collapsible"
+      description: "Navigation elements (menu links, etc.) displayed on collapsible dropdown on small screens."
+    offcanvas_label:
       type: "text"
-      label: "Text"
-      description: "Vertically centered strings of text."
-      preview: " Navbar text with an inline element "
+      label: "Offcanvas label"
+      description: "When using the offcanvas feature, used for labelling."
+      preview: "Offcanvas"
+#    items:
+#      type: "render"
+#      label: "Menu items"
+#      description: "Full-height and lightweight navigation (including support for dropdowns)."
+#      preview:
+#        - title: "Home"
+#          url: "#"
+#        - title: "Library"
+#          url: "#"
+#          below:
+#            - title: "Sub 1"
+#              url: "#"
+#            - title: "Sub 2"
+#              url: "#"
+#        - title: "Data"

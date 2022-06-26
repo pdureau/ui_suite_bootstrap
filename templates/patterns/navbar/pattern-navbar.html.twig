@@ -1,51 +1,131 @@
-{% if variant != '' and variant|lower != 'default' %}
-  {% set attributes = attributes.addClass('navbar-' ~ variant|lower|replace({'_': '-'})) %}
-{% endif %}
-
 {% import _self as menus %}
 
-<nav{{ attributes.addClass(['navbar', 'navbar-expand-lg']) }}>
-  {% if brand %}
-  <span class="navbar-brand" href="#">{{ brand }}</span>
-  {% endif %}
-  {% if items %}
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="{{ 'Toggle navigation'|t }}">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-  {{ menus.menu_links(items, attributes, 0) }}
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('navbar-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+{% set attributes = attributes.addClass('navbar') %}
+
+{% set container_class = container_class|default('container-fluid') %}
+{% set placement = placement|default('default') %}
+{% set toggler_position = toggler_position|default('start') %}
+{% set toggle_action = toggle_action|default('collapse') %}
+{% set offcanvas_position = offcanvas_position|default('end') %}
+{% set attributes = placement != 'default' ? attributes.addClass(placement) : attributes %}
+
+<nav {{ attributes }}>
+  <div class="{{ container_class }}">
+    {% if navigation_collapsible and toggler_position == 'start' %}
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="{{ toggle_action }}"
+              data-bs-target="#{{ navbar_id }}"
+              aria-controls="{{ navbar_id }}"
+              aria-expanded="false"
+              aria-label="{{ 'Toggle navigation'|t }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    {% endif %}
+    {{ navigation }}
+    {% if navigation_collapsible and toggler_position == 'end' %}
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="{{ toggle_action }}"
+              data-bs-target="#{{ navbar_id }}"
+              aria-controls="{{ navbar_id }}"
+              aria-expanded="false"
+              aria-label="{{ 'Toggle navigation'|t }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    {% endif %}
+
+    {% if navigation_collapsible %}
+      {% if toggle_action == 'offcanvas' %}
+        <div class="offcanvas offcanvas-{{ offcanvas_position }}" tabindex="-1" id="{{ navbar_id }}" aria-labelledby="{{ navbar_id }}-label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="{{ navbar_id }}-label">{{ offcanvas_label|default('Navigation'|t) }}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="{{ 'Close'|t }}"></button>
+          </div>
+          <div class="offcanvas-body">
+            {{ navigation_collapsible }}
+          </div>
+        </div>
+      {% else %}
+        <div class="collapse navbar-collapse" id="{{ navbar_id }}">
+          {{ navigation_collapsible }}
+        </div>
+      {% endif %}
+    {% endif %}
   </div>
-  {% endif %}
-  {% if text %}
-  <span class="navbar-text">{{ text }}</span>
-  {% endif %}
 </nav>
 
+
+{# @todo Handle navbar scroll option. #}
+{#<ul class="navbar-nav navbar-nav-scroll">#}
+{#</ul>#}
+
+{# @todo Handle navbar items. #}
+{#<ul class="navbar-nav">#}
+{#  <li class="nav-item">#}
+{#    <a class="nav-link active" aria-current="page" href="#">Home</a>#}
+{#  </li>#}
+{#  <li class="nav-item">#}
+{#    <a class="nav-link" href="#">Link</a>#}
+{#  </li>#}
+{#  <li class="nav-item dropdown">#}
+{#    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#      Dropdown#}
+{#    </a>#}
+{#    ...#}
+{#  </li>#}
+{#  <li class="nav-item">#}
+{#    <a class="nav-link disabled">Disabled</a>#}
+{#  </li>#}
+{#</ul>#}
+
+{# @todo Handle dark dropdown if dark navbar. #}
+{#<div class="dropdown">#}
+{#  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">#}
+{#    Dropdown button#}
+{#  </button>#}
+{#  <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownMenuButton2">#}
+{#    <li><a class="dropdown-item active" href="#">Action</a></li>#}
+{#    <li><a class="dropdown-item" href="#">Another action</a></li>#}
+{#    <li><a class="dropdown-item" href="#">Something else here</a></li>#}
+{#    <li><hr class="dropdown-divider"></li>#}
+{#    <li><a class="dropdown-item" href="#">Separated link</a></li>#}
+{#  </ul>#}
+{#</div>#}
+
+{# @todo Move this macro into dedicated component to be able to call it in menus
+ presenter templates. #}
 {% macro menu_links(items, attributes, menu_level) %}
   {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
       <ul class="navbar-nav">
-      {% for item in items %}
+        {% for item in items %}
           {% if item.below %}
-          <li{{ item.attributes.addClass(['nav-item', 'dropdown']) }}>
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              {{ item.title }}
-            </a>
-            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-          </li>
+            <li{{ item.attributes.addClass(['nav-item', 'dropdown']) }}>
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{ item.title }}
+              </a>
+              {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            </li>
           {% else %}
-          <li{{ item.attributes.addClass('nav-item') }}>
-            <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
-          </li>
+            <li{{ item.attributes.addClass('nav-item') }}>
+              <a class="nav-link" href="{{ item.url }}">{{ item.title }}</a>
+            </li>
           {% endif %}
-      {% endfor %}
+        {% endfor %}
       </ul>
     {% else %}
       <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-      {% for item in items %}
-        <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
-      {% endfor %}
+        {% for item in items %}
+          <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+        {% endfor %}
       </div>
     {% endif %}
   {% endif %}
