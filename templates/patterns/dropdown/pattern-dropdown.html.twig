@@ -11,13 +11,20 @@
 {% set button_split = button_split|default(false) %}
 {% set dark = dark|default(false) %}
 {% set auto_close = auto_close|default('true') %}
+{% set dropdown_tag = dropdown_tag|default('div') %}
+{% set dropdown_navbar = dropdown_navbar|default(false) %}
 {# Force button_type as button when splitting. #}
 {% set button_type = button_split ? 'button' : button_type %}
-{% set button_variant = button_size == 'default' ? button_color : button_color ~ '__' ~ button_size %}
+{% if dropdown_navbar %}
+  {% set button_variant = default %}
+{% else %}
+  {% set button_variant = button_size == 'default' ? button_color : button_color ~ '__' ~ button_size %}
+{% endif %}
 
 {% set button_attributes = create_attribute({
   'class': [
-    'dropdown-toggle'
+    'dropdown-toggle',
+    dropdown_navbar ? 'nav-link',
   ],
   'id': dropdown_id,
   'data-bs-toggle': 'dropdown',
@@ -34,7 +41,7 @@
   'aria-labelledby': dropdown_id
 }) %}
 
-<div {{ attributes }}>
+<{{ dropdown_tag }} {{ attributes }}>
   {% if button_split %}
     {% set split_button_attributes = create_attribute({
       'id': dropdown_id
@@ -75,4 +82,4 @@
       attributes: split_button_attributes
     }, button_variant) }}
   {% endif %}
-</div>
+</{{ dropdown_tag }}>

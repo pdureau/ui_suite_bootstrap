@@ -2,6 +2,9 @@ button:
   label: "Button"
   description: "For actions in forms, dialogs, and more with support for multiple sizes, states, and more. https://getbootstrap.com/docs/5.2/components/buttons/"
   variants:
+    default:
+      label: "Default"
+      description: "No 'btn' class added."
     primary__sm:
       label: "Primary small"
     secondary__sm:

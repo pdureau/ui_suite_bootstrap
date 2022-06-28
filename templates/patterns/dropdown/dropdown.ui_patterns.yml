@@ -70,6 +70,21 @@ dropdown:
         'false': "Manual close"
       preview: "true"
       allow_expose: true
+    dropdown_tag:
+      type: "select"
+      label: "Dropdown tag"
+      description: "Use Li for usage inside navbar. Otherwise stick to Div."
+      options:
+        div: "Div (default)"
+        li: "Li"
+      preview: "div"
+      allow_expose: true
+    dropdown_navbar:
+      type: "boolean"
+      label: "Use in navbar?"
+      description: "Check if the dropdown will be used in a navbar-nav element."
+      preview: false
+      allow_expose: true
   fields:
     title:
       type: "text"

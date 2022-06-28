@@ -1,4 +1,4 @@
-{% if variant != '' and variant|lower != 'dropdown_item' %}
+{% if variant != '' and variant|lower != 'default' and variant|lower != 'dropdown_item' %}
   {% set variants = variant|split('__') %}
   {% for variant in variants %}
     {% set attributes = attributes.addClass('btn-' ~ variant|lower|replace({'_': '-'})) %}

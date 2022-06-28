@@ -15,6 +15,7 @@ use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCardBody;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCarousel;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternDropdown;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbar;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbarNav;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessStatusMessages;
 use Drupal\ui_suite_bootstrap\HookHandler\ThemeSuggestionsAlter;
@@ -86,6 +87,16 @@ function ui_suite_bootstrap_preprocess_pattern_navbar(array &$variables): void {
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbar $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessPatternNavbar::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'pattern_navbar_nav'.
+ */
+function ui_suite_bootstrap_preprocess_pattern_navbar_nav(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbarNav $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternNavbarNav::class);
   $instance->preprocess($variables);
 }
 
