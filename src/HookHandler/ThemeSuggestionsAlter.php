@@ -15,7 +15,7 @@ class ThemeSuggestionsAlter {
   public const IGNORE_FORM_CONTROL_TYPES = [
     'checkbox',
     'hidden',
-    'radio'
+    'radio',
   ];
 
   /**
@@ -91,7 +91,7 @@ class ThemeSuggestionsAlter {
    *   TRUE if element's type is among the types. FALSE otherwise.
    */
   protected function isType(array $element, array $types): bool {
-    if (isset($element['#type']) && in_array($element['#type'], $types)) {
+    if (isset($element['#type']) && \in_array($element['#type'], $types, TRUE)) {
       return TRUE;
     }
     return FALSE;
@@ -109,7 +109,7 @@ class ThemeSuggestionsAlter {
    *   TRUE if has class. FALSE otherwise.
    */
   protected function hasClass(array $element, string $class): bool {
-    if (isset($element['#attributes']['class']) && in_array($class, $element['#attributes']['class'])) {
+    if (isset($element['#attributes']['class']) && \in_array($class, $element['#attributes']['class'], TRUE)) {
       return TRUE;
     }
     return FALSE;

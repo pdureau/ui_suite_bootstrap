@@ -21,7 +21,7 @@ class PreprocessPatternCarousel {
     $variables['carousel_id'] = Html::getUniqueId('bootstrap-carousel');
 
     // Move first image of each slide in a specific array key.
-    if (array_key_exists('slides', $variables) && is_array($variables['slides'])) {
+    if (\array_key_exists('slides', $variables) && \is_array($variables['slides'])) {
       foreach ($variables['slides'] as &$slide) {
         $slide['image'] = $this->extractCarouselImage($slide);
       }
@@ -29,7 +29,7 @@ class PreprocessPatternCarousel {
 
     // Nicer preview with fixed width and local backgrounds.
     if ($variables['context']->getType() == 'preview') {
-      $variables['attributes']['style'] = "width: 800px";
+      $variables['attributes']['style'] = 'width: 800px';
     }
   }
 
@@ -37,11 +37,11 @@ class PreprocessPatternCarousel {
    * Extract image from carousel slide.
    */
   protected function extractCarouselImage(&$item) {
-    if (!is_array($item)) {
+    if (!\is_array($item)) {
       return FALSE;
     }
 
-    if (array_key_exists('#theme', $item)) {
+    if (\array_key_exists('#theme', $item)) {
       if ($item['#theme'] === 'image' || $item['#theme'] === 'image_formatter') {
         $image = $item;
         $item = [];

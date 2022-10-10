@@ -13,6 +13,11 @@ use Drupal\Core\Render\Element;
 class PreprocessPatternNavbar {
 
   /**
+   * Length of the word dark.
+   */
+  public const DARK_LENGTH = 4;
+
+  /**
    * Pattern fields where render elements will be injected.
    */
   public const REGIONS_FIELDS = [
@@ -29,7 +34,7 @@ class PreprocessPatternNavbar {
   public function preprocess(array &$variables): void {
     $variables['navbar_id'] = Html::getUniqueId('bootstrap-navbar');
 
-    if (substr($variables['variant'], 0, 4) === 'dark') {
+    if (\substr($variables['variant'], 0, self::DARK_LENGTH) === 'dark') {
       foreach (self::REGIONS_FIELDS as $region) {
         if (isset($variables[$region])) {
           $this->addDarkSetting($variables[$region]);
@@ -45,9 +50,9 @@ class PreprocessPatternNavbar {
    *   The render element to parse.
    */
   protected function addDarkSetting(array &$item): void {
-    if (isset($item['#type']) &&
-      in_array($item['#type'], ['pattern', 'pattern_preview']) &&
-      $item['#id'] == 'navbar_nav'
+    if (isset($item['#type'])
+      && \in_array($item['#type'], ['pattern', 'pattern_preview'], TRUE)
+      && $item['#id'] == 'navbar_nav'
     ) {
       $item['#dark'] = TRUE;
       // Stop recursion when a navbar_nav is found, no need to enter in it.

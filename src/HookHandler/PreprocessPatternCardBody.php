@@ -16,7 +16,7 @@ class PreprocessPatternCardBody {
    *   The preprocessed variables.
    */
   public function preprocess(array &$variables): void {
-    if (array_key_exists('links', $variables) && is_array($variables['links'])) {
+    if (\array_key_exists('links', $variables) && \is_array($variables['links'])) {
       foreach ($variables['links'] as &$item) {
         $this->addCardLinkClass($item);
       }
@@ -27,11 +27,11 @@ class PreprocessPatternCardBody {
    * Add expected class in card's link.
    */
   protected function addCardLinkClass(&$item): void {
-    if (!is_array($item)) {
+    if (!\is_array($item)) {
       return;
     }
 
-    if (array_key_exists('#type', $item)) {
+    if (\array_key_exists('#type', $item)) {
       $class = 'card-link';
       if ($item['#type'] === 'link') {
         $item['#attributes']['class'][] = $class;

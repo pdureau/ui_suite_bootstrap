@@ -24,11 +24,13 @@ class PreprocessPatternNavbarNav {
       }
 
       // Add 'nav-link' class.
-      $item['url']->mergeOptions(['attributes' => [
-        'class' => [
-          'nav-link',
+      $item['url']->mergeOptions([
+        'attributes' => [
+          'class' => [
+            'nav-link',
+          ],
         ],
-      ]]);
+      ]);
 
       // Add 'dropdown-item' patterns to below links.
       if (isset($item['below']) && !empty($item['below'])) {
@@ -40,7 +42,7 @@ class PreprocessPatternNavbarNav {
           if ($sub_level_item['url']->isRouted() && $sub_level_item['url']->getRouteName() === '<nolink>') {
             $sub_level_item_attributes = $sub_level_item['url']->getOption('attributes');
             // Divider.
-            if (isset($sub_level_item_attributes['class']) && in_array('dropdown-divider', $sub_level_item_attributes['class'])) {
+            if (isset($sub_level_item_attributes['class']) && \in_array('dropdown-divider', $sub_level_item_attributes['class'], TRUE)) {
               $sub_level_item = [
                 '#type' => 'pattern',
                 '#id' => 'dropdown_item',
@@ -48,7 +50,7 @@ class PreprocessPatternNavbarNav {
               ];
             }
             // Header.
-            elseif (isset($sub_level_item_attributes['class']) && in_array('dropdown-header', $sub_level_item_attributes['class'])) {
+            elseif (isset($sub_level_item_attributes['class']) && \in_array('dropdown-header', $sub_level_item_attributes['class'], TRUE)) {
               $sub_level_item = [
                 '#type' => 'pattern',
                 '#id' => 'dropdown_item',

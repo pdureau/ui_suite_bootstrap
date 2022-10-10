@@ -10,6 +10,7 @@ declare(strict_types = 1);
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\ui_suite_bootstrap\HookHandler\FormSearchBlockFormAlter;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAlert;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCard;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCardBody;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCarousel;
@@ -17,13 +18,12 @@ use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternDropdown;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbar;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbarNav;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination;
-use Drupal\ui_suite_bootstrap\HookHandler\PreprocessStatusMessages;
 use Drupal\ui_suite_bootstrap\HookHandler\ThemeSuggestionsAlter;
 
 /**
  * Implements hook_form_FORM_ID_alter() for 'search_block_form'.
  */
-function ui_suite_bootstrap_form_search_block_form_alter(&$form, FormStateInterface $form_state, $form_id): void {
+function ui_suite_bootstrap_form_search_block_form_alter(array &$form, FormStateInterface $form_state, string $form_id): void {
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\FormSearchBlockFormAlter $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(FormSearchBlockFormAlter::class);
@@ -37,6 +37,16 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessPage::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'pattern_alert'.
+ */
+function ui_suite_bootstrap_preprocess_pattern_alert(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAlert $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternAlert::class);
   $instance->preprocess($variables);
 }
 
@@ -100,23 +110,13 @@ function ui_suite_bootstrap_preprocess_pattern_navbar_nav(array &$variables): vo
   $instance->preprocess($variables);
 }
 
-/*
+/**
  * Implements hook_preprocess_HOOK() for 'pattern_pagination'.
  */
 function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): void {
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessPatternPagination::class);
-  $instance->preprocess($variables);
-}
-
-/**
- * Implements hook_preprocess_HOOK() for 'status_messages'.
- */
-function ui_suite_bootstrap_preprocess_status_messages(&$variables): void {
-  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessStatusMessages $instance */
-  $instance = \Drupal::service('class_resolver')
-    ->getInstanceFromDefinition(PreprocessStatusMessages::class);
   $instance->preprocess($variables);
 }
 

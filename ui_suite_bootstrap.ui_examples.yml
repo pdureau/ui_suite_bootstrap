@@ -674,7 +674,7 @@ pricing:
                 header:
                   "#type": "html_tag"
                   "#tag": "h4"
-                  "#value": "Entreprise"
+                  "#value": "Enterprise"
                   "#attributes":
                     class:
                       - my-0

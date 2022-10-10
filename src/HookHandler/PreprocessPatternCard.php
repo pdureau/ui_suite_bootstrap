@@ -18,8 +18,7 @@ class PreprocessPatternCard {
   public function preprocess(array &$variables): void {
     // @todo If header, parse its content and if nav pattern found, add class
     // matching the variant.
-
-    if (!array_key_exists('image', $variables) || !is_array($variables['image'])) {
+    if (!\array_key_exists('image', $variables) || !\is_array($variables['image'])) {
       return;
     }
 
@@ -45,11 +44,11 @@ class PreprocessPatternCard {
    * Add expected class in card's image.
    */
   protected function addCardImageClass(&$item, string $image_class): void {
-    if (!is_array($item)) {
+    if (!\is_array($item)) {
       return;
     }
 
-    if (array_key_exists('#theme', $item)) {
+    if (\array_key_exists('#theme', $item)) {
       if ($item['#theme'] === 'image') {
         $item['#attributes']['class'][] = $image_class;
       }
