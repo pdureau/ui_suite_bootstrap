@@ -116,7 +116,7 @@ carousel:
   render:
     "#attached":
       "library":
-        - ui_suite_bootstrap/carousel_example
+        - ui_suite_bootstrap/example_carousel
     "1":
       "#type": "pattern"
       "#id": "carousel"

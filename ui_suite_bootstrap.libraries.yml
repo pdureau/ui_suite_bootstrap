@@ -11,7 +11,12 @@ bootstrap:
   dependencies:
     - core/popperjs
 
-carousel_example:
+example_carousel:
   css:
     theme:
-      assets/css/carousel_example.css: {}
+      assets/css/example/carousel.css: {}
+
+component_placeholder:
+  css:
+    theme:
+      assets/css/component/placeholder.css: {}

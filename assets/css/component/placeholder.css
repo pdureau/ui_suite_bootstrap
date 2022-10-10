@@ -1,0 +1,4 @@
+/* Prevents side effect of "placeholder" class in FormattableMarkup. */
+em.placeholder {
+  all: revert;
+}

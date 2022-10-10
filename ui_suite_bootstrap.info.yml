@@ -25,3 +25,4 @@ regions:
 
 libraries:
   - ui_suite_bootstrap/bootstrap
+  - ui_suite_bootstrap/component_placeholder
