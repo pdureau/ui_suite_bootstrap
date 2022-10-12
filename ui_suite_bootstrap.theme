@@ -26,7 +26,7 @@ function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
     foreach ($variables['image'] as &$item) {
       _ui_suite_bootstrap_add_card_image_class($item, $variables['variant']);
       if ($variables['context']->getType() == 'preview') {
-        $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
+        $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
         $uri = isset($item['#uri']) ? implode('/', [
           '',
           $base_path,
@@ -103,7 +103,7 @@ function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void
   // Nicer preview with fixed width and local backgrounds.
   if ($variables['context']->getType() == 'preview') {
     $variables['attributes']['style'] = "width: 800px";
-    $base_path = drupal_get_path('theme', 'ui_suite_bootstrap');
+    $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
     foreach ($variables['slides'] as $i => $slide) {
       if (isset($slide['image']) && is_array($slide['image'])) {
         $image = $slide['image'];
