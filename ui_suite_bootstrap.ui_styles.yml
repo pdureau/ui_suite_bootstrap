@@ -550,3 +550,15 @@ flex_align_content:
     align-content-between: "Between"
     align-content-around: "Around"
     align-content-stretch: "Stretch"
+
+# https://getbootstrap.com/docs/5.2/utilities/vertical-align/
+vertical_align:
+  label: "Vertical alignment"
+  description: "Change the alignment of elements. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements."
+  options:
+    align-baseline: "Baseline"
+    align-top: "Top"
+    align-middle: "Middle"
+    align-bottom: "Bottom"
+    align-text-bottom: "Text-bottom"
+    align-text-top: "Text-top"
