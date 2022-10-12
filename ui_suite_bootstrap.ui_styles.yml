@@ -581,3 +581,12 @@ float:
     float-start: "Start"
     float-end: "End"
     float-none: "None"
+
+# https://getbootstrap.com/docs/5.2/utilities/visibility/
+visibility:
+  label: "Visibility"
+  description: "Control the visibility of elements without modifying their display. These classes do not modify the display value and do not affect layout; .invisible elements still take up space in the page."
+  previewed_as: "aside"
+  options:
+    visible: "Visible"
+    invisible: "Invisible"
