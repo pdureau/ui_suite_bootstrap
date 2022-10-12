@@ -1,7 +1,7 @@
 # https://getbootstrap.com/docs/5.2/utilities/borders/#border
 borders_border:
   label: "Border"
-  description: "Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time."
+  description: "Use border utilities to add or remove an element's borders. Choose from all borders or one at a time."
   options:
     border: "Additive All"
     border-top: "Additive Top"
@@ -390,7 +390,7 @@ text_text_transform:
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-size
 text_text_font_size:
   label: "Font size"
-  description: "Quickly change the font-size of text. While our heading classes (e.g., .h1–.h6) apply font-size, font-weight, and line-height, these utilities only apply font-size. Sizing for these utilities matches HTML’s heading elements, so as the number increases, their size decreases."
+  description: "Quickly change the font-size of text. While our heading classes (e.g., .h1–.h6) apply font-size, font-weight, and line-height, these utilities only apply font-size. Sizing for these utilities matches HTML's heading elements, so as the number increases, their size decreases."
   options:
     fs-1: "1"
     fs-2: "2"
@@ -417,3 +417,136 @@ typography:
     display-5: "Display heading 5"
     display-6: "Display heading 6"
     lead: "Lead"
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#enable-flex-behaviors
+flex_flex:
+  label: "Flex"
+  description: "Apply display utilities to create a flexbox container and transform direct children elements into flex items. Flex containers and items are able to be modified further with additional flex properties."
+  options:
+    d-flex: "Flex"
+    d-inline-flex: "Inline flex"
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#direction
+flex_direction:
+  label: "Flex direction"
+  description: "Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is row However, you may encounter situations where you needed to explicitly set this value (like responsive layouts)."
+  options:
+    flex-row: "Flex row"
+    flex-row-reverse: "Reverse flex row"
+    flex-column: "Flex column"
+    flex-column-reverse: "Reverse flex column"
+  previewed_with:
+    - d-flex
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content
+flex_justify_content:
+  label: "Flex justify content"
+  description: "Use justify-content utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if flex-direction: column). Choose from start (browser default), end, center, between, around, or evenly."
+  options:
+    justify-content-start: "Start"
+    justify-content-end: "End"
+    justify-content-center: "Center"
+    justify-content-between: "Between"
+    justify-content-around: "Around"
+    justify-content-evenly: "Evenly"
+  previewed_with:
+    - d-flex
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#align-self
+flex_align_items:
+  label: "Flex align items"
+  description: "Use align-self utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if flex-direction: column). Choose from start, end, center, baseline, or stretch (browser default)."
+  options:
+    align-items-start: "Start"
+    align-items-end: "End"
+    align-items-center: "Center"
+    align-items-baseline: "Baseline"
+    align-items-stretch: "Stretch"
+  previewed_with:
+    - d-flex
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#align-self
+flex_align_self:
+  label: "Flex align self"
+  description: "Use align-self utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if flex-direction: column). Choose from the same options as align-self: start, end, center, baseline, or stretch (browser default)."
+  options:
+    align-self-start: "Start"
+    align-self-end: "End"
+    align-self-center: "Center"
+    align-self-baseline: "Baseline"
+    align-self-stretch: "Stretch"
+  previewed_with:
+    - d-flex
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#fill
+flex_fill:
+  label: "Flex fill"
+  description: "Use the flex-fill class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space."
+  options:
+    flex-fill: "Fill"
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#grow-and-shrink
+flex_grow:
+  label: "Flex grow"
+  description: "Use flex-grow-* utilities to toggle a flex item's ability to grow to fill available space. In the example below, the flex-grow-1 elements uses all available space it can, while allowing the remaining two flex items their necessary space."
+  options:
+    flex-grow-0: "Grow 0"
+    flex-grow-1: "Grow 1"
+
+flex_shrink:
+  label: "Flex shrink"
+  description: "Use flex-shrink-* utilities to toggle a flex item's ability to shrink if necessary."
+  options:
+    flex-shrink-0: "Shrink 0"
+    flex-shrink-1: "Shrink 1"
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#wrap
+flex_wrap:
+  label: "Flex wrap"
+  description: "Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with flex-nowrap, wrapping with flex-wrap, or reverse wrapping with flex-wrap-reverse."
+  options:
+    flex-nowrap: "No wrap"
+    flex-wrap: "Wrap"
+    flex-wrap-reverse: "Reverse wrap"
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#order
+flex_order:
+  label: "Flex order"
+  description: "Change the visual order of specific flex items with a handful of order utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As order takes any integer value from 0 to 5, add custom CSS for any additional values needed. Additionally there are also responsive order-first and order-last classes that change the order of an element by applying order: -1 and order: 6, respectively."
+  options:
+    order-first: "First"
+    order-last: "Last"
+    order-0: "Order 0"
+    order-1: "Order 1"
+    order-2: "Order 2"
+    order-3: "Order 3"
+    order-4: "Order 4"
+    order-5: "Order 5"
+
+# https://getbootstrap.com/docs/5.2/utilities/flex/#align-content
+flex_align_content:
+  label: "Flex align content"
+  description: "Use align-content utilities on flexbox containers to align flex items together on the cross axis. Choose from start (browser default), end, center, between, around, or stretch. Heads up! This property has no effect on single rows of flex items."
+  options:
+    align-content-start: "Start"
+    align-content-end: "End"
+    align-content-center: "Center"
+    align-content-between: "Between"
+    align-content-around: "Around"
+    align-content-stretch: "Stretch"
