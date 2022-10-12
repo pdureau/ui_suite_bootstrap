@@ -562,3 +562,13 @@ vertical_align:
     align-bottom: "Bottom"
     align-text-bottom: "Text-bottom"
     align-text-top: "Text-top"
+
+# https://getbootstrap.com/docs/5.2/utilities/overflow/
+overflow:
+  label: "Overflow"
+  description: "Configure how content overflows an element."
+  options:
+    overflow-auto: "Auto"
+    overflow-hidden: "Hidden"
+    overflow-visible: "Visible"
+    overflow-scroll: "Scroll"
