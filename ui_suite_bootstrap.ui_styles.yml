@@ -572,3 +572,12 @@ overflow:
     overflow-hidden: "Hidden"
     overflow-visible: "Visible"
     overflow-scroll: "Scroll"
+
+# https://getbootstrap.com/docs/5.2/utilities/float
+float:
+  label: "Float"
+  description: "These utility classes float an element to the left or right, or disable floating."
+  options:
+    float-start: "Start"
+    float-end: "End"
+    float-none: "None"
