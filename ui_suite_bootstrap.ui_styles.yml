@@ -608,7 +608,7 @@ sizing_width:
 sizing_height:
   label: "Height"
   description: "Make element as tall as its parent element or the viewport."
-  options: 
+  options:
     h-25: "25% height"
     h-50: "50% height"
     h-75: "75% height"
@@ -617,3 +617,118 @@ sizing_height:
     mh-100: "Max-height 100%"
     vh-100: "Height 100% of viewport"
     min-vh-100: "Min-height 100% of viewport"
+  previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/display
+display_all:
+  label: "Display all screens"
+  description: "Display utility classes that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query."
+  options:
+    d-none: "None"
+    d-inline: "Inline"
+    d-inline-block: "Inline block"
+    d-block: "Block"
+    d-grid: "Grid"
+    d-table: "Table"
+    d-table-cell: "Table cell"
+    d-table-row: "Table row"
+    d-flex: "Flex"
+    d-inline-flex: "Inline flex"
+  previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/display/#hiding-elements
+display_small:
+  label: "Display small screens"
+  description: "These utility classes apply to small screens and larger."
+  options:
+    d-sm-none: "Display: none on small screens and above"
+    d-sm-inline: "Display: inline on small screens and above"
+    d-sm-inline-block: "Display: inline-block on small screens and above"
+    d-sm-block: "Display: block on small screens and above"
+    d-sm-grid: "Display: grid on small screens and above"
+    d-sm-table: "Display: table on small screens and above"
+    d-sm-table-cell: "Display: table-cell on small screens and above"
+    d-sm-table-row: "Display: table-row on small screens and above"
+    d-sm-flex: "Display: flex on small screens and above"
+    d-sm-inline-flex: "Display: inline-flex on small screens and above"
+  previewed_as: "hidden"
+
+display_medium:
+  label: "Display medium screens"
+  description: "These utility classes apply to medium screens and larger."
+  options:
+    d-md-none: "Display: none on medium screens and above"
+    d-md-inline: "Display: inline on medium screens and above"
+    d-md-inline-block: "Display: inline-block on medium screens and above"
+    d-md-block: "Display: block on medium screens and above"
+    d-md-grid: "Display: grid on medium screens and above"
+    d-md-table: "Display: table on medium screens and above"
+    d-md-table-cell: "Display: table-cell on medium screens and above"
+    d-md-table-row: "Display: table-row on medium screens and above"
+    d-md-flex: "Display: flex on medium screens and above"
+    d-md-inline-flex: "Display: inline-flex on medium screens and above"
+  previewed_as: "hidden"
+
+display_large:
+  label: "Display large screens"
+  description: "These utility classes apply to large screens and larger."
+  options:
+    d-lg-none: "Display: none on large screens and above"
+    d-lg-inline: "Display: inline on large screens and above"
+    d-lg-inline-block: "Display: inline-block on large screens and above"
+    d-lg-block: "Display: block on large screens and above"
+    d-lg-grid: "Display: grid on large screens and above"
+    d-lg-table: "Display: table on large screens and above"
+    d-lg-table-cell: "Display: table-cell on large screens and above"
+    d-lg-table-row: "Display: table-row on large screens and above"
+    d-lg-flex: "Display: flex on large screens and above"
+    d-lg-inline-flex: "Display: inline-flex on large screens and above"
+  previewed_as: "hidden"
+
+display_x_large:
+  label: "Display x-large screens"
+  description: "These utility classes apply to extra-large screens and extra-extra-large screens."
+  options:
+    d-xl-none: "Display: none on x-large screens and xx-large screens."
+    d-xl-inline: "Display: inline on x-large screens and xx-large screens."
+    d-xl-inline-block: "Display: inline-block on x-large screens and xx-large screens."
+    d-xl-block: "Display: block on x-large screens and xx-large screens."
+    d-xl-grid: "Display: grid on x-large screens and xx-large screens."
+    d-xl-table: "Display: table on x-large screens and xx-large screens."
+    d-xl-table-cell: "Display: table-cell on x-large screens and xx-large screens."
+    d-xl-table-row: "Display: table-row on x-large screens and xx-large screens."
+    d-xl-flex: "Display: flex on x-large screens and xx-large screens."
+    d-xl-inline-flex: "Display: inline-flex on x-large screens and xx-large screens."
+  previewed_as: "hidden"
+
+display_xx_large:
+  label: "Display xx-large screens"
+  description: "These utility classes apply only to extra-extra-large screens."
+  options:
+    d-xxl-none: "Display: none only on xx-large screens"
+    d-xxl-inline: "Display: inline only on xx-large screens."
+    d-xxl-inline-block: "Display: inline-block only on xx-large screens."
+    d-xxl-block: "Display: block only on xx-large screens."
+    d-xxl-grid: "Display: grid only on xx-large screens."
+    d-xxl-table: "Display: table only on xx-large screens."
+    d-xxl-table-cell: "Display: table-cell only on xx-large screens."
+    d-xxl-table-row: "Display: table-row only on xx-large screens."
+    d-xxl-flex: "Display: flex only on xx-large screens."
+    d-xxl-inline-flex: "Display: inline-flex only on xx-large screens."
+  previewed_as: "hidden"
+
+display_print:
+  label: "Display in print"
+  description: "Change the display value of elements when printing."
+  options:
+    d-print-none: "Hide on print only."
+    d-print-inline: "Display as inline for printing."
+    d-print-inline-block: "Display as inline-block for printing."
+    d-print-block: "Display as block for printing."
+    d-print-grid: "Display as grid for printing."
+    d-print-table: "Display as table for printing."
+    d-print-table-row: "Display as table row for printing."
+    d-print-table-cell: "Display as table cell for printing."
+    d-print-flex: "Display as flex for printing."
+    d-print-inline-flex: "Display as inline-flex for printing."
+  previewed_as: "hidden"
