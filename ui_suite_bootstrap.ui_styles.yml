@@ -128,6 +128,26 @@ colors_color:
     text-black-50: "Black 50"
     text-white-50: "White 50"
 
+# https://getbootstrap.com/docs/5.2/helpers/color-background/
+colors_background_with_contrast:
+  label: "Background color with contrasting color"
+  description: "Set a background color with contrasting foreground color."
+  options:
+    text-bg-primary: "Primary"
+    text-bg-secondary: "Secondary"
+    text-bg-success: "Success"
+    text-bg-danger: "Danger"
+    text-bg-warning: "Warning"
+    text-bg-info: "Info"
+    text-bg-light: "Light"
+    text-bg-dark: "Dark"
+    text-bg-body: "Body"
+    text-bg-white: "White"
+    text-bg-transparent: "Transparent"
+  previewed_with:
+    - border
+    - p-2
+
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_weight:
   label: "Font weight"
