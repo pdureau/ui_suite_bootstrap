@@ -1,0 +1,17 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('nav-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+{% if nav_spacing != '' %}
+  {% set attributes = attributes.addClass('nav-' ~ nav_spacing|lower|replace({'_': '-'})) %}
+{% endif %}
+
+{% set nav_type = nav_type ?: 'ul' %}
+
+<{{ nav_type }} {{ attributes.addClass('nav') }}>
+  {% if items %}
+    {% for item in items %}
+      {{ item }}
+    {% endfor %}
+  {% endif %}
+</{{ nav_type }}>

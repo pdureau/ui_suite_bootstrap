@@ -1,0 +1,108 @@
+nav:
+  label: "Nav"
+  description: "The base .nav component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling. https://getbootstrap.com/docs/5.2/components/navs-tabs/"
+  variants:
+    default:
+      label: "Default"
+    tabs:
+      label: "Nav with tabs"
+    pills:
+      label: "Nav with pills"
+  settings:
+    nav_type:
+      type: "select"
+      label: "List type"
+      options:
+        ul: "ul (Default)"
+        ol: "ol"
+        nav: "nav"
+      preview: "ul"
+      allow_expose: true
+    nav_spacing:
+      type: "select"
+      label: "List type"
+      options:
+        fill: "Fill"
+        justified: "Justify"
+      preview: "fill"
+      allow_expose: true
+  fields:
+    items:
+      type: "list"
+      label: "Nav items"
+      description: "Nav items that appear inside the navigation component."
+      preview:
+        - type: "pattern"
+          id: "nav_item"
+          active: true
+          link:
+            type: 'link'
+            title: 'Active'
+            url: 'https://example.com'
+        - type: "pattern"
+          id: "dropdown"
+          button_type: "a"
+          dropdown_tag: "li"
+          dropdown_navbar: true
+          attributes:
+            class:
+              'nav-item'
+          title: "Dropdown"
+          content:
+            - type: "pattern"
+              id: "dropdown_item"
+              variant: "dropdown_header"
+              content: "Dropdown header"
+              heading_level: 6
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Action"
+              url: '#'
+            - type: "pattern"
+              id: "dropdown_item"
+              variant: "dropdown_item_text"
+              content: "Dropdown item text"
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Another action"
+              url: '#'
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Something else here"
+              url: '#'
+            - type: "pattern"
+              id: "dropdown_item"
+              variant: "dropdown_divider"
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Separated link"
+              url: '#'
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Action (button)"
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Another action (button)"
+            - type: "pattern"
+              id: "button"
+              variant: "dropdown_item"
+              label: "Something else here (button)"
+        - type: "pattern"
+          id: "nav_item"
+          link:
+            type: 'link'
+            title: 'Link'
+            url: 'https://example.com'
+        - type: "pattern"
+          id: "nav_item"
+          disabled: true
+          link:
+            type: 'link'
+            title: 'Disabled'
+            url: 'https://example.com'
