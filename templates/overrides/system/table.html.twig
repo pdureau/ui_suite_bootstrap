@@ -44,14 +44,14 @@
 
 {# Init variables specific to the Bootstrap table. #}
 {# @todo create theme settings to control default behavior. #}
-{% set responsive = responsive ? '' %}
-{% set stripes = stripes ? [] %}
-{% set borders = borders ? [] %}
-{% set hover = hover ? 'false' %}
-{% set divider = divider ? ['thead'] %}
-{% set caption_top = caption_top ? 'false' %}
-{% set header_color = header_color ? '' %}
-{% set footer_color = footer_color ? '' %}
+{% set responsive = responsive ? responsive : '' %}
+{% set stripes = stripes ? stripes : [] %}
+{% set borders = borders ? borders : [] %}
+{% set hover = hover ? hover : 'false' %}
+{% set divider = divider ? divider : ['thead'] %}
+{% set caption_top = caption_top ? caption_top : 'false' %}
+{% set header_color = header_color ? header_color : '' %}
+{% set footer_color = footer_color ? footer_color : '' %}
 
 {# Support 'Table Sticky Header' extension. https://bootstrap-table.com/docs/extensions/sticky-header #}
 {% if sticky %}
