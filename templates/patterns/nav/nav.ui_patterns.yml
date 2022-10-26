@@ -5,9 +5,17 @@ nav:
     default:
       label: "Default"
     tabs:
-      label: "Nav with tabs"
+      label: "Tabs"
+    tabs__fill:
+      label: "Tabs"
+    tabs__justified:
+      label: "Tabs"
     pills:
-      label: "Nav with pills"
+      label: "Pills"
+    pills__fill:
+      label: "Pills filled"
+    pills__justified:
+      label: "Pills filled with same width"
   settings:
     nav_type:
       type: "select"
@@ -17,14 +25,6 @@ nav:
         ol: "ol"
         nav: "nav"
       preview: "ul"
-      allow_expose: true
-    nav_spacing:
-      type: "select"
-      label: "List type"
-      options:
-        fill: "Fill"
-        justified: "Justify"
-      preview: "fill"
       allow_expose: true
   fields:
     items:
@@ -97,7 +97,7 @@ nav:
           id: "nav_item"
           link:
             type: 'link'
-            title: 'Link'
+            title: 'Much longer nav link'
             url: 'https://example.com'
         - type: "pattern"
           id: "nav_item"
