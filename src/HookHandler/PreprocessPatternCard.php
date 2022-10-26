@@ -16,8 +16,17 @@ class PreprocessPatternCard {
    *   The preprocessed variables.
    */
   public function preprocess(array &$variables): void {
-    // @todo If header, parse its content and if nav pattern found, add class
-    // matching the variant.
+    $this->handleCardImageClass($variables);
+    $this->handleHeaderNavClass($variables);
+  }
+
+  /**
+   * Handle adding card image class.
+   *
+   * @param array $variables
+   *   The theme key variables.
+   */
+  protected function handleCardImageClass(array &$variables): void {
     if (!\array_key_exists('image', $variables) || !\is_array($variables['image'])) {
       return;
     }
@@ -59,6 +68,46 @@ class PreprocessPatternCard {
 
     foreach ($item as &$next) {
       $this->addCardImageClass($next, $image_class);
+    }
+  }
+
+  /**
+   * Handle adding card header class to nav pattern.
+   *
+   * @param array $variables
+   *   The theme key variables.
+   */
+  protected function handleHeaderNavClass(array &$variables): void {
+    if (!\array_key_exists('header', $variables) || !\is_array($variables['header'])) {
+      return;
+    }
+
+    foreach ($variables['header'] as &$item) {
+      $this->addHeaderNavClass($item);
+    }
+  }
+
+  /**
+   * Add expected class in card's header.
+   */
+  protected function addHeaderNavClass(&$item): void {
+    if (!\is_array($item)) {
+      return;
+    }
+
+    if (\array_key_exists('#id', $item) && \array_key_exists('#variant', $item)) {
+      if ($item['#id'] === 'nav') {
+        if (substr($item['#variant'], 0, 4) === 'tabs') {
+          $item['#attributes']['class'][] = 'card-header-tabs';
+        }
+        elseif (substr($item['#variant'], 0, 5) === 'pills') {
+          $item['#attributes']['class'][] = 'card-header-pills';
+        }
+      }
+    }
+
+    foreach ($item as &$next) {
+      $this->addHeaderNavClass($next);
     }
   }
 
