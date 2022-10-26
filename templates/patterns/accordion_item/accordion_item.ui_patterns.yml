@@ -1,0 +1,41 @@
+accordion_item:
+  label: "(Accordion item)"
+  description: "Internal: to be used in the 'Accordion' component. https://getbootstrap.com/docs/5.2/components/accordion"
+  settings:
+    opened:
+      type: "boolean"
+      label: "Opened"
+      description: "If the accordion item is opened by default."
+      preview: true
+      allow_expose: true
+      allow_token: true
+    heading_level:
+      type: "select"
+      label: "Heading level"
+      description: "Internal: will be provided by the accordion pattern using it."
+      options:
+        2: "h2 (Default)"
+        3: "h3"
+        4: "h4"
+        5: "h5"
+        6: "h6"
+      preview: 2
+    accordion_id:
+      type: "textfield"
+      label: "Accordion ID"
+      description: "Internal: the accordion HTML ID, will be provided by the accordion pattern using it."
+      preview: "accordionExample"
+  fields:
+    title:
+      type: "text"
+      label: "Title"
+      description: "Item title."
+      preview: "Item title"
+    content:
+      type: "render"
+      label: "Content"
+      description: "Accordion item content."
+      preview:
+        - type: "html_tag"
+          tag: "p"
+          value: "Mollis pretium lorem primis senectus habitasse lectus scelerisque donec, ultricies tortor suspendisse adipiscing fusce morbi volutpat pellentesque, consectetur mi risus molestie curae malesuada cum. Dignissim lacus convallis massa mauris enim ad mattis magnis senectus montes, mollis taciti phasellus accumsan bibendum semper blandit suspendisse faucibus nibh est, metus lobortis morbi cras magna vivamus per risus fermentum."

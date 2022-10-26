@@ -10,6 +10,8 @@ declare(strict_types = 1);
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\ui_suite_bootstrap\HookHandler\FormSearchBlockFormAlter;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordion;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordionItem;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAlert;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCard;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternCardBody;
@@ -38,6 +40,26 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessPage::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'pattern_accordion'.
+ */
+function ui_suite_bootstrap_preprocess_pattern_accordion(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordion $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternAccordion::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'pattern_accordion_item'.
+ */
+function ui_suite_bootstrap_preprocess_pattern_accordion_item(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordionItem $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessPatternAccordionItem::class);
   $instance->preprocess($variables);
 }
 

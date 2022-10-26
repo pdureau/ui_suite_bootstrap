@@ -1,0 +1,12 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('accordion-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+{% set attributes = attributes.addClass('accordion') %}
+{% set attributes = accordion_id ? attributes.setAttribute('id', accordion_id) : attributes %}
+
+<div{{ attributes }}>
+  {{ content }}
+</div>

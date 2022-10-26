@@ -1,0 +1,47 @@
+{% set attributes = attributes.addClass('accordion-item') %}
+
+{% set heading_level = heading_level|default(2) %}
+{%
+set button_attributes = create_attribute({
+  'class': [
+    'accordion-button',
+    'collapsed'
+  ],
+  'type': 'button',
+  'data-bs-toggle': 'collapse',
+  'data-bs-target': '#' ~ accordion_item_id,
+  'aria-controls': accordion_item_id,
+  'aria-expanded': 'false'
+})
+%}
+
+{%
+set content_attributes = create_attribute({
+  'id': accordion_item_id,
+  'class': [
+    'accordion-collapse',
+    'collapse'
+  ],
+  'aria-labelledby': 'heading--' ~ accordion_item_id
+})
+%}
+{% set content_attributes = accordion_id ? content_attributes.setAttribute('data-bs-parent', '#' ~ accordion_id) : content_attributes %}
+
+{% if opened %}
+  {% set button_attributes = button_attributes.setAttribute('aria-expanded', 'true') %}
+  {% set button_attributes = button_attributes.removeClass('collapsed') %}
+  {% set content_attributes = content_attributes.addClass('show') %}
+{% endif %}
+
+<div{{ attributes }}>
+  <h{{ heading_level }} class="accordion-header" id="heading--{{ accordion_item_id }}">
+    <button{{ button_attributes}}>
+      {{ title }}
+    </button>
+  </h{{ heading_level }}>
+  <div{{ content_attributes}}>
+    <div class="accordion-body">
+      {{ content }}
+    </div>
+  </div>
+</div>
