@@ -1,0 +1,150 @@
+{#
+/**
+ * @file
+ * Default theme implementation for displaying a view as a table.
+ *
+ * Available variables:
+ * - attributes: Remaining HTML attributes for the element.
+ *   - class: HTML classes that can be used to style contextually through CSS.
+ * - title : The title of this group of rows.
+ * - header: The table header columns.
+ *   - attributes: Remaining HTML attributes for the element.
+ *   - content: HTML classes to apply to each header cell, indexed by
+ *   the header's key.
+ *   - default_classes: A flag indicating whether default classes should be
+ *     used.
+ * - caption_needed: Is the caption tag needed.
+ * - caption: The caption for this table.
+ * - accessibility_description: Extended description for the table details.
+ * - accessibility_summary: Summary for the table details.
+ * - rows: Table row items. Rows are keyed by row number.
+ *   - attributes: HTML classes to apply to each row.
+ *   - columns: Row column items. Columns are keyed by column number.
+ *     - attributes: HTML classes to apply to each column.
+ *     - content: The column content.
+ *   - default_classes: A flag indicating whether default classes should be
+ *     used.
+ * - responsive: A flag indicating whether table is responsive.
+ * - sticky: A flag indicating whether table header is sticky.
+ * - summary_element: A render array with table summary information (if any).
+ *
+ * @see template_preprocess_views_view_table()
+ *
+ * @ingroup themeable
+ */
+#}
+{# Init variables specific to the Bootstrap table. #}
+{# @todo create theme settings to control default behavior. #}
+{% set responsive = responsive ? 'responsive' : '' %}
+{% set stripes = stripes ? stripes : [] %}
+{% set borders = borders ? borders : [] %}
+{% set hover = hover ? hover : 'false' %}
+{% set divider = divider ? divider : ['tbody'] %}
+{% set caption_top = caption_top ? caption_top : 'false' %}
+{% set header_color = header_color ? header_color : '' %}
+
+{# Support 'Table Sticky Header' extension. https://bootstrap-table.com/docs/extensions/sticky-header #}
+{% if sticky %}
+  {% set attributes = attributes.setAttribute('data-sticky-header', 'true') %}
+{% endif %}
+
+{%
+  set classes = [
+  'cols-' ~ header|length,
+  responsive ? 'responsive-enabled',
+  sticky ? 'sticky-enabled',
+]
+%}
+
+{# Handle caption fallback logic from Views. #}
+{% if caption %}
+  {% set caption = caption %}
+  {{ caption }}
+{% else %}
+  {% set caption = title %}
+{% endif %}
+
+{% if (summary_element is not empty) %}
+  {% set caption = caption|render ~ summary_element|render %}
+{% endif %}
+
+{% if not caption_needed %}
+  {% set caption = '' %}
+{% endif %}
+
+{# Prepare header in the expected format. #}
+{% set prepared_header = [] %}
+{% if header %}
+  {% for column in header %}
+    {% set column_content %}
+      {%- if column.wrapper_element -%}
+        <{{ column.wrapper_element }}>
+        {%- if column.url -%}
+          <a href="{{ column.url }}" title="{{ column.title }}" rel="nofollow">{{ column.content }}{{ column.sort_indicator }}</a>
+        {%- else -%}
+          {{ column.content }}{{ column.sort_indicator }}
+        {%- endif -%}
+        </{{ column.wrapper_element }}>
+      {%- else -%}
+        {%- if column.url -%}
+          <a href="{{ column.url }}" title="{{ column.title }}" rel="nofollow">{{ column.content }}{{ column.sort_indicator }}</a>
+        {%- else -%}
+          {{- column.content }}{{ column.sort_indicator }}
+        {%- endif -%}
+      {%- endif -%}
+    {% endset %}
+
+    {% set prepared_header = prepared_header|merge([{
+      'attributes': column.attributes.setAttribute('scope', 'col'),
+      'content': column_content
+    }]) %}
+  {% endfor %}
+{% endif %}
+
+{# Prepare rows in the expected format. #}
+{% set prepared_rows = [] %}
+{% for row in rows %}
+  {% set prepared_columns = [] %}
+  {% for column in row.columns %}
+    {% set column_content %}
+      {%- if column.wrapper_element -%}
+        <{{ column.wrapper_element }}>
+        {% for content in column.content %}
+          {{ content.separator }}{{ content.field_output }}
+        {% endfor %}
+        </{{ column.wrapper_element }}>
+      {%- else -%}
+        {% for content in column.content %}
+          {{- content.separator }}{{ content.field_output -}}
+        {% endfor %}
+      {%- endif %}
+    {% endset %}
+
+    {% set prepared_columns = prepared_columns|merge([{
+      'attributes': column.attributes,
+      'content': column_content
+    }]) %}
+  {% endfor %}
+
+  {% set prepared_rows = prepared_rows|merge([{
+    'attributes': row.attributes,
+    'cells': prepared_columns
+  }]) %}
+{% endfor %}
+
+{{ pattern('table', {
+  attributes: attributes.addClass(classes),
+  variant: 'default',
+  header_color: header_color,
+  stripes: stripes,
+  borders: borders,
+  hover: hover,
+  responsive: responsive,
+  divider: divider,
+  caption: caption,
+  caption_top: caption_top,
+  header: prepared_header,
+  header_columns: header|length,
+  rows: prepared_rows
+})
+}}
