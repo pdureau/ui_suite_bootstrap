@@ -7,7 +7,5 @@
 {% endif %}
 
 <div{{ attributes.setAttribute('role', 'group').setAttribute('aria-label', label) }}>
-  {% for button in buttons %}
-    {{ button }}
-  {% endfor %}
+  {{ buttons }}
 </div>

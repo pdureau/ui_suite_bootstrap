@@ -1,9 +1,6 @@
 button_toolbar:
   label: "Button Toolbar"
   description: "Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more. https://getbootstrap.com/docs/5.2/components/button-group/#button-toolbar"
-  variants:
-    default:
-      label: "Default"
   fields:
     label:
       type: "text"
