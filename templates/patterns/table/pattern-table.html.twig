@@ -60,7 +60,7 @@
   <div class="{{ 'table-' ~ responsive|lower|replace({'_': '-'}) }}">
 {% endif %}
 
-<table {{ attributes.addClass(table_classes) }}>
+<table{{ attributes.addClass(table_classes) }}>
   {% if caption %}
     <caption>{{ caption }}</caption>
   {% endif %}
@@ -78,31 +78,31 @@
   {% endfor %}
 
   {% if header %}
-    <thead {{ thead_attributes }}>
+    <thead{{ thead_attributes }}>
       <tr>
         {% for cell in header %}
-          <{{ cell.tag }}{{ cell.attributes }}>
+          <{{ cell.tag|default('th') }}{{ cell.attributes }}>
             {{- cell.content -}}
-          </{{ cell.tag }}>
+          </{{ cell.tag|default('th') }}>
         {% endfor %}
       </tr>
     </thead>
   {% endif %}
 
   {% if rows %}
-    <tbody {{ tbody_attributes }}>
+    <tbody{{ tbody_attributes }}>
       {% for row in rows %}
         <tr{{ row.attributes }}>
           {% for cell in row.cells %}
-            <{{ cell.tag }}{{ cell.attributes }}>
+            <{{ cell.tag|default('td') }}{{ cell.attributes }}>
               {{- cell.content -}}
-            </{{ cell.tag }}>
+            </{{ cell.tag|default('td') }}>
           {% endfor %}
         </tr>
       {% endfor %}
     </tbody>
   {% elseif empty %}
-    <tbody {{ tbody_attributes }}>
+    <tbody{{ tbody_attributes }}>
       <tr>
         <td colspan="{{ header_columns }}">{{ empty }}</td>
       </tr>
@@ -110,13 +110,13 @@
   {% endif %}
 
   {% if footer %}
-    <tfoot {{ tfoot_attributes }}>
+    <tfoot{{ tfoot_attributes }}>
       {% for row in footer %}
-        <tr {{ row.attributes }}>
+        <tr{{ row.attributes }}>
           {% for cell in row.cells %}
-            <{{ cell.tag }}{{ cell.attributes }}>
+            <{{ cell.tag|default('td') }}{{ cell.attributes }}>
               {{- cell.content -}}
-            </{{ cell.tag }}>
+            </{{ cell.tag|default('td') }}>
           {% endfor %}
         </tr>
       {% endfor %}
