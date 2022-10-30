@@ -862,3 +862,48 @@ position:
     sticky-xl-bottom: "Sticky bottom from extra large"
     sticky-xxl-bottom: "Sticky bottom from extra extra large"
   previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/position/#position-values
+position_position:
+  label: "Position values"
+  description: "Quick positioning classes are available, though they are not responsive."
+  options:
+    position-static: "Static"
+    position-relative: "Relative"
+    position-absolute: "Absolute"
+    position-fixed: "Fixed"
+    position-sticky: "Sticky"
+  previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/position/#arrange-elements
+position_arrange_vertical:
+  label: "Arrange element vertically"
+  options:
+    top-0: "Top 0%"
+    top-50: "Top 50%"
+    top-100: "Top 100%"
+    bottom-0: "Bottom 0%"
+    bottom-50: "Bottom 50%"
+    bottom-100: "Bottom 100%"
+  previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/position/#arrange-elements
+position_arrange_horizontal:
+  label: "Arrange element horizontally"
+  options:
+    start-0: "Start 0%"
+    start-50: "Start 50%"
+    start-100: "Start 100%"
+    end-0: "End 0%"
+    end-50: "End 50%"
+    end-100: "End 100%"
+  previewed_as: "hidden"
+
+position_center:
+  label: "Center element"
+  description: "In addition, you can also center the elements with the transform utility class <code>.translate-middle</code>."
+  options:
+    translate-middle: "Center"
+    translate-middle-x: "Center horizontally"
+    translate-middle-y: "Center vertically"
+  previewed_as: "hidden"
