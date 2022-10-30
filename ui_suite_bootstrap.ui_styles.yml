@@ -805,3 +805,20 @@ visually_hidden:
     visually-hidden: "Visually hidden"
     visually-hidden-focusable: "Visually hidden focusable"
   previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/interactions/#text-selection
+interactions_text_selection:
+  label: "Text selection"
+  description: "Change the way in which the content is selected when the user interacts with it."
+  options:
+    user-select-all: "Select all"
+    user-select-auto: "Default"
+    user-select-none: "Not selectable"
+
+# https://getbootstrap.com/docs/5.2/utilities/interactions/#pointer-events
+interactions_pointer_events:
+  label: "Pointer events"
+  description: "Bootstrap provides <code>.pe-none</code> and <code>.pe-auto</code> classes to prevent or add element interactions."
+  options:
+    pe-none: "Not clickable"
+    pe-auto: "Default"

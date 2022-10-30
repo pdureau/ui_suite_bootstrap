@@ -20,3 +20,10 @@ component_placeholder:
   css:
     theme:
       assets/css/component/placeholder.css: {}
+
+accessibility:
+  js:
+    assets/js/accessibility.js: {}
+  dependencies:
+    - core/drupal
+    - core/once
