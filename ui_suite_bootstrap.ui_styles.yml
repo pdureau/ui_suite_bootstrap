@@ -91,7 +91,7 @@ borders_border_radius:
 # https://getbootstrap.com/docs/5.2/helpers/clearfix/
 clearfix:
   label: "Clearfix"
-  description: "asily clear floats by adding .clearfix to the parent element. Can also be used as a mixin."
+  description: "asily clear floats by adding <code>.clearfix</code> to the parent element."
   options:
     clearfix: "Clearfix"
 
@@ -421,7 +421,7 @@ text_text_transform:
 # https://getbootstrap.com/docs/5.2/helpers/text-truncation
 text_text_truncate:
   label: "Text truncate"
-  description: "For longer content, you can add a .text-truncate class to truncate the text with an ellipsis. Requires display: inline-block or display: block."
+  description: "For longer content, you can add a <code>.text-truncate</code> class to truncate the text with an ellipsis. Requires <code>display: inline-block</code> or <code>display: block.</code>"
   options:
     text-truncate: "Truncate"
 
@@ -623,7 +623,7 @@ float:
 # https://getbootstrap.com/docs/5.2/utilities/visibility/
 visibility:
   label: "Visibility"
-  description: "Control the visibility of elements without modifying their display. These classes do not modify the display value and do not affect layout; .invisible elements still take up space in the page."
+  description: "Control the visibility of elements without modifying their display. These classes do not modify the display value and do not affect layout; <code>.invisible</code> elements still take up space in the page."
   previewed_as: "aside"
   options:
     visible: "Visible"
@@ -786,3 +786,12 @@ opacity:
     - border
     - p-2
     - bg-light
+
+# https://getbootstrap.com/docs/5.2/helpers/visually-hidden
+visually_hidden:
+  label: "Visually hidden"
+  description: "Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with <code>.visually-hidden</code>. Use <code>.visually-hidden-focusable</code> to visually hide an element by default, but to display it when it’s focused (e.g. by a keyboard-only user). <code>.visually-hidden-focusable</code> can also be applied to a container–thanks to <code>:focus-within</code>, the container will be displayed when any child element of the container receives focus."
+  options:
+    visually-hidden: "Visually hidden"
+    visually-hidden-focusable: "Visually hidden focusable"
+  previewed_as: "hidden"
