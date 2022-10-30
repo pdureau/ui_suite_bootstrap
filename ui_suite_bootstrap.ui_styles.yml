@@ -822,3 +822,22 @@ interactions_pointer_events:
   options:
     pe-none: "Not clickable"
     pe-auto: "Default"
+
+# https://getbootstrap.com/docs/5.2/helpers/ratio
+ratio_ratio:
+  label: "Enable ratio"
+  description: "Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent."
+  options:
+    ratio: "Ratio enabled"
+  previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/helpers/ratio/#aspect-ratios
+ratio_aspect:
+  label: "Aspect ratios"
+  description: "You need to apply the <code>ratio</code> class in conjunction with one of these ratios."
+  options:
+    ratio-1x1: "1x1"
+    ratio-4x3: "4x3"
+    ratio-16x9: "16x9"
+    ratio-21x9: "21x9"
+  previewed_as: "hidden"
