@@ -23,7 +23,14 @@ component_placeholder:
 
 accessibility:
   js:
-    assets/js/accessibility.js: {}
+    assets/js/accessibility.js: { minified: true }
   dependencies:
     - core/drupal
     - core/once
+
+drupal.progress:
+  js:
+    assets/js/misc/progress.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery

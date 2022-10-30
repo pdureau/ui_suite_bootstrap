@@ -28,3 +28,7 @@ libraries:
   - ui_suite_bootstrap/bootstrap
   - ui_suite_bootstrap/component_placeholder
   - ui_suite_bootstrap/accessibility
+
+libraries-extend:
+  core/drupal.progress:
+    - ui_suite_bootstrap/drupal.progress
