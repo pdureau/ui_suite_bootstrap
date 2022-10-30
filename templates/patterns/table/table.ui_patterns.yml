@@ -93,7 +93,7 @@ table:
     divider:
       type: "checkboxes"
       label: "Table group divider"
-      description: "Add a thicker, darker border between table groups (<thead>, <tbody>, <tfoot>)."
+      description: "Add a thicker, darker border between table groups."
       options:
         thead: "Header"
         tbody: "Body"
@@ -117,7 +117,7 @@ table:
     caption:
       type: "textfield"
       label: "Caption"
-      description: "A <caption> functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it. By default it is displayed at the bottom of the table."
+      description: "A caption functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it. By default it is displayed at the bottom of the table."
       preview: "Example table (caption)"
     caption_top:
       type: "boolean"
