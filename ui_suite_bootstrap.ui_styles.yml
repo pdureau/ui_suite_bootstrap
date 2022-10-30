@@ -88,6 +88,13 @@ borders_border_radius:
     - p-2
     - bg-light
 
+# https://getbootstrap.com/docs/5.2/helpers/clearfix/
+clearfix:
+  label: "Clearfix"
+  description: "asily clear floats by adding .clearfix to the parent element. Can also be used as a mixin."
+  options:
+    clearfix: "Clearfix"
+
 # https://getbootstrap.com/docs/5.2/utilities/background/#background-color
 colors_background_color:
   label: "Background color"

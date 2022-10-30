@@ -7,6 +7,7 @@ dependencies:
   - layout_options:layout_options
   - ui_examples:ui_examples
   - ui_patterns:ui_patterns
+  - ui_patterns:ui_patterns_library
   - ui_patterns_settings:ui_patterns_settings
   - ui_styles:ui_styles
 
