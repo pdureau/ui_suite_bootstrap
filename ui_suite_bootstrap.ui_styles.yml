@@ -841,3 +841,24 @@ ratio_aspect:
     ratio-16x9: "16x9"
     ratio-21x9: "21x9"
   previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/helpers/position
+position:
+  label: "Position"
+  description: "Use these helpers for quickly configuring the position of an element."
+  options:
+    fixed-top: "Fixed top"
+    fixed-bottom: "Fixed bottom"
+    sticky-top: "Sticky top"
+    sticky-sm-top: "Sticky top from small"
+    sticky-md-top: "Sticky top from medium"
+    sticky-lg-top: "Sticky top from large"
+    sticky-xl-top: "Sticky top from extra large"
+    sticky-xxl-top: "Sticky top from extra extra large"
+    sticky-bottom: "Sticky bottom"
+    sticky-sm-bottom: "Sticky bottom from small"
+    sticky-md-bottom: "Sticky bottom from medium"
+    sticky-lg-bottom: "Sticky bottom from large"
+    sticky-xl-bottom: "Sticky bottom from extra large"
+    sticky-xxl-bottom: "Sticky bottom from extra extra large"
+  previewed_as: "hidden"
