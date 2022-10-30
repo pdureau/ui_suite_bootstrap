@@ -31,7 +31,7 @@
 
       {% if previewed_as == 'aside' %}
         <p>{{ label }} (<code>{{ id }}</code>)</p>
-        <div {{ style_attributes }}></div>
+        <div {{ style_attributes }}>{{ 'Example'|t }}</div>
       {% elseif previewed_as == 'hidden' %}
         <p>{{ label }} (<code>{{ id }}</code>)</p>
       {% else %}

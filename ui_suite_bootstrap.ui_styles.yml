@@ -219,6 +219,7 @@ shadows:
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_top:
   label: "Margin top"
+  description: "The negative margins are disabled by default, but can be enabled in Sass by setting $enable-negative-margins: true."
   options:
     mt-0: "0"
     mt-1: "1"
@@ -241,6 +242,7 @@ spacing_margin_top:
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_bottom:
   label: "Margin bottom"
+  description: "The negative margins are disabled by default, but can be enabled in Sass by setting $enable-negative-margins: true."
   options:
     mb-0: "0"
     mb-1: "1"
@@ -263,6 +265,7 @@ spacing_margin_bottom:
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_start:
   label: "Margin start"
+  description: "The negative margins are disabled by default, but can be enabled in Sass by setting $enable-negative-margins: true."
   options:
     ms-0: "0"
     ms-1: "1"
@@ -285,6 +288,7 @@ spacing_margin_start:
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_end:
   label: "Margin end"
+  description: "The negative margins are disabled by default, but can be enabled in Sass by setting $enable-negative-margins: true."
   options:
     me-0: "0"
     me-1: "1"
@@ -759,3 +763,19 @@ display_print:
     d-print-flex: "Display as flex for printing."
     d-print-inline-flex: "Display as inline-flex for printing."
   previewed_as: "hidden"
+
+# https://getbootstrap.com/docs/5.2/utilities/opacity
+opacity:
+  label: "Opacity"
+  description: "The opacity property sets the opacity level for an element. The opacity level describes the transparency level, where 1 is not transparent at all, .5 is 50% visible, and 0 is completely transparent."
+  options:
+    opacity-0: "0%"
+    opacity-25: "25%"
+    opacity-50: "50%"
+    opacity-75: "75%"
+    opacity-100: "100%"
+  previewed_as: "aside"
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
