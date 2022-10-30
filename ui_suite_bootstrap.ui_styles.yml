@@ -787,6 +787,16 @@ opacity:
     - p-2
     - bg-light
 
+# https://getbootstrap.com/docs/5.2/helpers/vertical-rule
+vertical_rule:
+  label: "Vertical rule"
+  description: "Vertical rules are inspired by the <code>&lt;hr&gt;</code> element, allowing you to create vertical dividers in common layouts."
+  options:
+    vr: "Vertical rule"
+  previewed_as: "aside"
+  previewed_with:
+    - ms-2
+
 # https://getbootstrap.com/docs/5.2/helpers/visually-hidden
 visually_hidden:
   label: "Visually hidden"
