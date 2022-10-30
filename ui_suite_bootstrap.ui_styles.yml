@@ -418,6 +418,13 @@ text_text_transform:
     text-uppercase: "Uppercase"
     text-capitalize: "Capitalize"
 
+# https://getbootstrap.com/docs/5.2/helpers/text-truncation
+text_text_truncate:
+  label: "Text truncate"
+  description: "For longer content, you can add a .text-truncate class to truncate the text with an ellipsis. Requires display: inline-block or display: block."
+  options:
+    text-truncate: "Truncate"
+
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-size
 text_text_font_size:
   label: "Font size"
