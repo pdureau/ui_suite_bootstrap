@@ -49,7 +49,7 @@ class PreprocessPatternNavItem {
       ]);
     }
 
-    if (array_key_exists('link', $variables)) {
+    if (\array_key_exists('link', $variables)) {
       if (isset($variables['link']) && !empty($variables['link'])) {
         if (!($variables['link']['#url'] instanceof Url)) {
           $variables['link']['#url'] = Url::fromUri($variables['link']['#url']);
@@ -62,4 +62,5 @@ class PreprocessPatternNavItem {
       }
     }
   }
+
 }

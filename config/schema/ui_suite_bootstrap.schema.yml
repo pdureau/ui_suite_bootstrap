@@ -1,0 +1,3 @@
+ui_suite_bootstrap.settings:
+  type: theme_settings
+  label: 'UI Suite Bootstrap settings'

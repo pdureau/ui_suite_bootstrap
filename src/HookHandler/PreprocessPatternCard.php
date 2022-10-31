@@ -10,6 +10,16 @@ namespace Drupal\ui_suite_bootstrap\HookHandler;
 class PreprocessPatternCard {
 
   /**
+   * Length of the word tabs.
+   */
+  public const TABS_LENGTH = 4;
+
+  /**
+   * Length of the word pills.
+   */
+  public const PILLS_LENGTH = 5;
+
+  /**
    * Handle CSS classes.
    *
    * @param array $variables
@@ -97,10 +107,10 @@ class PreprocessPatternCard {
 
     if (\array_key_exists('#id', $item) && \array_key_exists('#variant', $item)) {
       if ($item['#id'] === 'nav') {
-        if (substr($item['#variant'], 0, 4) === 'tabs') {
+        if (\substr($item['#variant'], 0, static::TABS_LENGTH) === 'tabs') {
           $item['#attributes']['class'][] = 'card-header-tabs';
         }
-        elseif (substr($item['#variant'], 0, 5) === 'pills') {
+        elseif (\substr($item['#variant'], 0, static::PILLS_LENGTH) === 'pills') {
           $item['#attributes']['class'][] = 'card-header-pills';
         }
       }
