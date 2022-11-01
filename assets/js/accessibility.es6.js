@@ -1,12 +1,12 @@
 ((Drupal, once) => {
-  Drupal.ui_suite_boostrap_accessibility =
-    Drupal.ui_suite_boostrap_accessibility || {};
+  Drupal.ui_suite_bootstrap_accessibility =
+    Drupal.ui_suite_bootstrap_accessibility || {};
 
-  Drupal.ui_suite_boostrap_accessibility.pointer_elements = ["a", "input"];
+  Drupal.ui_suite_bootstrap_accessibility.pointer_elements = ["a", "input"];
 
   function preventClick(element) {
     if (
-      Drupal.ui_suite_boostrap_accessibility.pointer_elements.includes(
+      Drupal.ui_suite_bootstrap_accessibility.pointer_elements.includes(
         element.tagName.toLowerCase()
       )
     ) {
@@ -24,7 +24,7 @@
     }
   }
 
-  Drupal.behaviors.ui_suite_boostrap_accessibility = {
+  Drupal.behaviors.ui_suite_bootstrap_accessibility = {
     attach(context) {
       // https://getbootstrap.com/docs/5.2/utilities/interactions/#pointer-events.
       // Add aria-disabled and tabindex on clickable elements with the "pe-none"
