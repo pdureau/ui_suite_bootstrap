@@ -7,6 +7,8 @@ grid_row:
       description: "Is the row wrapped in a container? Containers provide a means to center and horizontally pad your site’s contents."
       type: "boolean"
       preview: false
+      allow_expose: true
+      allow_token: true
     gutters:
       label: "Gutters"
       description: "The gutters between columns in our predefined grid classes can be removed with .no-gutters. This removes the negative margins from .row and the horizontal padding from all immediate children columns."
@@ -19,6 +21,8 @@ grid_row:
         g-3: "3"
         g-4: "4"
         g-5: "5"
+      allow_expose: true
+      allow_token: true
     gutters_horizontal:
       label: "Horizontal gutters"
       description: ".gx-* classes can be used to control the horizontal gutter widths. The .container or .container-fluid parent may need to be adjusted if larger gutters are used too to avoid unwanted overflow, using a matching padding utility."
@@ -31,6 +35,8 @@ grid_row:
         gx-3: "3"
         gx-4: "4"
         gx-5: "5"
+      allow_expose: true
+      allow_token: true
     gutters_vertical:
       label: "Vertical gutters"
       description: ".gy-* classes can be used to control the vertical gutter widths. Like the horizontal gutters, the vertical gutters can cause some overflow below the .row at the end of a page. If this occurs, you add a wrapper around .row with the .overflow-hidden class."
@@ -43,6 +49,8 @@ grid_row:
         gy-3: "3"
         gy-4: "4"
         gy-5: "5"
+      allow_expose: true
+      allow_token: true
     col_xs:
       label: "All (Extra small)"
       type: "select"
@@ -60,6 +68,8 @@ grid_row:
         col-10: "10"
         col-11: "11"
         col-12: "12"
+      allow_expose: true
+      allow_token: true
     col_sm:
       label: "Small"
       type: "select"
@@ -77,6 +87,8 @@ grid_row:
         col-sm-10: "10"
         col-sm-11: "11"
         col-sm-12: "12"
+      allow_expose: true
+      allow_token: true
     col_md:
       label: "Medium"
       type: "select"
@@ -94,6 +106,8 @@ grid_row:
         col-md-10: "10"
         col-md-11: "11"
         col-md-12: "12"
+      allow_expose: true
+      allow_token: true
     col_lg:
       label: "Large"
       type: "select"
@@ -111,6 +125,8 @@ grid_row:
         col-lg-10: "10"
         col-lg-11: "11"
         col-lg-12: "12"
+      allow_expose: true
+      allow_token: true
     col_xl:
       label: "Extra large"
       type: "select"
@@ -128,6 +144,8 @@ grid_row:
         col-xl-10: "10"
         col-xl-11: "11"
         col-xl-12: "12"
+      allow_expose: true
+      allow_token: true
     col_xxl:
       label: "Extra extra large"
       type: "select"
@@ -145,6 +163,8 @@ grid_row:
         col-xxl-10: "10"
         col-xxl-11: "11"
         col-xxl-12: "12"
+      allow_expose: true
+      allow_token: true
     spacing_margin_bottom:
       label: "Cols margin bottom"
       type: "select"
@@ -157,6 +177,8 @@ grid_row:
         mb-4: "4"
         mb-5: "5"
         mb-auto: "Auto"
+      allow_expose: true
+      allow_token: true
   fields:
     content:
       type: "render"

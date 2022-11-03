@@ -12,6 +12,7 @@ navbar_nav:
       label: "Dark"
       preview: false
       allow_expose: true
+      allow_token: true
   fields:
     items:
       type: "render"

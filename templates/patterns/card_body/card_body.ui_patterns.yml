@@ -13,6 +13,7 @@ card_body:
         6: "h6"
       preview: 5
       allow_expose: true
+      allow_token: true
   fields:
     title:
       type: "text"

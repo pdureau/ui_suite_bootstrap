@@ -22,6 +22,7 @@ dropdown_item:
         6: "h6 (Default)"
       preview: 6
       allow_expose: true
+      allow_token: true
   fields:
     content:
       type: "render"

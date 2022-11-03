@@ -16,6 +16,7 @@ card:
         bottom: "Bottom"
       preview: "top"
       allow_expose: true
+      allow_token: true
   fields:
     image:
       type: "render"

@@ -53,6 +53,7 @@ table:
         dark: "Dark"
       preview: "light"
       allow_expose: true
+      allow_token: true
     footer_color:
       type: "select"
       label: "Table footer color"
@@ -66,6 +67,7 @@ table:
         light: "light"
         dark: "Dark"
       allow_expose: true
+      allow_token: true
     stripes:
       type: "checkboxes"
       label: "Striped table"
@@ -76,6 +78,7 @@ table:
       preview:
         - "striped"
       allow_expose: true
+      allow_token: true
     borders:
       type: "select"
       label: "Table border style"
@@ -84,12 +87,14 @@ table:
         bordered: "With borders"
         borderless: "Borderless"
       allow_expose: true
+      allow_token: true
     hover:
       type: "boolean"
       label: "Hoverable rows"
       description: "Enable a hover state when passing the mouse over a row."
       preview: true
       allow_expose: true
+      allow_token: true
     divider:
       type: "checkboxes"
       label: "Table group divider"
@@ -101,6 +106,7 @@ table:
       preview:
         - "tbody"
       allow_expose: true
+      allow_token: true
     responsive:
       type: "select"
       label: "Responsive"
@@ -114,21 +120,25 @@ table:
         responsive-xxl: "Responsive below extra extra large"
       preview: "responsive"
       allow_expose: true
+      allow_token: true
     caption:
       type: "textfield"
       label: "Caption"
       description: "A caption functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it. By default it is displayed at the bottom of the table."
       preview: "Example table (caption)"
+      allow_token: true
     caption_top:
       type: "boolean"
       label: "Caption top"
       description: "Display caption at top of the table."
       allow_expose: true
+      allow_token: true
     header_columns:
       type: "number"
       label: "Number of columns in the header"
       description: "Used to display properly the empty message if the table is empty. Leave empty for automatic value."
       allow_expose: true
+      allow_token: true
   fields:
     header:
       type: "List"

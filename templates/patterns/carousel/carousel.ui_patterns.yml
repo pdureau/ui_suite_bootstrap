@@ -19,24 +19,28 @@ carousel:
       description: "Adding in the previous and next controls"
       preview: true
       allow_expose: true
+      allow_token: true
     with_indicators:
       type: "boolean"
       label: "With indicators?"
       description: "You can also add the indicators to the carousel, alongside the controls, too."
       preview: true
       allow_expose: true
+      allow_token: true
     with_touch:
       type: "boolean"
       label: "With touch swiping?"
       description: "Carousels support swiping left/right on touchscreen devices to move between slides."
       default_value: true
       allow_expose: true
+      allow_token: true
     interval:
       type: "number"
       label: "Interval"
       description: "The amount of time to delay between automatically cycling to the next item. In ms. 0 to disable autoplay."
       default_value: 5000
       allow_expose: true
+      allow_token: true
   fields:
     slides:
       type: "render"

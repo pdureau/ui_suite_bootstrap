@@ -116,12 +116,14 @@ button:
       description: "Is the button disabled?"
       preview: true
       allow_expose: true
+      allow_token: true
     label_visually_hidden:
       type: "boolean"
       label: "Hide button label?"
       description: "Is the button's label hidden?"
       preview: false
       allow_expose: true
+      allow_token: true
   fields:
     label:
       type: "text"

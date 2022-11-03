@@ -38,6 +38,7 @@ navbar:
         sticky-bottom: "Sticky bottom"
       preview: "default"
       allow_expose: true
+      allow_token: true
     toggler_position:
       type: "select"
       label: "Toggler position"
@@ -47,6 +48,7 @@ navbar:
         end: "End"
       preview: "end"
       allow_expose: true
+      allow_token: true
     toggle_action:
       type: "select"
       label: "Toggle action"
@@ -56,6 +58,7 @@ navbar:
         offcanvas: "Offcanvas"
       preview: "collapse"
       allow_expose: true
+      allow_token: true
     offcanvas_position:
       type: "select"
       label: "Offcanvas position"
@@ -64,6 +67,7 @@ navbar:
         end: "End (default)"
       preview: "end"
       allow_expose: true
+      allow_token: true
   fields:
     navigation:
       type: "render"

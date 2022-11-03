@@ -14,10 +14,12 @@ progress:
       label: "Label"
       description: "Text shown inside the progress bar."
       preview: "Label"
+      allow_token: true
     aria_label:
       type: "textfield"
       label: "Aria label"
       description: "Name of the progress bar for assistive technology."
+      allow_token: true
     percent:
       type: "number"
       label: "Total progress (%)"
@@ -40,3 +42,4 @@ progress:
       type: "number"
       label: "Height"
       description: "Height of progress element in pixels (px). Leave empty for default height."
+      allow_token: true

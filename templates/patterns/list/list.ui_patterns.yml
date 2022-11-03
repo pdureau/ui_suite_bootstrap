@@ -19,6 +19,7 @@ list:
         ol: "ol"
       preview: "ul"
       allow_expose: true
+      allow_token: true
   fields:
     items:
       type: "render"

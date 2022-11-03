@@ -23,6 +23,7 @@ dropdown:
         a: "Link"
       preview: "button"
       allow_expose: true
+      allow_token: true
     button_color:
       type: "select"
       label: "Dropdown button color"
@@ -37,6 +38,7 @@ dropdown:
         dark: "Dark"
       preview: "secondary"
       allow_expose: true
+      allow_token: true
     button_size:
       type: "select"
       label: "Dropdown button size"
@@ -47,18 +49,21 @@ dropdown:
         lg: "Large"
       preview: "default"
       allow_expose: true
+      allow_token: true
     button_split:
       type: "boolean"
       label: "Split"
       description: "Create split button dropdowns with virtually the same markup as single button dropdowns, but with the addition of .dropdown-toggle-split for proper spacing around the dropdown caret."
       preview: false
       allow_expose: true
+      allow_token: true
     dark:
       type: "boolean"
       label: "Dark"
       description: "Opt into darker dropdowns to match a dark navbar or custom style."
       preview: false
       allow_expose: true
+      allow_token: true
     auto_close:
       type: "select"
       label: "Auto close"
@@ -70,6 +75,7 @@ dropdown:
         'false': "Manual close"
       preview: "true"
       allow_expose: true
+      allow_token: true
     dropdown_tag:
       type: "select"
       label: "Dropdown tag"
@@ -79,12 +85,14 @@ dropdown:
         li: "Li"
       preview: "div"
       allow_expose: true
+      allow_token: true
     dropdown_navbar:
       type: "boolean"
       label: "Use in navbar?"
       description: "Check if the dropdown will be used in a navbar-nav element."
       preview: false
       allow_expose: true
+      allow_token: true
   fields:
     title:
       type: "text"
