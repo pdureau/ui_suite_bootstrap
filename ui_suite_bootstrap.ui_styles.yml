@@ -1,19 +1,29 @@
 # https://getbootstrap.com/docs/4.4/utilities/borders/#border
 borders_border:
-  label: Border
-  description: Use border utilities to add or remove an element’s borders. Choose from all borders or one at a time.
+  label: Border additive
+  description: Use it to add an element’s borders. Choose from all borders or one at a time.
   options:
-    border: Additive All
-    border-top: Additive Top
-    border-right: Additive Right
-    border-bottom: Additive Bottom
-    border-left: Additive Left
-    border-0: Subtractive All
-    border-top-0: Subtractive Top
-    border-right-0: Subtractive Right
-    border-bottom-0: Subtractive Bottom
-    border-left-0: Subtractive Left
+    border: All
+    border-top: Top
+    border-right: Right
+    border-bottom: Bottom
+    border-left: Left
   previewed_with:
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/4.4/utilities/borders/#border
+borders_border_substractive:
+  label: Border subtractive
+  description: Use it to remove an element’s borders. Choose from all borders or one at a time.
+  options:
+    border-0: All
+    border-top-0: Top
+    border-right-0: Right
+    border-bottom-0: Bottom
+    border-left-0: Left
+  previewed_with:
+    - border
     - p-2
     - bg-light
 
