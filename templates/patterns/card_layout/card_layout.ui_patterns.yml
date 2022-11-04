@@ -1,16 +1,16 @@
 card_layout:
   label: "Card Layout"
-  description: "In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, these layout options are not yet responsive. https://getbootstrap.com/docs/4.3/components/card/#card-layout"
+  description: "In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, these layout options are not yet responsive. https://getbootstrap.com/docs/4.6/components/card/#card-layout"
   variants:
     default:
       label: Card group (default)
-      description: "Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use display: flex; to achieve their uniform sizing. https://getbootstrap.com/docs/4.3/components/card/#card-groups"
+      description: "Use card groups to render cards as a single, attached element with equal width and height columns. Card groups use display: flex; to achieve their uniform sizing. https://getbootstrap.com/docs/4.6/components/card/#card-groups"
     deck:
       label: Card deck
-      description: "Need a set of equal width and height cards that aren’t attached to one another? Use card decks. https://getbootstrap.com/docs/4.3/components/card/#card-decks"
+      description: "Need a set of equal width and height cards that aren’t attached to one another? Use card decks. https://getbootstrap.com/docs/4.6/components/card/#card-decks"
     columns:
       label: Card columns
-      description: "Cards can be organized into Masonry-like columns with just CSS by wrapping them in .card-columns. Cards are built with CSS column properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right. https://getbootstrap.com/docs/4.3/components/card/#card-columns"
+      description: "Cards can be organized into Masonry-like columns with just CSS by wrapping them in .card-columns. Cards are built with CSS column properties instead of flexbox for easier alignment. Cards are ordered from top to bottom and left to right. https://getbootstrap.com/docs/4.6/components/card/#card-columns"
   fields:
     cards:
       type: "render"

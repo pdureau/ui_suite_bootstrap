@@ -1,6 +1,6 @@
 alert:
   label: Alert
-  description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. https://getbootstrap.com/docs/4.4/components/alerts/
+  description: Provide contextual feedback messages for typical user actions with the handful of available and flexible alert messages. https://getbootstrap.com/docs/4.6/components/alerts/
   variants:
     primary:
       label: Primary

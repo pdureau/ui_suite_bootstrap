@@ -8,9 +8,6 @@ views, blocks, flags...).
 
 ![Overview](doc/screenshot.png)
 
-Because we are targeting Bootstrap 4.x, this is not a fork of Nuvole's
-[Bootstrap Patterns](https://github.com/nuvoleweb/bootstrap_patterns) theme.
-
 # How it works
 
 ![Overview](doc/schema.png)
@@ -52,9 +49,9 @@ Those layouts are automatically available as configurable layout plugins.
 4 example pages are integrated using only render arrays, inside
 ui_suite_bootstrap.ui_examples.yml:
 
-- [album](https://getbootstrap.com/docs/4.5/examples/album/)
-- [pricing](https://getbootstrap.com/docs/4.5/examples/pricing/)
-- [carousel](https://getbootstrap.com/docs/4.5/examples/carousel/)
+- [album](https://getbootstrap.com/docs/4.6/examples/album/)
+- [pricing](https://getbootstrap.com/docs/4.6/examples/pricing/)
+- [carousel](https://getbootstrap.com/docs/4.6/examples/carousel/)
 
 You can browse the example pages directly inside Drupal: /examples
 
@@ -134,3 +131,8 @@ composer.json can be like:
   }
 }
 ```
+
+# Demo
+
+See [ui\_suite\_bootstrap\_demo](https://www.drupal.org/project/ui_suite_bootstrap_demo) installation profile.
+

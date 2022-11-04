@@ -1,6 +1,6 @@
 jumbotron:
   label: "Jumbotron"
-  description: "A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site. https://getbootstrap.com/docs/4.3/components/jumbotron/"
+  description: "A lightweight, flexible component that can optionally extend the entire viewport to showcase key content on your site. https://getbootstrap.com/docs/4.6/components/jumbotron/"
   variants:
     default:
       label: Default

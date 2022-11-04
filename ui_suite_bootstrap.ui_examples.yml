@@ -1,6 +1,6 @@
 album:
   label: Bootstrap Album
-  description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/4.4/examples/album/"
+  description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/4.6/examples/album/"
   render:
     - "#type": pattern
       "#id": jumbotron
@@ -519,7 +519,7 @@ album:
 
 carousel:
   label: Bootstrap Carousel
-  description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/4.4/examples/carousel/"
+  description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/4.6/examples/carousel/"
   render:
     - "#type": pattern
       "#id": carousel
@@ -898,7 +898,7 @@ carousel:
 
 pricing:
   label: Bootstrap Pricing
-  description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/4.4/examples/pricing/"
+  description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/4.6/examples/pricing/"
   render:
     - "#type": html_tag
       "#tag": div

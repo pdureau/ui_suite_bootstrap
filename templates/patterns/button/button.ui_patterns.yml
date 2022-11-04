@@ -1,6 +1,6 @@
 button:
   label: Button
-  description: For actions in forms, dialogs, and more with support for multiple sizes, states, and more. https://getbootstrap.com/docs/4.3/components/buttons/
+  description: For actions in forms, dialogs, and more with support for multiple sizes, states, and more. https://getbootstrap.com/docs/4.6/components/buttons/
   variants:
     primary:
       label: Primary

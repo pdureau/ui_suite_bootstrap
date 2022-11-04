@@ -1,6 +1,6 @@
 list_group:
   label: List Group
-  description: "List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within. https://getbootstrap.com/docs/4.3/components/list-group/"
+  description: "List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within. https://getbootstrap.com/docs/4.6/components/list-group/"
   variants:
     default:
       label: Default
@@ -10,7 +10,7 @@ list_group:
       description: Add .list-group-flush to remove some borders and rounded corners to render list group items edge-to-edge in a parent container (e.g., cards).
     horizontal:
       label: Horizontal
-      description: "Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints. Currently horizontal list groups cannot be combined with flush list groups. Only with Bootstrap 4.3+"
+      description: "Add .list-group-horizontal to change the layout of list group items from vertical to horizontal across all breakpoints. Currently horizontal list groups cannot be combined with flush list groups."
   fields:
     items:
       type: render

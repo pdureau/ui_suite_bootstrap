@@ -1,6 +1,6 @@
 navbar:
   label: Navbar
-  description: Powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin. https://getbootstrap.com/docs/4.4/components/navbar/
+  description: Powerful, responsive navigation header, the navbar. Includes support for branding, navigation, and more, including support for our collapse plugin. https://getbootstrap.com/docs/4.6/components/navbar/
   variants:
     default:
       label: Default

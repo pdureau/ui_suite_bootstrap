@@ -1,6 +1,6 @@
 media:
   label: "Media Object"
-  description: "Complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. https://getbootstrap.com/docs/4.4/components/media-object/"
+  description: "Complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. https://getbootstrap.com/docs/4.6/components/media-object/"
   settings:
     image_position:
       type: select
