@@ -255,6 +255,7 @@ spacing_padding_right:
   previewed_with:
     - border
     - bg-light
+    - text-right
 
 # https://getbootstrap.com/docs/4.4/utilities/spacing/#horizontal-centering
 spacing_horizontal_centering:
