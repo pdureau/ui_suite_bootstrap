@@ -2,12 +2,11 @@ album:
   label: Bootstrap Album
   description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/4.4/examples/album/"
   render:
-    "#attached":
-      "library":
-        - ui_suite_bootstrap/album_example
-    "1":
-      "#type": pattern
+    - "#type": pattern
       "#id": jumbotron
+      "#attached":
+        "library":
+          - ui_suite_bootstrap/album_example
       "#attributes":
         class:
           - text-center
@@ -44,8 +43,14 @@ album:
             "#attributes":
               class:
                 - my-2
-    "2":
-      "0":
+    - "#type": html_tag
+      "#tag": div
+      "#attributes":
+        class:
+          - album
+          - py-5
+          - bg-light
+      html_tag_content_1:
         "#type": pattern
         "#id": grid_row
         "#fields":
@@ -66,7 +71,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -87,20 +99,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -117,7 +122,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -138,20 +150,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -168,7 +173,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -189,20 +201,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -219,7 +224,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -240,20 +252,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -270,7 +275,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -291,20 +303,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -321,7 +326,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -342,20 +354,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -372,7 +377,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -393,20 +405,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -423,7 +428,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -444,20 +456,13 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
             - "#type": pattern
               "#id": card
               "#attributes":
@@ -474,7 +479,14 @@ album:
                   lead-in to additional content. This content is a little bit
                   longer.
                 body:
-                  "0":
+                  "#type": html_tag
+                  "#tag": div
+                  "#attributes":
+                    class:
+                      - d-flex
+                      - justify-content-between
+                      - align-items-center
+                  html_tag_content_1:
                     "#type": pattern
                     "#id": button_group
                     "#fields":
@@ -495,40 +507,25 @@ album:
                           "#attributes":
                             class:
                               - my-2
-                  "1":
+                  html_tag_content_2:
                     "#type": html_tag
                     "#tag": small
                     "#value": 9 mins
                     "#attributes":
                       class:
                         - text-muted
-                  "#type": html_tag
-                  "#tag": div
-                  "#attributes":
-                    class:
-                      - d-flex
-                      - justify-content-between
-                      - align-items-center
         "#settings":
           col_md: col-md-4
-      "#type": html_tag
-      "#tag": div
-      "#attributes":
-        class:
-          - album
-          - py-5
-          - bg-light
 
 carousel:
   label: Bootstrap Carousel
   description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/4.4/examples/carousel/"
   render:
-    "#attached":
-      "library":
-        - ui_suite_bootstrap/carousel_example
-    "1":
-      "#type": pattern
+    - "#type": pattern
       "#id": carousel
+      "#attached":
+        "library":
+          - ui_suite_bootstrap/carousel_example
       "#settings":
         with_indicators: true
         with_controls: true
@@ -554,18 +551,18 @@ carousel:
                 "#attributes":
                   class:
                     - text-left
-              - "0":
+              - "#type": html_tag
+                "#tag": p
+                "#attributes":
+                  class:
+                    - text-left
+                html_tag_content_1:
                   "#type": pattern
                   "#id": button
                   "#variant": primary__lg
                   "#fields":
                     label: Sign up today
                     url: "#"
-                "#type": html_tag
-                "#tag": p
-                "#attributes":
-                  class:
-                    - text-left
           - image:
               "#theme": image
               "#uri": >-
@@ -580,15 +577,15 @@ carousel:
                   Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
                   id elit non mi porta gravida at eget metus. Nullam id dolor id
                   nibh ultricies vehicula ut id elit.
-              - "0":
+              - "#type": html_tag
+                "#tag": p
+                html_tag_content_1:
                   "#type": pattern
                   "#id": button
                   "#variant": primary__lg
                   "#fields":
                     label: Learn more
                     url: "#"
-                "#type": html_tag
-                "#tag": p
           - image:
               "#theme": image
               "#uri": >-
@@ -609,20 +606,19 @@ carousel:
                 "#attributes":
                   class:
                     - text-right
-              - "0":
+              - "#type": html_tag
+                "#tag": p
+                "#attributes":
+                  class:
+                    - text-right
+                html_tag_content_1:
                   "#type": pattern
                   "#id": button
                   "#variant": primary__lg
                   "#fields":
                     label: Browse gallery
                     url: "#"
-                "#type": html_tag
-                "#tag": p
-                "#attributes":
-                  class:
-                    - text-right
-    "2":
-      "#type": pattern
+    - "#type": pattern
       "#id": grid_row
       "#attributes":
         class:
@@ -650,15 +646,15 @@ carousel:
                 Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo
                 risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo
                 cursus magna.
-            - "0":
+            - "#type": html_tag
+              "#tag": p
+              html_tag_content_1:
                 "#type": pattern
                 "#id": button
                 "#variant": secondary
                 "#fields":
                   label: View details »
                   url: "#"
-              "#type": html_tag
-              "#tag": p
           - - "#theme": image
               "#uri": >-
                 data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
@@ -677,15 +673,15 @@ carousel:
                 eget lacinia odio sem nec elit. Cras mattis consectetur purus sit
                 amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor
                 mauris condimentum nibh.
-            - "0":
+            - "#type": html_tag
+              "#tag": p
+              html_tag_content_1:
                 "#type": pattern
                 "#id": button
                 "#variant": secondary
                 "#fields":
                   label: View details »
                   url: "#"
-              "#type": html_tag
-              "#tag": p
           - - "#theme": image
               "#uri": >-
                 data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
@@ -704,17 +700,16 @@ carousel:
                 egestas eget quam. Vestibulum id ligula porta felis euismod semper.
                 Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum
                 nibh, ut fermentum massa justo sit amet risus.
-            - "0":
+            - "#type": html_tag
+              "#tag": p
+              html_tag_content_1:
                 "#type": pattern
                 "#id": button
                 "#variant": secondary
                 "#fields":
                   label: View details »
                   url: "#"
-              "#type": html_tag
-              "#tag": p
-    "3":
-      - "#type": html_tag
+    - - "#type": html_tag
         "#tag": hr
         "#attributes":
           class:
@@ -730,20 +725,20 @@ carousel:
             - col-md-5
         "#fields":
           content:
-            - - "0":
+            - - "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - featurette-heading
+                html_tag_content_1:
                   "#plain_text": "First featurette heading. "
-                "1":
+                html_tag_content_2:
                   "#type": html_tag
                   "#tag": span
                   "#attributes":
                     class:
                       - text-muted
                   "#value": It’ll blow your mind.
-                "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - featurette-heading
               - "#type": html_tag
                 "#tag": h2
                 "#attributes":
@@ -778,20 +773,20 @@ carousel:
             - col-md-5 order-md-1
         "#fields":
           content:
-            - - "0":
+            - - "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - featurette-heading
+                html_tag_content_1:
                   "#plain_text": "Oh yeah, it's that good. "
-                "1":
+                html_tag_content_2:
                   "#type": html_tag
                   "#tag": span
                   "#attributes":
                     class:
                       - text-muted
                   "#value": See for yourself.
-                "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - featurette-heading
               - "#type": html_tag
                 "#tag": p
                 "#attributes":
@@ -826,20 +821,20 @@ carousel:
             - col-md-5
         "#fields":
           content:
-            - - "0":
+            - - "#type": html_tag
+                "#tag": h2
+                "#attributes":
+                  class:
+                    - featurette-heading
+                html_tag_content_1:
                   "#plain_text": "And lastly, this one. "
-                "1":
+                html_tag_content_2:
                   "#type": html_tag
                   "#tag": span
                   "#attributes":
                     class:
                       - text-muted
                   "#value": Checkmate.
-                "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - featurette-heading
               - "#type": html_tag
                 "#tag": p
                 "#attributes":
@@ -868,233 +863,232 @@ pricing:
   label: Bootstrap Pricing
   description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/4.4/examples/pricing/"
   render:
-    "#attached":
-      "library":
-        - ui_suite_bootstrap/pricing_example
-    "1":
-      - "0":
-          "#type": html_tag
-          "#tag": h1
-          "#value": Pricing
-          "#attributes":
-            class:
-              - display-4
-        "1":
-          "#type": html_tag
-          "#tag": p
-          "#value": >-
-            Quickly build an effective pricing table for your potential customers
-            with this Bootstrap example. It’s built with default Bootstrap
-            components and utilities with little customization.
-          "#attributes":
-            class:
-              - lead
+    - "#type": html_tag
+      "#tag": div
+      "#attached":
+        "library":
+          - ui_suite_bootstrap/pricing_example
+      "#attributes":
+        class:
+          - pricing-header
+          - px-3
+          - py-3
+          - pt-md-5
+          - pb-md-4
+          - mx-auto
+          - text-center
+      html_tag_content_1:
         "#type": html_tag
-        "#tag": div
+        "#tag": h1
+        "#value": Pricing
         "#attributes":
           class:
-            - pricing-header
-            - px-3
-            - py-3
-            - pt-md-5
-            - pb-md-4
-            - mx-auto
+            - display-4
+      html_tag_content_2:
+        "#type": html_tag
+        "#tag": p
+        "#value": >-
+          Quickly build an effective pricing table for your potential customers
+          with this Bootstrap example. It’s built with default Bootstrap
+          components and utilities with little customization.
+        "#attributes":
+          class:
+            - lead
+    - "#type": html_tag
+      "#tag": div
+      "#attributes":
+        class:
+          - container
+      html_tag_content_1:
+        "#type": pattern
+        "#id": card_layout
+        "#variant": deck
+        "#attributes":
+          class:
+            - mb-3
             - text-center
-      - "0":
-          "#type": pattern
-          "#id": card_layout
-          "#variant": deck
-          "#attributes":
-            class:
-              - mb-3
-              - text-center
-          "#fields":
-            cards:
-              - "#type": pattern
-                "#id": card
-                "#attributes":
-                  class:
-                    - mb-4
-                    - shadow-sm
-                "#fields":
-                  header:
-                    "#type": html_tag
-                    "#tag": h4
-                    "#value": Free
+        "#fields":
+          cards:
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                header:
+                  "#type": html_tag
+                  "#tag": h4
+                  "#value": Free
+                  "#attributes":
+                    class:
+                      - my-0
+                      - font-weight-normal
+                body:
+                  - "#type": html_tag
+                    "#tag": h1
                     "#attributes":
                       class:
-                        - my-0
-                        - font-weight-normal
-                  body:
-                    - - "0":
-                          "#plain_text": "$0 "
-                        "1":
-                          "#type": html_tag
-                          "#tag": small
-                          "#attributes":
-                            class:
-                              - text-muted
-                          "#value": / mo
-                        "#type": html_tag
-                        "#tag": h1
-                        "#attributes":
-                          class:
-                            - card-title
-                            - pricing-card-title
-                      - "0":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": 10 users included
-                        "1":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": 2 GB of storage
-                        "2":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": Email support
-                        "3":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": Help center access
-                        "#type": html_tag
-                        "#tag": ul
-                        "#attributes":
-                          class:
-                            - list-unstyled
-                            - mt-3 mb-4
-                      - "#type": pattern
-                        "#id": button
-                        "#variant": outline_primary__lg
-                        "#attributes":
-                          class:
-                            - btn-block
-                        "#fields":
-                          label: Sign up for free
-              - "#type": pattern
-                "#id": card
-                "#attributes":
-                  class:
-                    - mb-4
-                    - shadow-sm
-                "#fields":
-                  header:
-                    "#type": html_tag
-                    "#tag": h4
-                    "#value": Pro
+                        - card-title
+                        - pricing-card-title
+                    html_tag_content_1:
+                      "#plain_text": "$0 "
+                    html_tag_content_2:
+                      "#type": html_tag
+                      "#tag": small
+                      "#attributes":
+                        class:
+                          - text-muted
+                      "#value": / mo
+                  - "#type": html_tag
+                    "#tag": ul
                     "#attributes":
                       class:
-                        - my-0
-                        - font-weight-normal
-                  body:
-                    - - "0":
-                          "#plain_text": "$15 "
-                        "1":
-                          "#type": html_tag
-                          "#tag": small
-                          "#attributes":
-                            class:
-                              - text-muted
-                          "#value": / mo
-                        "#type": html_tag
-                        "#tag": h1
-                        "#attributes":
-                          class:
-                            - card-title
-                            - pricing-card-title
-                      - "0":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": 20 users included
-                        "1":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": 10 GB of storage
-                        "2":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": Priority Email support
-                        "3":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": Help center access
-                        "#type": html_tag
-                        "#tag": ul
-                        "#attributes":
-                          class:
-                            - list-unstyled
-                            - mt-3 mb-4
-                      - "#type": pattern
-                        "#id": button
-                        "#variant": primary__lg
-                        "#attributes":
-                          class:
-                            - btn-block
-                        "#fields":
-                          label: Get started
-              - "#type": pattern
-                "#id": card
-                "#attributes":
-                  class:
-                    - mb-4
-                    - shadow-sm
-                "#fields":
-                  header:
-                    "#type": html_tag
-                    "#tag": h4
-                    "#value": Enterprise
+                        - list-unstyled
+                        - mt-3 mb-4
+                    html_tag_content_1:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": 10 users included
+                    html_tag_content_2:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": 2 GB of storage
+                    html_tag_content_3:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": Email support
+                    html_tag_content_4:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": Help center access
+                  - "#type": pattern
+                    "#id": button
+                    "#variant": outline_primary__lg
                     "#attributes":
                       class:
-                        - my-0
-                        - font-weight-normal
-                  body:
-                    - - "0":
-                          "#plain_text": "$29 "
-                        "1":
-                          "#type": html_tag
-                          "#tag": small
-                          "#attributes":
-                            class:
-                              - text-muted
-                          "#value": / mo
-                        "#type": html_tag
-                        "#tag": h1
-                        "#attributes":
-                          class:
-                            - card-title
-                            - pricing-card-title
-                      - "0":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": 30 users included
-                        "1":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": 15 GB of storage
-                        "2":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": Phone and email support
-                        "3":
-                          "#type": html_tag
-                          "#tag": li
-                          "#value": Help center access
-                        "#type": html_tag
-                        "#tag": ul
-                        "#attributes":
-                          class:
-                            - list-unstyled
-                            - mt-3 mb-4
-                      - "#type": pattern
-                        "#id": button
-                        "#variant": primary__lg
-                        "#attributes":
-                          class:
-                            - btn-block
-                        "#fields":
-                          label: Contact us
-        "#type": html_tag
-        "#tag": div
-        "#attributes":
-          class:
-            - container
+                        - btn-block
+                    "#fields":
+                      label: Sign up for free
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                header:
+                  "#type": html_tag
+                  "#tag": h4
+                  "#value": Pro
+                  "#attributes":
+                    class:
+                      - my-0
+                      - font-weight-normal
+                body:
+                  - "#type": html_tag
+                    "#tag": h1
+                    "#attributes":
+                      class:
+                        - card-title
+                        - pricing-card-title
+                    html_tag_content_1:
+                      "#plain_text": "$15 "
+                    html_tag_content_2:
+                      "#type": html_tag
+                      "#tag": small
+                      "#attributes":
+                        class:
+                          - text-muted
+                      "#value": / mo
+                  - "#type": html_tag
+                    "#tag": ul
+                    "#attributes":
+                      class:
+                        - list-unstyled
+                        - mt-3 mb-4
+                    html_tag_content_1:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": 20 users included
+                    html_tag_content_2:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": 10 GB of storage
+                    html_tag_content_3:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": Priority Email support
+                    html_tag_content_4:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": Help center access
+                  - "#type": pattern
+                    "#id": button
+                    "#variant": primary__lg
+                    "#attributes":
+                      class:
+                        - btn-block
+                    "#fields":
+                      label: Get started
+            - "#type": pattern
+              "#id": card
+              "#attributes":
+                class:
+                  - mb-4
+                  - shadow-sm
+              "#fields":
+                header:
+                  "#type": html_tag
+                  "#tag": h4
+                  "#value": Enterprise
+                  "#attributes":
+                    class:
+                      - my-0
+                      - font-weight-normal
+                body:
+                  - "#type": html_tag
+                    "#tag": h1
+                    "#attributes":
+                      class:
+                        - card-title
+                        - pricing-card-title
+                    html_tag_content_1:
+                      "#plain_text": "$29 "
+                    html_tag_content_2:
+                      "#type": html_tag
+                      "#tag": small
+                      "#attributes":
+                        class:
+                          - text-muted
+                      "#value": / mo
+                  - "#type": html_tag
+                    "#tag": ul
+                    "#attributes":
+                      class:
+                        - list-unstyled
+                        - mt-3 mb-4
+                    html_tag_content_1:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": 30 users included
+                    html_tag_content_2:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": 15 GB of storage
+                    html_tag_content_3:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": Phone and email support
+                    html_tag_content_4:
+                      "#type": html_tag
+                      "#tag": li
+                      "#value": Help center access
+                  - "#type": pattern
+                    "#id": button
+                    "#variant": primary__lg
+                    "#attributes":
+                      class:
+                        - btn-block
+                    "#fields":
+                      label: Contact us
