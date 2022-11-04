@@ -714,150 +714,187 @@ carousel:
         "#attributes":
           class:
             - featurette-divider
-      - "#type": pattern
-        "#id": grid_row
+      - "#type": html_tag
+        "#tag": div
         "#attributes":
           class:
+            - row
             - featurette
-        "#settings":
-          cols_sizes_cycle:
-            - col-md-7
-            - col-md-5
-        "#fields":
-          content:
-            - - "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - featurette-heading
-                html_tag_content_1:
-                  "#plain_text": "First featurette heading. "
-                html_tag_content_2:
-                  "#type": html_tag
-                  "#tag": span
-                  "#attributes":
-                    class:
-                      - text-muted
-                  "#value": It’ll blow your mind.
-              - "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - lead
-                "#value": >-
-                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                  ligula porta felis euismod semper. Praesent commodo cursus magna,
-                  vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                  commodo.
-            - "#theme": image
-              "#uri": >-
-                data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+        html_tag_content_1:
+          "#type": html_tag
+          "#tag": div
+          "#attributes":
+            class:
+              - col
+              - col-md-7
+          html_tag_content_1:
+            "#type": html_tag
+            "#tag": h2
+            "#attributes":
+              class:
+                - featurette-heading
+            html_tag_content_1:
+              "#plain_text": "First featurette heading. "
+            html_tag_content_2:
+              "#type": html_tag
+              "#tag": span
               "#attributes":
                 class:
-                  - featurette-image
-                  - img-fluid
-                  - mx-auto
+                  - text-muted
+              "#value": It’ll blow your mind.
+          html_tag_content_2:
+            "#type": html_tag
+            "#tag": h2
+            "#attributes":
+              class:
+                - lead
+            "#value": >-
+              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+              ligula porta felis euismod semper. Praesent commodo cursus magna,
+              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+              commodo.
+        html_tag_content_2:
+          "#type": html_tag
+          "#tag": div
+          "#attributes":
+            class:
+              - col
+              - col-md-5
+          html_tag_content_1:
+            "#theme": image
+            "#uri": >-
+              data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+            "#attributes":
+              class:
+                - featurette-image
+                - img-fluid
+                - mx-auto
+
       - "#type": html_tag
         "#tag": hr
         "#attributes":
           class:
             - featurette-divider
-      - "#type": pattern
-        "#id": grid_row
+
+      - "#type": html_tag
+        "#tag": div
         "#attributes":
           class:
+            - row
             - featurette
-        "#settings":
-          cols_sizes_cycle:
-            - col-md-7 order-md-2
-            - col-md-5 order-md-1
-        "#fields":
-          content:
-            - - "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - featurette-heading
-                html_tag_content_1:
-                  "#plain_text": "Oh yeah, it's that good. "
-                html_tag_content_2:
-                  "#type": html_tag
-                  "#tag": span
-                  "#attributes":
-                    class:
-                      - text-muted
-                  "#value": See for yourself.
-              - "#type": html_tag
-                "#tag": p
-                "#attributes":
-                  class:
-                    - lead
-                "#value": >-
-                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                  ligula porta felis euismod semper. Praesent commodo cursus magna,
-                  vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                  commodo.
-            - "#theme": image
-              "#uri": >-
-                data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+        html_tag_content_1:
+          "#type": html_tag
+          "#tag": div
+          "#attributes":
+            class:
+              - col
+              - col-md-7
+              - order-md-2
+          html_tag_content_1:
+            "#type": html_tag
+            "#tag": h2
+            "#attributes":
+              class:
+                - featurette-heading
+            html_tag_content_1:
+              "#plain_text": "Oh yeah, it's that good. "
+            html_tag_content_2:
+              "#type": html_tag
+              "#tag": span
               "#attributes":
                 class:
-                  - featurette-image
-                  - img-fluid
-                  - mx-auto
+                  - text-muted
+              "#value": See for yourself.
+          html_tag_content_2:
+            "#type": html_tag
+            "#tag": h2
+            "#attributes":
+              class:
+                - lead
+            "#value": >-
+              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+              ligula porta felis euismod semper. Praesent commodo cursus magna,
+              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+              commodo.
+        html_tag_content_2:
+          "#type": html_tag
+          "#tag": div
+          "#attributes":
+            class:
+              - col
+              - col-md-5
+              - order-md-1
+          html_tag_content_1:
+            "#theme": image
+            "#uri": >-
+              data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+            "#attributes":
+              class:
+                - featurette-image
+                - img-fluid
+                - mx-auto
+
       - "#type": html_tag
         "#tag": hr
         "#attributes":
           class:
             - featurette-divider
-      - "#type": pattern
-        "#id": grid_row
+
+      - "#type": html_tag
+        "#tag": div
         "#attributes":
           class:
+            - row
             - featurette
-        "#settings":
-          cols_sizes_cycle:
-            - col-md-7
-            - col-md-5
-        "#fields":
-          content:
-            - - "#type": html_tag
-                "#tag": h2
-                "#attributes":
-                  class:
-                    - featurette-heading
-                html_tag_content_1:
-                  "#plain_text": "And lastly, this one. "
-                html_tag_content_2:
-                  "#type": html_tag
-                  "#tag": span
-                  "#attributes":
-                    class:
-                      - text-muted
-                  "#value": Checkmate.
-              - "#type": html_tag
-                "#tag": p
-                "#attributes":
-                  class:
-                    - lead
-                "#value": >-
-                  Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
-                  ligula porta felis euismod semper. Praesent commodo cursus magna,
-                  vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
-                  commodo.
-            - "#theme": image
-              "#uri": >-
-                data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+        html_tag_content_1:
+          "#type": html_tag
+          "#tag": div
+          "#attributes":
+            class:
+              - col
+              - col-md-7
+          html_tag_content_1:
+            "#type": html_tag
+            "#tag": h2
+            "#attributes":
+              class:
+                - featurette-heading
+            html_tag_content_1:
+              "#plain_text": "And lastly, this one. "
+            html_tag_content_2:
+              "#type": html_tag
+              "#tag": span
               "#attributes":
                 class:
-                  - featurette-image
-                  - img-fluid
-                  - mx-auto
-      - "#type": html_tag
-        "#tag": hr
-        "#attributes":
-          class:
-            - featurette-divider
+                  - text-muted
+              "#value": Checkmate.
+          html_tag_content_2:
+            "#type": html_tag
+            "#tag": h2
+            "#attributes":
+              class:
+                - lead
+            "#value": >-
+              Donec ullamcorper nulla non metus auctor fringilla. Vestibulum id
+              ligula porta felis euismod semper. Praesent commodo cursus magna,
+              vel scelerisque nisl consectetur. Fusce dapibus, tellus ac cursus
+              commodo.
+        html_tag_content_2:
+          "#type": html_tag
+          "#tag": div
+          "#attributes":
+            class:
+              - col
+              - col-md-5
+          html_tag_content_1:
+            "#theme": image
+            "#uri": >-
+              data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E
+            "#attributes":
+              class:
+                - featurette-image
+                - img-fluid
+                - mx-auto
 
 pricing:
   label: Bootstrap Pricing
