@@ -57,11 +57,17 @@ You can browse the example pages directly inside Drupal: /examples
 
 # Installation
 
-## Manually
+```
+$ composer require 'drupal/ui_suite_bootstrap:4.x'
+```
 
-You need to place the Bootstrap library in the `libraries` folder.
 
-## With Composer
+## Manual installation
+
+By default, the theme use https://www.bootstrapcdn.com/
+
+If you prefer a local instalaltion, you need to override the libraries and place the Bootstrap library in the `libraries` folder:
+
 
 ```json
 {
@@ -89,7 +95,7 @@ You need to place the Bootstrap library in the `libraries` folder.
   },
   "extra": {
     "installer-paths": {
-      "app/libraries/{$name}": [
+      "web/libraries/{$name}": [
         "type:drupal-library"
       ]
     }
@@ -97,9 +103,8 @@ You need to place the Bootstrap library in the `libraries` folder.
 }
 ```
 
-### Asset Packagist
 
-If you are using the website [Asset Packagist](https://asset-packagist.org), the
+If you are using [Asset Packagist](https://asset-packagist.org), the
 composer.json can be like:
 
 ```json

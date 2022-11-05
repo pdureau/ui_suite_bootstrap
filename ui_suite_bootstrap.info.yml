@@ -9,6 +9,5 @@ dependencies:
   - ui_patterns:ui_patterns_library
   - ui_patterns_settings:ui_patterns_settings
   - ui_styles:ui_styles
-
 libraries:
   - ui_suite_bootstrap/bootstrap
