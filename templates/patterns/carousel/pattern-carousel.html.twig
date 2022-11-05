@@ -17,10 +17,12 @@
   <div class="carousel-inner" role="listbox">
     {% for slide in slides %}
       <div class="carousel-item{% if loop.first %} active{% endif %}">
-        {{ slide.image }}
+        {{ slide }}
+        {% if captions[loop.index0] %}
         <div class="carousel-caption">
-          {{ slide|without('image') }}
+          {{ captions[loop.index0] }}
         </div>
+        {% endif %}
       </div>
     {% endfor %}
   </div>

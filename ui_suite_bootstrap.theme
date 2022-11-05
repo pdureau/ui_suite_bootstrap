@@ -22,11 +22,11 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
  * See also: https://getbootstrap.com/docs/4.6/components/card/.
  */
 function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
+  $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
     foreach ($variables['image'] as &$item) {
       _ui_suite_bootstrap_add_card_image_class($item, $variables['variant']);
       if ($variables['context']->getType() == 'preview') {
-        $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
         $uri = isset($item['#uri']) ? implode('/', [
           '',
           $base_path,
@@ -93,52 +93,20 @@ function _ui_suite_bootstrap_add_card_link_class(&$item): void {
  */
 function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
 
-  // Move first image of each slide in a specific array key.
-  if (array_key_exists('slides', $variables) && is_array($variables['slides'])) {
-    foreach ($variables['slides'] as &$slide) {
-      $slide['image'] = _ui_suite_bootstrap_extract_carousel_image($slide);
-    }
-  }
-
   // Nicer preview with fixed width and local backgrounds.
   if ($variables['context']->getType() == 'preview') {
     $variables['attributes']['style'] = "width: 800px";
     $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
     foreach ($variables['slides'] as $i => $slide) {
-      if (isset($slide['image']) && is_array($slide['image'])) {
-        $image = $slide['image'];
-        $uri = isset($image['#uri']) ? implode('/', [
-          '',
-          $base_path,
-          $image['#uri'],
-        ]) : '';
-        $variables['slides'][$i]['image']['#uri'] = $uri;
-      }
+      $uri = isset($slide['#uri']) ? implode('/', [
+        '',
+        $base_path,
+        $slide['#uri'],
+      ]) : '';
+      $variables['slides'][$i]['#uri'] = $uri;
     }
   }
 
-}
-
-/**
- * Extract image from carousel slide.
- */
-function _ui_suite_bootstrap_extract_carousel_image(&$item) {
-  if (is_array($item) && array_key_exists('#theme', $item)) {
-    if ($item['#theme'] === 'image' || $item['#theme'] === 'image_formatter') {
-      $image = $item;
-      $item = [];
-      return $image;
-    }
-  }
-  if (isset($item) && is_array($item)) {
-    foreach ($item as &$next) {
-      $dig = _ui_suite_bootstrap_extract_carousel_image($next);
-      if ($dig) {
-        return $dig;
-      }
-    }
-  }
-  return FALSE;
 }
 
 /*

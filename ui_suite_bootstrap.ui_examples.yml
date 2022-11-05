@@ -531,93 +531,85 @@ carousel:
         with_controls: true
       "#fields":
         slides:
-          - image:
-              "#theme": image
-              "#uri": >-
-                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
-            caption:
-              - "#type": html_tag
-                "#tag": h1
-                "#value": Example headline.
-                "#attributes":
-                  class:
-                    - text-left
-              - "#type": html_tag
-                "#tag": p
-                "#value": >-
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
-                  id elit non mi porta gravida at eget metus. Nullam id dolor id
-                  nibh ultricies vehicula ut id elit.
-                "#attributes":
-                  class:
-                    - text-left
-              - "#type": html_tag
-                "#tag": p
-                "#attributes":
-                  class:
-                    - text-left
-                html_tag_content_1:
-                  "#type": pattern
-                  "#id": button
-                  "#variant": primary__lg
-                  "#fields":
-                    label: Sign up today
-                    url: "#"
-          - image:
-              "#theme": image
-              "#uri": >-
-                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
-            caption:
-              - "#type": html_tag
-                "#tag": h1
-                "#value": Another example headline.
-              - "#type": html_tag
-                "#tag": p
-                "#value": >-
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
-                  id elit non mi porta gravida at eget metus. Nullam id dolor id
-                  nibh ultricies vehicula ut id elit.
-              - "#type": html_tag
-                "#tag": p
-                html_tag_content_1:
-                  "#type": pattern
-                  "#id": button
-                  "#variant": primary__lg
-                  "#fields":
-                    label: Learn more
-                    url: "#"
-          - image:
-              "#theme": image
-              "#uri": >-
-                data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
-            caption:
-              - "#type": html_tag
-                "#tag": h1
-                "#value": One more for good measure.
-                "#attributes":
-                  class:
-                    - text-right
-              - "#type": html_tag
-                "#tag": p
-                "#value": >-
-                  Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
-                  id elit non mi porta gravida at eget metus. Nullam id dolor id
-                  nibh ultricies vehicula ut id elit.
-                "#attributes":
-                  class:
-                    - text-right
-              - "#type": html_tag
-                "#tag": p
-                "#attributes":
-                  class:
-                    - text-right
-                html_tag_content_1:
-                  "#type": pattern
-                  "#id": button
-                  "#variant": primary__lg
-                  "#fields":
-                    label: Browse gallery
-                    url: "#"
+          - "#theme": image
+            "#uri": data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+          - "#theme": image
+            "#uri": data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+          - "#theme": image
+            "#uri": data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==
+        captions:
+          - - "#type": html_tag
+              "#tag": h1
+              "#value": Example headline.
+              "#attributes":
+                class:
+                  - text-left
+            - "#type": html_tag
+              "#tag": p
+              "#value": >-
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                id elit non mi porta gravida at eget metus. Nullam id dolor id
+                nibh ultricies vehicula ut id elit.
+              "#attributes":
+                class:
+                  - text-left
+            - "#type": html_tag
+              "#tag": p
+              "#attributes":
+                class:
+                  - text-left
+              html_tag_content_1:
+                "#type": pattern
+                "#id": button
+                "#variant": primary__lg
+                "#fields":
+                  label: Sign up today
+                  url: "#"
+          - - "#type": html_tag
+              "#tag": h1
+              "#value": Another example headline.
+            - "#type": html_tag
+              "#tag": p
+              "#value": >-
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                id elit non mi porta gravida at eget metus. Nullam id dolor id
+                nibh ultricies vehicula ut id elit.
+            - "#type": html_tag
+              "#tag": p
+              html_tag_content_1:
+                "#type": pattern
+                "#id": button
+                "#variant": primary__lg
+                "#fields":
+                  label: Learn more
+                  url: "#"
+          - - "#type": html_tag
+              "#tag": h1
+              "#value": One more for good measure.
+              "#attributes":
+                class:
+                  - text-right
+            - "#type": html_tag
+              "#tag": p
+              "#value": >-
+                Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec
+                id elit non mi porta gravida at eget metus. Nullam id dolor id
+                nibh ultricies vehicula ut id elit.
+              "#attributes":
+                class:
+                  - text-right
+            - "#type": html_tag
+              "#tag": p
+              "#attributes":
+                class:
+                  - text-right
+              html_tag_content_1:
+                "#type": pattern
+                "#id": button
+                "#variant": primary__lg
+                "#fields":
+                  label: Browse gallery
+                  url: "#"
     - "#type": pattern
       "#id": grid_row
       "#attributes":

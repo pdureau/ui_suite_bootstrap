@@ -22,29 +22,34 @@ carousel:
     slides:
       type: render
       label: "Slides"
-      description: "Each slide is a collection of title, subtitle and slide image."
+      description: "List of renderables. Each slide is an image."
       preview:
-        - - theme: "image"
-            uri: "assets/slide-1.svg"
-          - type: html_tag
+        - theme: "image"
+          uri: "assets/slide-1.svg"
+        - theme: "image"
+          uri: "assets/slide-2.svg"
+        - theme: "image"
+          uri: "assets/slide-3.svg"
+    captions:
+      type: render
+      label: "Captions"
+      description: "List of renderables. Captions (title, subtitle...) for each slide"
+      preview:
+        - - type: html_tag
             tag: h5
             value: "First slide label"
           - type: html_tag
             tag: p
             value: "Nulla vitae elit libero, a pharetra augue mollis interdum."
-        - - theme: "image"
-            uri: "/assets/slide-2.svg"
-          - type: html_tag
+        - - type: html_tag
             tag: h5
-            value: "Second slide label"
+            value: "First slide label"
           - type: html_tag
             tag: p
             value: "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-        - - theme: "image"
-            uri: "/assets/slide-3.svg"
-          - type: html_tag
+        - - type: html_tag
             tag: h5
-            value: "Third slide label"
+            value: "First slide label"
           - type: html_tag
             tag: p
             value: "Praesent commodo cursus magna, vel scelerisque nisl consectetur."
