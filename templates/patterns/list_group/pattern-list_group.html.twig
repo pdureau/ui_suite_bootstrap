@@ -2,11 +2,6 @@
   {% set attributes = attributes.addClass('list-group-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
-<ul{{ attributes.addClass('list-group') }}>
-  {% for item in items %}
-    {% set item_attributes = create_attribute({'class': ['list-group-item']}) %}
-    {% set item_attributes = item['#active'] ? item_attributes.addClass('active') : item_attributes %}
-    {% set item_attributes = item['#disabled'] ? item_attributes.addClass('disabled') : item_attributes %}
-    <li{{item_attributes}}>{{ item }}</li>
-  {% endfor %}
-</ul>
+<div{{ attributes.addClass('list-group') }}>
+  {{ items }}
+</div>

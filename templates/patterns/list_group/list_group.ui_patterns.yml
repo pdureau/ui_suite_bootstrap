@@ -15,25 +15,30 @@ list_group:
     items:
       type: render
       label: Items
-      description: "An array of render arrays, with 2 specific optional properties: active & disabled"
+      description: "A list of List Group Items patterns."
       preview:
-        - type: html_tag
-          tag: span
-          value: "Cras justo odio"
-          active: FALSE
-        - type: html_tag
-          tag: span
-          value: "Dapibus ac facilisis in (active)"
-          active: TRUE
-          disabled: FALSE
-        - type: html_tag
-          tag: span
-          value: "Morbi leo risus"
-          active: FALSE
-        - type: html_tag
-          tag: span
-          value: "Porta ac consectetur ac (disabled)"
-          disabled: TRUE
-        - type: html_tag
-          tag: span
-          value: "Vestibulum at eros"
+        - type: pattern
+          id: list_group_item
+          fields:
+            content: The current link item
+          settings:
+            active: true
+        - type: pattern
+          id: list_group_item
+          fields:
+            content: A second link item
+        - type: pattern
+          id: list_group_item
+          fields:
+            content: A third link item
+        - type: pattern
+          id: list_group_item
+          fields:
+            content: A fourth link item, with a link
+            url: "#"
+        - type: pattern
+          id: list_group_item
+          fields:
+            content: The disabled link item
+          settings:
+            disabled: true
