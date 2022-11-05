@@ -133,6 +133,22 @@ shadows:
     - m-3
 
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
+spacing_margin:
+  label: Margin
+  options:
+    m-0: 0
+    m-1: 1
+    m-2: 2
+    m-3: 3
+    m-4: 4
+    m-5: 5
+    m-auto: Auto
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_margin_top:
   label: Margin top
   options:
@@ -194,6 +210,21 @@ spacing_margin_right:
   previewed_with:
     - border
     - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
+spacing_padding:
+  label: Padding
+  options:
+    p-0: 0
+    p-1: 1
+    p-2: 2
+    p-3: 3
+    p-4: 4
+    p-5: 5
+    p-auto: Auto
+  previewed_with:
+    - border
     - bg-light
 
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
