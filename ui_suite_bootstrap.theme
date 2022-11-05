@@ -8,6 +8,65 @@
 declare(strict_types = 1);
 
 /**
+ * Add theme base path to media.
+ *
+ * @param mixed $item
+ *   The render element.
+ *
+ * @return array
+ *   The modified item.
+ */
+function _ui_suite_bootstrap_add_media_path($item): array {
+  /** @var array $item */
+  $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
+  if (is_array($item) && array_key_exists('#theme', $item)) {
+    if ($item['#theme'] === 'image') {
+      $uri = isset($item['#uri']) ? implode('/', [
+        '',
+        $base_path,
+        $item['#uri'],
+      ]) : '';
+      $item['#uri'] = $uri;
+    }
+  }
+  if (is_array($item) && array_key_exists('#type', $item)) {
+    if (($item['#type'] === 'html_tag') || ($item['#tag'] === 'img')) {
+      $uri = isset($item['#attributes']['src']) ? implode('/', [
+        '',
+        $base_path,
+        $item['#attributes']['src'],
+      ]) : '';
+      $item['#attributes']['src'] = $uri;
+    }
+  }
+  return $item;
+}
+
+/**
+ * Add expected class to links.
+ *
+ * @param mixed $item
+ *   The render element.
+ * @param string $class
+ *   The CSS class to add.
+ */
+function _ui_suite_bootstrap_add_link_class(&$item, string $class): void {
+  if (is_array($item) && array_key_exists('#type', $item)) {
+    if ($item['#type'] === 'link') {
+      $item['#attributes']['class'][] = $class;
+    }
+    if ($item['#type'] === 'html_tag' && $item['#tag'] === 'a') {
+      $item['#attributes']['class'][] = $class;
+    }
+  }
+  if (is_array($item)) {
+    foreach ($item as &$next) {
+      _ui_suite_bootstrap_add_link_class($next, $class);
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK() for 'page'.
  */
 function ui_suite_bootstrap_preprocess_page(array &$variables): void {
@@ -22,23 +81,17 @@ function ui_suite_bootstrap_preprocess_page(array &$variables): void {
  * See also: https://getbootstrap.com/docs/4.6/components/card/.
  */
 function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
-  $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
     foreach ($variables['image'] as &$item) {
       _ui_suite_bootstrap_add_card_image_class($item, $variables['variant']);
       if ($variables['context']->getType() == 'preview') {
-        $uri = isset($item['#uri']) ? implode('/', [
-          '',
-          $base_path,
-          $item['#uri'],
-        ]) : '';
-        $item['#uri'] = $uri;
+        $item = _ui_suite_bootstrap_add_media_path($item);
       }
     }
   }
   if (array_key_exists('links', $variables) && is_array($variables['links'])) {
     foreach ($variables['links'] as &$item) {
-      _ui_suite_bootstrap_add_card_link_class($item);
+      _ui_suite_bootstrap_add_link_class($item, 'card-link');
     }
   }
 }
@@ -67,46 +120,18 @@ function _ui_suite_bootstrap_add_card_image_class(&$item, string $variant): void
 }
 
 /**
- * Add expected class in card's link.
- */
-function _ui_suite_bootstrap_add_card_link_class(&$item): void {
-  if (is_array($item) && array_key_exists('#type', $item)) {
-    $class = 'card-link';
-    if ($item['#type'] === 'link') {
-      $item['#attributes']['class'][] = $class;
-    }
-    if ($item['#type'] === 'html_tag' && $item['#tag'] === 'a') {
-      $item['#attributes']['class'][] = $class;
-    }
-  }
-  if (is_array($item)) {
-    foreach ($item as &$next) {
-      _ui_suite_bootstrap_add_card_link_class($next);
-    }
-  }
-}
-
-/**
  * Implements hook_preprocess_HOOK() for 'pattern_carousel'.
  *
  * See also: https://getbootstrap.com/docs/4.6/components/carousel/.
  */
 function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
-
   // Nicer preview with fixed width and local backgrounds.
   if ($variables['context']->getType() == 'preview') {
     $variables['attributes']['style'] = "width: 800px";
-    $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
     foreach ($variables['slides'] as $i => $slide) {
-      $uri = isset($slide['#uri']) ? implode('/', [
-        '',
-        $base_path,
-        $slide['#uri'],
-      ]) : '';
-      $variables['slides'][$i]['#uri'] = $uri;
+      $variables['slides'][$i] = _ui_suite_bootstrap_add_media_path($slide);
     }
   }
-
 }
 
 /*
