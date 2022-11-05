@@ -1,0 +1,18 @@
+figure:
+  label: "Figure"
+  description: "Anytime you need to display a piece of content—like an image with an optional caption, consider using figure. https://getbootstrap.com/docs/4.6/content/figures/"
+  fields:
+    image:
+      type: "render"
+      label: "Image"
+      description: "Figure image"
+      preview:
+        - type: html_tag
+          tag: img
+          attributes:
+            src: assets/figure-image.png
+    caption:
+      type: "render"
+      label: "Caption"
+      description: "A caption under the image."
+      preview: "A caption for the above image."

@@ -1,0 +1,10 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('jumbotron-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+<figure{{ attributes.addClass('figure') }}>
+  {{ image }}
+  <figcaption class="figure-caption">
+    {{ caption }}
+  </figcaption>
+</figure>
