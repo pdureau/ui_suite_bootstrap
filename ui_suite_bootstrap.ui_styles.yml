@@ -1,19 +1,29 @@
 # https://getbootstrap.com/docs/5.2/utilities/borders/#border
 borders_border:
   label: "Border"
-  description: "Use border utilities to add or remove an element's borders. Choose from all borders or one at a time."
+  description: "Use it to add an element’s borders. Choose from all borders or one at a time."
   options:
     border: "Additive All"
     border-top: "Additive Top"
     border-end: "Additive End"
     border-bottom: "Additive Bottom"
     border-start: "Additive Start"
-    border-0: "Subtractive All"
-    border-top-0: "Subtractive Top"
-    border-end-0: "Subtractive End"
-    border-bottom-0: "Subtractive Bottom"
-    border-start-0: "Subtractive Start"
   previewed_with:
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/borders/#border
+borders_border_substractive:
+  label: Border subtractive
+  description: Use it to remove an element’s borders. Choose from all borders or one at a time.
+  options:
+    border-0: All
+    border-top-0: Top
+    border-right-0: Right
+    border-bottom-0: Bottom
+    border-left-0: Left
+  previewed_with:
+    - border
     - p-2
     - bg-light
 
@@ -217,6 +227,22 @@ shadows:
     - m-3
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
+spacing_margin:
+  label: Margin
+  options:
+    m-0: 0
+    m-1: 1
+    m-2: 2
+    m-3: 3
+    m-4: 4
+    m-5: 5
+    m-auto: Auto
+  previewed_with:
+    - border
+    - p-2
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_top:
   label: "Margin top"
   description: "The negative margins are disabled by default, but can be enabled in Sass by setting $enable-negative-margins: true."
@@ -309,6 +335,21 @@ spacing_margin_end:
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
+spacing_padding:
+  label: Padding
+  options:
+    p-0: 0
+    p-1: 1
+    p-2: 2
+    p-3: 3
+    p-4: 4
+    p-5: 5
+    p-auto: Auto
+  previewed_with:
+    - border
+    - bg-light
+
+# https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_top:
   label: "Padding top"
   options:
@@ -367,6 +408,7 @@ spacing_padding_end:
   previewed_with:
     - border
     - bg-light
+    - text-end
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#horizontal-centering
 spacing_horizontal_centering:
