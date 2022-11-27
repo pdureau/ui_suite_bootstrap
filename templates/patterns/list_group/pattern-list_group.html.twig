@@ -1,0 +1,7 @@
+{% if variant != '' and variant|lower != 'default' %}
+  {% set attributes = attributes.addClass('list-group-' ~ variant|lower|replace({'_': '-'})) %}
+{% endif %}
+
+<div{{ attributes.addClass('list-group') }}>
+  {{ items }}
+</div>
