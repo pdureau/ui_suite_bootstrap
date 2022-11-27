@@ -106,6 +106,7 @@ clearfix:
     clearfix: "Clearfix"
 
 # https://getbootstrap.com/docs/5.2/utilities/background/#background-color
+# https://getbootstrap.com/docs/5.2/helpers/color-background/
 colors_background_color:
   label: "Background color"
   description: "Similar to the contextual text color classes, easily set the background of an element to any contextual class."
@@ -121,6 +122,17 @@ colors_background_color:
     bg-body: "Body"
     bg-white: "White"
     bg-transparent: "Transparent"
+    text-bg-primary: "Primary with contrasting foreground"
+    text-bg-secondary: "Secondary with contrasting foreground"
+    text-bg-success: "Success with contrasting foreground"
+    text-bg-danger: "Danger with contrasting foreground"
+    text-bg-warning: "Warning with contrasting foreground"
+    text-bg-info: "Info with contrasting foreground"
+    text-bg-light: "Light with contrasting foreground"
+    text-bg-dark: "Dark with contrasting foreground"
+    text-bg-body: "Body with contrasting foreground"
+    text-bg-white: "White with contrasting foreground"
+    text-bg-transparent: "Transparent with contrasting foreground"
   previewed_with:
     - border
     - p-2
@@ -144,26 +156,6 @@ colors_color:
     text-white: "White"
     text-black-50: "Black 50"
     text-white-50: "White 50"
-
-# https://getbootstrap.com/docs/5.2/helpers/color-background/
-colors_background_with_contrast:
-  label: "Background color with contrasting color"
-  description: "Set a background color with contrasting foreground color."
-  options:
-    text-bg-primary: "Primary"
-    text-bg-secondary: "Secondary"
-    text-bg-success: "Success"
-    text-bg-danger: "Danger"
-    text-bg-warning: "Warning"
-    text-bg-info: "Info"
-    text-bg-light: "Light"
-    text-bg-dark: "Dark"
-    text-bg-body: "Body"
-    text-bg-white: "White"
-    text-bg-transparent: "Transparent"
-  previewed_with:
-    - border
-    - p-2
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_weight:
@@ -467,19 +459,8 @@ text_text_truncate:
   options:
     text-truncate: "Truncate"
 
-# https://getbootstrap.com/docs/5.2/utilities/text/#font-size
-text_text_font_size:
-  label: "Font size"
-  description: "Quickly change the font-size of text. While our heading classes (e.g., .h1–.h6) apply font-size, font-weight, and line-height, these utilities only apply font-size. Sizing for these utilities matches HTML's heading elements, so as the number increases, their size decreases."
-  options:
-    fs-1: "1"
-    fs-2: "2"
-    fs-3: "3"
-    fs-4: "4"
-    fs-5: "5"
-    fs-6: "6"
-
 # https://getbootstrap.com/docs/5.2/content/typography/
+# https://getbootstrap.com/docs/5.2/utilities/text/#font-size
 typography:
   label: "Typography"
   description: ".h1 through .h6 classes are available, for when you want to match the font styling of a heading but cannot use the associated HTML element. Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default."
@@ -497,6 +478,12 @@ typography:
     display-5: "Display heading 5"
     display-6: "Display heading 6"
     lead: "Lead"
+    fs-1: "1"
+    fs-2: "2"
+    fs-3: "3"
+    fs-4: "4"
+    fs-5: "5"
+    fs-6: "6"
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#enable-flex-behaviors
 flex_flex:
