@@ -1,9 +1,8 @@
 album:
-  label: "Bootstrap Album"
+  label: "Album"
   description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/5.2/examples/album/"
   render:
-    "1":
-      "#type": "html_tag"
+    - "#type": "html_tag"
       "#tag": "section"
       "#attributes":
         class:
@@ -63,8 +62,7 @@ album:
                   - btn
                   - btn-secondary
                   - my-2
-    "2":
-      "0":
+    - "0":
         "#type": "pattern"
         "#id": "grid_row"
         "#fields":
@@ -111,15 +109,14 @@ album:
           - bg-light
 
 carousel:
-  label: "Bootstrap Carousel"
+  label: "Carousel"
   description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/5.2/examples/carousel/"
   render:
-    "#attached":
-      "library":
-        - ui_suite_bootstrap/example_carousel
-    "1":
-      "#type": "pattern"
+    - "#type": "pattern"
       "#id": "carousel"
+      "#attached":
+        "library":
+          - ui_suite_bootstrap/example_carousel
       "#settings":
         with_indicators: true
         with_controls: true
@@ -209,8 +206,7 @@ carousel:
                   "#fields":
                     label: "Browse gallery"
                     url: "#"
-    "2":
-      "#type": "pattern"
+    - "#type": "pattern"
       "#id": "grid_row"
       "#attributes":
         class:
@@ -295,8 +291,7 @@ carousel:
                 "#fields":
                   label: "View details »"
                   url: "#"
-    "3":
-      "#type": "html_tag"
+    - "#type": "html_tag"
       "#tag": "div"
       "#attributes":
         class:
@@ -477,261 +472,260 @@ carousel:
                 - mx-auto
 
 pricing:
-  label: "Bootstrap Pricing"
+  label: "Pricing"
   description: "Example pricing page built with Cards and featuring a custom header and footer. https://getbootstrap.com/docs/5.2/examples/pricing/"
   render:
-    "1":
-      - "#type": "html_tag"
-        "#tag": "div"
+    - "#type": "html_tag"
+      "#tag": "div"
+      "#attributes":
+        class:
+          - pricing-header
+          - p-3
+          - pb-md-4
+          - mx-auto
+          - text-center
+      "0":
+        "#type": "html_tag"
+        "#tag": "h1"
+        "#value": "Pricing"
         "#attributes":
           class:
-            - pricing-header
-            - p-3
-            - pb-md-4
-            - mx-auto
-            - text-center
-        "0":
-          "#type": "html_tag"
-          "#tag": "h1"
-          "#value": "Pricing"
-          "#attributes":
-            class:
-              - display-4
-              - fw-normal
-        "1":
-          "#type": "html_tag"
-          "#tag": "p"
-          "#value": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization."
-          "#attributes":
-            class:
-              - fs-5
-              - text-muted
-      - "#type": "pattern"
-        "#id": "grid_row"
+            - display-4
+            - fw-normal
+      "1":
+        "#type": "html_tag"
+        "#tag": "p"
+        "#value": "Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization."
         "#attributes":
           class:
-            - mb-3
-            - text-center
-        "#settings":
-          with_container: false
-          col_xs: col-12
-          col_md: col-md-4
-        "#fields":
-          content:
-            - "#type": "pattern"
-              "#id": "card"
-              "#attributes":
-                class:
-                  - mb-4
-                  - shadow-sm
-                  - rounded-3
-              "#fields":
-                header:
-                  "#type": "html_tag"
-                  "#tag": "h4"
-                  "#value": "Free"
-                  "#attributes":
-                    class:
-                      - my-0
-                      - fw-normal
-                content:
-                  - - "#type": "html_tag"
-                      "#tag": "div"
+            - fs-5
+            - text-muted
+    - "#type": "pattern"
+      "#id": "grid_row"
+      "#attributes":
+        class:
+          - mb-3
+          - text-center
+      "#settings":
+        with_container: false
+        col_xs: col-12
+        col_md: col-md-4
+      "#fields":
+        content:
+          - "#type": "pattern"
+            "#id": "card"
+            "#attributes":
+              class:
+                - mb-4
+                - shadow-sm
+                - rounded-3
+            "#fields":
+              header:
+                "#type": "html_tag"
+                "#tag": "h4"
+                "#value": "Free"
+                "#attributes":
+                  class:
+                    - my-0
+                    - fw-normal
+              content:
+                - - "#type": "html_tag"
+                    "#tag": "div"
+                    "#attributes":
+                      class:
+                        - card-body
+                    "0":
+                      "#type": "html_tag"
+                      "#tag": "h1"
                       "#attributes":
                         class:
-                          - card-body
+                          - card-title
+                          - pricing-card-title
                       "0":
-                        "#type": "html_tag"
-                        "#tag": "h1"
-                        "#attributes":
-                          class:
-                            - card-title
-                            - pricing-card-title
-                        "0":
-                          "#plain_text": "$0"
-                        "1":
-                          "#type": "html_tag"
-                          "#tag": "small"
-                          "#attributes":
-                            class:
-                              - text-muted
-                              - fw-light
-                          "#value": "/mo"
+                        "#plain_text": "$0"
                       "1":
                         "#type": "html_tag"
-                        "#tag": "ul"
+                        "#tag": "small"
                         "#attributes":
                           class:
-                            - list-unstyled
-                            - mt-3
-                            - mb-4
-                        "0":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "10 users included"
-                        "1":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "2 GB of storage"
-                        "2":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "Email support"
-                        "3":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "Help center access"
-                      "2":
-                        "#type": "pattern"
-                        "#id": "button"
-                        "#variant": "outline_primary__lg"
-                        "#attributes":
-                          class:
-                            - w-100
-                        "#fields":
-                          label: "Sign up for free"
-            - "#type": "pattern"
-              "#id": "card"
-              "#attributes":
-                class:
-                  - mb-4
-                  - shadow-sm
-                  - rounded-3
-              "#fields":
-                header:
-                  "#type": "html_tag"
-                  "#tag": "h4"
-                  "#value": "Pro"
-                  "#attributes":
-                    class:
-                      - my-0
-                      - fw-normal
-                content:
-                  - - "#type": "html_tag"
-                      "#tag": "div"
+                            - text-muted
+                            - fw-light
+                        "#value": "/mo"
+                    "1":
+                      "#type": "html_tag"
+                      "#tag": "ul"
                       "#attributes":
                         class:
-                          - card-body
+                          - list-unstyled
+                          - mt-3
+                          - mb-4
                       "0":
                         "#type": "html_tag"
-                        "#tag": "h1"
-                        "#attributes":
-                          class:
-                            - card-title
-                            - pricing-card-title
-                        "0":
-                          "#plain_text": "$15"
-                        "1":
-                          "#type": "html_tag"
-                          "#tag": "small"
-                          "#attributes":
-                            class:
-                              - text-muted
-                              - fw-light
-                          "#value": "/mo"
+                        "#tag": "li"
+                        "#value": "10 users included"
                       "1":
                         "#type": "html_tag"
-                        "#tag": "ul"
-                        "#attributes":
-                          class:
-                            - list-unstyled
-                            - mt-3
-                            - mb-4
-                        "0":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "20 users included"
-                        "1":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "10 GB of storage"
-                        "2":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "Priority email support"
-                        "3":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "Help center access"
+                        "#tag": "li"
+                        "#value": "2 GB of storage"
                       "2":
-                        "#type": "pattern"
-                        "#id": "button"
-                        "#variant": "primary__lg"
-                        "#attributes":
-                          class:
-                            - w-100
-                        "#fields":
-                          label: "Get started"
-            - "#type": "pattern"
-              "#id": "card"
-              "#attributes":
-                class:
-                  - mb-4
-                  - shadow-sm
-                  - rounded-3
-                  - border-primary
-              "#fields":
-                header:
-                  "#type": "html_tag"
-                  "#tag": "h4"
-                  "#value": "Enterprise"
-                  "#attributes":
-                    class:
-                      - my-0
-                      - fw-normal
-                content:
-                  - - "#type": "html_tag"
-                      "#tag": "div"
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "Email support"
+                      "3":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "Help center access"
+                    "2":
+                      "#type": "pattern"
+                      "#id": "button"
+                      "#variant": "outline_primary__lg"
                       "#attributes":
                         class:
-                          - card-body
+                          - w-100
+                      "#fields":
+                        label: "Sign up for free"
+          - "#type": "pattern"
+            "#id": "card"
+            "#attributes":
+              class:
+                - mb-4
+                - shadow-sm
+                - rounded-3
+            "#fields":
+              header:
+                "#type": "html_tag"
+                "#tag": "h4"
+                "#value": "Pro"
+                "#attributes":
+                  class:
+                    - my-0
+                    - fw-normal
+              content:
+                - - "#type": "html_tag"
+                    "#tag": "div"
+                    "#attributes":
+                      class:
+                        - card-body
+                    "0":
+                      "#type": "html_tag"
+                      "#tag": "h1"
+                      "#attributes":
+                        class:
+                          - card-title
+                          - pricing-card-title
                       "0":
-                        "#type": "html_tag"
-                        "#tag": "h1"
-                        "#attributes":
-                          class:
-                            - card-title
-                            - pricing-card-title
-                        "0":
-                          "#plain_text": "$29"
-                        "1":
-                          "#type": "html_tag"
-                          "#tag": "small"
-                          "#attributes":
-                            class:
-                              - text-muted
-                              - fw-light
-                          "#value": "/mo"
+                        "#plain_text": "$15"
                       "1":
                         "#type": "html_tag"
-                        "#tag": "ul"
+                        "#tag": "small"
                         "#attributes":
                           class:
-                            - list-unstyled
-                            - mt-3
-                            - mb-4
-                        "0":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "30 users included"
-                        "1":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "15 GB of storage"
-                        "2":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "Phone and email support"
-                        "3":
-                          "#type": "html_tag"
-                          "#tag": "li"
-                          "#value": "Help center access"
+                            - text-muted
+                            - fw-light
+                        "#value": "/mo"
+                    "1":
+                      "#type": "html_tag"
+                      "#tag": "ul"
+                      "#attributes":
+                        class:
+                          - list-unstyled
+                          - mt-3
+                          - mb-4
+                      "0":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "20 users included"
+                      "1":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "10 GB of storage"
                       "2":
-                        "#type": "pattern"
-                        "#id": "button"
-                        "#variant": "primary__lg"
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "Priority email support"
+                      "3":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "Help center access"
+                    "2":
+                      "#type": "pattern"
+                      "#id": "button"
+                      "#variant": "primary__lg"
+                      "#attributes":
+                        class:
+                          - w-100
+                      "#fields":
+                        label: "Get started"
+          - "#type": "pattern"
+            "#id": "card"
+            "#attributes":
+              class:
+                - mb-4
+                - shadow-sm
+                - rounded-3
+                - border-primary
+            "#fields":
+              header:
+                "#type": "html_tag"
+                "#tag": "h4"
+                "#value": "Enterprise"
+                "#attributes":
+                  class:
+                    - my-0
+                    - fw-normal
+              content:
+                - - "#type": "html_tag"
+                    "#tag": "div"
+                    "#attributes":
+                      class:
+                        - card-body
+                    "0":
+                      "#type": "html_tag"
+                      "#tag": "h1"
+                      "#attributes":
+                        class:
+                          - card-title
+                          - pricing-card-title
+                      "0":
+                        "#plain_text": "$29"
+                      "1":
+                        "#type": "html_tag"
+                        "#tag": "small"
                         "#attributes":
                           class:
-                            - w-100
-                        "#fields":
-                          label: "Contact us"
+                            - text-muted
+                            - fw-light
+                        "#value": "/mo"
+                    "1":
+                      "#type": "html_tag"
+                      "#tag": "ul"
+                      "#attributes":
+                        class:
+                          - list-unstyled
+                          - mt-3
+                          - mb-4
+                      "0":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "30 users included"
+                      "1":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "15 GB of storage"
+                      "2":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "Phone and email support"
+                      "3":
+                        "#type": "html_tag"
+                        "#tag": "li"
+                        "#value": "Help center access"
+                    "2":
+                      "#type": "pattern"
+                      "#id": "button"
+                      "#variant": "primary__lg"
+                      "#attributes":
+                        class:
+                          - w-100
+                      "#fields":
+                        label: "Contact us"
