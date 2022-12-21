@@ -6,8 +6,8 @@
 {% endif %}
 
 {% set attributes = attributes.addClass('list-group-item') %}
-{% set attributes = disabled ? attributes.addClass('disabled').setAttribute("aria-disabled", "true") : attributes %}
-{% set attributes = active ? attributes.addClass('active').setAttribute("aria-current", "true") : attributes %}
+{% set attributes = disabled ? attributes.addClass('disabled').setAttribute('aria-disabled', 'true') : attributes %}
+{% set attributes = active ? attributes.addClass('active').setAttribute('aria-current', 'true') : attributes %}
 
 {% if url or attributes.href %}
   {% set url = url ?: attributes.href %}

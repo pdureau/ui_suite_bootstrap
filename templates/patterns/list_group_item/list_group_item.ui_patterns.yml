@@ -1,41 +1,41 @@
 list_group_item:
-  label: (List Group Item)
-  description: "List groups are a flexible and powerful component for displaying a series of content. Modify and extend them to support just about any content within. https://getbootstrap.com/docs/5.2/components/list-group/"
+  label: "(List Group Item)"
+  description: "Internal: to be used in the 'List Group' component. https://getbootstrap.com/docs/5.2/components/list-group/"
   variants:
     primary:
-      label: Primary
+      label: "Primary"
     secondary:
-      label: Secondary
+      label: "Secondary"
     success:
-      label: Success
+      label: "Success"
     danger:
-      label: Danger
+      label: "Danger"
     warning:
-      label: Warning
+      label: "Warning"
     info:
-      label: Info
+      label: "Info"
     light:
-      label: Light
+      label: "Light"
     dark:
-      label: Dark
+      label: "Dark"
   settings:
     active:
-      type: boolean
-      label: Active?
-      description: Indicate the current active selection.
-      preview: False
+      type: "boolean"
+      label: "Active?"
+      description: "Indicate the current active selection."
+      preview: false
     disabled:
-      type: boolean
-      label: Disabled?
-      description: Make it appear disabled. Note that some elements with .disabled will also require custom JavaScript to fully disable their click events (e.g., links).
-      preview: False
+      type: "boolean"
+      label: "Disabled?"
+      description: "Make it appears disabled. Note that some elements with .disabled will also require custom JavaScript to fully disable their click events (e.g., links)."
+      preview: false
   fields:
     content:
-      type: render
-      label: Content
+      type: "render"
+      label: "Content"
       description: "Plain text, or any kind of content."
       preview: "An item"
     url:
-      type: text
-      label: URL
-      description: The button URL. Optional.
+      type: "text"
+      label: "URL"
+      description: "The button URL. Optional."

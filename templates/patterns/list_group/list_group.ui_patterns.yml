@@ -18,45 +18,45 @@ list_group:
       label: "Horizontal Small"
       description: "Horizontal starts at breakpoint small."
     horizontal_md:
-      label: "Horizontal Small"
+      label: "Horizontal Medium"
       description: "Horizontal starts at breakpoint medium."
     horizontal_lg:
-      label: "Horizontal Small"
+      label: "Horizontal Large"
       description: "Horizontal starts at breakpoint large."
     horizontal_xl:
-      label: "Horizontal Small"
+      label: "Horizontal Extra large"
       description: "Horizontal starts at breakpoint extra large."
     horizontal_xxl:
-      label: "Horizontal Small"
+      label: "Horizontal Extra extra large"
       description: "Horizontal starts at breakpoint extra extra large."
   fields:
     items:
-      type: render
-      label: Items
+      type: "render"
+      label: "Items"
       description: "A list of List Group Items patterns."
       preview:
-        - type: pattern
-          id: list_group_item
+        - type: "pattern"
+          id: "list_group_item"
           fields:
-            content: The current link item
+            content: "The current link item"
           settings:
             active: true
-        - type: pattern
-          id: list_group_item
+        - type: "pattern"
+          id: "list_group_item"
           fields:
-            content: A second link item
-        - type: pattern
-          id: list_group_item
+            content: "A second link item"
+        - type: "pattern"
+          id: "list_group_item"
           fields:
-            content: A third link item
-        - type: pattern
-          id: list_group_item
+            content: "A third link item"
+        - type: "pattern"
+          id: "list_group_item"
           fields:
-            content: A fourth link item, with a link
+            content: "A fourth link item, with a link"
             url: "#"
-        - type: pattern
-          id: list_group_item
+        - type: "pattern"
+          id: "list_group_item"
           fields:
-            content: The disabled link item
+            content: "The disabled link item"
           settings:
             disabled: true

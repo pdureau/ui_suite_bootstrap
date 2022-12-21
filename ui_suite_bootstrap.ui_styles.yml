@@ -13,15 +13,15 @@ borders_border:
     - bg-light
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#border
-borders_border_substractive:
-  label: Border subtractive
-  description: Use it to remove an element’s borders. Choose from all borders or one at a time.
+borders_border_subtractive:
+  label: "Border subtractive"
+  description: "Use it to remove an element’s borders. Choose from all borders or one at a time."
   options:
-    border-0: All
-    border-top-0: Top
-    border-right-0: Right
-    border-bottom-0: Bottom
-    border-left-0: Left
+    border-0: "All"
+    border-top-0: "Top"
+    border-end-0: "End"
+    border-bottom-0: "Bottom"
+    border-start-0: "Start"
   previewed_with:
     - border
     - p-2
@@ -220,15 +220,15 @@ shadows:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin:
-  label: Margin
+  label: "Margin"
   options:
-    m-0: 0
-    m-1: 1
-    m-2: 2
-    m-3: 3
-    m-4: 4
-    m-5: 5
-    m-auto: Auto
+    m-0: "0"
+    m-1: "1"
+    m-2: "2"
+    m-3: "3"
+    m-4: "4"
+    m-5: "5"
+    m-auto: "Auto"
   previewed_with:
     - border
     - p-2
@@ -328,15 +328,15 @@ spacing_margin_end:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding:
-  label: Padding
+  label: "Padding"
   options:
-    p-0: 0
-    p-1: 1
-    p-2: 2
-    p-3: 3
-    p-4: 4
-    p-5: 5
-    p-auto: Auto
+    p-0: "0"
+    p-1: "1"
+    p-2: "2"
+    p-3: "3"
+    p-4: "4"
+    p-5: "5"
+    p-auto: "Auto"
   previewed_with:
     - border
     - bg-light
