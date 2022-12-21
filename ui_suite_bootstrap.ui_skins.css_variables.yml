@@ -1,331 +1,271 @@
 # https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables
-bs_blue:
-  group: "Colors"
-  type: "color"
-  label: "Blue"
-  default_value: "#0d6efd"
-bs_indigo:
-  group: "Colors"
-  type: "color"
-  label: "Indigo"
-  default_value: "#6610f2"
-bs_purple:
-  group: "Colors"
-  type: "color"
-  label: "Purple"
-  default_value: "#6f42c1"
-bs_pink:
-  group: "Colors"
-  type: "color"
-  label: "Pink"
-  default_value: "#d63384"
-bs_red:
-  group: "Colors"
-  type: "color"
-  label: "Red"
-  default_value: "#dc3545"
-bs_orange:
-  group: "Colors"
-  type: "color"
-  label: "Orange"
-  default_value: "#fd7e14"
-bs_yellow:
-  group: "Colors"
-  type: "color"
-  label: "Yellow"
-  default_value: "#ffc107"
-bs_green:
-  group: "Colors"
-  type: "color"
-  label: "Green"
-  default_value: "#198754"
-bs_teal:
-  group: "Colors"
-  type: "color"
-  label: "Teal"
-  default_value: "#20c997"
-bs_cyan:
-  group: "Colors"
-  type: "color"
-  label: "Cyan"
-  default_value: "#0dcaf0"
-bs_black:
-  group: "Colors"
-  type: "color"
-  label: "Black"
-  default_value: "#000000"
-bs_black_rgb:
-  group: "Colors"
-  type: "textfield"
-  label: "Black (RGB)"
-  default_value: "0, 0, 0"
-bs_white:
-  group: "Colors"
-  type: "color"
-  label: "White"
-  default_value: "#ffffff"
-bs_white_rgb:
-  group: "Colors"
-  type: "textfield"
-  label: "White (RGB)"
-  default_value: "255, 255, 255"
-bs_gray:
-  group: "Colors"
-  type: "color"
-  label: "Gray"
-  default_value: "#6c757d"
-bs_gray_dark:
-  group: "Colors"
-  type: "color"
-  label: "Gray dark"
-  default_value: "#343a40"
-bs_gray_100:
-  group: "Colors"
-  type: "color"
-  label: "Gray 100"
-  default_value: "#f8f9fa"
-bs_gray_200:
-  group: "Colors"
-  type: "color"
-  label: "Gray 200"
-  default_value: "#e9ecef"
-bs_gray_300:
-  group: "Colors"
-  type: "color"
-  label: "Gray 300"
-  default_value: "#dee2e6"
-bs_gray_400:
-  group: "Colors"
-  type: "color"
-  label: "Gray 400"
-  default_value: "#ced4da"
-bs_gray_500:
-  group: "Colors"
-  type: "color"
-  label: "Gray 500"
-  default_value: "#adb5bd"
-bs_gray_600:
-  group: "Colors"
-  type: "color"
-  label: "Gray 600"
-  default_value: "#6c757d"
-bs_gray_700:
-  group: "Colors"
-  type: "color"
-  label: "Gray 700"
-  default_value: "#495057"
-bs_gray_800:
-  group: "Colors"
-  type: "color"
-  label: "Gray 800"
-  default_value: "#343a40"
-bs_gray_900:
-  group: "Colors"
-  type: "color"
-  label: "Gray 900"
-  default_value: "#212529"
 bs_primary:
   group: "Colors"
   type: "color"
   label: "Primary"
-  default_value: "#0d6efd"
+  default_values:
+    ":root": "#0d6efd"
 bs_primary_rgb:
   group: "Colors"
   type: "textfield"
   label: "Primary (RGB)"
-  default_value: "13, 110, 253"
+  default_values:
+    ":root": "13, 110, 253"
 bs_secondary:
   group: "Colors"
   type: "color"
   label: "Secondary"
-  default_value: "#6c757d"
+  default_values:
+    ":root": "#6c757d"
 bs_secondary_rgb:
   group: "Colors"
   type: "textfield"
   label: "Secondary (RGB)"
-  default_value: "108, 117, 125"
+  default_values:
+    ":root": "108, 117, 125"
 bs_success:
   group: "Colors"
   type: "color"
   label: "Success"
-  default_value: "#198754"
+  default_values:
+    ":root": "#198754"
 bs_success_rgb:
   group: "Colors"
   type: "textfield"
   label: "Success (RGB)"
-  default_value: "25, 135, 84"
+  default_values:
+    ":root": "25, 135, 84"
 bs_info:
   group: "Colors"
   type: "color"
   label: "Info"
-  default_value: "#0dcaf0"
+  default_values:
+    ":root": "#0dcaf0"
 bs_info_rgb:
   group: "Colors"
   type: "textfield"
   label: "Info (RGB)"
-  default_value: "13, 202, 240"
+  default_values:
+    ":root": "13, 202, 240"
 bs_warning:
   group: "Colors"
   type: "color"
   label: "Warning"
-  default_value: "#ffc107"
+  default_values:
+    ":root": "#ffc107"
 bs_warning_rgb:
   group: "Colors"
   type: "textfield"
   label: "Warning (RGB)"
-  default_value: "255, 193, 7"
+  default_values:
+    ":root": "255, 193, 7"
 bs_danger:
   group: "Colors"
   type: "color"
   label: "Danger"
-  default_value: "#dc3545"
+  default_values:
+    ":root": "#dc3545"
 bs_danger_rgb:
   group: "Colors"
   type: "textfield"
   label: "Danger (RGB)"
-  default_value: "220, 53, 69"
+  default_values:
+    ":root": "220, 53, 69"
 bs_light:
   group: "Colors"
   type: "color"
   label: "Light"
-  default_value: "#f8f9fa"
+  default_values:
+    ":root": "#f8f9fa"
 bs_light_rgb:
   group: "Colors"
   type: "textfield"
   label: "Light (RGB)"
-  default_value: "248, 249, 250"
+  default_values:
+    ":root": "248, 249, 250"
 bs_dark:
   group: "Colors"
   type: "color"
   label: "Dark"
-  default_value: "#212529"
+  default_values:
+    ":root": "#212529"
 bs_dark_rgb:
   group: "Colors"
   type: "textfield"
   label: "Dark (RGB)"
-  default_value: "33, 37, 41"
+  default_values:
+    ":root": "33, 37, 41"
+bs_white:
+  group: "Colors"
+  type: "color"
+  label: "White"
+  default_values:
+    ":root": "#ffffff"
+bs_white_rgb:
+  group: "Colors"
+  type: "textfield"
+  label: "White (RGB)"
+  default_values:
+    ":root": "255, 255, 255"
+bs_black:
+  group: "Colors"
+  type: "color"
+  label: "Black"
+  default_values:
+    ":root": "#000000"
+bs_black_rgb:
+  group: "Colors"
+  type: "textfield"
+  label: "Black (RGB)"
+  default_values:
+    ":root": "0, 0, 0"
 bs_font_sans_serif:
   group: "Fonts"
   type: "textarea"
   label: "Font sans serif"
-  default_value: "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
+  default_values:
+    ":root": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
 bs_font_monospace:
   group: "Fonts"
   type: "textarea"
   label: "Font monospace"
-  default_value: "SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
+  default_values:
+    ":root": "SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
 bs_gradient:
   group: "Colors"
   type: "textfield"
   label: "Gradient"
-  default_value: "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))"
+  default_values:
+    ":root": "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))"
 bs_body_font_family:
   group: "Body"
   type: "textfield"
   label: "Font family"
-  default_value: "var(--bs-font-sans-serif)"
+  default_values:
+    ":root": "var(--bs-font-sans-serif)"
 bs_body_font_size:
   group: "Body"
   type: "textfield"
   label: "Font size"
-  default_value: "1rem"
+  default_values:
+    ":root": "1rem"
 bs_body_font_weight:
   group: "Body"
   type: "textfield"
   label: "Font weight"
-  default_value: "400"
+  default_values:
+    ":root": "400"
 bs_body_line_height:
   group: "Body"
   type: "textfield"
   label: "Line height"
-  default_value: "1.5"
+  default_values:
+    ":root": "1.5"
 bs_body_color:
   group: "Body"
   type: "color"
   label: "Color"
-  default_value: "#212529"
+  default_values:
+    ":root": "#212529"
 bs_body_color_rgb:
   group: "Body"
   type: "textfield"
   label: "Color (RGB)"
-  default_value: "33, 37, 41"
+  default_values:
+    ":root": "33, 37, 41"
 bs_body_bg:
   group: "Body"
   type: "color"
   label: "Background color"
-  default_value: "#ffffff"
+  default_values:
+    ":root": "#ffffff"
 bs_body_bg_rgb:
   group: "Body"
   type: "textfield"
   label: "Background color (RGB)"
-  default_value: "255, 255, 255"
+  default_values:
+    ":root": "255, 255, 255"
 bs_border_width:
   group: "Border"
-  type: "color"
+  type: "textfield"
   label: "Width"
-  default_value: "1px"
+  default_values:
+    ":root": "1px"
 bs_border_style:
   group: "Border"
   type: "textfield"
   label: "Style"
-  default_value: "solid"
+  default_values:
+    ":root": "solid"
 bs_border_color:
   group: "Border"
   type: "color"
   label: "Color"
-  default_value: "#dee2e6"
+  default_values:
+    ":root": "#dee2e6"
 bs_border_color_translucent:
   group: "Border"
-  type: "textfield"
+  type: "ui_skins_alpha_color"
   label: "Color translucent"
-  default_value: "rgba(0, 0, 0, 0.175)"
+  default_values:
+    ":root": "#0000002c"
 bs_border_radius:
   group: "Border"
   type: "textfield"
   label: "Radius"
-  default_value: "0.375rem"
+  default_values:
+    ":root": "0.375rem"
 bs_border_radius_sm:
   group: "Border"
   type: "textfield"
   label: "Radius small"
-  default_value: "0.25rem"
+  default_values:
+    ":root": "0.25rem"
 bs_border_radius_lg:
   group: "Border"
   type: "textfield"
   label: "Radius large"
-  default_value: "0.5rem"
+  default_values:
+    ":root": "0.5rem"
 bs_border_radius_xl:
   group: "Border"
   type: "textfield"
   label: "Radius extra large"
-  default_value: "1rem"
+  default_values:
+    ":root": "1rem"
 bs_border_radius_2xl:
   group: "Border"
   type: "textfield"
   label: "Radius extra extra large"
-  default_value: "2rem"
+  default_values:
+    ":root": "2rem"
 bs_border_radius_pill:
   group: "Border"
   type: "textfield"
   label: "Radius pill"
-  default_value: "50rem"
+  default_values:
+    ":root": "50rem"
 bs_link_color:
   group: "Link"
   type: "color"
   label: "Color"
-  default_value: "#0d6efd"
+  default_values:
+    ":root": "#0d6efd"
 bs_link_hover_color:
   group: "Link"
   type: "color"
   label: "Hover color"
-  default_value: "#0a58ca"
+  default_values:
+    ":root": "#0a58ca"
 bs_code_color:
   group: "Code"
   type: "color"
   label: "Color"
-  default_value: "#d63384"
+  default_values:
+    ":root": "#d63384"
 bs_highlight_bg:
   group: "Highlight"
   type: "color"
   label: "Background color"
-  default_value: "#fff3cd"
+  default_values:
+    ":root": "#fff3cd"
