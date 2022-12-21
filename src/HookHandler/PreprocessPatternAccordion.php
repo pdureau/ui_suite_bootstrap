@@ -26,7 +26,7 @@ class PreprocessPatternAccordion {
       $accordion_item_settings['#heading_level'] = $variables['heading_level'];
     }
 
-    if (array_key_exists('keep_open', $variables) && !$variables['keep_open']) {
+    if (\array_key_exists('keep_open', $variables) && !$variables['keep_open']) {
       $accordion_id = Html::getUniqueId('bootstrap-accordion');
       // Add unique id to the accordion.
       $variables['accordion_id'] = $accordion_id;

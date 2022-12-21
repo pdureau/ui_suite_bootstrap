@@ -25,6 +25,9 @@ class PreprocessPatternCardBody {
 
   /**
    * Add expected class in card's link.
+   *
+   * @param mixed $item
+   *   A render item.
    */
   protected function addCardLinkClass(&$item): void {
     if (!\is_array($item)) {

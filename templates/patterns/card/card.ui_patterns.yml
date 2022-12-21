@@ -44,11 +44,11 @@ card:
             subtitle: "Card subtitle"
             text: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit."
             content:
-             - type: "pattern"
-               id: "button"
-               variant: "primary"
-               fields:
-                 label: "Go somewhere"
+              - type: "pattern"
+                id: "button"
+                variant: "primary"
+                fields:
+                  label: "Go somewhere"
             links:
               - type: "link"
                 url: "#"

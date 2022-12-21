@@ -91,7 +91,7 @@ borders_border_radius:
 # https://getbootstrap.com/docs/5.2/helpers/clearfix/
 clearfix:
   label: "Clearfix"
-  description: "asily clear floats by adding <code>.clearfix</code> to the parent element."
+  description: "Easily clear floats by adding <code>.clearfix</code> to the parent element."
   options:
     clearfix: "Clearfix"
 

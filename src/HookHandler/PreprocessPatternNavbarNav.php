@@ -40,6 +40,7 @@ class PreprocessPatternNavbarNav {
           }
 
           if ($sub_level_item['url']->isRouted() && $sub_level_item['url']->getRouteName() === '<nolink>') {
+            /** @var array $sub_level_item_attributes */
             $sub_level_item_attributes = $sub_level_item['url']->getOption('attributes');
             // Divider.
             if (isset($sub_level_item_attributes['class']) && \in_array('dropdown-divider', $sub_level_item_attributes['class'], TRUE)) {

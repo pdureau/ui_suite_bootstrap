@@ -61,6 +61,11 @@ class PreprocessPatternCard {
 
   /**
    * Add expected class in card's image.
+   *
+   * @param mixed $item
+   *   A render item.
+   * @param string $image_class
+   *   The image class to add.
    */
   protected function addCardImageClass(&$item, string $image_class): void {
     if (!\is_array($item)) {
@@ -99,6 +104,9 @@ class PreprocessPatternCard {
 
   /**
    * Add expected class in card's header.
+   *
+   * @param mixed $item
+   *   A render item.
    */
   protected function addHeaderNavClass(&$item): void {
     if (!\is_array($item)) {
