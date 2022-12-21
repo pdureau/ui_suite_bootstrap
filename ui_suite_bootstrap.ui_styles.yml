@@ -569,17 +569,12 @@ flex_fill:
     flex-fill: "Fill"
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#grow-and-shrink
-flex_grow:
-  label: "Flex grow"
-  description: "Use flex-grow-* utilities to toggle a flex item's ability to grow to fill available space. In the example below, the flex-grow-1 elements uses all available space it can, while allowing the remaining two flex items their necessary space."
+flex_grow_shrink:
+  label: "Flex grow and shrink"
+  description: "Use flex-grow-* utilities to toggle a flex item's ability to grow to fill available space. In the example below, the flex-grow-1 elements uses all available space it can, while allowing the remaining two flex items their necessary space. Use flex-shrink-* utilities to toggle a flex item's ability to shrink if necessary."
   options:
     flex-grow-0: "Grow 0"
     flex-grow-1: "Grow 1"
-
-flex_shrink:
-  label: "Flex shrink"
-  description: "Use flex-shrink-* utilities to toggle a flex item's ability to shrink if necessary."
-  options:
     flex-shrink-0: "Shrink 0"
     flex-shrink-1: "Shrink 1"
 
