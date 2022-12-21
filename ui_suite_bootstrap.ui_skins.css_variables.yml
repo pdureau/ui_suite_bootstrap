@@ -269,3 +269,77 @@ bs_highlight_bg:
   label: "Background color"
   default_values:
     ":root": "#fff3cd"
+
+# Component: Alert.
+bs_alert_color:
+  group: "Component: Alert"
+  type: "color"
+  label: "Color"
+  default_values:
+    ".alert": "#212529"
+    ".alert-primary": "#084298"
+    ".alert-secondary": "#41464b"
+    ".alert-success": "#0f5132"
+    ".alert-danger": "#842029"
+    ".alert-warning": "#664d03"
+    ".alert-info": "#055160"
+    ".alert-light": "#636464"
+    ".alert-dark": "#141619"
+bs_alert_bg:
+  group: "Component: Alert"
+  type: "ui_skins_alpha_color"
+  label: "Background color"
+  default_values:
+    ".alert": "#00000000"
+    ".alert-primary": "#cfe2ffff"
+    ".alert-secondary": "#e2e3e5ff"
+    ".alert-success": "#d1e7ddff"
+    ".alert-danger": "#f8d7daff"
+    ".alert-warning": "#fff3cdff"
+    ".alert-info": "#cff4fcff"
+    ".alert-light": "#fefefeff"
+    ".alert-dark": "#d3d3d4ff"
+bs_alert_border_color:
+  group: "Component: Alert"
+  type: "ui_skins_alpha_color"
+  label: "Border color"
+  default_values:
+    ".alert": "#00000000"
+    ".alert-primary": "#b6d4feff"
+    ".alert-secondary": "#d3d6d8ff"
+    ".alert-success": "#badbccff"
+    ".alert-danger": "#f5c2c7ff"
+    ".alert-warning": "#ffecb5ff"
+    ".alert-info": "#b6effbff"
+    ".alert-light": "#fdfdfeff"
+    ".alert-dark": "#bcbebfff"
+bs_alert_padding_x:
+  group: "Component: Alert"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".alert": "1rem"
+bs_alert_padding_y:
+  group: "Component: Alert"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".alert": "1rem"
+bs_alert_margin_bottom:
+  group: "Component: Alert"
+  type: "textfield"
+  label: "Margin bottom"
+  default_values:
+    ".alert": "1rem"
+bs_alert_border:
+  group: "Component: Alert"
+  type: "textfield"
+  label: "Border"
+  default_values:
+    ".alert": "1px solid var(--bs-alert-border-color)"
+bs_alert_border_radius:
+  group: "Component: Alert"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".alert": "0.375rem"
