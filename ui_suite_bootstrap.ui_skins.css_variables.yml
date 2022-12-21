@@ -343,3 +343,65 @@ bs_alert_border_radius:
   label: "Border radius"
   default_values:
     ".alert": "0.375rem"
+
+# Component: Breadcrumb.
+bs_breadcrumb_padding_x:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".breadcrumb": "0"
+bs_breadcrumb_padding_y:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".breadcrumb": "0"
+bs_breadcrumb_margin_bottom:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Margin bottom"
+  default_values:
+    ".breadcrumb": "1rem"
+bs_breadcrumb_font_size:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Font size"
+  default_values:
+    ".breadcrumb": "var(--bs-body-font-size)"
+bs_breadcrumb_bg:
+  group: "Component: Breadcrumb"
+  type: "ui_skins_alpha_color"
+  label: "Background color"
+  default_values:
+    ".breadcrumb": "#00000000"
+bs_breadcrumb_border_radius:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".breadcrumb": "0"
+bs_breadcrumb_divider:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Divider"
+  default_values:
+    ".breadcrumb": "\"/\""
+bs_breadcrumb_divider_color:
+  group: "Component: Breadcrumb"
+  type: "color"
+  label: "Divider color"
+  default_values:
+    ".breadcrumb": "#6c757d"
+bs_breadcrumb_item_padding_x:
+  group: "Component: Breadcrumb"
+  type: "textfield"
+  label: "Item horizontal padding"
+  default_values:
+    ".breadcrumb": "0.5rem"
+bs_breadcrumb_item_active_color:
+  group: "Component: Breadcrumb"
+  type: "color"
+  label: "Active item color"
+  default_values:
+    ".breadcrumb": "#6c757d"
