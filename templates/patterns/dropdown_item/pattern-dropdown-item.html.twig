@@ -6,12 +6,12 @@
 {% endif %}
 
 {% if variant|lower == 'dropdown_divider' %}
-  <hr {{ attributes }}>
+  <hr{{ attributes }}>
 {% elseif variant|lower == 'dropdown_header' %}
   {% set heading_level = heading_level|default(6) %}
-  <h{{ heading_level }} {{ attributes}} >{{ content }}</h{{ heading_level }}>
+  <h{{ heading_level }}{{ attributes}}>{{ content }}</h{{ heading_level }}>
 {% elseif variant|lower == 'dropdown_item_text' %}
-  <span {{ attributes }}>{{ content }}</span>
+  <span{{ attributes }}>{{ content }}</span>
 {% else %}
   {#
   In this case it is the responsibility of the content render element to

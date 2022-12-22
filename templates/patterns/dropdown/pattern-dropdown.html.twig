@@ -41,7 +41,7 @@
   'aria-labelledby': dropdown_id
 }) %}
 
-<{{ dropdown_tag }} {{ attributes }}>
+<{{ dropdown_tag }}{{ attributes }}>
   {% if button_split %}
     {% set split_button_attributes = create_attribute({
       'id': dropdown_id

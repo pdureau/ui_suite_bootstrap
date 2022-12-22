@@ -12,7 +12,7 @@
 {% set offcanvas_position = offcanvas_position|default('end') %}
 {% set attributes = placement != 'default' ? attributes.addClass(placement) : attributes %}
 
-<nav {{ attributes }}>
+<nav{{ attributes }}>
   {% if navigation_collapsible and toggler_position == 'start' %}
     <button class="navbar-toggler"
             type="button"
