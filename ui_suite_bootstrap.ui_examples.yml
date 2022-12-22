@@ -122,90 +122,99 @@ carousel:
         with_controls: true
       "#fields":
         slides:
-          - image:
-              "#theme": "image"
-              "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
-              "#attributes":
-                "width": "100%"
-                "height": "100%"
-            caption:
-              - "#type": "html_tag"
-                "#tag": "h1"
-                "#value": "Example headline."
+          - "#type": "pattern"
+            "#id": "carousel_item"
+            "#fields":
+              image:
+                "#theme": "image"
+                "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
                 "#attributes":
-                  class:
-                    - text-start
-              - "#type": "html_tag"
-                "#tag": "p"
-                "#value": "Some representative placeholder content for the first slide of the carousel."
+                  "width": "100%"
+                  "height": "100%"
+              caption:
+                - "#type": "html_tag"
+                  "#tag": "h1"
+                  "#value": "Example headline."
+                  "#attributes":
+                    class:
+                      - text-start
+                - "#type": "html_tag"
+                  "#tag": "p"
+                  "#value": "Some representative placeholder content for the first slide of the carousel."
+                  "#attributes":
+                    class:
+                      - text-start
+                - "#type": "html_tag"
+                  "#tag": "p"
+                  "#attributes":
+                    class:
+                      - text-start
+                  "0":
+                    "#type": "pattern"
+                    "#id": "button"
+                    "#variant": "primary__lg"
+                    "#fields":
+                      label: "Sign up today"
+                      url: "#"
+          - "#type": "pattern"
+            "#id": "carousel_item"
+            "#fields":
+              image:
+                "#theme": "image"
+                "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
                 "#attributes":
-                  class:
-                    - text-start
-              - "#type": "html_tag"
-                "#tag": "p"
+                  "width": "100%"
+                  "height": "100%"
+              caption:
+                - "#type": "html_tag"
+                  "#tag": "h1"
+                  "#value": "Another example headline."
+                - "#type": "html_tag"
+                  "#tag": "p"
+                  "#value": "Some representative placeholder content for the second slide of the carousel."
+                - "#type": "html_tag"
+                  "#tag": "p"
+                  "0":
+                    "#type": "pattern"
+                    "#id": "button"
+                    "#variant": "primary__lg"
+                    "#fields":
+                      label: "Learn more"
+                      url: "#"
+          - "#type": "pattern"
+            "#id": "carousel_item"
+            "#fields":
+              image:
+                "#theme": "image"
+                "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
                 "#attributes":
-                  class:
-                    - text-start
-                "0":
-                  "#type": "pattern"
-                  "#id": "button"
-                  "#variant": "primary__lg"
-                  "#fields":
-                    label: "Sign up today"
-                    url: "#"
-          - image:
-              "#theme": "image"
-              "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
-              "#attributes":
-                "width": "100%"
-                "height": "100%"
-            caption:
-              - "#type": "html_tag"
-                "#tag": "h1"
-                "#value": "Another example headline."
-              - "#type": "html_tag"
-                "#tag": "p"
-                "#value": "Some representative placeholder content for the second slide of the carousel."
-              - "#type": "html_tag"
-                "#tag": "p"
-                "0":
-                  "#type": "pattern"
-                  "#id": "button"
-                  "#variant": "primary__lg"
-                  "#fields":
-                    label: "Learn more"
-                    url: "#"
-          - image:
-              "#theme": "image"
-              "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
-              "#attributes":
-                "width": "100%"
-                "height": "100%"
-            caption:
-              - "#type": "html_tag"
-                "#tag": "h1"
-                "#value": "One more for good measure."
-                "#attributes":
-                  class:
-                    - text-end
-              - "#type": "html_tag"
-                "#tag": "p"
-                "#value": "Some representative placeholder content for the third slide of this carousel."
-                "#attributes":
-                  class:
-                    - text-end
-              - "#type": "html_tag"
-                "#tag": "p"
-                "#attributes":
-                  class:
-                    - text-end
-                "0":
-                  "#type": "pattern"
-                  "#id": "button"
-                  "#variant": "primary__lg"
-                  "#fields":
-                    label: "Browse gallery"
-                    url: "#"
+                  "width": "100%"
+                  "height": "100%"
+              caption:
+                - "#type": "html_tag"
+                  "#tag": "h1"
+                  "#value": "One more for good measure."
+                  "#attributes":
+                    class:
+                      - text-end
+                - "#type": "html_tag"
+                  "#tag": "p"
+                  "#value": "Some representative placeholder content for the third slide of this carousel."
+                  "#attributes":
+                    class:
+                      - text-end
+                - "#type": "html_tag"
+                  "#tag": "p"
+                  "#attributes":
+                    class:
+                      - text-end
+                  "0":
+                    "#type": "pattern"
+                    "#id": "button"
+                    "#variant": "primary__lg"
+                    "#fields":
+                      label: "Browse gallery"
+                      url: "#"
     - "#type": "pattern"
       "#id": "grid_row"
       "#attributes":

@@ -38,12 +38,15 @@
 
   <div class="carousel-inner">
     {% for slide in slides %}
-      <div class="carousel-item{% if loop.first %} active{% endif %}">
-        {{ slide.image }}
-        <div class="carousel-caption">
-          {{ slide|without('image') }}
-        </div>
-      </div>
+      {% if loop.first and slide is iterable %}
+        {#
+        There is currently no recursive merge in Twig or Drupal core Twig.
+        So it may breaks if the slide already have #attributes.
+        #}
+        {% set slide = slide|merge({'#attributes': {'class': ['active']}}) %}
+      {% endif %}
+
+      {{ slide }}
     {% endfor %}
   </div>
 
