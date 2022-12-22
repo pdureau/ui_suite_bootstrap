@@ -344,6 +344,44 @@ bs_alert_border_radius:
   default_values:
     ".alert": "0.375rem"
 
+# Component: Badge.
+bs_badge_padding_x:
+  group: "Component: Badge"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".badge": "0.65em"
+bs_badge_padding_y:
+  group: "Component: Badge"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".badge": "0.35em"
+bs_badge_font_size:
+  group: "Component: Badge"
+  type: "textfield"
+  label: "Font size"
+  default_values:
+    ".badge": "0.75em"
+bs_badge_font_weight:
+  group: "Component: Badge"
+  type: "textfield"
+  label: "Font weight"
+  default_values:
+    ".badge": "700"
+bs_badge_color:
+  group: "Component: Badge"
+  type: "color"
+  label: "Color"
+  default_values:
+    ".badge": "#ffffff"
+bs_badge_border_radius:
+  group: "Component: Badge"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".badge": "0.375em"
+
 # Component: Breadcrumb.
 bs_breadcrumb_padding_x:
   group: "Component: Breadcrumb"
