@@ -1,12 +1,14 @@
 button_toolbar:
   label: "Button Toolbar"
   description: "Combine sets of button groups into button toolbars for more complex components. Use utility classes as needed to space out groups, buttons, and more. https://getbootstrap.com/docs/5.2/components/button-group/#button-toolbar"
-  fields:
+  settings:
     label:
-      type: "text"
+      type: "textfield"
       label: "Role"
       description: "The toolbar label. Visually hidden. Used with assistive technologies."
       preview: "Toolbar with button groups"
+      allow_token: true
+  fields:
     groups:
       type: "render"
       label: "Groups"

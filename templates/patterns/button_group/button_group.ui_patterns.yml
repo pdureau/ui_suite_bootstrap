@@ -11,12 +11,14 @@ button_group:
     vertical:
       label: "Vertical"
       description: "Make a set of buttons appear vertically stacked rather than horizontally. Split button dropdowns are not supported here."
-  fields:
+  settings:
     label:
-      type: "text"
+      type: "textfield"
       label: "Role"
       description: "The group label. Visually hidden. Used with assistive technologies."
       preview: "Basic example"
+      allow_token: true
+  fields:
     buttons:
       type: "render"
       label: "Buttons"

@@ -155,7 +155,8 @@ carousel:
                     "#variant": "primary__lg"
                     "#fields":
                       label: "Sign up today"
-                      url: "#"
+                    "#settings":
+                      url: "#anchor"
           - "#type": "pattern"
             "#id": "carousel_item"
             "#fields":
@@ -180,7 +181,8 @@ carousel:
                     "#variant": "primary__lg"
                     "#fields":
                       label: "Learn more"
-                      url: "#"
+                    "#settings":
+                      url: "https://example.com"
           - "#type": "pattern"
             "#id": "carousel_item"
             "#fields":
@@ -214,7 +216,8 @@ carousel:
                     "#variant": "primary__lg"
                     "#fields":
                       label: "Browse gallery"
-                      url: "#"
+                    "#settings":
+                      url: "https://example.com"
     - "#type": "pattern"
       "#id": "grid_row"
       "#attributes":
@@ -249,7 +252,8 @@ carousel:
                 "#variant": "secondary"
                 "#fields":
                   label: "View details »"
-                  url: "#"
+                "#settings":
+                  url: "https://example.com"
           - - "#theme": "image"
               "#uri": "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
               "#attributes":
@@ -274,7 +278,8 @@ carousel:
                 "#variant": "secondary"
                 "#fields":
                   label: "View details »"
-                  url: "#"
+                "#settings":
+                  url: "https://example.com"
           - - "#theme": "image"
               "#uri": "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
               "#attributes":
@@ -299,7 +304,8 @@ carousel:
                 "#variant": "secondary"
                 "#fields":
                   label: "View details »"
-                  url: "#"
+                "#settings":
+                  url: "https://example.com"
     - "#type": "html_tag"
       "#tag": "div"
       "#attributes":

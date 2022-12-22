@@ -53,7 +53,8 @@ list_group:
           id: "list_group_item"
           fields:
             content: "A fourth link item, with a link"
-            url: "#"
+          settings:
+            url: "https://example.com"
         - type: "pattern"
           id: "list_group_item"
           fields:

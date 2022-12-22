@@ -6,6 +6,10 @@
   {% set attributes = attributes.addClass('btn-group') %}
 {% endif %}
 
-<div{{ attributes.setAttribute('role', 'group').setAttribute('aria-label', label) }}>
+{% if label %}
+  {% set attributes = attributes.setAttribute('aria-label', label) %}
+{% endif %}
+
+<div{{ attributes.setAttribute('role', 'group') }}>
   {{ buttons }}
 </div>

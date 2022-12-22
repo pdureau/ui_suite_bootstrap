@@ -114,7 +114,7 @@ button:
       type: "boolean"
       label: "Disabled?"
       description: "Is the button disabled?"
-      preview: true
+      preview: false
       allow_expose: true
       allow_token: true
     label_visually_hidden:
@@ -124,14 +124,14 @@ button:
       preview: false
       allow_expose: true
       allow_token: true
+    url:
+      type: "url"
+      label: "URL"
+      description: "The button URL. Optional."
+      preview: "https://example.com"
   fields:
     label:
       type: "text"
       label: "Label"
       description: "The button label."
       preview: "Submit"
-    url:
-      type: "text"
-      label: "URL"
-      description: "The button URL. Optional."
-      preview: "http://example.com"

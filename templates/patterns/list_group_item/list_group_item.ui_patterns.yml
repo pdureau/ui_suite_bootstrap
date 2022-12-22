@@ -24,18 +24,22 @@ list_group_item:
       label: "Active?"
       description: "Indicate the current active selection."
       preview: false
+      allow_expose: true
+      allow_token: true
     disabled:
       type: "boolean"
       label: "Disabled?"
       description: "Make it appears disabled. Note that some elements with .disabled will also require custom JavaScript to fully disable their click events (e.g., links)."
       preview: false
+      allow_expose: true
+      allow_token: true
+    url:
+      type: "url"
+      label: "URL"
+      description: "The button URL. Optional."
   fields:
     content:
       type: "render"
       label: "Content"
       description: "Plain text, or any kind of content."
       preview: "An item"
-    url:
-      type: "text"
-      label: "URL"
-      description: "The button URL. Optional."
