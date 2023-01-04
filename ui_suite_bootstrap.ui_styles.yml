@@ -137,6 +137,20 @@ colors_background_color:
     - border
     - p-2
 
+# https://getbootstrap.com/docs/5.2/utilities/background/#opacity
+colors_background_opacity:
+  label: "Background opacity"
+  description: "Modify the opacity of the background color with utility classes."
+  options:
+    bg-opacity-75: "75% opacity"
+    bg-opacity-50: "50% opacity"
+    bg-opacity-25: "25% opacity"
+    bg-opacity-10: "10% opacity"
+  previewed_with:
+    - border
+    - p-2
+    - bg-primary
+
 # https://getbootstrap.com/docs/5.2/utilities/colors/#colors
 colors_color:
   label: "Color"
