@@ -270,6 +270,128 @@ bs_highlight_bg:
   default_values:
     ":root": "#fff3cd"
 
+# Component: Accordion
+bs_accordion_color:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Color"
+  default_values:
+    ".accordion": "var(--bs-body-color)"
+bs_accordion_bg:
+  group: "Component: Accordion"
+  type: "color"
+  label: "Background color"
+  default_values:
+    ".accordion": "#ffffff"
+bs_accordion_border_transition:
+  group: "Component: Accordion"
+  type: "textarea"
+  label: "Border transition"
+  default_values:
+    ".accordion": "color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease"
+bs_accordion_border_color:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Border color"
+  default_values:
+    ".accordion": "var(--bs-border-color)"
+bs_accordion_border_width:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".accordion": "1px"
+bs_accordion_border_radius:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".accordion": "0.375rem"
+bs_accordion_inner_border_radius:
+  group: "Component: Accordion"
+  type: "textarea"
+  label: "Inner border radius"
+  default_values:
+    ".accordion": "calc(0.375rem - 1px)"
+bs_accordion_btn_padding_x:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Button horizontal padding"
+  default_values:
+    ".accordion": "1.25rem"
+bs_accordion_btn_padding_y:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Button vertical padding"
+  default_values:
+    ".accordion": "1rem"
+bs_accordion_btn_color:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Button color"
+  default_values:
+    ".accordion": "var(--bs-body-color)"
+bs_accordion_btn_bg:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Button background color"
+  default_values:
+    ".accordion": "var(--bs-accordion-bg)"
+bs_accordion_btn_icon_width:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Button icon width"
+  default_values:
+    ".accordion": "1.25rem"
+bs_accordion_btn_icon_transform:
+  group: "Component: Accordion"
+  type: "textarea"
+  label: "Button icon transform"
+  default_values:
+    ".accordion": "rotate(-180deg)"
+bs_accordion_btn_icon_transition:
+  group: "Component: Accordion"
+  type: "textarea"
+  label: "Button icon transition"
+  default_values:
+    ".accordion": "transform 0.2s ease-in-out"
+bs_accordion_btn_focus_border_color:
+  group: "Component: Accordion"
+  type: "color"
+  label: "Button focus border color"
+  default_values:
+    ".accordion": "#86b7fe"
+bs_accordion_btn_focus_box_shadow:
+  group: "Component: Accordion"
+  type: "textarea"
+  label: "Button focus box shadow"
+  default_values:
+    ".accordion": "0 0 0 0.25rem rgba(13, 110, 253, 0.25)"
+bs_accordion_body_padding_x:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Body horizontal padding"
+  default_values:
+    ".accordion": "1.25rem"
+bs_accordion_body_padding_y:
+  group: "Component: Accordion"
+  type: "textfield"
+  label: "Body vertical padding"
+  default_values:
+    ".accordion": "1rem"
+bs_accordion_active_color:
+  group: "Component: Accordion"
+  type: "color"
+  label: "Active color"
+  default_values:
+    ".accordion": "#0c63e4"
+bs_accordion_active_bg:
+  group: "Component: Accordion"
+  type: "color"
+  label: "Active background color"
+  default_values:
+    ".accordion": "#e7f1ff"
+
 # Component: Alert.
 bs_alert_color:
   group: "Component: Alert"
@@ -440,6 +562,1127 @@ bs_breadcrumb_item_padding_x:
 bs_breadcrumb_item_active_color:
   group: "Component: Breadcrumb"
   type: "color"
-  label: "Active item color"
+  label: "Item active color"
   default_values:
     ".breadcrumb": "#6c757d"
+
+# Component: Button.
+bs_btn_padding_x:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".btn-sm": "0.5rem"
+    ".btn": "0.75rem"
+    ".btn-lg": "1rem"
+bs_btn_padding_y:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".btn-sm": "0.25rem"
+    ".btn": "0.375rem"
+    ".btn-lg": "0.5rem"
+bs_btn_font_family:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Font family"
+  default_values:
+    ".btn": "null !default"
+bs_btn_font-weight:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Font weight"
+  default_values:
+    ".btn": "400"
+bs_btn_font_size:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Font size"
+  default_values:
+    ".btn-sm": "0.875rem"
+    ".btn": "1rem"
+    ".btn-lg": "1.25rem"
+bs_btn_line_height:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Line height"
+  default_values:
+    ".btn": "1.5"
+bs_btn_color:
+  group: "Component: Button"
+  type: "color"
+  label: "Color"
+  default_values:
+    ".btn": "#212529"
+    ".btn-primary": "#ffffff"
+    ".btn-secondary": "#ffffff"
+    ".btn-success": "#ffffff"
+    ".btn-danger": "#ffffff"
+    ".btn-warning": "#000000"
+    ".btn-info": "#000000"
+    ".btn-light": "#000000"
+    ".btn-dark": "#ffffff"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+bs_btn_active_color:
+  group: "Component: Button"
+  type: "color"
+  label: "Active color"
+  default_values:
+    ".btn": "#212529"
+    ".btn-primary": "#ffffff"
+    ".btn-secondary": "#ffffff"
+    ".btn-success": "#ffffff"
+    ".btn-danger": "#ffffff"
+    ".btn-warning": "#000000"
+    ".btn-info": "#000000"
+    ".btn-light": "#000000"
+    ".btn-dark": "#ffffff"
+    ".btn-outline-primary": "#ffffff"
+    ".btn-outline-secondary": "#ffffff"
+    ".btn-outline-success": "#ffffff"
+    ".btn-outline-danger": "#ffffff"
+    ".btn-outline-warning": "#000000"
+    ".btn-outline-info": "#000000"
+    ".btn-outline-light": "#000000"
+    ".btn-outline-dark": "#000000"
+bs_btn_hover_color:
+  group: "Component: Button"
+  type: "color"
+  label: "Hover color"
+  default_values:
+    ".btn": "#212529"
+    ".btn-primary": "#ffffff"
+    ".btn-secondary": "#ffffff"
+    ".btn-success": "#ffffff"
+    ".btn-danger": "#ffffff"
+    ".btn-warning": "#000000"
+    ".btn-info": "#000000"
+    ".btn-light": "#000000"
+    ".btn-dark": "#ffffff"
+    ".btn-outline-primary": "#ffffff"
+    ".btn-outline-secondary": "#ffffff"
+    ".btn-outline-success": "#ffffff"
+    ".btn-outline-danger": "#ffffff"
+    ".btn-outline-warning": "#000000"
+    ".btn-outline-info": "#000000"
+    ".btn-outline-light": "#000000"
+    ".btn-outline-dark": "#000000"
+bs_btn_bg:
+  group: "Component: Button"
+  type: "ui_skins_alpha_color"
+  label: "Background color"
+  default_values:
+    ".btn": "#ffffff00"
+    ".btn-primary": "#0d6efdff"
+    ".btn-secondary": "#6c757dff"
+    ".btn-success": "#198754ff"
+    ".btn-danger": "#dc3545ff"
+    ".btn-warning": "#ffc107ff"
+    ".btn-info": "#0dcaf0ff"
+    ".btn-light": "#f8f9faff"
+    ".btn-dark": "#212529ff"
+bs_btn_active_bg:
+  group: "Component: Button"
+  type: "color"
+  label: "Active background color"
+  default_values:
+    ".btn-primary": "#0b5ed7"
+    ".btn-secondary": "#5c636a"
+    ".btn-success": "#157347"
+    ".btn-danger": "#bb2d3b"
+    ".btn-warning": "#ffca2c"
+    ".btn-info": "#31d2f2"
+    ".btn-light": "#d3d4d5"
+    ".btn-dark": "#424649"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+bs_btn_active_border_color:
+  group: "Component: Button"
+  type: "color"
+  label: "Active border color"
+  default_values:
+    ".btn-primary": "#0a53be"
+    ".btn-secondary": "#51585e"
+    ".btn-success": "#13653f"
+    ".btn-danger": "#a52834"
+    ".btn-warning": "#ffc720"
+    ".btn-info": "#25cff2"
+    ".btn-light": "#babbbc"
+    ".btn-dark": "#373b3e"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+bs_btn_hover_bg:
+  group: "Component: Button"
+  type: "color"
+  label: "Hover background color"
+  default_values:
+    ".btn-primary": "#0b5ed7"
+    ".btn-secondary": "#5c636a"
+    ".btn-success": "#157347"
+    ".btn-danger": "#bb2d3b"
+    ".btn-warning": "#ffca2c"
+    ".btn-info": "#31d2f2"
+    ".btn-light": "#d3d4d5"
+    ".btn-dark": "#424649"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+bs_btn_disabled_bg:
+  group: "Component: Button"
+  type: "color"
+  label: "Disabled background color"
+  default_values:
+    ".btn-primary": "#0d6efd"
+    ".btn-secondary": "#6c757d"
+    ".btn-success": "#198754"
+    ".btn-danger": "#dc3545"
+    ".btn-warning": "#ffc107"
+    ".btn-info": "#0dcaf0"
+    ".btn-light": "#f8f9fa"
+    ".btn-dark": "#212529"
+    ".btn-outline-primary": "#ffffff"
+    ".btn-outline-secondary": "#ffffff"
+    ".btn-outline-success": "#ffffff"
+    ".btn-outline-danger": "#ffffff"
+    ".btn-outline-warning": "#ffffff"
+    ".btn-outline-info": "#ffffff"
+    ".btn-outline-light": "#ffffff"
+    ".btn-outline-dark": "#ffffff"
+bs_btn_disabled_border_color:
+  group: "Component: Button"
+  type: "color"
+  label: "Disabled border color"
+  default_values:
+    ".btn-primary": "#0d6efd"
+    ".btn-secondary": "#6c757d"
+    ".btn-success": "#198754"
+    ".btn-danger": "#dc3545"
+    ".btn-warning": "#ffc107"
+    ".btn-info": "#0dcaf0"
+    ".btn-light": "#f8f9fa"
+    ".btn-dark": "#212529"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+bs_btn_border_width:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".btn": "1px"
+bs_btn_border_color:
+  group: "Component: Button"
+  type: "ui_skins_alpha_color"
+  label: "Border color"
+  default_values:
+    ".btn": "#ffffff00"
+    ".btn-primary": "#0d6efdff"
+    ".btn-secondary": "#6c757dff"
+    ".btn-success": "#198754ff"
+    ".btn-danger": "#dc3545ff"
+    ".btn-warning": "#ffc107ff"
+    ".btn-info": "#0dcaf0ff"
+    ".btn-light": "#f8f9faff"
+    ".btn-dark": "#212529ff"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+bs_btn_border_radius:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".btn-sm": "0.25rem"
+    ".btn": "0.375rem"
+    ".btn-lg": "0.5rem"
+bs_btn_hover_border_color:
+  group: "Component: Button"
+  type: "ui_skins_alpha_color"
+  label: "Hover border color"
+  default_values:
+    ".btn": "#ffffff00"
+    ".btn-primary": "#0a58caff"
+    ".btn-secondary": "#565e64ff"
+    ".btn-success": "#146c43ff"
+    ".btn-danger": "#b02a37ff"
+    ".btn-warning": "#ffc720ff"
+    ".btn-info": "#25cff2ff"
+    ".btn-light": "#c6c7c8ff"
+    ".btn-dark": "#373b3eff"
+    ".btn-outline-primary": "#0d6efdff"
+    ".btn-outline-secondary": "#6c757dff"
+    ".btn-outline-success": "#198754ff"
+    ".btn-outline-danger": "#dc3545ff"
+    ".btn-outline-warning": "#ffc107ff"
+    ".btn-outline-info": "#0dcaf0ff"
+    ".btn-outline-light": "#f8f9faff"
+    ".btn-outline-dark": "#212529ff"
+bs_btn_focus_shadow_rgb:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Focus shadow color (RGB)"
+  default_values:
+    ".btn": "49,132,253"
+    ".btn-primary": "49,132,253"
+    ".btn-secondary": "130,138,145"
+    ".btn-success": "60,153,110"
+    ".btn-danger": "225,83,97"
+    ".btn-warning": "217,164,6"
+    ".btn-info": "11,172,204"
+    ".btn-light": "211,212,213"
+    ".btn-dark": "66,70,73"
+    ".btn-outline-primary": "13,110,253"
+    ".btn-outline-secondary": "108,117,125"
+    ".btn-outline-success": "25,135,84"
+    ".btn-outline-danger": "220,53,69"
+    ".btn-outline-warning": "255,193,7"
+    ".btn-outline-info": "13,202,240"
+    ".btn-outline-light": "248,249,250"
+    ".btn-outline-dark": "33,37,41"
+bs_btn_box_shadow:
+  group: "Component: Button"
+  type: "textarea"
+  label: "Box shadow"
+  default_values:
+    ".btn": "inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075)"
+bs_btn_disabled_opacity:
+  group: "Component: Button"
+  type: "textfield"
+  label: "Disabled opacity"
+  default_values:
+    ".btn": "0.65"
+bs_btn_focus_box_shadow:
+  group: "Component: Button"
+  type: "textarea"
+  label: "Focus box shadow"
+  default_values:
+    ".btn": "0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5)"
+bs_btn_active_shadow:
+  group: "Component: Button"
+  type: "textarea"
+  label: "Active shadow"
+  default_values:
+    ".btn-primary": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-secondary": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-success": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-danger": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-warning": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-info": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-light": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-dark": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-primary": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-secondary": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-success": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-danger": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-warning": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-info": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-light": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+    ".btn-outline-dark": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
+bs_btn_disabled_color:
+  group: "Component: Button"
+  type: "color"
+  label: "Disabled color"
+  default_values:
+    ".btn-primary": "#ffffff"
+    ".btn-secondary": "#ffffff"
+    ".btn-success": "#ffffff"
+    ".btn-danger": "#ffffff"
+    ".btn-warning": "#ffffff"
+    ".btn-info": "#ffffff"
+    ".btn-light": "#ffffff"
+    ".btn-dark": "#ffffff"
+    ".btn-outline-primary": "#0d6efd"
+    ".btn-outline-secondary": "#6c757d"
+    ".btn-outline-success": "#198754"
+    ".btn-outline-danger": "#dc3545"
+    ".btn-outline-warning": "#ffc107"
+    ".btn-outline-info": "#0dcaf0"
+    ".btn-outline-light": "#f8f9fa"
+    ".btn-outline-dark": "#212529"
+
+# Component: Card.
+bs_card_spacer_y:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Body vertical spacer"
+  default_values:
+    ".card": "1rem"
+bs_card_spacer_x:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Body horizontal spacer"
+  default_values:
+    ".card": "1rem"
+bs_card_title_spacer_y:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Title vertical spacer"
+  default_values:
+    ".card": "0.5rem"
+bs_card_border_width:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".card": "1px"
+bs_card_border_color:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Border color"
+  default_values:
+    ".card": "var(--bs-border-color-translucent)"
+bs_card_border_radius:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".card": "0.375rem"
+bs_card_box_shadow:
+  group: "Component: Card"
+  type: "textarea"
+  label: "Box shadow"
+  default_values:
+    ".card": ""
+bs_card_inner_border_radius:
+  group: "Component: Card"
+  type: "textarea"
+  label: "Inner border radius"
+  default_values:
+    ".card": "calc(0.375rem - 1px)"
+bs_card_cap_padding_y:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Cap vertical padding"
+  default_values:
+    ".card": "0.5rem"
+bs_card_cap_padding_x:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Cap horizontal padding"
+  default_values:
+    ".card": "1rem"
+bs_card_cap_bg:
+  group: "Component: Card"
+  type: "ui_skins_alpha_color"
+  label: "Cap background color"
+  default_values:
+    ".card": "#00000008"
+bs_card_cap_color:
+  group: "Component: Card"
+  type: "color"
+  label: "Cap color"
+  default_values:
+    ".card": ""
+bs_card_bg:
+  group: "Component: Card"
+  type: "color"
+  label: "Background color"
+  default_values:
+    ".card": "#ffffff"
+bs_card_img_overlay_padding:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Image overlay padding"
+  default_values:
+    ".card": "1rem"
+bs_card_group_margin:
+  group: "Component: Card"
+  type: "textfield"
+  label: "Group margin"
+  default_values:
+    ".card": "0.75rem"
+
+# Component: Dropdown.
+bs_dropdown_zindex:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Z-index"
+  default_values:
+    ".dropdown-menu": "1000"
+bs_dropdown_min_width:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Min width"
+  default_values:
+    ".dropdown-menu": "10rem"
+bs_dropdown_padding_x:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".dropdown-menu": "0"
+bs_dropdown_padding_y:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".dropdown-menu": "0"
+bs_dropdown_spacer:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Spacer"
+  default_values:
+    ".dropdown-menu": "0.125rem"
+bs_dropdown_font_size:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Font size"
+  default_values:
+    ".dropdown-menu": "1rem"
+bs_dropdown_color:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Color"
+  default_values:
+    ".dropdown-menu": "#212529"
+bs_dropdown_bg:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Background color"
+  default_values:
+    ".dropdown-menu": "#ffffff"
+bs_dropdown_border_color:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Border color"
+  default_values:
+    ".dropdown-menu": "var(--bs-border-color-translucent)"
+bs_dropdown_border_radius:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".dropdown-menu": "0.375rem"
+bs_dropdown_border_width:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".dropdown-menu": "1px"
+bs_dropdown_inner_border_radius:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Inner border radius"
+  default_values:
+    ".dropdown-menu": "calc(0.375rem - 1px)"
+bs_dropdown_divider_bg:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Divider background color"
+  default_values:
+    ".dropdown-menu": "var(--bs-border-color-translucent)"
+bs_dropdown_divider_margin_y:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Divider vertical margin"
+  default_values:
+    ".dropdown-menu": "0.5rem"
+bs_dropdown_box_shadow:
+  group: "Component: Dropdown"
+  type: "textarea"
+  label: "Box shadow"
+  default_values:
+    ".dropdown-menu": "0 0.5rem 1rem rgba(0, 0, 0, 0.15)"
+bs_dropdown_link_color:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Link color"
+  default_values:
+    ".dropdown-menu": "#212529"
+bs_dropdown_link_hover_color:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Link hover color"
+  default_values:
+    ".dropdown-menu": "#1e2125"
+bs_dropdown_link_hover_bg:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Link hover background color"
+  default_values:
+    ".dropdown-menu": "#e9ecef"
+bs_dropdown_link_active_color:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Link active color"
+  default_values:
+    ".dropdown-menu": "#ffffff"
+bs_dropdown_link_active_bg:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Link active background color"
+  default_values:
+    ".dropdown-menu": "#0d6efd"
+bs_dropdown_link_disabled_color:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Link disabled color"
+  default_values:
+    ".dropdown-menu": "#adb5bd"
+bs_dropdown_item_padding_x:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Item horizontal padding"
+  default_values:
+    ".dropdown-menu": "1rem"
+bs_dropdown_item_padding_y:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Item vertical padding"
+  default_values:
+    ".dropdown-menu": "0.25rem"
+bs_dropdown_header_color:
+  group: "Component: Dropdown"
+  type: "color"
+  label: "Header color"
+  default_values:
+    ".dropdown-menu": "#6c757d"
+bs_dropdown_header_padding_x:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Header horizontal padding"
+  default_values:
+    ".dropdown-menu": "1rem"
+bs_dropdown_header_padding_y:
+  group: "Component: Dropdown"
+  type: "textfield"
+  label: "Header vertical padding"
+  default_values:
+    ".dropdown-menu": "0.5rem"
+
+# Component: List group.
+bs_list_group_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Color"
+  default_values:
+    ".list-group": "#212529"
+bs_list_group_bg:
+  group: "Component: List group"
+  type: "color"
+  label: "Background color"
+  default_values:
+    ".list-group": "#ffffff"
+bs_list_group_border_color:
+  group: "Component: List group"
+  type: "ui_skins_alpha_color"
+  label: "Border color"
+  default_values:
+    ".list-group": "#00000020"
+bs_list_group_border_width:
+  group: "Component: List group"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".list-group": "1px"
+bs_list_group_border_radius:
+  group: "Component: List group"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".list-group": "0.375rem"
+bs_list_group_item_padding_x:
+  group: "Component: List group"
+  type: "textfield"
+  label: "Item horizontal padding"
+  default_values:
+    ".list-group": "1rem"
+bs_list_group_item_padding_y:
+  group: "Component: List group"
+  type: "textfield"
+  label: "Item vertical padding"
+  default_values:
+    ".list-group": "0.5rem"
+bs_list_group_action_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Action color"
+  default_values:
+    ".list-group": "#495057"
+bs_list_group_action_hover_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Action hover color"
+  default_values:
+    ".list-group": "#495057"
+bs_list_group_action_hover_bg:
+  group: "Component: List group"
+  type: "color"
+  label: "Action hover background color"
+  default_values:
+    ".list-group": "#f8f9fa"
+bs_list_group_action_active_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Action active color"
+  default_values:
+    ".list-group": "#212529"
+bs_list_group_action_active_bg:
+  group: "Component: List group"
+  type: "color"
+  label: "Action active background color"
+  default_values:
+    ".list-group": "#e9ecef"
+bs_list_group_disabled_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Disabled color"
+  default_values:
+    ".list-group": "#6c757d"
+bs_list_group_disabled_bg:
+  group: "Component: List group"
+  type: "color"
+  label: "Disabled background color"
+  default_values:
+    ".list-group": "#ffffff"
+bs_list_group_active_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Active color"
+  default_values:
+    ".list-group": "#ffffff"
+bs_list_group_active_bg:
+  group: "Component: List group"
+  type: "color"
+  label: "Active background color"
+  default_values:
+    ".list-group": "#0d6efd"
+bs_list_group_active_border_color:
+  group: "Component: List group"
+  type: "color"
+  label: "Active border color"
+  default_values:
+    ".list-group": "#0d6efd"
+
+# Component: Navbar.
+bs_navbar_padding_x:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".navbar": "0"
+bs_navbar_padding_y:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".navbar": "0.5rem"
+bs_navbar_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Color"
+  default_values:
+    ".navbar": "#0000008c"
+bs_navbar_hover_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Hover color"
+  default_values:
+    ".navbar": "#000000b3"
+bs_navbar_disabled_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Hover color"
+  default_values:
+    ".navbar": "#0000004d"
+bs_navbar_active_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Active color"
+  default_values:
+    ".navbar": "#000000e6"
+bs_navbar_brand_padding_y:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Brand vertical padding"
+  default_values:
+    ".navbar": "0.3125rem"
+bs_navbar_brand_margin_end:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Brand margin end"
+  default_values:
+    ".navbar": "1rem"
+bs_navbar_brand_font_size:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Brand font size"
+  default_values:
+    ".navbar": "1.25rem"
+bs_navbar_brand_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Brand color"
+  default_values:
+    ".navbar": "#000000e6"
+bs_navbar_brand_hover_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Brand hover color"
+  default_values:
+    ".navbar": "#000000e6"
+bs_navbar_nav_link_padding_x:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Nav link horizontal padding"
+  default_values:
+    ".navbar": "0.5rem"
+bs_navbar_toggler_padding_x:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Toggler horizontal padding"
+  default_values:
+    ".navbar": "0.75rem"
+bs_navbar_toggler_padding_y:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Toggler vertical padding"
+  default_values:
+    ".navbar": "0.25rem"
+bs_navbar_toggler_font_size:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Toggler font size"
+  default_values:
+    ".navbar": "1.25rem"
+bs_navbar_toggler_border_color:
+  group: "Component: Navbar"
+  type: "ui_skins_alpha_color"
+  label: "Toggler border color"
+  default_values:
+    ".navbar": "#0000001a"
+bs_navbar_toggler_border_radius:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Toggler border radius"
+  default_values:
+    ".navbar": "0.375rem"
+bs_navbar_toggler_focus_width:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Toggler focus width"
+  default_values:
+    ".navbar": "0.25rem"
+bs_navbar_toggler_transition:
+  group: "Component: Navbar"
+  type: "textfield"
+  label: "Toggler transition"
+  default_values:
+    ".navbar": "box-shadow 0.15s ease-in-out"
+
+# Component: Nav link.
+bs_nav_link_padding_x:
+  group: "Component: Nav link"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".nav": "1rem"
+bs_nav_link_padding_y:
+  group: "Component: Nav link"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".nav": "0.5rem"
+bs_nav_link_font_weight:
+  group: "Component: Nav link"
+  type: "textfield"
+  label: "Font weight"
+  default_values:
+    ".nav": ""
+bs_nav_link_color:
+  group: "Component: Nav link"
+  type: "textfield"
+  label: "Color"
+  default_values:
+    ".nav": "var(--bs-link-color)"
+bs_nav_link_hover_color:
+  group: "Component: Nav link"
+  type: "textfield"
+  label: "Hover color"
+  default_values:
+    ".nav": "var(--bs-link-hover-color)"
+bs_nav_link_disabled_color:
+  group: "Component: Nav link"
+  type: "color"
+  label: "Disabled color"
+  default_values:
+    ".nav": "#6c757d"
+
+# Component: Nav tabs.
+bs_nav_tabs_border_width:
+  group: "Component: Nav tabs"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".nav-tabs": "1px"
+bs_nav_tabs_border_color:
+  group: "Component: Nav tabs"
+  type: "color"
+  label: "Border color"
+  default_values:
+    ".nav-tabs": "#dee2e6"
+bs_nav_tabs_border_radius:
+  group: "Component: Nav tabs"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".nav-tabs": "0.375rem"
+bs_nav_tabs_link_hover_border_color:
+  group: "Component: Nav tabs"
+  type: "textarea"
+  label: "Link hover border color"
+  default_values:
+    ".nav-tabs": "#e9ecef #e9ecef #dee2e6"
+bs_nav_tabs_link_active_color:
+  group: "Component: Nav tabs"
+  type: "color"
+  label: "Link active color"
+  default_values:
+    ".nav-tabs": "#495057"
+bs_nav_tabs_link_active_bg:
+  group: "Component: Nav tabs"
+  type: "color"
+  label: "Link active background color"
+  default_values:
+    ".nav-tabs": "#ffffff"
+bs_nav_tabs_link_active_border_color:
+  group: "Component: Nav tabs"
+  type: "textarea"
+  label: "Link active border color"
+  default_values:
+    ".nav-tabs": "#dee2e6 #dee2e6 #fff"
+
+# Component: Nav pills.
+bs_nav_pills_border_radius:
+  group: "Component: Nav pills"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".nav-pills": "0.375rem"
+bs_nav_pills_link_active_color:
+  group: "Component: Nav pills"
+  type: "color"
+  label: "Link active color"
+  default_values:
+    ".nav-pills": "#ffffff"
+bs_nav_pills_link_active_bg:
+  group: "Component: Nav pills"
+  type: "color"
+  label: "Link active background color"
+  default_values:
+    ".nav-pills": "#0d6efd"
+
+# Component: Pagination.
+bs_pagination_padding_x:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Horizontal padding"
+  default_values:
+    ".pagination-sm": "0.5rem"
+    ".pagination": "0.75rem"
+    ".pagination-lg": "1.5rem"
+bs_pagination_padding_y:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Vertical padding"
+  default_values:
+    ".pagination-sm": "0.25rem"
+    ".pagination": "0.375rem"
+    ".pagination-lg": "0.75rem"
+bs_pagination_font_size:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Font size"
+  default_values:
+    ".pagination-sm": "0.875rem"
+    ".pagination": "1rem"
+    ".pagination-lg": "1.25rem"
+bs_pagination_color:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Color"
+  default_values:
+    ".pagination": "var(--bs-link-color)"
+bs_pagination_bg:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Background color"
+  default_values:
+    ".pagination": "#ffffff"
+bs_pagination_border_width:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Border width"
+  default_values:
+    ".pagination": "1px"
+bs_pagination_border_color:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Border color"
+  default_values:
+    ".pagination": "#dee2e6"
+bs_pagination_border_radius:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".pagination-sm": "0.25rem"
+    ".pagination": "0.375rem"
+    ".pagination-lg": "0.5rem"
+bs_pagination_hover_color:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Hover color"
+  default_values:
+    ".pagination": "var(--bs-link-hover-color)"
+bs_pagination_hover_bg:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Hover background color"
+  default_values:
+    ".pagination": "#e9ecef"
+bs_pagination_hover_border_color:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Hover border color"
+  default_values:
+    ".pagination": "#dee2e6"
+bs_pagination_focus_color:
+  group: "Component: Pagination"
+  type: "textfield"
+  label: "Focus color"
+  default_values:
+    ".pagination": "var(--bs-link-hover-color)"
+bs_pagination_focus_bg:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Focus background color"
+  default_values:
+    ".pagination": "#e9ecef"
+bs_pagination_focus_box_shadow:
+  group: "Component: Pagination"
+  type: "textarea"
+  label: "Focus box shadow"
+  default_values:
+    ".pagination": "0 0 0 0.25rem rgba(13, 110, 253, 0.25)"
+bs_pagination_active_color:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Active color"
+  default_values:
+    ".pagination": "#ffffff"
+bs_pagination_active_bg:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Active background color"
+  default_values:
+    ".pagination": "#0d6efd"
+bs_pagination_active_border_color:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Active border color"
+  default_values:
+    ".pagination": "#0d6efd"
+bs_pagination_disabled_color:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Disabled color"
+  default_values:
+    ".pagination": "#6c757d"
+bs_pagination_disabled_bg:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Disabled background color"
+  default_values:
+    ".pagination": "#ffffff"
+bs_pagination_disabled_border_color:
+  group: "Component: Pagination"
+  type: "color"
+  label: "Disabled border color"
+  default_values:
+    ".pagination": "#dee2e6"
+
+# Component: Progress.
+bs_progress_height:
+  group: "Component: Progress"
+  type: "textfield"
+  label: "Height"
+  default_values:
+    ".progress": "1rem"
+bs_progress_font_size:
+  group: "Component: Progress"
+  type: "textfield"
+  label: "Font size"
+  default_values:
+    ".progress": "0.75rem"
+bs_progress_bg:
+  group: "Component: Progress"
+  type: "color"
+  label: "Background color"
+  default_values:
+    ".progress": "#e9ecef"
+bs_progress_border_radius:
+  group: "Component: Progress"
+  type: "textfield"
+  label: "Border radius"
+  default_values:
+    ".progress": "0.375rem"
+bs_progress_box_shadow:
+  group: "Component: Progress"
+  type: "textarea"
+  label: "Box shadow"
+  default_values:
+    ".progress": "inset 0 1px 2px rgba(0, 0, 0, 0.075)"
+bs_progress_bar_color:
+  group: "Component: Progress"
+  type: "color"
+  label: "Bar color"
+  default_values:
+    ".progress": "#ffffff"
+bs_progress_bar_bg:
+  group: "Component: Progress"
+  type: "color"
+  label: "Bar background color"
+  default_values:
+    ".progress": "#0d6efd"
+bs_progress_bar_transition:
+  group: "Component: Progress"
+  type: "textarea"
+  label: "Bar transition"
+  default_values:
+    ".progress": "width 0.6s ease"
