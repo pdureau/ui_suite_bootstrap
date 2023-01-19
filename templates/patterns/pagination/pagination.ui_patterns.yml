@@ -1,6 +1,7 @@
 pagination:
   label: "Pagination"
   description: "Indicate a series of related content exists across multiple pages. https://getbootstrap.com/docs/5.2/components/pagination/"
+  category: "Navigation"
   variants:
     sm:
       label: "Smaller"

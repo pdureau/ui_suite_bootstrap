@@ -1,6 +1,7 @@
 dropdown_item:
   label: "(Dropdown item)"
   description: "Internal: to be used in the 'Dropdown' component. https://getbootstrap.com/docs/5.2/components/dropdowns/#menu-content"
+  category: "Dropdown"
   variants:
     dropdown_item:
       label: "Dropdown item"

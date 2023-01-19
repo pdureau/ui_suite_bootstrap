@@ -1,6 +1,7 @@
 grid_row:
   label: "Grid Row"
   description: "The grid system uses a series of containers, rows, and columns to layout and align content https://getbootstrap.com/docs/5.2/layout/grid/ For simple use cases only. For more powerful needs, please use bootstrap_grid_row_* layouts."
+  category: "Layout"
   settings:
     with_container:
       label: "With container?"

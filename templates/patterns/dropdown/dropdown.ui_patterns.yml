@@ -1,6 +1,7 @@
 dropdown:
   label: "Dropdown"
   description: "Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is an intentional design decision. https://getbootstrap.com/docs/5.2/components/dropdowns/"
+  category: "Dropdown"
   variants:
     dropdown:
       label: "Dropdown"

@@ -1,6 +1,7 @@
 accordion:
   label: "Accordion"
   description: "Render content in a box that expands and collapses vertically. https://getbootstrap.com/docs/5.2/components/accordion/"
+  category: "Accordion"
   variants:
     default:
       label: "Default"

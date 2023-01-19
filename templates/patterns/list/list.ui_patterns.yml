@@ -1,6 +1,7 @@
 list:
   label: "List"
   description: "https://getbootstrap.com/docs/5.2/content/typography/#lists"
+  category: "Typography"
   variants:
     default:
       label: "Default"

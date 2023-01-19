@@ -1,6 +1,7 @@
 nav_item:
   label: "(Nav item)"
   description: "Internal: to be used in the 'nav' components (nav, navbar-nav, etc). https://getbootstrap.com/docs/5.2/components/navs-tabs/"
+  category: "Navs and tabs"
   settings:
     active:
       type: "boolean"

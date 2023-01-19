@@ -1,6 +1,7 @@
 card_layout:
   label: "Card Layout"
   description: "In addition to styling the content within cards, Bootstrap includes a few options for laying out series of cards. For the time being, these layout options are not yet responsive. https://getbootstrap.com/docs/5.2/components/card/#card-layout"
+  category: "Card"
   fields:
     cards:
       type: "render"

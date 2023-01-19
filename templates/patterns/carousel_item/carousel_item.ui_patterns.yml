@@ -1,6 +1,7 @@
 carousel_item:
   label: "(Carousel Item)"
   description: "Internal: to be used in the 'Carousel' component. https://getbootstrap.com/docs/5.2/components/carousel/"
+  category: "Carousel"
   fields:
     image:
       type: "render"

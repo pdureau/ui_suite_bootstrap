@@ -1,6 +1,7 @@
 card_body:
   label: "(Card body)"
   description: "Internal: to be used in the 'Card' component. https://getbootstrap.com/docs/5.2/components/card/"
+  category: "Card"
   settings:
     heading_level:
       type: "select"

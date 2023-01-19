@@ -1,6 +1,7 @@
 navbar_nav:
   label: "(Navbar nav)"
   description: "Internal: to be used in the 'Navbar' component. https://getbootstrap.com/docs/5.2/components/navbar/"
+  category: "Navbar"
   variants:
     default:
       label: "Default"

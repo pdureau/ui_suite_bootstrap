@@ -1,6 +1,7 @@
 nav:
   label: "Nav"
   description: "The base .nav component is built with flexbox and provide a strong foundation for building all types of navigation components. It includes some style overrides (for working with lists), some link padding for larger hit areas, and basic disabled styling. https://getbootstrap.com/docs/5.2/components/navs-tabs/"
+  category: "Navs and tabs"
   variants:
     default:
       label: "Default"
