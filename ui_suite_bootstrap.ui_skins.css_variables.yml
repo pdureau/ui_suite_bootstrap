@@ -1,392 +1,430 @@
 # https://getbootstrap.com/docs/5.2/customize/css-variables/#root-variables
 bs_primary:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Primary"
   default_values:
     ":root": "#0d6efd"
+  weight: 1
 bs_primary_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Primary (RGB)"
   default_values:
     ":root": "13, 110, 253"
+  weight: 2
 bs_secondary:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Secondary"
   default_values:
     ":root": "#6c757d"
+  weight: 5
 bs_secondary_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Secondary (RGB)"
   default_values:
     ":root": "108, 117, 125"
+  weight: 6
 bs_success:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Success"
   default_values:
     ":root": "#198754"
+  weight: 10
 bs_success_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Success (RGB)"
   default_values:
     ":root": "25, 135, 84"
+  weight: 11
 bs_info:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Info"
   default_values:
     ":root": "#0dcaf0"
+  weight: 15
 bs_info_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Info (RGB)"
   default_values:
     ":root": "13, 202, 240"
+  weight: 16
 bs_warning:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Warning"
   default_values:
     ":root": "#ffc107"
+  weight: 20
 bs_warning_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Warning (RGB)"
   default_values:
     ":root": "255, 193, 7"
+  weight: 21
 bs_danger:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Danger"
   default_values:
     ":root": "#dc3545"
+  weight: 25
 bs_danger_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Danger (RGB)"
   default_values:
     ":root": "220, 53, 69"
+  weight: 26
 bs_light:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Light"
   default_values:
     ":root": "#f8f9fa"
+  weight: 30
 bs_light_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Light (RGB)"
   default_values:
     ":root": "248, 249, 250"
+  weight: 31
 bs_dark:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Dark"
   default_values:
     ":root": "#212529"
+  weight: 35
 bs_dark_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Dark (RGB)"
   default_values:
     ":root": "33, 37, 41"
+  weight: 36
 bs_white:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "White"
   default_values:
     ":root": "#ffffff"
+  weight: 40
 bs_white_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "White (RGB)"
   default_values:
     ":root": "255, 255, 255"
+  weight: 41
 bs_black:
-  group: "Colors"
+  category: "Colors"
   type: "color"
   label: "Black"
   default_values:
     ":root": "#000000"
+  weight: 45
 bs_black_rgb:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Black (RGB)"
   default_values:
     ":root": "0, 0, 0"
+  weight: 46
 bs_font_sans_serif:
-  group: "Fonts"
+  category: "Fonts"
   type: "textarea"
   label: "Font sans serif"
   default_values:
     ":root": "system-ui, -apple-system, \"Segoe UI\", Roboto, \"Helvetica Neue\", \"Noto Sans\", \"Liberation Sans\", Arial, sans-serif, \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Symbol\", \"Noto Color Emoji\""
 bs_font_monospace:
-  group: "Fonts"
+  category: "Fonts"
   type: "textarea"
   label: "Font monospace"
   default_values:
     ":root": "SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace"
 bs_gradient:
-  group: "Colors"
+  category: "Colors"
   type: "textfield"
   label: "Gradient"
   default_values:
     ":root": "linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0))"
+  weight: 50
 bs_body_font_family:
-  group: "Body"
+  category: "Body"
   type: "textfield"
   label: "Font family"
   default_values:
     ":root": "var(--bs-font-sans-serif)"
 bs_body_font_size:
-  group: "Body"
+  category: "Body"
   type: "textfield"
   label: "Font size"
   default_values:
     ":root": "1rem"
 bs_body_font_weight:
-  group: "Body"
+  category: "Body"
   type: "textfield"
   label: "Font weight"
   default_values:
     ":root": "400"
 bs_body_line_height:
-  group: "Body"
+  category: "Body"
   type: "textfield"
   label: "Line height"
   default_values:
     ":root": "1.5"
 bs_body_color:
-  group: "Body"
+  category: "Body"
   type: "color"
   label: "Color"
   default_values:
     ":root": "#212529"
 bs_body_color_rgb:
-  group: "Body"
+  category: "Body"
   type: "textfield"
   label: "Color (RGB)"
   default_values:
     ":root": "33, 37, 41"
 bs_body_bg:
-  group: "Body"
+  category: "Body"
   type: "color"
   label: "Background color"
   default_values:
     ":root": "#ffffff"
 bs_body_bg_rgb:
-  group: "Body"
+  category: "Body"
   type: "textfield"
   label: "Background color (RGB)"
   default_values:
     ":root": "255, 255, 255"
 bs_border_width:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Width"
   default_values:
     ":root": "1px"
 bs_border_style:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Style"
   default_values:
     ":root": "solid"
 bs_border_color:
-  group: "Border"
+  category: "Border"
   type: "color"
   label: "Color"
   default_values:
     ":root": "#dee2e6"
 bs_border_color_translucent:
-  group: "Border"
+  category: "Border"
   type: "ui_skins_alpha_color"
   label: "Color translucent"
   default_values:
     ":root": "#0000002c"
 bs_border_radius:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Radius"
   default_values:
     ":root": "0.375rem"
+  weight: 5
 bs_border_radius_sm:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Radius small"
   default_values:
     ":root": "0.25rem"
+  weight: 6
 bs_border_radius_lg:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Radius large"
   default_values:
     ":root": "0.5rem"
+  weight: 7
 bs_border_radius_xl:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Radius extra large"
   default_values:
     ":root": "1rem"
+  weight: 8
 bs_border_radius_2xl:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Radius extra extra large"
   default_values:
     ":root": "2rem"
+  weight: 9
 bs_border_radius_pill:
-  group: "Border"
+  category: "Border"
   type: "textfield"
   label: "Radius pill"
   default_values:
     ":root": "50rem"
+  weight: 10
 bs_link_color:
-  group: "Link"
+  category: "Link"
   type: "color"
   label: "Color"
   default_values:
     ":root": "#0d6efd"
 bs_link_hover_color:
-  group: "Link"
+  category: "Link"
   type: "color"
   label: "Hover color"
   default_values:
     ":root": "#0a58ca"
 bs_code_color:
-  group: "Code"
+  category: "Code"
   type: "color"
   label: "Color"
   default_values:
     ":root": "#d63384"
 bs_highlight_bg:
-  group: "Highlight"
+  category: "Highlight"
   type: "color"
   label: "Background color"
   default_values:
     ":root": "#fff3cd"
 
+bs_bg_opacity:
+  category: "Background"
+  type: "textfield"
+  label: "Background opacity"
+  default_values:
+    ".bg-opacity-100": "1"
+    ".bg-opacity-75": "0.75"
+    ".bg-opacity-50": "0.5"
+    ".bg-opacity-25": "0.25"
+    ".bg-opacity-10": "0.1"
+
 # Component: Accordion
 bs_accordion_color:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Color"
   default_values:
     ".accordion": "var(--bs-body-color)"
 bs_accordion_bg:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "color"
   label: "Background color"
   default_values:
     ".accordion": "#ffffff"
 bs_accordion_border_transition:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textarea"
   label: "Border transition"
   default_values:
     ".accordion": "color 0.15s ease-in-out,background-color 0.15s ease-in-out,border-color 0.15s ease-in-out,box-shadow 0.15s ease-in-out,border-radius 0.15s ease"
 bs_accordion_border_color:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Border color"
   default_values:
     ".accordion": "var(--bs-border-color)"
 bs_accordion_border_width:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Border width"
   default_values:
     ".accordion": "1px"
 bs_accordion_border_radius:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".accordion": "0.375rem"
 bs_accordion_inner_border_radius:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textarea"
   label: "Inner border radius"
   default_values:
     ".accordion": "calc(0.375rem - 1px)"
 bs_accordion_btn_padding_x:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
-  label: "Button horizontal padding"
+  label: "Button padding horizontal"
   default_values:
     ".accordion": "1.25rem"
 bs_accordion_btn_padding_y:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
-  label: "Button vertical padding"
+  label: "Button padding vertical"
   default_values:
     ".accordion": "1rem"
 bs_accordion_btn_color:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Button color"
   default_values:
     ".accordion": "var(--bs-body-color)"
 bs_accordion_btn_bg:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Button background color"
   default_values:
     ".accordion": "var(--bs-accordion-bg)"
 bs_accordion_btn_icon_width:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
   label: "Button icon width"
   default_values:
     ".accordion": "1.25rem"
 bs_accordion_btn_icon_transform:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textarea"
   label: "Button icon transform"
   default_values:
     ".accordion": "rotate(-180deg)"
 bs_accordion_btn_icon_transition:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textarea"
   label: "Button icon transition"
   default_values:
     ".accordion": "transform 0.2s ease-in-out"
 bs_accordion_btn_focus_border_color:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "color"
   label: "Button focus border color"
   default_values:
     ".accordion": "#86b7fe"
 bs_accordion_btn_focus_box_shadow:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textarea"
   label: "Button focus box shadow"
   default_values:
     ".accordion": "0 0 0 0.25rem rgba(13, 110, 253, 0.25)"
 bs_accordion_body_padding_x:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
-  label: "Body horizontal padding"
+  label: "Body padding horizontal"
   default_values:
     ".accordion": "1.25rem"
 bs_accordion_body_padding_y:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "textfield"
-  label: "Body vertical padding"
+  label: "Body padding vertical"
   default_values:
     ".accordion": "1rem"
 bs_accordion_active_color:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "color"
   label: "Active color"
   default_values:
     ".accordion": "#0c63e4"
 bs_accordion_active_bg:
-  group: "Component: Accordion"
+  category: "Component: Accordion"
   type: "color"
   label: "Active background color"
   default_values:
@@ -394,7 +432,7 @@ bs_accordion_active_bg:
 
 # Component: Alert.
 bs_alert_color:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "color"
   label: "Color"
   default_values:
@@ -408,7 +446,7 @@ bs_alert_color:
     ".alert-light": "#636464"
     ".alert-dark": "#141619"
 bs_alert_bg:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "ui_skins_alpha_color"
   label: "Background color"
   default_values:
@@ -422,7 +460,7 @@ bs_alert_bg:
     ".alert-light": "#fefefeff"
     ".alert-dark": "#d3d3d4ff"
 bs_alert_border_color:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "ui_skins_alpha_color"
   label: "Border color"
   default_values:
@@ -436,31 +474,31 @@ bs_alert_border_color:
     ".alert-light": "#fdfdfeff"
     ".alert-dark": "#bcbebfff"
 bs_alert_padding_x:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".alert": "1rem"
 bs_alert_padding_y:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".alert": "1rem"
 bs_alert_margin_bottom:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "textfield"
   label: "Margin bottom"
   default_values:
     ".alert": "1rem"
 bs_alert_border:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "textfield"
   label: "Border"
   default_values:
     ".alert": "1px solid var(--bs-alert-border-color)"
 bs_alert_border_radius:
-  group: "Component: Alert"
+  category: "Component: Alert"
   type: "textfield"
   label: "Border radius"
   default_values:
@@ -468,37 +506,37 @@ bs_alert_border_radius:
 
 # Component: Badge.
 bs_badge_padding_x:
-  group: "Component: Badge"
+  category: "Component: Badge"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".badge": "0.65em"
 bs_badge_padding_y:
-  group: "Component: Badge"
+  category: "Component: Badge"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".badge": "0.35em"
 bs_badge_font_size:
-  group: "Component: Badge"
+  category: "Component: Badge"
   type: "textfield"
   label: "Font size"
   default_values:
     ".badge": "0.75em"
 bs_badge_font_weight:
-  group: "Component: Badge"
+  category: "Component: Badge"
   type: "textfield"
   label: "Font weight"
   default_values:
     ".badge": "700"
 bs_badge_color:
-  group: "Component: Badge"
+  category: "Component: Badge"
   type: "color"
   label: "Color"
   default_values:
     ".badge": "#ffffff"
 bs_badge_border_radius:
-  group: "Component: Badge"
+  category: "Component: Badge"
   type: "textfield"
   label: "Border radius"
   default_values:
@@ -506,61 +544,61 @@ bs_badge_border_radius:
 
 # Component: Breadcrumb.
 bs_breadcrumb_padding_x:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".breadcrumb": "0"
 bs_breadcrumb_padding_y:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".breadcrumb": "0"
 bs_breadcrumb_margin_bottom:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
   label: "Margin bottom"
   default_values:
     ".breadcrumb": "1rem"
 bs_breadcrumb_font_size:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
   label: "Font size"
   default_values:
     ".breadcrumb": "var(--bs-body-font-size)"
 bs_breadcrumb_bg:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "ui_skins_alpha_color"
   label: "Background color"
   default_values:
     ".breadcrumb": "#00000000"
 bs_breadcrumb_border_radius:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".breadcrumb": "0"
 bs_breadcrumb_divider:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
   label: "Divider"
   default_values:
     ".breadcrumb": "\"/\""
 bs_breadcrumb_divider_color:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "color"
   label: "Divider color"
   default_values:
     ".breadcrumb": "#6c757d"
 bs_breadcrumb_item_padding_x:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "textfield"
-  label: "Item horizontal padding"
+  label: "Item padding horizontal"
   default_values:
     ".breadcrumb": "0.5rem"
 bs_breadcrumb_item_active_color:
-  group: "Component: Breadcrumb"
+  category: "Component: Breadcrumb"
   type: "color"
   label: "Item active color"
   default_values:
@@ -568,35 +606,35 @@ bs_breadcrumb_item_active_color:
 
 # Component: Button.
 bs_btn_padding_x:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".btn-sm": "0.5rem"
     ".btn": "0.75rem"
     ".btn-lg": "1rem"
 bs_btn_padding_y:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".btn-sm": "0.25rem"
     ".btn": "0.375rem"
     ".btn-lg": "0.5rem"
 bs_btn_font_family:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Font family"
   default_values:
     ".btn": "null !default"
 bs_btn_font-weight:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Font weight"
   default_values:
     ".btn": "400"
 bs_btn_font_size:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Font size"
   default_values:
@@ -604,13 +642,13 @@ bs_btn_font_size:
     ".btn": "1rem"
     ".btn-lg": "1.25rem"
 bs_btn_line_height:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Line height"
   default_values:
     ".btn": "1.5"
 bs_btn_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Color"
   default_values:
@@ -632,7 +670,7 @@ bs_btn_color:
     ".btn-outline-light": "#f8f9fa"
     ".btn-outline-dark": "#212529"
 bs_btn_active_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Active color"
   default_values:
@@ -654,7 +692,7 @@ bs_btn_active_color:
     ".btn-outline-light": "#000000"
     ".btn-outline-dark": "#000000"
 bs_btn_hover_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Hover color"
   default_values:
@@ -676,7 +714,7 @@ bs_btn_hover_color:
     ".btn-outline-light": "#000000"
     ".btn-outline-dark": "#000000"
 bs_btn_bg:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "ui_skins_alpha_color"
   label: "Background color"
   default_values:
@@ -690,7 +728,7 @@ bs_btn_bg:
     ".btn-light": "#f8f9faff"
     ".btn-dark": "#212529ff"
 bs_btn_active_bg:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Active background color"
   default_values:
@@ -711,7 +749,7 @@ bs_btn_active_bg:
     ".btn-outline-light": "#f8f9fa"
     ".btn-outline-dark": "#212529"
 bs_btn_active_border_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Active border color"
   default_values:
@@ -732,7 +770,7 @@ bs_btn_active_border_color:
     ".btn-outline-light": "#f8f9fa"
     ".btn-outline-dark": "#212529"
 bs_btn_hover_bg:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Hover background color"
   default_values:
@@ -753,7 +791,7 @@ bs_btn_hover_bg:
     ".btn-outline-light": "#f8f9fa"
     ".btn-outline-dark": "#212529"
 bs_btn_disabled_bg:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Disabled background color"
   default_values:
@@ -774,7 +812,7 @@ bs_btn_disabled_bg:
     ".btn-outline-light": "#ffffff"
     ".btn-outline-dark": "#ffffff"
 bs_btn_disabled_border_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Disabled border color"
   default_values:
@@ -795,13 +833,13 @@ bs_btn_disabled_border_color:
     ".btn-outline-light": "#f8f9fa"
     ".btn-outline-dark": "#212529"
 bs_btn_border_width:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Border width"
   default_values:
     ".btn": "1px"
 bs_btn_border_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "ui_skins_alpha_color"
   label: "Border color"
   default_values:
@@ -823,7 +861,7 @@ bs_btn_border_color:
     ".btn-outline-light": "#f8f9fa"
     ".btn-outline-dark": "#212529"
 bs_btn_border_radius:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Border radius"
   default_values:
@@ -831,7 +869,7 @@ bs_btn_border_radius:
     ".btn": "0.375rem"
     ".btn-lg": "0.5rem"
 bs_btn_hover_border_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "ui_skins_alpha_color"
   label: "Hover border color"
   default_values:
@@ -853,7 +891,7 @@ bs_btn_hover_border_color:
     ".btn-outline-light": "#f8f9faff"
     ".btn-outline-dark": "#212529ff"
 bs_btn_focus_shadow_rgb:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Focus shadow color (RGB)"
   default_values:
@@ -875,25 +913,25 @@ bs_btn_focus_shadow_rgb:
     ".btn-outline-light": "248,249,250"
     ".btn-outline-dark": "33,37,41"
 bs_btn_box_shadow:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textarea"
   label: "Box shadow"
   default_values:
     ".btn": "inset 0 1px 0 rgba(255, 255, 255, 0.15),0 1px 1px rgba(0, 0, 0, 0.075)"
 bs_btn_disabled_opacity:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textfield"
   label: "Disabled opacity"
   default_values:
     ".btn": "0.65"
 bs_btn_focus_box_shadow:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textarea"
   label: "Focus box shadow"
   default_values:
     ".btn": "0 0 0 0.25rem rgba(var(--bs-btn-focus-shadow-rgb), .5)"
 bs_btn_active_shadow:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "textarea"
   label: "Active shadow"
   default_values:
@@ -914,7 +952,7 @@ bs_btn_active_shadow:
     ".btn-outline-light": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
     ".btn-outline-dark": "inset 0 3px 5px rgba(0, 0, 0, 0.125)"
 bs_btn_disabled_color:
-  group: "Component: Button"
+  category: "Component: Button"
   type: "color"
   label: "Disabled color"
   default_values:
@@ -937,91 +975,91 @@ bs_btn_disabled_color:
 
 # Component: Card.
 bs_card_spacer_y:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Body vertical spacer"
   default_values:
     ".card": "1rem"
 bs_card_spacer_x:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Body horizontal spacer"
   default_values:
     ".card": "1rem"
 bs_card_title_spacer_y:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Title vertical spacer"
   default_values:
     ".card": "0.5rem"
 bs_card_border_width:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Border width"
   default_values:
     ".card": "1px"
 bs_card_border_color:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Border color"
   default_values:
     ".card": "var(--bs-border-color-translucent)"
 bs_card_border_radius:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".card": "0.375rem"
 bs_card_box_shadow:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textarea"
   label: "Box shadow"
   default_values:
     ".card": ""
 bs_card_inner_border_radius:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textarea"
   label: "Inner border radius"
   default_values:
     ".card": "calc(0.375rem - 1px)"
 bs_card_cap_padding_y:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
-  label: "Cap vertical padding"
+  label: "Cap padding vertical"
   default_values:
     ".card": "0.5rem"
 bs_card_cap_padding_x:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
-  label: "Cap horizontal padding"
+  label: "Cap padding horizontal"
   default_values:
     ".card": "1rem"
 bs_card_cap_bg:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "ui_skins_alpha_color"
   label: "Cap background color"
   default_values:
     ".card": "#00000008"
 bs_card_cap_color:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "color"
   label: "Cap color"
   default_values:
     ".card": ""
 bs_card_bg:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "color"
   label: "Background color"
   default_values:
     ".card": "#ffffff"
 bs_card_img_overlay_padding:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Image overlay padding"
   default_values:
     ".card": "1rem"
 bs_card_group_margin:
-  group: "Component: Card"
+  category: "Component: Card"
   type: "textfield"
   label: "Group margin"
   default_values:
@@ -1029,261 +1067,261 @@ bs_card_group_margin:
 
 # Component: Dropdown.
 bs_dropdown_zindex:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Z-index"
   default_values:
     ".dropdown-menu": "1000"
 bs_dropdown_min_width:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Min width"
   default_values:
     ".dropdown-menu": "10rem"
 bs_dropdown_padding_x:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".dropdown-menu": "0"
 bs_dropdown_padding_y:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".dropdown-menu": "0"
 bs_dropdown_spacer:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Spacer"
   default_values:
     ".dropdown-menu": "0.125rem"
 bs_dropdown_font_size:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Font size"
   default_values:
     ".dropdown-menu": "1rem"
 bs_dropdown_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Color"
   default_values:
     ".dropdown-menu": "#212529"
 bs_dropdown_bg:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Background color"
   default_values:
     ".dropdown-menu": "#ffffff"
 bs_dropdown_border_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Border color"
   default_values:
     ".dropdown-menu": "var(--bs-border-color-translucent)"
 bs_dropdown_border_radius:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".dropdown-menu": "0.375rem"
 bs_dropdown_border_width:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Border width"
   default_values:
     ".dropdown-menu": "1px"
 bs_dropdown_inner_border_radius:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Inner border radius"
   default_values:
     ".dropdown-menu": "calc(0.375rem - 1px)"
 bs_dropdown_divider_bg:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Divider background color"
   default_values:
     ".dropdown-menu": "var(--bs-border-color-translucent)"
 bs_dropdown_divider_margin_y:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
   label: "Divider vertical margin"
   default_values:
     ".dropdown-menu": "0.5rem"
 bs_dropdown_box_shadow:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textarea"
   label: "Box shadow"
   default_values:
     ".dropdown-menu": "0 0.5rem 1rem rgba(0, 0, 0, 0.15)"
 bs_dropdown_link_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Link color"
   default_values:
     ".dropdown-menu": "#212529"
 bs_dropdown_link_hover_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Link hover color"
   default_values:
     ".dropdown-menu": "#1e2125"
 bs_dropdown_link_hover_bg:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Link hover background color"
   default_values:
     ".dropdown-menu": "#e9ecef"
 bs_dropdown_link_active_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Link active color"
   default_values:
     ".dropdown-menu": "#ffffff"
 bs_dropdown_link_active_bg:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Link active background color"
   default_values:
     ".dropdown-menu": "#0d6efd"
 bs_dropdown_link_disabled_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Link disabled color"
   default_values:
     ".dropdown-menu": "#adb5bd"
 bs_dropdown_item_padding_x:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
-  label: "Item horizontal padding"
+  label: "Item padding horizontal"
   default_values:
     ".dropdown-menu": "1rem"
 bs_dropdown_item_padding_y:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
-  label: "Item vertical padding"
+  label: "Item padding vertical"
   default_values:
     ".dropdown-menu": "0.25rem"
 bs_dropdown_header_color:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "color"
   label: "Header color"
   default_values:
     ".dropdown-menu": "#6c757d"
 bs_dropdown_header_padding_x:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
-  label: "Header horizontal padding"
+  label: "Header padding horizontal"
   default_values:
     ".dropdown-menu": "1rem"
 bs_dropdown_header_padding_y:
-  group: "Component: Dropdown"
+  category: "Component: Dropdown"
   type: "textfield"
-  label: "Header vertical padding"
+  label: "Header padding vertical"
   default_values:
     ".dropdown-menu": "0.5rem"
 
 # Component: List group.
 bs_list_group_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Color"
   default_values:
     ".list-group": "#212529"
 bs_list_group_bg:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Background color"
   default_values:
     ".list-group": "#ffffff"
 bs_list_group_border_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "ui_skins_alpha_color"
   label: "Border color"
   default_values:
     ".list-group": "#00000020"
 bs_list_group_border_width:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "textfield"
   label: "Border width"
   default_values:
     ".list-group": "1px"
 bs_list_group_border_radius:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".list-group": "0.375rem"
 bs_list_group_item_padding_x:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "textfield"
-  label: "Item horizontal padding"
+  label: "Item padding horizontal"
   default_values:
     ".list-group": "1rem"
 bs_list_group_item_padding_y:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "textfield"
-  label: "Item vertical padding"
+  label: "Item padding vertical"
   default_values:
     ".list-group": "0.5rem"
 bs_list_group_action_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Action color"
   default_values:
     ".list-group": "#495057"
 bs_list_group_action_hover_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Action hover color"
   default_values:
     ".list-group": "#495057"
 bs_list_group_action_hover_bg:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Action hover background color"
   default_values:
     ".list-group": "#f8f9fa"
 bs_list_group_action_active_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Action active color"
   default_values:
     ".list-group": "#212529"
 bs_list_group_action_active_bg:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Action active background color"
   default_values:
     ".list-group": "#e9ecef"
 bs_list_group_disabled_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Disabled color"
   default_values:
     ".list-group": "#6c757d"
 bs_list_group_disabled_bg:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Disabled background color"
   default_values:
     ".list-group": "#ffffff"
 bs_list_group_active_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Active color"
   default_values:
     ".list-group": "#ffffff"
 bs_list_group_active_bg:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Active background color"
   default_values:
     ".list-group": "#0d6efd"
 bs_list_group_active_border_color:
-  group: "Component: List group"
+  category: "Component: List group"
   type: "color"
   label: "Active border color"
   default_values:
@@ -1291,115 +1329,115 @@ bs_list_group_active_border_color:
 
 # Component: Navbar.
 bs_navbar_padding_x:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".navbar": "0"
 bs_navbar_padding_y:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".navbar": "0.5rem"
 bs_navbar_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Color"
   default_values:
     ".navbar": "#0000008c"
 bs_navbar_hover_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Hover color"
   default_values:
     ".navbar": "#000000b3"
 bs_navbar_disabled_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Hover color"
   default_values:
     ".navbar": "#0000004d"
 bs_navbar_active_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Active color"
   default_values:
     ".navbar": "#000000e6"
 bs_navbar_brand_padding_y:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
-  label: "Brand vertical padding"
+  label: "Brand padding vertical"
   default_values:
     ".navbar": "0.3125rem"
 bs_navbar_brand_margin_end:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
   label: "Brand margin end"
   default_values:
     ".navbar": "1rem"
 bs_navbar_brand_font_size:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
   label: "Brand font size"
   default_values:
     ".navbar": "1.25rem"
 bs_navbar_brand_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Brand color"
   default_values:
     ".navbar": "#000000e6"
 bs_navbar_brand_hover_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Brand hover color"
   default_values:
     ".navbar": "#000000e6"
 bs_navbar_nav_link_padding_x:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
-  label: "Nav link horizontal padding"
+  label: "Nav link padding horizontal"
   default_values:
     ".navbar": "0.5rem"
 bs_navbar_toggler_padding_x:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
-  label: "Toggler horizontal padding"
+  label: "Toggler padding horizontal"
   default_values:
     ".navbar": "0.75rem"
 bs_navbar_toggler_padding_y:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
-  label: "Toggler vertical padding"
+  label: "Toggler padding vertical"
   default_values:
     ".navbar": "0.25rem"
 bs_navbar_toggler_font_size:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
   label: "Toggler font size"
   default_values:
     ".navbar": "1.25rem"
 bs_navbar_toggler_border_color:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "ui_skins_alpha_color"
   label: "Toggler border color"
   default_values:
     ".navbar": "#0000001a"
 bs_navbar_toggler_border_radius:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
   label: "Toggler border radius"
   default_values:
     ".navbar": "0.375rem"
 bs_navbar_toggler_focus_width:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
   label: "Toggler focus width"
   default_values:
     ".navbar": "0.25rem"
 bs_navbar_toggler_transition:
-  group: "Component: Navbar"
+  category: "Component: Navbar"
   type: "textfield"
   label: "Toggler transition"
   default_values:
@@ -1407,37 +1445,37 @@ bs_navbar_toggler_transition:
 
 # Component: Nav link.
 bs_nav_link_padding_x:
-  group: "Component: Nav link"
+  category: "Component: Nav link"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".nav": "1rem"
 bs_nav_link_padding_y:
-  group: "Component: Nav link"
+  category: "Component: Nav link"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".nav": "0.5rem"
 bs_nav_link_font_weight:
-  group: "Component: Nav link"
+  category: "Component: Nav link"
   type: "textfield"
   label: "Font weight"
   default_values:
     ".nav": ""
 bs_nav_link_color:
-  group: "Component: Nav link"
+  category: "Component: Nav link"
   type: "textfield"
   label: "Color"
   default_values:
     ".nav": "var(--bs-link-color)"
 bs_nav_link_hover_color:
-  group: "Component: Nav link"
+  category: "Component: Nav link"
   type: "textfield"
   label: "Hover color"
   default_values:
     ".nav": "var(--bs-link-hover-color)"
 bs_nav_link_disabled_color:
-  group: "Component: Nav link"
+  category: "Component: Nav link"
   type: "color"
   label: "Disabled color"
   default_values:
@@ -1445,43 +1483,43 @@ bs_nav_link_disabled_color:
 
 # Component: Nav tabs.
 bs_nav_tabs_border_width:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "textfield"
   label: "Border width"
   default_values:
     ".nav-tabs": "1px"
 bs_nav_tabs_border_color:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "color"
   label: "Border color"
   default_values:
     ".nav-tabs": "#dee2e6"
 bs_nav_tabs_border_radius:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".nav-tabs": "0.375rem"
 bs_nav_tabs_link_hover_border_color:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "textarea"
   label: "Link hover border color"
   default_values:
     ".nav-tabs": "#e9ecef #e9ecef #dee2e6"
 bs_nav_tabs_link_active_color:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "color"
   label: "Link active color"
   default_values:
     ".nav-tabs": "#495057"
 bs_nav_tabs_link_active_bg:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "color"
   label: "Link active background color"
   default_values:
     ".nav-tabs": "#ffffff"
 bs_nav_tabs_link_active_border_color:
-  group: "Component: Nav tabs"
+  category: "Component: Nav tabs"
   type: "textarea"
   label: "Link active border color"
   default_values:
@@ -1489,19 +1527,19 @@ bs_nav_tabs_link_active_border_color:
 
 # Component: Nav pills.
 bs_nav_pills_border_radius:
-  group: "Component: Nav pills"
+  category: "Component: Nav pills"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".nav-pills": "0.375rem"
 bs_nav_pills_link_active_color:
-  group: "Component: Nav pills"
+  category: "Component: Nav pills"
   type: "color"
   label: "Link active color"
   default_values:
     ".nav-pills": "#ffffff"
 bs_nav_pills_link_active_bg:
-  group: "Component: Nav pills"
+  category: "Component: Nav pills"
   type: "color"
   label: "Link active background color"
   default_values:
@@ -1509,23 +1547,23 @@ bs_nav_pills_link_active_bg:
 
 # Component: Pagination.
 bs_pagination_padding_x:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
-  label: "Horizontal padding"
+  label: "Padding horizontal"
   default_values:
     ".pagination-sm": "0.5rem"
     ".pagination": "0.75rem"
     ".pagination-lg": "1.5rem"
 bs_pagination_padding_y:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
-  label: "Vertical padding"
+  label: "Padding vertical"
   default_values:
     ".pagination-sm": "0.25rem"
     ".pagination": "0.375rem"
     ".pagination-lg": "0.75rem"
 bs_pagination_font_size:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
   label: "Font size"
   default_values:
@@ -1533,31 +1571,31 @@ bs_pagination_font_size:
     ".pagination": "1rem"
     ".pagination-lg": "1.25rem"
 bs_pagination_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
   label: "Color"
   default_values:
     ".pagination": "var(--bs-link-color)"
 bs_pagination_bg:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Background color"
   default_values:
     ".pagination": "#ffffff"
 bs_pagination_border_width:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
   label: "Border width"
   default_values:
     ".pagination": "1px"
 bs_pagination_border_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Border color"
   default_values:
     ".pagination": "#dee2e6"
 bs_pagination_border_radius:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
   label: "Border radius"
   default_values:
@@ -1565,73 +1603,73 @@ bs_pagination_border_radius:
     ".pagination": "0.375rem"
     ".pagination-lg": "0.5rem"
 bs_pagination_hover_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
   label: "Hover color"
   default_values:
     ".pagination": "var(--bs-link-hover-color)"
 bs_pagination_hover_bg:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Hover background color"
   default_values:
     ".pagination": "#e9ecef"
 bs_pagination_hover_border_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Hover border color"
   default_values:
     ".pagination": "#dee2e6"
 bs_pagination_focus_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textfield"
   label: "Focus color"
   default_values:
     ".pagination": "var(--bs-link-hover-color)"
 bs_pagination_focus_bg:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Focus background color"
   default_values:
     ".pagination": "#e9ecef"
 bs_pagination_focus_box_shadow:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "textarea"
   label: "Focus box shadow"
   default_values:
     ".pagination": "0 0 0 0.25rem rgba(13, 110, 253, 0.25)"
 bs_pagination_active_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Active color"
   default_values:
     ".pagination": "#ffffff"
 bs_pagination_active_bg:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Active background color"
   default_values:
     ".pagination": "#0d6efd"
 bs_pagination_active_border_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Active border color"
   default_values:
     ".pagination": "#0d6efd"
 bs_pagination_disabled_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Disabled color"
   default_values:
     ".pagination": "#6c757d"
 bs_pagination_disabled_bg:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Disabled background color"
   default_values:
     ".pagination": "#ffffff"
 bs_pagination_disabled_border_color:
-  group: "Component: Pagination"
+  category: "Component: Pagination"
   type: "color"
   label: "Disabled border color"
   default_values:
@@ -1639,49 +1677,49 @@ bs_pagination_disabled_border_color:
 
 # Component: Progress.
 bs_progress_height:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "textfield"
   label: "Height"
   default_values:
     ".progress": "1rem"
 bs_progress_font_size:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "textfield"
   label: "Font size"
   default_values:
     ".progress": "0.75rem"
 bs_progress_bg:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "color"
   label: "Background color"
   default_values:
     ".progress": "#e9ecef"
 bs_progress_border_radius:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "textfield"
   label: "Border radius"
   default_values:
     ".progress": "0.375rem"
 bs_progress_box_shadow:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "textarea"
   label: "Box shadow"
   default_values:
     ".progress": "inset 0 1px 2px rgba(0, 0, 0, 0.075)"
 bs_progress_bar_color:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "color"
   label: "Bar color"
   default_values:
     ".progress": "#ffffff"
 bs_progress_bar_bg:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "color"
   label: "Bar background color"
   default_values:
     ".progress": "#0d6efd"
 bs_progress_bar_transition:
-  group: "Component: Progress"
+  category: "Component: Progress"
   type: "textarea"
   label: "Bar transition"
   default_values:
