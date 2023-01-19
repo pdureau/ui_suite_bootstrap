@@ -1,7 +1,8 @@
 # https://getbootstrap.com/docs/5.2/utilities/borders/#border
 borders_border:
+  category: "Borders"
   label: "Border"
-  description: "Use it to add an element’s borders. Choose from all borders or one at a time."
+  description: "Use it to add an element's borders. Choose from all borders or one at a time."
   options:
     border: "Additive All"
     border-top: "Additive Top"
@@ -14,8 +15,9 @@ borders_border:
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#border
 borders_border_subtractive:
+  category: "Borders"
   label: "Border subtractive"
-  description: "Use it to remove an element’s borders. Choose from all borders or one at a time."
+  description: "Use it to remove an element's borders. Choose from all borders or one at a time."
   options:
     border-0: "All"
     border-top-0: "Top"
@@ -29,6 +31,7 @@ borders_border_subtractive:
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#color
 borders_border_color:
+  category: "Borders"
   label: "Border color"
   description: "Change the border color using utilities built on our theme colors."
   options:
@@ -48,14 +51,15 @@ borders_border_color:
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#opacity
 borders_border_opacity:
+  category: "Borders"
   label: "Border opacity"
   description: "This allows for real-time color changes without compilation and dynamic alpha transparency changes."
   options:
-    border-opacity-10: "0.10"
-    border-opacity-25: "0.25"
-    border-opacity-50: "0.50"
-    border-opacity-75: "0.75"
-    border-opacity-100: "1"
+    border-opacity-100: "100%"
+    border-opacity-75: "75%"
+    border-opacity-50: "50%"
+    border-opacity-25: "25%"
+    border-opacity-10: "10%"
   previewed_with:
     - border
     - border-success
@@ -63,6 +67,7 @@ borders_border_opacity:
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#width
 borders_border_width:
+  category: "Borders"
   label: "Border width"
   options:
     border-1: "1"
@@ -77,6 +82,7 @@ borders_border_width:
 
 # https://getbootstrap.com/docs/5.2/utilities/borders/#radius
 borders_border_radius:
+  category: "Borders"
   label: "Border radius"
   description: "Add classes to an element to easily round its corners."
   options:
@@ -100,6 +106,7 @@ borders_border_radius:
 
 # https://getbootstrap.com/docs/5.2/helpers/clearfix/
 clearfix:
+  category: "Float"
   label: "Clearfix"
   description: "Easily clear floats by adding <code>.clearfix</code> to the parent element."
   options:
@@ -108,6 +115,7 @@ clearfix:
 # https://getbootstrap.com/docs/5.2/utilities/background/#background-color
 # https://getbootstrap.com/docs/5.2/helpers/color-background/
 colors_background_color:
+  category: "Background"
   label: "Background color"
   description: "Similar to the contextual text color classes, easily set the background of an element to any contextual class."
   options:
@@ -139,13 +147,15 @@ colors_background_color:
 
 # https://getbootstrap.com/docs/5.2/utilities/background/#opacity
 colors_background_opacity:
+  category: "Background"
   label: "Background opacity"
   description: "Modify the opacity of the background color with utility classes."
   options:
-    bg-opacity-75: "75% opacity"
-    bg-opacity-50: "50% opacity"
-    bg-opacity-25: "25% opacity"
-    bg-opacity-10: "10% opacity"
+    bg-opacity-100: "100%"
+    bg-opacity-75: "75%"
+    bg-opacity-50: "50%"
+    bg-opacity-25: "25%"
+    bg-opacity-10: "10%"
   previewed_with:
     - border
     - p-2
@@ -153,6 +163,7 @@ colors_background_opacity:
 
 # https://getbootstrap.com/docs/5.2/utilities/colors/#colors
 colors_color:
+  category: "Text"
   label: "Color"
   description: "Convey meaning through color with a handful of color utility classes."
   options:
@@ -173,6 +184,7 @@ colors_color:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_weight:
+  category: "Text"
   label: "Font weight"
   description: "Quickly change the weight (boldness) of text."
   options:
@@ -185,6 +197,7 @@ text_font_weight:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-weight-and-italics
 text_font_italics:
+  category: "Text"
   label: "Font italics"
   description: "Quickly italicize text."
   options:
@@ -193,6 +206,7 @@ text_font_italics:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#line-height
 text_line_height:
+  category: "Text"
   label: "Line height"
   description: "Change the line height."
   options:
@@ -203,6 +217,7 @@ text_line_height:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#monospace
 text_font_monospace:
+  category: "Text"
   label: "Monospace"
   description: "Change a selection to the monospace font stack."
   options:
@@ -210,6 +225,7 @@ text_font_monospace:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#text-decoration
 text_text_decoration:
+  category: "Text"
   label: "Text decoration"
   description: "Decorate text in components with text decoration classes."
   options:
@@ -219,6 +235,7 @@ text_text_decoration:
 
 # https://getbootstrap.com/docs/5.2/utilities/shadows/
 shadows:
+  category: "Borders"
   label: "Shadows"
   description: "Add or remove shadows to elements with box-shadow utilities."
   options:
@@ -234,6 +251,7 @@ shadows:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin:
+  category: "Spacing"
   label: "Margin"
   options:
     m-0: "0"
@@ -250,6 +268,7 @@ spacing_margin:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_top:
+  category: "Spacing"
   label: "Margin top"
   options:
     mt-0: "0"
@@ -266,6 +285,7 @@ spacing_margin_top:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_bottom:
+  category: "Spacing"
   label: "Margin bottom"
   options:
     mb-0: "0"
@@ -282,6 +302,7 @@ spacing_margin_bottom:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_start:
+  category: "Spacing"
   label: "Margin start"
   options:
     ms-0: "0"
@@ -298,6 +319,7 @@ spacing_margin_start:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_margin_end:
+  category: "Spacing"
   label: "Margin end"
   options:
     me-0: "0"
@@ -314,6 +336,7 @@ spacing_margin_end:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding:
+  category: "Spacing"
   label: "Padding"
   options:
     p-0: "0"
@@ -329,6 +352,7 @@ spacing_padding:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_top:
+  category: "Spacing"
   label: "Padding top"
   options:
     pt-0: "0"
@@ -344,6 +368,7 @@ spacing_padding_top:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_bottom:
+  category: "Spacing"
   label: "Padding bottom"
   options:
     pb-0: "0"
@@ -359,6 +384,7 @@ spacing_padding_bottom:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_start:
+  category: "Spacing"
   label: "Padding start"
   options:
     ps-0: "0"
@@ -374,6 +400,7 @@ spacing_padding_start:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#notation
 spacing_padding_end:
+  category: "Spacing"
   label: "Padding end"
   options:
     pe-0: "0"
@@ -390,6 +417,7 @@ spacing_padding_end:
 
 # https://getbootstrap.com/docs/5.2/utilities/spacing/#horizontal-centering
 spacing_horizontal_centering:
+  category: "Spacing"
   label: "Horizontal centering"
   description: "An .mx-auto class for horizontally centering fixed-width block level content—that is, content that has display: block and a width set—by setting the horizontal margins to auto."
   options:
@@ -397,6 +425,7 @@ spacing_horizontal_centering:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#text-alignment
 text_text_alignment:
+  category: "Text"
   label: "Text alignment"
   description: "Easily realign text to components with text alignment classes."
   options:
@@ -410,6 +439,7 @@ text_text_alignment:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#text-wrapping-and-overflow
 text_text_wrapping:
+  category: "Text"
   label: "Text wrapping and overflow"
   options:
     text-wrap: "Wrap"
@@ -421,6 +451,7 @@ text_text_wrapping:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#word-break
 text_text_word_break:
+  category: "Text"
   label: "Word break"
   options:
     text-break: "Break"
@@ -431,6 +462,7 @@ text_text_word_break:
 
 # https://getbootstrap.com/docs/5.2/utilities/text/#text-transform
 text_text_transform:
+  category: "Text"
   label: "Text transform"
   description: "Transform text in components with text capitalization classes."
   options:
@@ -440,6 +472,7 @@ text_text_transform:
 
 # https://getbootstrap.com/docs/5.2/helpers/text-truncation
 text_text_truncate:
+  category: "Text"
   label: "Text truncate"
   description: "For longer content, you can add a <code>.text-truncate</code> class to truncate the text with an ellipsis. Requires <code>display: inline-block</code> or <code>display: block.</code>"
   options:
@@ -448,8 +481,9 @@ text_text_truncate:
 # https://getbootstrap.com/docs/5.2/content/typography/
 # https://getbootstrap.com/docs/5.2/utilities/text/#font-size
 typography:
+  category: "Text"
   label: "Typography"
-  description: ".h1 through .h6 classes are available, for when you want to match the font styling of a heading but cannot use the associated HTML element. Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading—a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default."
+  description: ".h1 through .h6 classes are available, for when you want to match the font styling of a heading but cannot use the associated HTML element. Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a <strong>display heading</strong> a larger, slightly more opinionated heading style. Keep in mind these headings are not responsive by default."
   options:
     h1: "Heading 1"
     h2: "Heading 2"
@@ -464,15 +498,16 @@ typography:
     display-5: "Display heading 5"
     display-6: "Display heading 6"
     lead: "Lead"
-    fs-1: "1"
-    fs-2: "2"
-    fs-3: "3"
-    fs-4: "4"
-    fs-5: "5"
-    fs-6: "6"
+    fs-1: "Font size 1"
+    fs-2: "Font size 2"
+    fs-3: "Font size 3"
+    fs-4: "Font size 4"
+    fs-5: "Font size 5"
+    fs-6: "Font size 6"
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#enable-flex-behaviors
 flex_flex:
+  category: "Flex"
   label: "Flex"
   description: "Apply display utilities to create a flexbox container and transform direct children elements into flex items. Flex containers and items are able to be modified further with additional flex properties."
   options:
@@ -485,6 +520,7 @@ flex_flex:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#direction
 flex_direction:
+  category: "Flex"
   label: "Flex direction"
   description: "Set the direction of flex items in a flex container with direction utilities. In most cases you can omit the horizontal class here as the browser default is row However, you may encounter situations where you needed to explicitly set this value (like responsive layouts)."
   options:
@@ -500,6 +536,7 @@ flex_direction:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#justify-content
 flex_justify_content:
+  category: "Flex"
   label: "Flex justify content"
   description: "Use justify-content utilities on flexbox containers to change the alignment of flex items on the main axis (the x-axis to start, y-axis if flex-direction: column). Choose from start (browser default), end, center, between, around, or evenly."
   options:
@@ -515,8 +552,22 @@ flex_justify_content:
     - p-2
     - bg-light
 
+# https://getbootstrap.com/docs/5.2/utilities/flex/#align-content
+flex_align_content:
+  category: "Flex"
+  label: "Flex align content"
+  description: "Use align-content utilities on flexbox containers to align flex items together on the cross axis. Choose from start (browser default), end, center, between, around, or stretch. Heads up! This property has no effect on single rows of flex items."
+  options:
+    align-content-start: "Start"
+    align-content-end: "End"
+    align-content-center: "Center"
+    align-content-between: "Between"
+    align-content-around: "Around"
+    align-content-stretch: "Stretch"
+
 # https://getbootstrap.com/docs/5.2/utilities/flex/#align-self
 flex_align_items:
+  category: "Flex"
   label: "Flex align items"
   description: "Use align-self utilities on flexbox containers to change the alignment of flex items on the cross axis (the y-axis to start, x-axis if flex-direction: column). Choose from start, end, center, baseline, or stretch (browser default)."
   options:
@@ -533,6 +584,7 @@ flex_align_items:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#align-self
 flex_align_self:
+  category: "Flex"
   label: "Flex align self"
   description: "Use align-self utilities on flexbox items to individually change their alignment on the cross axis (the y-axis to start, x-axis if flex-direction: column). Choose from the same options as align-self: start, end, center, baseline, or stretch (browser default)."
   options:
@@ -549,6 +601,7 @@ flex_align_self:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#fill
 flex_fill:
+  category: "Flex"
   label: "Flex fill"
   description: "Use the flex-fill class on a series of sibling elements to force them into widths equal to their content (or equal widths if their content does not surpass their border-boxes) while taking up all available horizontal space."
   options:
@@ -556,6 +609,7 @@ flex_fill:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#grow-and-shrink
 flex_grow_shrink:
+  category: "Flex"
   label: "Flex grow and shrink"
   description: "Use flex-grow-* utilities to toggle a flex item's ability to grow to fill available space. In the example below, the flex-grow-1 elements uses all available space it can, while allowing the remaining two flex items their necessary space. Use flex-shrink-* utilities to toggle a flex item's ability to shrink if necessary."
   options:
@@ -566,6 +620,7 @@ flex_grow_shrink:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#wrap
 flex_wrap:
+  category: "Flex"
   label: "Flex wrap"
   description: "Change how flex items wrap in a flex container. Choose from no wrapping at all (the browser default) with flex-nowrap, wrapping with flex-wrap, or reverse wrapping with flex-wrap-reverse."
   options:
@@ -575,6 +630,7 @@ flex_wrap:
 
 # https://getbootstrap.com/docs/5.2/utilities/flex/#order
 flex_order:
+  category: "Flex"
   label: "Flex order"
   description: "Change the visual order of specific flex items with a handful of order utilities. We only provide options for making an item first or last, as well as a reset to use the DOM order. As order takes any integer value from 0 to 5, add custom CSS for any additional values needed. Additionally there are also responsive order-first and order-last classes that change the order of an element by applying order: -1 and order: 6, respectively."
   options:
@@ -587,20 +643,9 @@ flex_order:
     order-4: "Order 4"
     order-5: "Order 5"
 
-# https://getbootstrap.com/docs/5.2/utilities/flex/#align-content
-flex_align_content:
-  label: "Flex align content"
-  description: "Use align-content utilities on flexbox containers to align flex items together on the cross axis. Choose from start (browser default), end, center, between, around, or stretch. Heads up! This property has no effect on single rows of flex items."
-  options:
-    align-content-start: "Start"
-    align-content-end: "End"
-    align-content-center: "Center"
-    align-content-between: "Between"
-    align-content-around: "Around"
-    align-content-stretch: "Stretch"
-
 # https://getbootstrap.com/docs/5.2/utilities/vertical-align/
 vertical_align:
+  category: "Spacing"
   label: "Vertical alignment"
   description: "Change the alignment of elements. Please note that vertical-align only affects inline, inline-block, inline-table, and table cell elements."
   options:
@@ -613,6 +658,7 @@ vertical_align:
 
 # https://getbootstrap.com/docs/5.2/utilities/overflow/
 overflow:
+  category: "Visibility"
   label: "Overflow"
   description: "Configure how content overflows an element."
   options:
@@ -623,6 +669,7 @@ overflow:
 
 # https://getbootstrap.com/docs/5.2/utilities/float
 float:
+  category: "Float"
   label: "Float"
   description: "These utility classes float an element to the left or right, or disable floating."
   options:
@@ -632,6 +679,7 @@ float:
 
 # https://getbootstrap.com/docs/5.2/utilities/visibility/
 visibility:
+  category: "Visibility"
   label: "Visibility"
   description: "Control the visibility of elements without modifying their display. These classes do not modify the display value and do not affect layout; <code>.invisible</code> elements still take up space in the page."
   previewed_as: "aside"
@@ -641,6 +689,7 @@ visibility:
 
 # https://getbootstrap.com/docs/5.2/utilities/sizing
 sizing_width:
+  category: "Sizing"
   label: "Width"
   description: "Make element as wide as its parent element or the viewport."
   options:
@@ -654,6 +703,7 @@ sizing_width:
     min-vw-100: "Min-width 100% of viewport"
 
 sizing_height:
+  category: "Sizing"
   label: "Height"
   description: "Make element as tall as its parent element or the viewport."
   options:
@@ -669,6 +719,7 @@ sizing_height:
 
 # https://getbootstrap.com/docs/5.2/utilities/display
 display_all:
+  category: "Display"
   label: "Display all screens"
   description: "Display utility classes that apply to all breakpoints, from xs to xxl, have no breakpoint abbreviation in them. This is because those classes are applied from min-width: 0 and up, and thus are not bound by a media query."
   options:
@@ -686,6 +737,7 @@ display_all:
 
 # https://getbootstrap.com/docs/5.2/utilities/display/#hiding-elements
 display_small:
+  category: "Display"
   label: "Display small screens"
   description: "These utility classes apply to small screens and larger."
   options:
@@ -702,6 +754,7 @@ display_small:
   previewed_as: "hidden"
 
 display_medium:
+  category: "Display"
   label: "Display medium screens"
   description: "These utility classes apply to medium screens and larger."
   options:
@@ -718,6 +771,7 @@ display_medium:
   previewed_as: "hidden"
 
 display_large:
+  category: "Display"
   label: "Display large screens"
   description: "These utility classes apply to large screens and larger."
   options:
@@ -734,6 +788,7 @@ display_large:
   previewed_as: "hidden"
 
 display_x_large:
+  category: "Display"
   label: "Display x-large screens"
   description: "These utility classes apply to extra-large screens and extra-extra-large screens."
   options:
@@ -750,6 +805,7 @@ display_x_large:
   previewed_as: "hidden"
 
 display_xx_large:
+  category: "Display"
   label: "Display xx-large screens"
   description: "These utility classes apply only to extra-extra-large screens."
   options:
@@ -766,6 +822,7 @@ display_xx_large:
   previewed_as: "hidden"
 
 display_print:
+  category: "Display"
   label: "Display in print"
   description: "Change the display value of elements when printing."
   options:
@@ -783,14 +840,15 @@ display_print:
 
 # https://getbootstrap.com/docs/5.2/utilities/opacity
 opacity:
+  category: "Visibility"
   label: "Opacity"
   description: "The opacity property sets the opacity level for an element. The opacity level describes the transparency level, where 1 is not transparent at all, .5 is 50% visible, and 0 is completely transparent."
   options:
-    opacity-0: "0%"
-    opacity-25: "25%"
-    opacity-50: "50%"
-    opacity-75: "75%"
     opacity-100: "100%"
+    opacity-75: "75%"
+    opacity-50: "50%"
+    opacity-25: "25%"
+    opacity-0: "0%"
   previewed_as: "aside"
   previewed_with:
     - border
@@ -809,8 +867,9 @@ vertical_rule:
 
 # https://getbootstrap.com/docs/5.2/helpers/visually-hidden
 visually_hidden:
+  category: "Visibility"
   label: "Visually hidden"
-  description: "Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with <code>.visually-hidden</code>. Use <code>.visually-hidden-focusable</code> to visually hide an element by default, but to display it when it’s focused (e.g. by a keyboard-only user). <code>.visually-hidden-focusable</code> can also be applied to a container–thanks to <code>:focus-within</code>, the container will be displayed when any child element of the container receives focus."
+  description: "Visually hide an element while still allowing it to be exposed to assistive technologies (such as screen readers) with <code>.visually-hidden</code>. Use <code>.visually-hidden-focusable</code> to visually hide an element by default, but to display it when it's focused (e.g. by a keyboard-only user). <code>.visually-hidden-focusable</code> can also be applied to a container–thanks to <code>:focus-within</code>, the container will be displayed when any child element of the container receives focus."
   options:
     visually-hidden: "Visually hidden"
     visually-hidden-focusable: "Visually hidden focusable"
@@ -818,6 +877,7 @@ visually_hidden:
 
 # https://getbootstrap.com/docs/5.2/utilities/interactions/#text-selection
 interactions_text_selection:
+  category: "Interactions"
   label: "Text selection"
   description: "Change the way in which the content is selected when the user interacts with it."
   options:
@@ -827,6 +887,7 @@ interactions_text_selection:
 
 # https://getbootstrap.com/docs/5.2/utilities/interactions/#pointer-events
 interactions_pointer_events:
+  category: "Interactions"
   label: "Pointer events"
   description: "Bootstrap provides <code>.pe-none</code> and <code>.pe-auto</code> classes to prevent or add element interactions."
   options:
@@ -835,6 +896,7 @@ interactions_pointer_events:
 
 # https://getbootstrap.com/docs/5.2/helpers/ratio/#aspect-ratios
 ratio_aspect:
+  category: "Sizing"
   label: "Aspect ratios"
   description: "Use generated pseudo elements to make an element maintain the aspect ratio of your choosing. Perfect for responsively handling video or slideshow embeds based on the width of the parent."
   options:
@@ -846,6 +908,7 @@ ratio_aspect:
 
 # https://getbootstrap.com/docs/5.2/helpers/position
 position:
+  category: "Position"
   label: "Position"
   description: "Use these helpers for quickly configuring the position of an element."
   options:
@@ -867,6 +930,7 @@ position:
 
 # https://getbootstrap.com/docs/5.2/utilities/position/#position-values
 position_position:
+  category: "Position"
   label: "Position values"
   description: "Quick positioning classes are available, though they are not responsive."
   options:
@@ -879,6 +943,7 @@ position_position:
 
 # https://getbootstrap.com/docs/5.2/utilities/position/#arrange-elements
 position_arrange_vertical:
+  category: "Position"
   label: "Arrange element vertically"
   options:
     top-0: "Top 0%"
@@ -891,6 +956,7 @@ position_arrange_vertical:
 
 # https://getbootstrap.com/docs/5.2/utilities/position/#arrange-elements
 position_arrange_horizontal:
+  category: "Position"
   label: "Arrange element horizontally"
   options:
     start-0: "Start 0%"
@@ -902,6 +968,7 @@ position_arrange_horizontal:
   previewed_as: "hidden"
 
 position_center:
+  category: "Position"
   label: "Center element"
   description: "In addition, you can also center the elements with the transform utility class <code>.translate-middle</code>."
   options:
