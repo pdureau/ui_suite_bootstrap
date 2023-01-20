@@ -43,7 +43,9 @@
         There is currently no recursive merge in Twig or Drupal core Twig.
         So it may breaks if the slide already have #attributes.
         #}
-        {% set slide = slide|merge({'#attributes': {'class': ['active']}}) %}
+        {% set slide = slide|merge({'#attributes': {'class': ['carousel-item', 'active']}}) %}
+      {% elseif slide is iterable %}
+        {% set slide = slide|merge({'#attributes': {'class': ['carousel-item']}}) %}
       {% endif %}
 
       {{ slide }}
