@@ -2,6 +2,7 @@
 borders_border:
   label: Border additive
   description: Use it to add an element’s borders. Choose from all borders or one at a time.
+  category: Borders
   options:
     border: All
     border-top: Top
@@ -16,6 +17,7 @@ borders_border:
 borders_border_substractive:
   label: Border subtractive
   description: Use it to remove an element’s borders. Choose from all borders or one at a time.
+  category: Borders
   options:
     border-0: All
     border-top-0: Top
@@ -31,6 +33,7 @@ borders_border_substractive:
 borders_border_color:
   label: Border color
   description: Change the border color using utilities built on our theme colors.
+  category: Borders
   options:
     border-primary: Primary
     border-secondary: Secondary
@@ -50,6 +53,7 @@ borders_border_color:
 borders_border_radius:
   label: Border radius
   description: Add classes to an element to easily round its corners.
+  category: Borders
   options:
     rounded: Rounded
     rounded-top: Rounded Top
@@ -67,6 +71,7 @@ borders_border_radius:
 colors_background_color:
   label: Background color
   description: Similar to the contextual text color classes, easily set the background of an element to any contextual class.
+  category: Colors
   options:
     bg-primary: Primary
     bg-secondary: Secondary
@@ -75,7 +80,10 @@ colors_background_color:
     bg-warning: Warning
     bg-info: Info
     bg-light: Light
-    bg-dark: Dark
+    bg-dark:
+      label: Dark
+      previewed_with:
+        - text-light
     bg-white: White
     bg-transparent: Transparent
   previewed_with:
@@ -86,6 +94,7 @@ colors_background_color:
 colors_color:
   label: Color
   description: Convey meaning through color with a handful of color utility classes.
+  category: Colors
   options:
     text-primary: Primary
     text-secondary: Secondary
@@ -93,18 +102,28 @@ colors_color:
     text-danger: Danger
     text-warning: Warning
     text-info: Info
-    text-light: Light
+    text-light:
+      label: Light
+      previewed_with:
+        - bg-dark
     text-dark: Dark
     text-body: Body
     text-muted: Muted
-    text-white: White
+    text-white:
+      label: White
+      previewed_with:
+        - bg-dark
     text-black-50: Black 50
-    text-white-50: White 50
+    text-white-50:
+      label: White 50
+      previewed_with:
+        - bg-dark
 
 # https://getbootstrap.com/docs/4.6/utilities/text/#font-weight-and-italics
 text_font_weight:
   label: Font weight
   description: Quickly change the weight (boldness) of text.
+  category: Text
   options:
     font-weight-bold: Bold
     font-weight-normal: Normal
@@ -114,6 +133,7 @@ text_font_weight:
 text_font_italics:
   label: Font italics
   description: Quickly italicize text.
+  category: Text
   options:
     font-italic: Italic
 
@@ -135,6 +155,7 @@ shadows:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_margin:
   label: Margin
+  category: Spacing
   options:
     m-0: 0
     m-1: 1
@@ -151,6 +172,7 @@ spacing_margin:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_margin_top:
   label: Margin top
+  category: Spacing
   options:
     mt-0: 0
     mt-1: 1
@@ -167,6 +189,7 @@ spacing_margin_top:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_margin_bottom:
   label: Margin bottom
+  category: Spacing
   options:
     mb-0: 0
     mb-1: 1
@@ -183,6 +206,7 @@ spacing_margin_bottom:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_margin_left:
   label: Margin left
+  category: Spacing
   options:
     ml-0: 0
     ml-1: 1
@@ -199,6 +223,7 @@ spacing_margin_left:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_margin_right:
   label: Margin right
+  category: Spacing
   options:
     mr-0: 0
     mr-1: 1
@@ -215,6 +240,7 @@ spacing_margin_right:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_padding:
   label: Padding
+  category: Spacing
   options:
     p-0: 0
     p-1: 1
@@ -230,6 +256,7 @@ spacing_padding:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_padding_top:
   label: Padding top
+  category: Spacing
   options:
     pt-0: 0
     pt-1: 1
@@ -245,6 +272,7 @@ spacing_padding_top:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_padding_bottom:
   label: Padding bottom
+  category: Spacing
   options:
     pb-0: 0
     pb-1: 1
@@ -260,6 +288,7 @@ spacing_padding_bottom:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_padding_left:
   label: Padding left
+  category: Spacing
   options:
     pl-0: 0
     pl-1: 1
@@ -275,6 +304,7 @@ spacing_padding_left:
 # https://getbootstrap.com/docs/4.6/utilities/spacing/#notation
 spacing_padding_right:
   label: Padding right
+  category: Spacing
   options:
     pr-0: 0
     pr-1: 1
@@ -299,6 +329,7 @@ spacing_horizontal_centering:
 text_text_alignment:
   label: Text alignment
   description: Easily realign text to components with text alignment classes.
+  category: Text
   options:
     text-justify: Justify
     text-left: Left
@@ -313,6 +344,7 @@ text_text_alignment:
 text_text_transform:
   label: Text transform
   description: Transform text in components with text capitalization classes.
+  category: Text
   options:
     text-lowercase: Lowercase
     text-uppercase: Uppercase
