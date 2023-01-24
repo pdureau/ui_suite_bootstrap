@@ -9,20 +9,24 @@
 <div class="row">
 <div class="col-lg-2">
   <h2 class="hidden">{{ "Available patterns"|t }}</h2>
-
-  {# List of available patterns with anchor links. #}
-  <ul class="list-unstyled">
-    {% for pattern_name, pattern in patterns %}
-      <li>
-        <a href="#{{ pattern_name }}">{{ pattern.label }}</a>
-      </li>
-    {% endfor %}
-  </ul>
+  {% for group_name, group_patterns in patterns %}
+    {% if patterns|length > 1 %}
+      <h3>{{ group_name }}</h3>
+    {% endif %}
+    <ul class="list-unstyled">
+      {% for pattern_name, pattern in group_patterns %}
+        <li>
+          <a href="#{{ pattern_name }}">{{ pattern.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 
 </div>
 <div class="col-lg-10">
 
-  {% for pattern_name, pattern in patterns %}
+  {% for group_patterns in patterns %}
+    {% for pattern_name, pattern in group_patterns %}
 
     <div class="pattern-preview pattern-preview__{{ pattern.definition.id }}">
       {# Pattern name and description. #}
@@ -42,6 +46,7 @@
     </div>
 
     <hr class="my-5">
+    {% endfor %}
   {% endfor %}
 
 </div>

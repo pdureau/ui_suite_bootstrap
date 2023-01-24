@@ -10,31 +10,51 @@
 <div class="col-lg-2">
   <h2 class="hidden">{{ "Available styles"|t }}</h2>
 
-  {# List of available styles with anchor links. #}
+  {% for group_name, group_styles in styles %}
+    {% if styles|length > 1 %}
+      <h3>{{ group_name }}</h3>
+    {% endif %}
   <ul class="list-unstyled">
-    {% for style in styles %}
-      <li>
-        <a href="#{{ style.id }}">{{ style.label }}</a>
-      </li>
-    {% endfor %}
-  </ul>
-
+      {% for style in group_styles %}
+        <li>
+          <a href="#{{ style.id }}">{{ style.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% endfor %}
 </div>
 <div class="col-lg-10">
+  
+ {% for group_styles in styles %}
+    {% for style in group_styles %}
+      <h3 id="{{ style.id }}" class="display-3">{{ style.label }}</h3>
+      {% if style.description %}
+        <p>{{ style.description }}</p>
+      {% endif %}
+      {% for id, option in style.preview_options %}
+        {% set option_attributes = create_attribute()
+          .addClass(id)
+          .addClass(option.previewed_with) %}
+        {% set previewed_as = option.previewed_as %}
+        {% set label = option.label %}
 
-  {% for style in styles %}
-    <h3 id="{{ style.id }}" class="display-3">{{ style.label }}</h3>
-    {% if style.description %}
-    <p>{{ style.description }}</p>
-    {% endif %}
-    {% for id, label in style.options %}
-      {% set style_attributes = create_attribute().addClass(id).addClass(style.previewed_with) %}
-      <p{{ style_attributes }}>{{ label }} (<code>{{ id }}</code>)</p>
+        {% if previewed_as == 'aside' %}
+          <p>{{ label }} ({{ id }})</p>
+          <div{{ option_attributes }}>{{ 'Example'|t }}</div>
+        {% elseif previewed_as == 'hidden' %}
+          <p>{{ label }} ({{ id }})</p>
+        {% else %}
+          <p{{ option_attributes }}>{{ label }} ({{ id }})</p>
+        {% endif %}
+
+        {% if option.description is not empty %}
+          <p>{{ option.description }}</p>
+        {% endif %}
+      {% endfor %}
+      <hr>
     {% endfor %}
-    <hr>
   {% endfor %}
-{% endif %}
-
 </div>
 </diV>
 
+{% endif %}
