@@ -1,0 +1,26 @@
+{% set attributes = (delay > 0) ? attributes.setAttribute('data-delay', delay).setAttribute('data-autohide', 'true') : attributes %}
+{% set attributes = attributes.setAttribute('role', 'alert').setAttribute('aria-live', 'assertive') %}
+{% set attributes = (role == "status") ? attributes.setAttribute('role', 'status').setAttribute('aria-live', 'polite') : attributes  %}
+<div{{ attributes.addClass('toast show').setAttribute('aria-atomic', 'true') }}>
+  {% if image or title or meta or dismissible %}
+  <div class="toast-header">
+    {{ image }}
+    {% if title %}
+    <strong class="mr-auto">{{ title }}</strong>
+    {% endif %}
+    {% if meta %}
+    <small class="text-muted">{{ meta }}</small>
+    {% endif %}
+    {% if dismissible %}
+    <button type="button" class="ml-2 mb-1 close" data-dismiss="toast" aria-label="{{ "Close"|t() }}">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% if body %}
+  <div class="toast-body">
+    {{ body }}
+  </div>
+  {% endif %}
+</div>

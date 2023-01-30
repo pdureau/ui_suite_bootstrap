@@ -1,0 +1,57 @@
+toast:
+  label: Toast
+  description: Push notifications to your visitors with a toast, a lightweight and easily customizable alert message. https://getbootstrap.com/docs/4.6/components/toasts/
+  fields:
+    image:
+      type: render
+      label: Image
+      description: The alert heading. Optional.
+      preview:
+        - theme: image
+          uri: "assets/toast-image.svg"
+          attributes:
+            class:
+              - rounded
+              - mr-2
+    title:
+      type: text
+      label: Title
+      description: Bootstrap
+      preview: Well done!
+    meta:
+      type: text
+      label: Meta
+      description: The alert heading. Optional.
+      preview: ">11 mins ago"
+    body:
+      type: render
+      label: Body
+      description: The alert message.
+      preview: "Hello, world! This is a toast message."
+  settings:
+    dismissible:
+      type: boolean
+      label: Dismissible?
+      description: It’s possible to dismiss any alert inline
+      default_value: True
+      preview: True
+    delay:
+      type: "number"
+      label: "Delay (ms)"
+      description: "Delay hiding the toast (ms). If 0, the toast stays open until manually closed. Default: 0"
+      default_value: 0
+      preview: 1000
+    role:
+      type: select
+      label: Accessibility role
+      description: If it’s an important message like an error, use "Alert & Assertive", otherwise use "Status & Polite".
+      options:
+        alert: "Alert & assertive (Default)"
+        status: Status & polite
+      default_value: alert
+      preview: alert
+  libraries:
+    # Toasts are opt-in for performance reasons, so you must initialize them yourself.
+    - init:
+        js:
+          init.js: {}
