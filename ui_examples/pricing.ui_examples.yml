@@ -1,0 +1,233 @@
+id: pricing
+label: Pricing
+description: "Example pricing page built with Cards and featuring a custom header and footer."
+render:
+  - "#type": html_tag
+    "#tag": div
+    "#attached":
+      "library":
+        - ui_suite_bootstrap/pricing_example
+    "#attributes":
+      class:
+        - pricing-header
+        - px-3
+        - py-3
+        - pt-md-5
+        - pb-md-4
+        - mx-auto
+        - text-center
+    html_tag_content_1:
+      "#type": html_tag
+      "#tag": h1
+      "#value": Pricing
+      "#attributes":
+        class:
+          - display-4
+    html_tag_content_2:
+      "#type": html_tag
+      "#tag": p
+      "#value": >-
+        Quickly build an effective pricing table for your potential customers
+        with this Bootstrap example. It’s built with default Bootstrap
+        components and utilities with little customization.
+      "#attributes":
+        class:
+          - lead
+  - "#type": html_tag
+    "#tag": div
+    "#attributes":
+      class:
+        - container
+    html_tag_content_1:
+      "#type": pattern
+      "#id": card_layout
+      "#variant": deck
+      "#attributes":
+        class:
+          - mb-3
+          - text-center
+      "#fields":
+        cards:
+          - "#type": pattern
+            "#id": card
+            "#attributes":
+              class:
+                - mb-4
+                - shadow-sm
+            "#fields":
+              header:
+                "#type": html_tag
+                "#tag": h4
+                "#value": Free
+                "#attributes":
+                  class:
+                    - my-0
+                    - font-weight-normal
+              body:
+                - "#type": html_tag
+                  "#tag": h1
+                  "#attributes":
+                    class:
+                      - card-title
+                      - pricing-card-title
+                  html_tag_content_1:
+                    "#plain_text": "$0 "
+                  html_tag_content_2:
+                    "#type": html_tag
+                    "#tag": small
+                    "#attributes":
+                      class:
+                        - text-muted
+                    "#value": / mo
+                - "#type": html_tag
+                  "#tag": ul
+                  "#attributes":
+                    class:
+                      - list-unstyled
+                      - mt-3 mb-4
+                  html_tag_content_1:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": 10 users included
+                  html_tag_content_2:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": 2 GB of storage
+                  html_tag_content_3:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": Email support
+                  html_tag_content_4:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": Help center access
+                - "#type": pattern
+                  "#id": button
+                  "#variant": outline_primary__lg
+                  "#attributes":
+                    class:
+                      - btn-block
+                  "#fields":
+                    label: Sign up for free
+          - "#type": pattern
+            "#id": card
+            "#attributes":
+              class:
+                - mb-4
+                - shadow-sm
+            "#fields":
+              header:
+                "#type": html_tag
+                "#tag": h4
+                "#value": Pro
+                "#attributes":
+                  class:
+                    - my-0
+                    - font-weight-normal
+              body:
+                - "#type": html_tag
+                  "#tag": h1
+                  "#attributes":
+                    class:
+                      - card-title
+                      - pricing-card-title
+                  html_tag_content_1:
+                    "#plain_text": "$15 "
+                  html_tag_content_2:
+                    "#type": html_tag
+                    "#tag": small
+                    "#attributes":
+                      class:
+                        - text-muted
+                    "#value": / mo
+                - "#type": html_tag
+                  "#tag": ul
+                  "#attributes":
+                    class:
+                      - list-unstyled
+                      - mt-3 mb-4
+                  html_tag_content_1:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": 20 users included
+                  html_tag_content_2:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": 10 GB of storage
+                  html_tag_content_3:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": Priority Email support
+                  html_tag_content_4:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": Help center access
+                - "#type": pattern
+                  "#id": button
+                  "#variant": primary__lg
+                  "#attributes":
+                    class:
+                      - btn-block
+                  "#fields":
+                    label: Get started
+          - "#type": pattern
+            "#id": card
+            "#attributes":
+              class:
+                - mb-4
+                - shadow-sm
+            "#fields":
+              header:
+                "#type": html_tag
+                "#tag": h4
+                "#value": Enterprise
+                "#attributes":
+                  class:
+                    - my-0
+                    - font-weight-normal
+              body:
+                - "#type": html_tag
+                  "#tag": h1
+                  "#attributes":
+                    class:
+                      - card-title
+                      - pricing-card-title
+                  html_tag_content_1:
+                    "#plain_text": "$29 "
+                  html_tag_content_2:
+                    "#type": html_tag
+                    "#tag": small
+                    "#attributes":
+                      class:
+                        - text-muted
+                    "#value": / mo
+                - "#type": html_tag
+                  "#tag": ul
+                  "#attributes":
+                    class:
+                      - list-unstyled
+                      - mt-3 mb-4
+                  html_tag_content_1:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": 30 users included
+                  html_tag_content_2:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": 15 GB of storage
+                  html_tag_content_3:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": Phone and email support
+                  html_tag_content_4:
+                    "#type": html_tag
+                    "#tag": li
+                    "#value": Help center access
+                - "#type": pattern
+                  "#id": button
+                  "#variant": primary__lg
+                  "#attributes":
+                    class:
+                      - btn-block
+                  "#fields":
+                    label: Contact us
