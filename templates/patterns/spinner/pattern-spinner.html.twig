@@ -1,0 +1,18 @@
+{% if variant == '' or variant|lower == 'border' %}
+  {% set attributes = attributes.addClass('spinner-border') %}
+{% endif %}
+{% if variant|lower == 'border_sm' %}
+  {% set attributes = attributes.addClass('spinner-border').addClass('spinner-border-sm') %}
+{% endif %}
+{% if variant|lower == 'grow' %}
+  {% set attributes = attributes.addClass('spinner-grow') %}
+{% endif %}
+{% if variant|lower == 'grow_sm' %}
+  {% set attributes = attributes.addClass('spinner-grow').addClass('spinner-grow-sm') %}
+{% endif %}
+
+<div{{ attributes.setAttribute("role", "status") }}>
+  {% if label %}
+  <span class="sr-only">{{ label }}</span>
+  {% endif %}
+</div>

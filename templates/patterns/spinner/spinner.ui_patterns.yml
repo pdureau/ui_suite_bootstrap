@@ -1,0 +1,18 @@
+spinner:
+  label: Spinner
+  description: Indicate the loading state of a component or page with Bootstrap spinners, built entirely with HTML, CSS, and no JavaScript. https://getbootstrap.com/docs/4.6/components/spinners/
+  variants:
+    border:
+      label: Border (Default)
+    border_sm:
+      label: Border small
+    grow:
+      label: Grow
+    grow_sm:
+      label: Grow small
+  fields:
+    label:
+      type: text
+      label: Label
+      description: ...
+      preview: "Loading..."
