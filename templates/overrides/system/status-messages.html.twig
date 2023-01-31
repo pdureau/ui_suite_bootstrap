@@ -31,9 +31,14 @@
   {% set variant = (type == 'error') ? 'danger' : variant %}
 
   {% for message in messages %}
+    {#
+    Ensure each pattern have its own attributes to not interfere on other
+    messages by changing the main attributes object.
+    #}
+    {% set pattern_attributes = create_attribute(attributes.toArray()) %}
     {{ pattern('alert', {
       'variant': variant,
-      'attributes': attributes,
+      'attributes': pattern_attributes,
       'message': message,
       'dismissible': true
     }) }}
