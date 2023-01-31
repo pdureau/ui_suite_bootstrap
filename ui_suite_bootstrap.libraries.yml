@@ -1,3 +1,13 @@
+popper:
+  remote: https://popper.js.org/
+  license:
+    name: MIT
+    gpl-compatible: false
+  js:
+    https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js:
+      minified: true
+      type: external
+
 bootstrap:
   remote: http://getbootstrap.com/
   license:
@@ -14,6 +24,8 @@ bootstrap:
         type: external
   dependencies:
     - core/jquery
+    # Popper si used only by dropdown pattern, but must be declared here for proper loading order.
+    - ui_suite_bootstrap/popper
 
 carousel_example:
   css:

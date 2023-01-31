@@ -1,0 +1,46 @@
+dropdown:
+  label: "Dropdown"
+  description: "Dropdowns are toggleable, contextual overlays for displaying lists of links and more. They’re made interactive with the included Bootstrap dropdown JavaScript plugin. They’re toggled by clicking, not by hovering; this is an intentional design decision. https://getbootstrap.com/docs/4.6/components/dropdowns/"
+  settings:
+    split:
+      label: Split
+      type: boolean
+      description: "If false, the button action is disabled and trigger the dropdown. If true, the button is split: the first part triggers its action, the second part the dropdwon. Default: false"
+      default: false
+      preview: false
+    direction:
+      label: Direction
+      type: select
+      options:
+        "": "Down (Default)"
+        up: Up
+        right: Right
+        left: Left*
+      default: ""
+      preview: ""
+  fields:
+    button:
+      type: "render"
+      label: "Button"
+      description: "The dropdown renderable button. If it has an 'url' property, it splits: the first part triggers its action, the second part is the dropdown"
+      preview:
+        - type: pattern
+          id: button
+          variant: primary
+          label: "Dropdown button"
+          url: "/yo"
+    content:
+      type: "menu"
+      label: "Content"
+      description: "A Drupal menu structure. Must be flat. https://api.drupal.org/api/drupal/core!modules!system!templates!menu.html.twig/10.0.x"
+      preview:
+        - title: Action
+          url: "#"
+        - title: Another action
+          url: "#"
+        - title: Something else here
+          url: "#"
+  libraries:
+    - init:
+        js:
+          init.js: {}

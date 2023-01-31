@@ -1,0 +1,12 @@
+{% set attributes = direction ? attributes.addClass('drop' ~ direction) : attributes.addClass('dropdown') %}
+{% set attributes = split ? attributes.addClass('btn-group') : attributes %}
+<div{{ attributes }}>
+  {{ button }}
+   {% if content %}
+   <div class="dropdown-menu">
+      {% for item in content %}
+        <a class="dropdown-item" href="{{ item.url }}">{{ item.title }}</a>
+      {% endfor %}
+    </div>
+  {% endif %}
+</div>

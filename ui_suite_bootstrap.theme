@@ -7,6 +7,69 @@
 
 declare(strict_types = 1);
 
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Template\AttributeHelper;
+
+/**
+ * Add a value into the class attributes of a given element.
+ *
+ * Assumes element is an array.
+ * Inspired by: https://www.drupal.org/node/3334294
+ *
+ * @param array $element
+ *   An array.
+ * @param string[]|string ...$classes
+ *   The classes to add on element. Arguments can include string keys directly,
+ *   or arrays of string keys.
+ *
+ * @return array
+ *   The element with the given class(es) in attributes.
+ */
+function _ui_suite_bootstrap_add_class(array $element, ...$classes): array {
+  // Element can be a render array or a list of render arrays.
+  if (array_is_list($element)) {
+    foreach ($element as $index => $item) {
+      $element[$index] = _ui_suite_bootstrap_add_class($element[$index], $classes);
+    }
+    return $element;
+  }
+  $attributes = new Attribute($element['#attributes'] ?? []);
+  $attributes->addClass(...$classes);
+  $element['#attributes'] = $attributes->toArray();
+  return $element;
+}
+
+/**
+ * Set attribute on a given element.
+ *
+ * Assumes element is an array.
+ * Inspired by: https://www.drupal.org/node/3334294
+ *
+ * @param array $element
+ *   An array.
+ * @param string $name
+ *   The attribute name.
+ * @param mixed $value
+ *   (optional) The attribute value.
+ *
+ * @return array
+ *   The element with the given sanitized attribute's value.
+ */
+function _ui_suite_bootstrap_set_attribute(array $element, string $name, string $value): array {
+  // Element can be a render array or a list of render arrays.
+  if (array_is_list($element)) {
+    foreach ($element as $index => $item) {
+      $element[$index] = _ui_suite_bootstrap_set_attribute($element[$index], $name, $value);
+    }
+    return $element;
+  }
+  $element['#attributes'] = AttributeHelper::mergeCollections(
+    $element['#attributes'] ?? [],
+    new Attribute([$name => $value])
+  );
+  return $element;
+}
+
 /**
  * Add expected class to links.
  *
@@ -118,6 +181,37 @@ function ui_suite_bootstrap_preprocess_pattern_figure(array &$variables): void {
 function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): void {
   $variables['current'] = (int) (string) $variables['current'];
 }
+
+/*
+ * Implements hook_preprocess_HOOK() for 'pattern_drowpdown'.
+ *
+ * See also: https://getbootstrap.com/docs/4.6/components/dropdowns/.
+ */
+function ui_suite_bootstrap_preprocess_pattern_dropdown(array &$variables): void {
+  if (isset($variables['split']) && $variables['split']) {
+    if (array_is_list($variables['button'])) {
+      $variables['button'] = $variables['button'][0];
+    }
+    $split_button = $variables['button'];
+    unset($split_button['#label']);
+    unset($split_button['#url']);
+    $split_button = _ui_suite_bootstrap_set_attribute($split_button, 'data-toggle', 'dropdown');
+    $split_button = _ui_suite_bootstrap_set_attribute($split_button, 'data-toggle', 'dropdown-toggle-split');
+    $split_button = _ui_suite_bootstrap_set_attribute($split_button, 'aria-expanded', 'false');
+    $split_button = _ui_suite_bootstrap_add_class($split_button, 'dropdown-toggle');
+    $variables['button'] = [
+      $variables['button'],
+      $split_button,
+    ];
+    return;
+  }
+  if (array_key_exists('button', $variables) && is_array($variables['button'])) {
+    $variables['button'] = _ui_suite_bootstrap_set_attribute($variables['button'], 'data-toggle', 'dropdown');
+    $variables['button'] = _ui_suite_bootstrap_set_attribute($variables['button'], 'aria-expanded', 'false');
+    $variables['button'] = _ui_suite_bootstrap_add_class($variables['button'], 'dropdown-toggle');
+  }
+}
+
 
 /*
  * Implements hook_preprocess_HOOK() for 'image'.
