@@ -8,41 +8,6 @@
 declare(strict_types = 1);
 
 /**
- * Add theme base path to media.
- *
- * @param mixed $item
- *   The render element.
- *
- * @return array
- *   The modified item.
- */
-function _ui_suite_bootstrap_add_media_path($item): array {
-  /** @var array $item */
-  $base_path = \Drupal::service('extension.list.theme')->getPath('ui_suite_bootstrap');
-  if (is_array($item) && array_key_exists('#theme', $item)) {
-    if ($item['#theme'] === 'image') {
-      $uri = isset($item['#uri']) ? implode('/', [
-        '',
-        $base_path,
-        $item['#uri'],
-      ]) : '';
-      $item['#uri'] = $uri;
-    }
-  }
-  if (is_array($item) && array_key_exists('#type', $item)) {
-    if (($item['#type'] === 'html_tag') && ($item['#tag'] === 'img')) {
-      $uri = isset($item['#attributes']['src']) ? implode('/', [
-        '',
-        $base_path,
-        $item['#attributes']['src'],
-      ]) : '';
-      $item['#attributes']['src'] = $uri;
-    }
-  }
-  return $item;
-}
-
-/**
  * Add expected class to links.
  *
  * @param mixed $item
@@ -94,8 +59,7 @@ function _ui_suite_bootstrap_add_image_class(&$item, string $class): void {
  * Implements hook_preprocess_HOOK() for 'page'.
  */
 function ui_suite_bootstrap_preprocess_page(array &$variables): void {
-  // @todo It would be better to have a setting, like bootstrap_barrio do with
-  // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
+  // Will be replaced by UI Skins.
   $variables['container'] = 'container';
 }
 
@@ -112,9 +76,6 @@ function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
         $class = 'card-img';
       }
       _ui_suite_bootstrap_add_image_class($item, $class);
-      if ($variables['context']->getType() == 'preview') {
-        $item = _ui_suite_bootstrap_add_media_path($item);
-      }
     }
   }
   if (array_key_exists('links', $variables) && is_array($variables['links'])) {
@@ -130,12 +91,9 @@ function ui_suite_bootstrap_preprocess_pattern_card(array &$variables): void {
  * See also: https://getbootstrap.com/docs/4.6/components/carousel/.
  */
 function ui_suite_bootstrap_preprocess_pattern_carousel(array &$variables): void {
-  // Nicer preview with fixed width and local backgrounds.
+  // Nicer preview with fixed width.
   if ($variables['context']->getType() == 'preview') {
     $variables['attributes']['style'] = "width: 800px";
-    foreach ($variables['slides'] as $i => $slide) {
-      $variables['slides'][$i] = _ui_suite_bootstrap_add_media_path($slide);
-    }
   }
 }
 
@@ -148,9 +106,6 @@ function ui_suite_bootstrap_preprocess_pattern_figure(array &$variables): void {
   if (array_key_exists('image', $variables) && is_array($variables['image'])) {
     foreach ($variables['image'] as &$item) {
       _ui_suite_bootstrap_add_image_class($item, 'figure-img');
-      if ($variables['context']->getType() == 'preview') {
-        $item = _ui_suite_bootstrap_add_media_path($item);
-      }
     }
   }
 }
@@ -162,4 +117,17 @@ function ui_suite_bootstrap_preprocess_pattern_figure(array &$variables): void {
  */
 function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): void {
   $variables['current'] = (int) (string) $variables['current'];
+}
+
+/*
+ * Implements hook_preprocess_HOOK() for 'image'.
+ *
+ * Convert relative path to full path for card, carousel & figure previews.
+ */
+function ui_suite_bootstrap_preprocess_image(array &$variables): void {
+  $uri = $variables["uri"];
+  $is_absolute = isset(parse_url($uri)['host']) || \str_starts_with($uri, "/") || \str_starts_with($uri, "data:");
+  if (!$is_absolute) {
+    $variables["attributes"]["src"] = base_path() . $variables["directory"] . "/" . $uri;
+  }
 }

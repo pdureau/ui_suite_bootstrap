@@ -7,10 +7,8 @@ figure:
       label: "Image"
       description: "Figure image"
       preview:
-        - type: html_tag
-          tag: img
-          attributes:
-            src: assets/figure-image.png
+        - theme: "image"
+          uri: assets/figure-image.png
     caption:
       type: "render"
       label: "Caption"
