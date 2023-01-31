@@ -1,0 +1,107 @@
+{# Create unique attribute objects for each table group. #}
+{% set thead_attributes = create_attribute() %}
+{% set tbody_attributes = create_attribute() %}
+{% set tfoot_attributes = create_attribute() %}
+
+{% set attributes = attributes.addClass('table') %}
+{% if variant != '' and variant|lower != 'default' %}
+  {% set variants = variant|split('__') %}
+  {% for variant in variants %}
+    {% set attributes = attributes.addClass('table-' ~ variant|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% if stripes %}
+  {% for stripe in stripes %}
+    {% set attributes = attributes.addClass('table-' ~ stripe|lower|replace({'_': '-'})) %}
+  {% endfor %}
+{% endif %}
+
+{% if borders %}
+  {% set attributes = attributes.addClass('table-' ~ borders|lower|replace({'_': '-'})) %}
+{% endif %}
+
+{% if hover %}
+  {% set attributes = attributes.addClass('table-hover') %}
+{% endif %}
+
+{% if header_color %}
+  {% set thead_attributes = thead_attributes.addClass('table-' ~ header_color|lower|replace({'_': '-'})) %}
+{% endif %}
+{% if footer_color %}
+  {% set tfoot_attributes = tfoot_attributes.addClass('table-' ~ footer_color|lower|replace({'_': '-'})) %}
+{% endif %}
+
+{% set header_columns = header ? header|length : 0 %}
+
+{% if responsive %}
+  <div class="{{ 'table-' ~ responsive|lower|replace({'_': '-'}) }}">
+{% endif %}
+
+<table{{ attributes.addClass(table_classes) }}>
+  {% if caption %}
+    <caption>{{ caption }}</caption>
+  {% endif %}
+
+  {% for colgroup in colgroups %}
+    {% if colgroup.cols %}
+      <colgroup{{ colgroup.attributes }}>
+        {% for col in colgroup.cols %}
+          <col{{ col.attributes }} />
+        {% endfor %}
+      </colgroup>
+    {% else %}
+      <colgroup{{ colgroup.attributes }} />
+    {% endif %}
+  {% endfor %}
+
+  {% if header %}
+    <thead{{ thead_attributes }}>
+      <tr>
+        {% for cell in header %}
+          <{{ cell.tag|default('th') }}{{ cell.attributes }}>
+            {{- cell.content -}}
+          </{{ cell.tag|default('th') }}>
+        {% endfor %}
+      </tr>
+    </thead>
+  {% endif %}
+
+  {% if rows %}
+    <tbody{{ tbody_attributes }}>
+      {% for row in rows %}
+        <tr{{ row.attributes }}>
+          {% for cell in row.cells %}
+            <{{ cell.tag|default('td') }}{{ cell.attributes }}>
+              {{- cell.content -}}
+            </{{ cell.tag|default('td') }}>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  {% elseif empty %}
+    <tbody{{ tbody_attributes }}>
+      <tr>
+        <td colspan="{{ header_columns }}">{{ empty }}</td>
+      </tr>
+    </tbody>
+  {% endif %}
+
+  {% if footer %}
+    <tfoot{{ tfoot_attributes }}>
+      {% for row in footer %}
+        <tr{{ row.attributes }}>
+          {% for cell in row.cells %}
+            <{{ cell.tag|default('td') }}{{ cell.attributes }}>
+              {{- cell.content -}}
+            </{{ cell.tag|default('td') }}>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tfoot>
+  {% endif %}
+</table>
+
+{% if responsive %}
+</div>
+{% endif %}
