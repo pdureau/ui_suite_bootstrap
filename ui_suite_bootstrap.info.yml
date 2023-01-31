@@ -1,6 +1,6 @@
 name: "UI Suite Bootstrap"
 type: theme
-description: "A site-builder friendly Bootstrap theme, using the UI Suite: UI Patterns, UI Styles, Layout Options & UI Examples modules."
+description: "A site-builder friendly Bootstrap theme, using the UI Suite: UI Patterns, UI Styles, UI Skins, Layout Options & UI Examples modules."
 core_version_requirement: ^9 || ^10
 base theme: false
 dependencies:

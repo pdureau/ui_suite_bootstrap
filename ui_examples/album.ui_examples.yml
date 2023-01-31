@@ -1,8 +1,6 @@
 id: album
 label: Album
 description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/4.6/examples/album/"
-libraries:
-  - ui_suite_bootstrap/album_example
 render:
   - "#type": pattern
     "#id": jumbotron
