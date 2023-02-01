@@ -26,10 +26,12 @@ use Drupal\Core\Template\AttributeHelper;
  *   The element with the given class(es) in attributes.
  */
 function _ui_suite_bootstrap_add_class(array $element, ...$classes): array {
-  // Element can be a render array or a list of render arrays.
   if (array_is_list($element)) {
     foreach ($element as $index => $item) {
-      $element[$index] = _ui_suite_bootstrap_add_class($element[$index], $classes);
+      if (!\is_array($item)) {
+        continue;
+      }
+      $element[$index] = _ui_suite_bootstrap_add_class($item, ...$classes);
     }
     return $element;
   }
@@ -56,10 +58,12 @@ function _ui_suite_bootstrap_add_class(array $element, ...$classes): array {
  *   The element with the given sanitized attribute's value.
  */
 function _ui_suite_bootstrap_set_attribute(array $element, string $name, string $value): array {
-  // Element can be a render array or a list of render arrays.
   if (array_is_list($element)) {
     foreach ($element as $index => $item) {
-      $element[$index] = _ui_suite_bootstrap_set_attribute($element[$index], $name, $value);
+      if (!\is_array($item)) {
+        continue;
+      }
+      $element[$index] = _ui_suite_bootstrap_set_attribute($item, $name, $value);
     }
     return $element;
   }
@@ -119,7 +123,7 @@ function ui_suite_bootstrap_preprocess_pattern_figure(array &$variables): void {
   }
 }
 
-/*
+/**
  * Implements hook_preprocess_HOOK() for 'pattern_pagination'.
  *
  * See also: https://getbootstrap.com/docs/4.6/components/pagination/.
@@ -128,7 +132,7 @@ function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): vo
   $variables['current'] = (int) (string) $variables['current'];
 }
 
-/*
+/**
  * Implements hook_preprocess_HOOK() for 'pattern_drowpdown'.
  *
  * See also: https://getbootstrap.com/docs/4.6/components/dropdowns/.
@@ -158,8 +162,7 @@ function ui_suite_bootstrap_preprocess_pattern_dropdown(array &$variables): void
   }
 }
 
-
-/*
+/**
  * Implements hook_preprocess_HOOK() for 'image'.
  *
  * Convert relative path to full path for card, carousel & figure previews.

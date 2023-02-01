@@ -15,14 +15,14 @@ dropdown:
         "": "Down (Default)"
         up: Up
         right: Right
-        left: Left*
+        left: Left
       default: ""
       preview: ""
   fields:
     button:
       type: "render"
       label: "Button"
-      description: "The dropdown renderable button. If it has an 'url' property, it splits: the first part triggers its action, the second part is the dropdown"
+      description: "The dropdown renderable button."
       preview:
         - type: pattern
           id: button
