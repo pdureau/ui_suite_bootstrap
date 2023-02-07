@@ -8,8 +8,6 @@ use Drupal\Core\Template\AttributeValueBase;
 
 /**
  * Class to help modify attributes.
- *
- * @ingroup utility
  */
 class Attributes extends ArrayObject {
 

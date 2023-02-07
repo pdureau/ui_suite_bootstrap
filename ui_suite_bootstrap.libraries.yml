@@ -27,7 +27,8 @@ component_placeholder:
 drupal.dialog.off_canvas:
   css:
     component:
-      assets/css/form/off-canvas.form.css: { }
+      assets/css/form/off-canvas.button.css: {}
+      assets/css/form/off-canvas.form.css: {}
 
 drupal.progress:
   js:

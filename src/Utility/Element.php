@@ -209,6 +209,75 @@ class Element extends DrupalAttributes {
   }
 
   /**
+   * Adds a specific Bootstrap class to color a button based on its text value.
+   *
+   * @param bool $override
+   *   Flag determining whether or not to override any existing set class.
+   *
+   * @return static
+   *
+   * @SuppressWarnings(PHPMD.BooleanArgumentFlag)
+   */
+  public function colorize($override = TRUE) {
+    $button = $this->isButton();
+
+    // @todo Be able to use for other stuff than button.
+    $prefix = $button ? 'btn' : 'has';
+
+    // List of classes, based on the prefix.
+    $classes = [
+      "{$prefix}-primary",
+      "{$prefix}-secondary",
+      "{$prefix}-success",
+      "{$prefix}-danger",
+      "{$prefix}-warning",
+      "{$prefix}-info",
+      "{$prefix}-light",
+      "{$prefix}-dark",
+      "{$prefix}-link",
+      "{$prefix}-outline-primary",
+      "{$prefix}-outline-secondary",
+      "{$prefix}-outline-success",
+      "{$prefix}-outline-danger",
+      "{$prefix}-outline-warning",
+      "{$prefix}-outline-info",
+      "{$prefix}-outline-light",
+      "{$prefix}-outline-link",
+      // Default should be last.
+      "{$prefix}-outline-dark",
+    ];
+
+    // Set the class to "btn-outline-dark" if it shouldn't be colorized.
+    $class = FALSE;
+
+    // Search for an existing class.
+    if (!$class || !$override) {
+      foreach ($classes as $value) {
+        if ($this->hasClass($value)) {
+          $class = $value;
+          break;
+        }
+      }
+    }
+
+    // Find a class based on the value of "value", "title" or "button_type".
+    if (!$class) {
+      $value = $this->getProperty('value', $this->getProperty('title', ''));
+      $class = "{$prefix}-" . Bootstrap::cssClassFromString($value, $button ? $this->getProperty('button_type', 'outline-dark') : 'outline-dark');
+    }
+
+    // Remove any existing classes and add the specified class.
+    if ($class) {
+      $this->removeClass($classes)->addClass($class);
+      if ($button && $this->getProperty('split')) {
+        $this->removeClass($classes, $this::SPLIT_BUTTON)->addClass($class, $this::SPLIT_BUTTON);
+      }
+    }
+
+    return $this;
+  }
+
+  /**
    * Creates a new \Drupal\ui_suite_bootstrap\Utility\Element instance.
    *
    * @param array|string $element

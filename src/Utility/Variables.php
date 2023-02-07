@@ -6,8 +6,6 @@ namespace Drupal\ui_suite_bootstrap\Utility;
 
 /**
  * Class to help modify template variables.
- *
- * @ingroup utility
  */
 class Variables extends DrupalAttributes {
 

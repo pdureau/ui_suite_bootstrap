@@ -32,12 +32,15 @@ class PreprocessInput {
   /**
    * An element object provided in the variables array, may not be set.
    *
-   * @var \Drupal\bootstrap\Utility\Element|false
+   * @var \Drupal\ui_suite_bootstrap\Utility\Element|false
    */
   protected $element;
 
   /**
-   * {@inheritdoc}
+   * Prepare variables.
+   *
+   * @param array $variables
+   *   The hook preprocess variables.
    */
   public function preprocess(array &$variables): void {
     if (!isset($variables['element'])) {
@@ -46,21 +49,38 @@ class PreprocessInput {
 
     $this->variables = Variables::create($variables);
     $this->element = $this->variables->element;
+    if (!$this->element) {
+      return;
+    }
 
     // Form control.
     // @see https://getbootstrap.com/docs/5.2/forms/form-control
-    if ($this->element
-      && !$this->element->isButton()
+    if (!$this->element->isButton()
       && !$this->element->isType($this->ignoreFormControlTypes)
     ) {
       if (!$this->element->hasClass('form-control-plaintext')) {
-        $this->variables->addClass('form-control');
+        $this->element->addClass('form-control');
 
         if ($this->element->isType('color')) {
-          $this->variables->addClass('form-control-color');
+          $this->element->addClass('form-control-color');
         }
       }
     }
+
+    // Colorize button.
+    if ($this->element->isButton()) {
+      $this->element->colorize();
+      $this->variables->offsetSet('label', $this->element->getProperty('value'));
+    }
+
+    // Map the element properties.
+    $this->variables->map([
+      'attributes' => 'attributes',
+      'icon' => 'icon',
+      'field_prefix' => 'prefix',
+      'field_suffix' => 'suffix',
+      'type' => 'type',
+    ]);
   }
 
 }

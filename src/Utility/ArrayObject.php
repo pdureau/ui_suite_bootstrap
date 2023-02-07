@@ -13,8 +13,6 @@ use Drupal\Core\Render\BubbleableMetadata;
  * Custom ArrayObject implementation.
  *
  * The native ArrayObject is unnecessarily complicated.
- *
- * @ingroup utility
  */
 class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \Countable, AttachmentsInterface, RefinableCacheableDependencyInterface {
 
@@ -186,7 +184,7 @@ class ArrayObject implements \IteratorAggregate, \ArrayAccess, \Serializable, \C
    */
   public function exchangeArray($data) {
     if (!\is_array($data) && \is_object($data) && !($data instanceof ArrayObject)) {
-      throw new \InvalidArgumentException('Passed variable is not an array or an instance of \Drupal\bootstrap\Utility\ArrayObject.');
+      throw new \InvalidArgumentException('Passed variable is not an array or an instance of \Drupal\ui_suite_bootstrap\Utility\ArrayObject.');
     }
     if (\is_object($data) && $data instanceof ArrayObject) {
       $data = $data->getArrayCopy();

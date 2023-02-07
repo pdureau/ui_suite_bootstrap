@@ -21,7 +21,7 @@ class ThemeSuggestionsAlter {
   /**
    * An element object provided in the variables array, may not be set.
    *
-   * @var \Drupal\bootstrap\Utility\Element|false
+   * @var \Drupal\ui_suite_bootstrap\Utility\Element|false
    */
   protected $element;
 
