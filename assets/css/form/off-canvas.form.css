@@ -1,0 +1,16 @@
+/**
+ * Bootstrap 5 places form-text class on description but Drupal places this
+ * class on the input.
+ *
+ * @see core/misc/dialog/off-canvas.form.css
+ */
+
+/* Remove form-text input styles applied on description. */
+#drupal-off-canvas .description.form-text {
+  max-width: none;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  line-height: normal;
+}

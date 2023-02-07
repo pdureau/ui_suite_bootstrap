@@ -29,11 +29,7 @@
   {% endif %}
 
   {% block input %}
-    {#
-    Core puts a "form-text" class on input. In Bootstrap 5, this class is for
-    the description of the form element.
-    #}
-    <input{{ attributes.removeClass('form-text') }} />
+    <input{{ attributes }} />
   {% endblock %}
 
   {% if suffix %}

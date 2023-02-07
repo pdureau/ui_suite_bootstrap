@@ -8,18 +8,9 @@ bootstrap:
   css:
     theme:
       /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
+      assets/css/form/form-text.css: { }
   dependencies:
     - core/popperjs
-
-example_carousel:
-  css:
-    theme:
-      assets/css/example/carousel.css: {}
-
-component_placeholder:
-  css:
-    theme:
-      assets/css/component/placeholder.css: {}
 
 accessibility:
   js:
@@ -28,9 +19,29 @@ accessibility:
     - core/drupal
     - core/once
 
+component_placeholder:
+  css:
+    theme:
+      assets/css/component/placeholder.css: {}
+
+drupal.dialog.off_canvas:
+  css:
+    component:
+      assets/css/form/off-canvas.form.css: { }
+
 drupal.progress:
   js:
     assets/js/misc/progress.js: { minified: true }
   dependencies:
     - core/drupal
     - core/jquery
+
+example_carousel:
+  css:
+    theme:
+      assets/css/example/carousel.css: {}
+
+form:
+  css:
+    component:
+      assets/css/form/form-required.css: { }

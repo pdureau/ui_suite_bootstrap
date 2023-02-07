@@ -1,0 +1,13 @@
+/**
+ * Bootstrap 5 places form-text class on description but Drupal places this
+ * class on the input.
+ */
+
+/* Remove form-text styles applied on input. */
+input.form-text.form-control {
+  margin-top: 0;
+}
+input.form-text.form-control-plaintext {
+  margin-top: 0;
+  font-size: inherit;
+}

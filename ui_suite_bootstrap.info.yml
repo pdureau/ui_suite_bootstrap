@@ -24,9 +24,12 @@ regions:
 
 libraries:
   - ui_suite_bootstrap/bootstrap
-  - ui_suite_bootstrap/component_placeholder
   - ui_suite_bootstrap/accessibility
+  - ui_suite_bootstrap/component_placeholder
+  - ui_suite_bootstrap/form
 
 libraries-extend:
+  core/drupal.dialog.off_canvas:
+    - ui_suite_bootstrap/drupal.dialog.off_canvas
   core/drupal.progress:
     - ui_suite_bootstrap/drupal.progress
