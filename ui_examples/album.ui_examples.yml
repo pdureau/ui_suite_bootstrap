@@ -1,0 +1,109 @@
+id: "album"
+label: "Album"
+description: "Simple one-page template for photo galleries, portfolios, and more. https://getbootstrap.com/docs/5.2/examples/album/"
+render:
+  - "#type": "html_tag"
+    "#tag": "section"
+    "#attributes":
+      class:
+        - py-5
+        - text-center
+        - container
+    "0":
+      "#type": "html_tag"
+      "#tag": "div"
+      "#attributes":
+        class:
+          - row
+          - py-lg-5
+      "0":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-lg-6
+            - col-md-8
+            - mx-auto
+        "0":
+          "#type": "html_tag"
+          "#tag": "h1"
+          "#value": "Album example"
+          "#attributes":
+            class:
+              - fw-light
+        "1":
+          "#type": "html_tag"
+          "#tag": "p"
+          "#value": "Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely."
+          "#attributes":
+            class:
+              - lead
+              - text-muted
+        "2":
+          "#type": "html_tag"
+          "#tag": "p"
+          "0":
+            "#type": "html_tag"
+            "#tag": "a"
+            "#value": "Main call to action"
+            "#attributes":
+              href: "#"
+              class:
+                - btn
+                - btn-primary
+                - my-2
+          "1":
+            "#type": "html_tag"
+            "#tag": "a"
+            "#value": "Secondary action"
+            "#attributes":
+              href: "#"
+              class:
+                - btn
+                - btn-secondary
+                - my-2
+  - "0":
+      "#type": "pattern"
+      "#id": "grid_row"
+      "#fields":
+        content:
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+          - "#type": "pattern_preview"
+            "#id": "card"
+            "#variant": "default"
+      "#settings":
+        with_container: true
+        gutters: g-3
+        col_xs: col-12
+        col_sm: col-sm-6
+        col_md: col-md-4
+    "#type": "html_tag"
+    "#tag": "div"
+    "#attributes":
+      class:
+        - album
+        - py-5
+        - bg-light

@@ -1,0 +1,377 @@
+id: "carousel"
+label: "Carousel"
+description: "Customize the navbar and carousel, then add some new components. https://getbootstrap.com/docs/5.2/examples/carousel/"
+render:
+  - "#type": "pattern"
+    "#id": "carousel"
+    "#attached":
+      "library":
+        - ui_suite_bootstrap/example_carousel
+    "#settings":
+      with_indicators: true
+      with_controls: true
+    "#fields":
+      slides:
+        - "#type": "pattern"
+          "#id": "carousel_item"
+          "#fields":
+            image:
+              "#theme": "image"
+              "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
+              "#attributes":
+                "width": "100%"
+                "height": "100%"
+            caption:
+              - "#type": "html_tag"
+                "#tag": "h1"
+                "#value": "Example headline."
+                "#attributes":
+                  class:
+                    - text-start
+              - "#type": "html_tag"
+                "#tag": "p"
+                "#value": "Some representative placeholder content for the first slide of the carousel."
+                "#attributes":
+                  class:
+                    - text-start
+              - "#type": "html_tag"
+                "#tag": "p"
+                "#attributes":
+                  class:
+                    - text-start
+                "0":
+                  "#type": "pattern"
+                  "#id": "button"
+                  "#variant": "primary__lg"
+                  "#fields":
+                    label: "Sign up today"
+                  "#settings":
+                    url: "#anchor"
+        - "#type": "pattern"
+          "#id": "carousel_item"
+          "#fields":
+            image:
+              "#theme": "image"
+              "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
+              "#attributes":
+                "width": "100%"
+                "height": "100%"
+            caption:
+              - "#type": "html_tag"
+                "#tag": "h1"
+                "#value": "Another example headline."
+              - "#type": "html_tag"
+                "#tag": "p"
+                "#value": "Some representative placeholder content for the second slide of the carousel."
+              - "#type": "html_tag"
+                "#tag": "p"
+                "0":
+                  "#type": "pattern"
+                  "#id": "button"
+                  "#variant": "primary__lg"
+                  "#fields":
+                    label: "Learn more"
+                  "#settings":
+                    url: "https://example.com"
+        - "#type": "pattern"
+          "#id": "carousel_item"
+          "#fields":
+            image:
+              "#theme": "image"
+              "#uri": "data:image/svg+xml;base64,PHN2ZyBjbGFzcz0iYmQtcGxhY2Vob2xkZXItaW1nIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGFyaWEtaGlkZGVuPSJ0cnVlIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSI+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjwvc3ZnPgo="
+              "#attributes":
+                "width": "100%"
+                "height": "100%"
+            caption:
+              - "#type": "html_tag"
+                "#tag": "h1"
+                "#value": "One more for good measure."
+                "#attributes":
+                  class:
+                    - text-end
+              - "#type": "html_tag"
+                "#tag": "p"
+                "#value": "Some representative placeholder content for the third slide of this carousel."
+                "#attributes":
+                  class:
+                    - text-end
+              - "#type": "html_tag"
+                "#tag": "p"
+                "#attributes":
+                  class:
+                    - text-end
+                "0":
+                  "#type": "pattern"
+                  "#id": "button"
+                  "#variant": "primary__lg"
+                  "#fields":
+                    label: "Browse gallery"
+                  "#settings":
+                    url: "https://example.com"
+  - "#type": "pattern"
+    "#id": "grid_row"
+    "#attributes":
+      class:
+        - marketing
+    "#settings":
+      with_container: true
+      col_lg: col-lg-4
+    "#fields":
+      content:
+        - - "#theme": "image"
+            "#uri": "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            "#attributes":
+              class:
+                - rounded-circle
+              width: 140
+              height: 140
+          - "#type": "html_tag"
+            "#tag": "h2"
+            "#value": "Heading"
+            "#attributes":
+              class:
+                - fw-normal
+          - "#type": "html_tag"
+            "#tag": "p"
+            "#value": "Some representative placeholder content for the three columns of text below the carousel. This is the first column."
+          - "#type": html_tag
+            "#tag": "p"
+            "0":
+              "#type": "pattern"
+              "#id": "button"
+              "#variant": "secondary"
+              "#fields":
+                label: "View details »"
+              "#settings":
+                url: "https://example.com"
+        - - "#theme": "image"
+            "#uri": "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            "#attributes":
+              class:
+                - rounded-circle
+              width: 140
+              height: 140
+          - "#type": "html_tag"
+            "#tag": "h2"
+            "#value": "Heading"
+            "#attributes":
+              class:
+                - fw-normal
+          - "#type": "html_tag"
+            "#tag": "p"
+            "#value": "Another exciting bit of representative placeholder content. This time, we've moved on to the second column."
+          - "#type": html_tag
+            "#tag": "p"
+            "0":
+              "#type": "pattern"
+              "#id": "button"
+              "#variant": "secondary"
+              "#fields":
+                label: "View details »"
+              "#settings":
+                url: "https://example.com"
+        - - "#theme": "image"
+            "#uri": "data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw=="
+            "#attributes":
+              class:
+                - rounded-circle
+              width: 140
+              height: 140
+          - "#type": "html_tag"
+            "#tag": "h2"
+            "#value": "Heading"
+            "#attributes":
+              class:
+                - fw-normal
+          - "#type": "html_tag"
+            "#tag": "p"
+            "#value": "And lastly this, the third column of representative placeholder content."
+          - "#type": html_tag
+            "#tag": "p"
+            "0":
+              "#type": "pattern"
+              "#id": "button"
+              "#variant": "secondary"
+              "#fields":
+                label: "View details »"
+              "#settings":
+                url: "https://example.com"
+  - "#type": "html_tag"
+    "#tag": "div"
+    "#attributes":
+      class:
+        - container
+        - marketing
+    "0":
+      "#type": "html_tag"
+      "#tag": "hr"
+      "#attributes":
+        class:
+          - featurette-divider
+    "1":
+      "#type": "html_tag"
+      "#tag": "div"
+      "#attributes":
+        class:
+          - row
+          - featurette
+      "0":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-md-7
+        "0":
+          "#type": "html_tag"
+          "#tag": "h2"
+          "#attributes":
+            class:
+              - featurette-heading
+              - fw-normal
+              - lh-1
+          "0":
+            "#plain_text": "First featurette heading. "
+          "1":
+            "#type": "html_tag"
+            "#tag": "span"
+            "#value": "It’ll blow your mind."
+            "#attributes":
+              class:
+                - text-muted
+        "1":
+          "#type": "html_tag"
+          "#tag": "p"
+          "#value": "Some great placeholder content for the first featurette here. Imagine some exciting prose here."
+          "#attributes":
+            class:
+              - lead
+      "1":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-md-5
+        "0":
+          "#theme": image
+          "#uri": "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+          "#attributes":
+            class:
+              - featurette-image
+              - img-fluid
+              - mx-auto
+    "2":
+      "#type": "html_tag"
+      "#tag": "hr"
+      "#attributes":
+        class:
+          - featurette-divider
+    "3":
+      "#type": "html_tag"
+      "#tag": "div"
+      "#attributes":
+        class:
+          - row
+          - featurette
+      "0":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-md-7
+            - order-md-2
+        "0":
+          "#type": "html_tag"
+          "#tag": "h2"
+          "#attributes":
+            class:
+              - featurette-heading
+              - fw-normal
+              - lh-1
+          "0":
+            "#plain_text": "Oh yeah, it’s that good. "
+          "1":
+            "#type": "html_tag"
+            "#tag": "span"
+            "#value": "See for yourself."
+            "#attributes":
+              class:
+                - text-muted
+        "1":
+          "#type": "html_tag"
+          "#tag": "p"
+          "#value": "Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place."
+          "#attributes":
+            class:
+              - lead
+      "1":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-md-5
+            - order-md-1
+        "0":
+          "#theme": image
+          "#uri": "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+          "#attributes":
+            class:
+              - featurette-image
+              - img-fluid
+              - mx-auto
+    "4":
+      "#type": "html_tag"
+      "#tag": "hr"
+      "#attributes":
+        class:
+          - featurette-divider
+    "5":
+      "#type": "html_tag"
+      "#tag": "div"
+      "#attributes":
+        class:
+          - row
+          - featurette
+      "0":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-md-7
+        "0":
+          "#type": "html_tag"
+          "#tag": "h2"
+          "#attributes":
+            class:
+              - featurette-heading
+              - fw-normal
+              - lh-1
+          "0":
+            "#plain_text": "And lastly, this one. "
+          "1":
+            "#type": "html_tag"
+            "#tag": "span"
+            "#value": "Checkmate."
+            "#attributes":
+              class:
+                - text-muted
+        "1":
+          "#type": "html_tag"
+          "#tag": "p"
+          "#value": "And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content."
+          "#attributes":
+            class:
+              - lead
+      "1":
+        "#type": "html_tag"
+        "#tag": "div"
+        "#attributes":
+          class:
+            - col-md-5
+        "0":
+          "#theme": image
+          "#uri": "data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%22500%22%20height%3D%22500%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20500%22%20preserveAspectRatio%3D%22none%22%3E%3Cdefs%3E%3Cstyle%20type%3D%22text%2Fcss%22%3E%23holder_16d9b9aa225%20text%20%7B%20fill%3A%23AAAAAA%3Bfont-weight%3Abold%3Bfont-family%3AArial%2C%20Helvetica%2C%20Open%20Sans%2C%20sans-serif%2C%20monospace%3Bfont-size%3A25pt%20%7D%20%3C%2Fstyle%3E%3C%2Fdefs%3E%3Cg%20id%3D%22holder_16d9b9aa225%22%3E%3Crect%20width%3D%22500%22%20height%3D%22500%22%20fill%3D%22%23EEEEEE%22%3E%3C%2Frect%3E%3Cg%3E%3Ctext%20x%3D%22185.25%22%20y%3D%22261.4%22%3E500x500%3C%2Ftext%3E%3C%2Fg%3E%3C%2Fg%3E%3C%2Fsvg%3E"
+          "#attributes":
+            class:
+              - featurette-image
+              - img-fluid
+              - mx-auto

@@ -26,6 +26,10 @@ body {
   height: 32rem;
 }
 
+.carousel-item .img-fluid {
+  height: 100%;
+}
+
 /* MARKETING CONTENT
 -------------------------------------------------- */
 
