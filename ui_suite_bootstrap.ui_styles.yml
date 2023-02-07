@@ -701,6 +701,7 @@ sizing_width:
     mw-100: "Max-width 100%"
     vw-100: "Width 100% of viewport"
     min-vw-100: "Min-width 100% of viewport"
+  previewed_as: "hidden"
 
 sizing_height:
   category: "Sizing"
