@@ -58,15 +58,15 @@
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
     is_form_group ? 'form-group',
-    is_radio ? 'radio',
-    is_checkbox ? 'checkbox',
+    (is_radio or is_checkbox) ? 'form-check',
     is_autocomplete ? 'form-autocomplete',
-    has_error ? 'error has-error'
-  ]
+    has_error ? 'error has-error',
+    floating_label ? 'form-floating'
+]
 %}{%
   set description_classes = [
     'description',
-    'alert-info',
+    'form-text',
     description_display == 'invisible' ? 'visually-hidden',
   ]
 %}

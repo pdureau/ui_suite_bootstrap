@@ -9,6 +9,7 @@ declare(strict_types = 1);
 
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\ui_suite_bootstrap\HookHandler\FormSearchBlockFormAlter;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessInput;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordion;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordionItem;
@@ -161,4 +162,14 @@ function ui_suite_bootstrap_theme_suggestions_input_alter(array &$suggestions, a
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(ThemeSuggestionsAlter::class);
   $instance->input($suggestions, $variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'input'.
+ */
+function ui_suite_bootstrap_preprocess_input(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessInput $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessInput::class);
+  $instance->preprocess($variables);
 }
