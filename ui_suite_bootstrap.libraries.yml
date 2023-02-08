@@ -4,13 +4,11 @@ bootstrap:
     name: MIT
     gpl-compatible: false
   js:
-    /libraries/bootstrap/dist/js/bootstrap.min.js: { minified: true }
+    /libraries/bootstrap/dist/js/bootstrap.bundle.min.js: { minified: true }
   css:
     theme:
       /libraries/bootstrap/dist/css/bootstrap.min.css: { minified: true }
       assets/css/form/form-text.css: { }
-  dependencies:
-    - core/popperjs
 
 accessibility:
   js:
