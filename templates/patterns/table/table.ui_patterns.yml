@@ -121,12 +121,6 @@ table:
       preview: "responsive"
       allow_expose: true
       allow_token: true
-    caption:
-      type: "textfield"
-      label: "Caption"
-      description: "A caption functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it. By default it is displayed at the bottom of the table."
-      preview: "Example table (caption)"
-      allow_token: true
     caption_top:
       type: "boolean"
       label: "Caption top"
@@ -378,3 +372,8 @@ table:
       type: "Render"
       label: "Empty"
       description: "Render element used when there is no rows."
+    caption:
+      type: "text"
+      label: "Caption"
+      description: "A caption functions like a heading for a table. It helps users with screen readers to find a table and understand what it's about and decide if they want to read it. By default it is displayed at the bottom of the table."
+      preview: "Example table (caption)"
