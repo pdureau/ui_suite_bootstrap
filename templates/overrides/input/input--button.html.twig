@@ -1,4 +1,3 @@
-{% extends "input.html.twig" %}
 {#
 /**
  * @file
@@ -22,15 +21,16 @@
  * @see template_preprocess_input()
  */
 #}
-{% spaceless %}
-  {%
-    set classes = [
+{% extends "input.html.twig" %}
+{% block input %}
+  {% apply spaceless %}
+    {%
+      set classes = [
       'btn',
       type == 'submit' ? 'js-form-submit',
       icon and icon_position and not icon_only ? 'icon-' ~ icon_position,
     ]
-  %}
-  {% block input %}
+    %}
     {% if icon and icon_only %}
       <button{{ attributes.addClass(classes, 'icon-only') }}>
         <span class="visually-hidden">{{ label }}</span>
@@ -44,5 +44,5 @@
       {% endif %}
     {% endif %}
     {{ children }}
-  {% endblock %}
-{% endspaceless %}
+  {% endapply %}
+{% endblock %}

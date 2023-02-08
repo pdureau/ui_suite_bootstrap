@@ -22,7 +22,7 @@
  */
 #}
 {% extends "input--button.html.twig" %}
-{% spaceless %}
+{% apply spaceless %}
   {%
     set classes = [
       'btn',
@@ -55,4 +55,4 @@
     </button>
     {{ children }}
   {% endblock %}
-{% endspaceless %}
+{% endapply %}
