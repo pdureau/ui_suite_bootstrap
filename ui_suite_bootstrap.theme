@@ -8,6 +8,8 @@
 declare(strict_types = 1);
 
 use Drupal\Core\Form\FormStateInterface;
+use Drupal\Core\Template\Attribute;
+use Drupal\Core\Template\AttributeHelper;
 use Drupal\ui_suite_bootstrap\HookHandler\FormSearchBlockFormAlter;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessInput;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
@@ -172,4 +174,86 @@ function ui_suite_bootstrap_preprocess_input(array &$variables): void {
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessInput::class);
   $instance->preprocess($variables);
+}
+
+/**
+ * Add a value into the class attributes of a given element.
+ *
+ * Assumes element is an array.
+ * Inspired by: https://www.drupal.org/node/3334294
+ *
+ * @param array $element
+ *   An array.
+ * @param string[]|string ...$classes
+ *   The classes to add on element. Arguments can include string keys directly,
+ *   or arrays of string keys.
+ *
+ * @return array
+ *   The element with the given class(es) in attributes.
+ */
+function _ui_suite_bootstrap_add_class(array $element, ...$classes): array {
+  if (_ui_suite_bootstrap_is_numeric_array($element)) {
+    foreach ($element as $index => $item) {
+      if (!\is_array($item)) {
+        continue;
+      }
+      $element[$index] = _ui_suite_bootstrap_add_class($item, ...$classes);
+    }
+    return $element;
+  }
+  $attributes = new Attribute($element['#attributes'] ?? []);
+  $attributes->addClass(...$classes);
+  $element['#attributes'] = $attributes->toArray();
+  return $element;
+}
+
+/**
+ * Set attribute on a given element.
+ *
+ * Assumes element is an array.
+ * Inspired by: https://www.drupal.org/node/3334294
+ *
+ * @param array $element
+ *   An array.
+ * @param string $name
+ *   The attribute name.
+ * @param mixed $value
+ *   (optional) The attribute value.
+ *
+ * @return array
+ *   The element with the given sanitized attribute's value.
+ */
+function _ui_suite_bootstrap_set_attribute(array $element, string $name, mixed $value): array {
+  if (_ui_suite_bootstrap_is_numeric_array($element)) {
+    foreach ($element as $index => $item) {
+      if (!\is_array($item)) {
+        continue;
+      }
+      $element[$index] = _ui_suite_bootstrap_set_attribute($item, $name, $value);
+    }
+    return $element;
+  }
+  $element['#attributes'] = AttributeHelper::mergeCollections(
+    $element['#attributes'] ?? [],
+    new Attribute([$name => $value])
+  );
+  return $element;
+}
+
+/**
+ * Check if an array is numeric.
+ *
+ * @param array $array
+ *   The array to check.
+ *
+ * @return bool
+ *   TRUE if the array is numeric. FALSE in case of associative array.
+ */
+function _ui_suite_bootstrap_is_numeric_array(array $array): bool {
+  foreach (array_keys($array) as $a) {
+    if (!is_int($a)) {
+      return FALSE;
+    }
+  }
+  return TRUE;
 }

@@ -13,45 +13,48 @@
 {% set attributes = placement != 'default' ? attributes.addClass(placement) : attributes %}
 
 <nav{{ attributes }}>
-  {% if navigation_collapsible and toggler_position == 'start' %}
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="{{ toggle_action }}"
-            data-bs-target="#{{ navbar_id }}"
-            aria-controls="{{ navbar_id }}"
-            aria-expanded="false"
-            aria-label="{{ 'Toggle navigation'|t }}">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  {% endif %}
-  {{ navigation }}
-  {% if navigation_collapsible and toggler_position == 'end' %}
-    <button class="navbar-toggler"
-            type="button"
-            data-bs-toggle="{{ toggle_action }}"
-            data-bs-target="#{{ navbar_id }}"
-            aria-controls="{{ navbar_id }}"
-            aria-expanded="false"
-            aria-label="{{ 'Toggle navigation'|t }}">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-  {% endif %}
+  <div class="container-fluid">
+    {% if navigation_collapsible and toggler_position == 'start' %}
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="{{ toggle_action }}"
+              data-bs-target="#{{ navbar_id }}"
+              aria-controls="{{ navbar_id }}"
+              aria-expanded="false"
+              aria-label="{{ 'Toggle navigation'|t }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    {% endif %}
+    {{ brand }}
+    {{ navigation }}
+    {% if navigation_collapsible and toggler_position == 'end' %}
+      <button class="navbar-toggler"
+              type="button"
+              data-bs-toggle="{{ toggle_action }}"
+              data-bs-target="#{{ navbar_id }}"
+              aria-controls="{{ navbar_id }}"
+              aria-expanded="false"
+              aria-label="{{ 'Toggle navigation'|t }}">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    {% endif %}
 
-  {% if navigation_collapsible %}
-    {% if toggle_action == 'offcanvas' %}
-      <div class="offcanvas offcanvas-{{ offcanvas_position }}" tabindex="-1" id="{{ navbar_id }}" aria-labelledby="{{ navbar_id }}-label">
-        <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="{{ navbar_id }}-label">{{ offcanvas_label|default('Navigation'|t) }}</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="{{ 'Close'|t }}"></button>
+    {% if navigation_collapsible %}
+      {% if toggle_action == 'offcanvas' %}
+        <div class="offcanvas offcanvas-{{ offcanvas_position }}" tabindex="-1" id="{{ navbar_id }}" aria-labelledby="{{ navbar_id }}-label">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="{{ navbar_id }}-label">{{ offcanvas_label|default('Navigation'|t) }}</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="{{ 'Close'|t }}"></button>
+          </div>
+          <div class="offcanvas-body">
+            {{ navigation_collapsible }}
+          </div>
         </div>
-        <div class="offcanvas-body">
+      {% else %}
+        <div class="collapse navbar-collapse" id="{{ navbar_id }}">
           {{ navigation_collapsible }}
         </div>
-      </div>
-    {% else %}
-      <div class="collapse navbar-collapse" id="{{ navbar_id }}">
-        {{ navigation_collapsible }}
-      </div>
+      {% endif %}
     {% endif %}
-  {% endif %}
+  </div>
 </nav>

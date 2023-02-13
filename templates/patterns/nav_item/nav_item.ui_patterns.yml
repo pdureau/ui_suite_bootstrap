@@ -19,5 +19,5 @@ nav_item:
       preview:
         type: 'link'
         title: 'Link'
-        # It should be an URL object, preprocessed for the preview.
+        # It should be a URL object, preprocessed for the preview.
         url: 'https://example.com'

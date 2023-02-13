@@ -16,8 +16,7 @@ class PreprocessPage {
    *   The preprocessed variables.
    */
   public function preprocess(array &$variables): void {
-    // @todo It would be better to have a setting, like bootstrap_barrio do with
-    // bootstrap_barrio_fluid_container ('container-fluid' : 'container')
+    // @todo Will be moved to a future UI Skins feature.
     $variables['container'] = 'container';
   }
 

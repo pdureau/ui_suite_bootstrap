@@ -34,6 +34,10 @@ class PreprocessPatternNavbar {
   public function preprocess(array &$variables): void {
     $variables['navbar_id'] = Html::getUniqueId('bootstrap-navbar');
 
+    if (\array_key_exists('brand', $variables) && \is_array($variables['brand'])) {
+      $variables['brand'] = \_ui_suite_bootstrap_add_class($variables['brand'], 'navbar-brand');
+    }
+
     if (\substr($variables['variant'], 0, self::DARK_LENGTH) === 'dark') {
       foreach (self::REGIONS_FIELDS as $region) {
         if (isset($variables[$region])) {

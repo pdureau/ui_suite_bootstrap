@@ -11,6 +11,7 @@ navbar_nav:
     dark:
       type: "boolean"
       label: "Dark"
+      description: "Activate dropdown dark menu."
       preview: false
       allow_expose: true
       allow_token: true
