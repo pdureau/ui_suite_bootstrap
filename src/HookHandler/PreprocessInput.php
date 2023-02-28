@@ -67,6 +67,15 @@ class PreprocessInput {
       }
     }
 
+    // Checks and radios.
+    if ($this->element->isType('checkbox') || $this->element->isType('radio')) {
+      $this->element->addClass('form-check-input');
+    }
+    // Switch checkbox.
+    if ($this->element->hasProperty('is_switch') && $this->element->getProperty('is_switch')) {
+      $this->element->setAttribute('role', 'switch');
+    }
+
     // Colorize button.
     if ($this->element->isButton()) {
       $this->element->colorize();

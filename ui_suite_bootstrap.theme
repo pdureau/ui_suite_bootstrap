@@ -10,7 +10,9 @@ declare(strict_types = 1);
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Template\Attribute;
 use Drupal\Core\Template\AttributeHelper;
+use Drupal\ui_suite_bootstrap\HookHandler\ElementInfoAlter;
 use Drupal\ui_suite_bootstrap\HookHandler\FormSearchBlockFormAlter;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessFormElement;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessInput;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPage;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternAccordion;
@@ -25,6 +27,16 @@ use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbarNav;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavItem;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination;
 use Drupal\ui_suite_bootstrap\HookHandler\ThemeSuggestionsAlter;
+
+/**
+ * Implements hook_element_info_alter().
+ */
+function ui_suite_bootstrap_element_info_alter(array &$info): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\ElementInfoAlter $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(ElementInfoAlter::class);
+  $instance->alter($info);
+}
 
 /**
  * Implements hook_form_FORM_ID_alter() for 'search_block_form'.
@@ -164,6 +176,16 @@ function ui_suite_bootstrap_theme_suggestions_input_alter(array &$suggestions, a
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(ThemeSuggestionsAlter::class);
   $instance->input($suggestions, $variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'form_element'.
+ */
+function ui_suite_bootstrap_preprocess_form_element(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessFormElement $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessFormElement::class);
+  $instance->preprocess($variables);
 }
 
 /**
