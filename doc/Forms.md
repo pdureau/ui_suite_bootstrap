@@ -1,5 +1,91 @@
 # Forms
 
+## Form controls
+
+https://getbootstrap.com/docs/5.2/forms/form-control.
+
+### Sizing
+
+https://getbootstrap.com/docs/5.2/forms/form-control/#sizing:
+
+```php
+$form['example_lg'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Example'),
+  '#attributes' => [
+    'class' => [
+      'form-control-lg',
+    ],
+  ],
+];
+
+$form['example_sm'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Example'),
+  '#attributes' => [
+    'class' => [
+      'form-control-sm',
+    ],
+  ],
+];
+```
+
+### Readonly plain text
+
+https://getbootstrap.com/docs/5.2/forms/form-control/#readonly-plain-text:
+
+```php
+$form['example_readonly_plain_text'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Example'),
+  '#attributes' => [
+    'class' => [
+      'form-control-plaintext',
+    ],
+    'readonly' => TRUE,
+  ],
+  '#value' => 'Example',
+];
+```
+
+## Select
+
+https://getbootstrap.com/docs/5.2/forms/select.
+
+### Sizing
+
+https://getbootstrap.com/docs/5.2/forms/select/#sizing:
+
+```php
+$form['example_select_lg'] = [
+  '#type' => 'select',
+  '#title' => $this->t('Example'),
+  '#options' => [
+    'option_1' => $this->t('Option 1'),
+    'option_2' => $this->t('Option 2'),
+  ],
+  '#attributes' => [
+    'class' => [
+      'form-select-lg',
+    ],
+  ],
+];
+
+$form['example_select_sm'] = [
+  '#type' => 'select',
+  '#title' => $this->t('Example'),
+  '#options' => [
+    'option_1' => $this->t('Option 1'),
+    'option_2' => $this->t('Option 2'),
+  ],
+  '#attributes' => [
+    'class' => [
+      'form-select-sm',
+    ],
+  ],
+];
+```
+
 ## Checkboxes and radios
 
 https://getbootstrap.com/docs/5.2/forms/checks-radios.
