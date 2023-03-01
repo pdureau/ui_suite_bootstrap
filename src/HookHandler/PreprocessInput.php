@@ -20,6 +20,7 @@ class PreprocessInput {
     'checkbox',
     'hidden',
     'radio',
+    'range',
   ];
 
   /**
@@ -74,6 +75,11 @@ class PreprocessInput {
     // Switch checkbox.
     if ($this->element->hasProperty('is_switch') && $this->element->getProperty('is_switch')) {
       $this->element->setAttribute('role', 'switch');
+    }
+
+    // Range.
+    if ($this->element->isType('range')) {
+      $this->element->addClass('form-range');
     }
 
     // Colorize button.
