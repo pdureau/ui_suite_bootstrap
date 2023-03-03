@@ -149,6 +149,7 @@ function ui_suite_bootstrap_preprocess_pattern_dropdown(array &$variables): void
     $split_button = _ui_suite_bootstrap_set_attribute($split_button, 'data-toggle', 'dropdown-toggle-split');
     $split_button = _ui_suite_bootstrap_set_attribute($split_button, 'aria-expanded', 'false');
     $split_button = _ui_suite_bootstrap_add_class($split_button, 'dropdown-toggle');
+    $split_button = _ui_suite_bootstrap_add_class($split_button, 'dropdown-toggle-split');
     $variables['button'] = [
       $variables['button'],
       $split_button,
