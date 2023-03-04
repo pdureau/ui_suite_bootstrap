@@ -2,7 +2,17 @@
   {% if image and image_position != 'bottom' %}
     {{ image }}
   {% endif %}
-  {{ include('@ui_suite_bootstrap/patterns/card/_card-content.html.twig') }}
+  {% if header %}
+  <div class="card-header">
+    {{ header }}
+  </div>
+  {% endif %}
+  {{ content }}
+  {% if footer %}
+  <div class="card-footer">
+    {{ footer }}
+  </div>
+  {% endif %}
   {% if image and image_position == 'bottom' %}
     {{ image }}
   {% endif %}
