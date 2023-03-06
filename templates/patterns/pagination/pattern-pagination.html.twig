@@ -2,20 +2,18 @@
   {% set attributes = attributes.addClass('pagination-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
-{% import _self as pagination %}
-
 {% if items %}
 <nav aria-label="{{ 'Pagination'|t }}">
   <ul{{ attributes.addClass('pagination') }}>
 
     {# Print first item if we are not on the first page. #}
     {% if items.first %}
-      {{ pagination.item(items.first.text|default('« First'|t), items.first.href, items.first.attributes, 'First'|t) }}
+      {{ _self.item(items.first.text|default('« First'|t), items.first.href, items.first.attributes, 'First'|t) }}
     {% endif %}
 
     {# Print previous item if we are not on the first page. #}
     {% if items.previous %}
-      {{ pagination.item(items.previous.text|default('‹ Previous'|t), items.previous.href, items.previous.attributes, 'Previous'|t) }}
+      {{ _self.item(items.previous.text|default('‹ Previous'|t), items.previous.href, items.previous.attributes, 'Previous'|t) }}
     {% endif %}
 
     {# Current pages for other pagers. #}
@@ -28,18 +26,18 @@
           {{- key -}}
       </span></li>
       {% else %}
-       {{ pagination.item(key, item.href, items.attributes) }}
+       {{ _self.item(key, item.href, items.attributes) }}
       {% endif %}
     {% endfor %}
 
     {# Print next item if we are not on the last page. #}
     {% if items.next %}
-      {{ pagination.item(items.next.text|default('Next ›'|t), items.next.href, items.next.attributes, 'Next'|t) }}
+      {{ _self.item(items.next.text|default('Next ›'|t), items.next.href, items.next.attributes, 'Next'|t) }}
     {% endif %}
 
     {# Print last item if we are not on the last page. #}
     {% if items.last %}
-      {{ pagination.item(items.last.text|default('Last »'|t), items.last.href, items.last.attributes, 'Last'|t) }}
+      {{ _self.item(items.last.text|default('Last »'|t), items.last.href, items.last.attributes, 'Last'|t) }}
     {% endif %}
 
   </ul>

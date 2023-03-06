@@ -8,39 +8,30 @@
 
 {% set dark = dark|default(false) %}
 
-{% macro menu_links(items, attributes, menu_level, dark) %}
-  {% import _self as menus %}
-  {% if items %}
-    {% if menu_level == 0 %}
-      <ul{{ attributes }}>
+{% if items %}
+  <ul{{ attributes }}>
+  {% for item in items %}
+    {% if item.below %}
+      {{ pattern('dropdown', {
+        'title': item.title,
+        'content': item.below,
+        'button_type': 'a',
+        'button_color': 'primary',
+        'button_size': 'default',
+        'button_split': false,
+        'dark': dark,
+        'auto_close': 'true',
+        'dropdown_tag': 'li',
+        'dropdown_navbar': true,
+        'attributes': create_attribute({
+          'class': ['nav-item']
+        })
+      }, 'dropdown') }}
     {% else %}
-      <ul>
+      <li{{ item.attributes.addClass('nav-item') }}>
+        {{ link(item.title, item.url) }}
+      </li>
     {% endif %}
-    {% for item in items %}
-      {% if item.below %}
-        {{ pattern('dropdown', {
-          'title': item.title,
-          'content': item.below,
-          'button_type': 'a',
-          'button_color': 'primary',
-          'button_size': 'default',
-          'button_split': false,
-          'dark': dark,
-          'auto_close': 'true',
-          'dropdown_tag': 'li',
-          'dropdown_navbar': true,
-          'attributes': create_attribute({
-            'class': ['nav-item']
-          })
-        }, 'dropdown') }}
-      {% else %}
-        <li{{ item.attributes.addClass('nav-item') }}>
-          {{ link(item.title, item.url) }}
-        </li>
-      {% endif %}
-    {% endfor %}
-    </ul>
-  {% endif %}
-{% endmacro %}
-
-{{ _self.menu_links(items, attributes, 0, dark) }}
+  {% endfor %}
+  </ul>
+{% endif %}
