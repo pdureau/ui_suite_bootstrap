@@ -3,8 +3,6 @@
   {% set attributes = attributes.addClass('bg-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
-{% import _self as menus %}
-
 <nav{{ attributes.addClass(['navbar', 'navbar-expand-lg', 'bg-light']) }}>
   {% if brand %}
   <span class="navbar-brand" href="#">{{ brand }}</span>
@@ -14,7 +12,7 @@
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-  {{ menus.menu_links(items, attributes, 0) }}
+  {{ _self.menu_links(items, attributes, 0) }}
   </div>
   {% endif %}
   {% if text %}
@@ -23,7 +21,6 @@
 </nav>
 
 {% macro menu_links(items, attributes, menu_level) %}
-  {% import _self as menus %}
   {% if items %}
     {% if menu_level == 0 %}
       <ul class="navbar-nav">
@@ -33,7 +30,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               {{ item.title }}
             </a>
-            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+            {{ _self.menu_links(item.below, attributes, menu_level + 1) }}
           </li>
           {% else %}
           <li{{ item.attributes.addClass('nav-item') }}>
