@@ -1,0 +1,5 @@
+// Set the directory for the theme root used to locate images, fonts etc.
+$theme-root: "../..";
+
+// Set other directories relative to theme root.
+$image-path: "#{$theme-root}/assets/images/optimized";

@@ -1,0 +1,17 @@
+langcode: en
+status: true
+dependencies:
+  theme:
+    - ui_suite_bootstrap_subtheme_example
+id: ui_suite_bootstrap_subtheme_example_local_actions
+theme: ui_suite_bootstrap_subtheme_example
+region: header
+weight: 20
+provider: null
+plugin: local_actions_block
+settings:
+  id: local_actions_block
+  label: 'Primary admin actions'
+  provider: core
+  label_display: '0'
+visibility: {  }

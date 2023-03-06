@@ -1,0 +1,4 @@
+bootstrap:
+  css:
+    theme:
+      assets/css/styles.css: { minified: true }
