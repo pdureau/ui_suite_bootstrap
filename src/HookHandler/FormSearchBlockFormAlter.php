@@ -22,6 +22,11 @@ class FormSearchBlockFormAlter {
    *   The form ID.
    */
   public function alter(array &$form, FormStateInterface $formState, string $form_id): void {
+    if (!isset($form['keys'])) {
+      return;
+    }
+
+    $form['keys']['#input_group_button'] = TRUE;
   }
 
 }

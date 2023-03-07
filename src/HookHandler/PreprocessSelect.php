@@ -7,21 +7,9 @@ namespace Drupal\ui_suite_bootstrap\HookHandler;
 use Drupal\ui_suite_bootstrap\Utility\Variables;
 
 /**
- * Pre-processes variables for the "input" theme hook.
+ * Pre-processes variables for the "select" theme hook.
  */
-class PreprocessInput {
-
-  /**
-   * The types of elements to not receive the "form-control" class.
-   *
-   * @var array
-   */
-  protected array $ignoreFormControlTypes = [
-    'checkbox',
-    'hidden',
-    'radio',
-    'range',
-  ];
+class PreprocessSelect {
 
   /**
    * The Variables object.
@@ -54,40 +42,6 @@ class PreprocessInput {
       return;
     }
 
-    // Form control.
-    // @see https://getbootstrap.com/docs/5.2/forms/form-control
-    if (!$this->element->isButton()
-      && !$this->element->isType($this->ignoreFormControlTypes)
-    ) {
-      if (!$this->element->hasClass('form-control-plaintext')) {
-        $this->element->addClass('form-control');
-
-        if ($this->element->isType('color')) {
-          $this->element->addClass('form-control-color');
-        }
-      }
-    }
-
-    // Checks and radios.
-    if ($this->element->isType('checkbox') || $this->element->isType('radio')) {
-      $this->element->addClass('form-check-input');
-    }
-    // Switch checkbox.
-    if ($this->element->hasProperty('is_switch') && $this->element->getProperty('is_switch')) {
-      $this->element->setAttribute('role', 'switch');
-    }
-
-    // Range.
-    if ($this->element->isType('range')) {
-      $this->element->addClass('form-range');
-    }
-
-    // Colorize button.
-    if ($this->element->isButton()) {
-      $this->element->colorize();
-      $this->variables->offsetSet('label', $this->element->getProperty('value'));
-    }
-
     // Create variables for #input_group and #input_group_button flags.
     $variables['input_group'] = $this->element->getProperty('input_group') || $this->element->getProperty('input_group_button');
 
@@ -100,7 +54,6 @@ class PreprocessInput {
       'attributes' => 'attributes',
       'field_prefix' => 'prefix',
       'field_suffix' => 'suffix',
-      'type' => 'type',
     ]);
   }
 
