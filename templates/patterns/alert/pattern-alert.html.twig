@@ -1,8 +1,5 @@
 {% if variant != '' and variant|lower != 'default' %}
-  {% set variants = variant|split('__') %}
-  {% for variant in variants %}
-    {% set attributes = attributes.addClass('alert-' ~ variant|lower|replace({'_': '-'})) %}
-  {% endfor %}
+  {% set attributes = attributes.addClass('alert-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
 {% if dismissible %}

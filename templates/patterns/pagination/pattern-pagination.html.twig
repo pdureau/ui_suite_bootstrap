@@ -46,8 +46,8 @@
 
 {% macro item(text, href, attributes, aria_label = '') %}
 <li class="page-item">
-  {% set attributes =  attributes ?: create_attribute() %}
-  {% set attributes =  aria_label ? attributes.setAttribute('aria-label', aria_label) : attributes %}
+  {% set attributes = attributes|default(create_attribute()) %}
+  {% set attributes = aria_label ? attributes.setAttribute('aria-label', aria_label) : attributes %}
   <a {{ attributes.addClass('page-link').setAttribute('href', href) }}>
     {% if aria_label is not empty %}
     <span aria-hidden="true">{{ text }}</span>

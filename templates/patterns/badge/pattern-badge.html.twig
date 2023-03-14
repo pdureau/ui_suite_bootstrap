@@ -1,12 +1,10 @@
-{% if variant != '' and variant|lower != 'default' %}
-  {% set variants = variant|split('__') %}
-  {% for variant in variants %}
-    {% set attributes = attributes.addClass('badge-' ~ variant|lower|replace({'_': '-'})) %}
-  {% endfor %}
+{% if variant and variant|lower != 'default' %}
+  {% set variants = variant|split('__')|map(v => v|lower|replace({(v): 'badge-' ~ v})|replace({'_': '-'})) %}
+  {% set attributes = attributes.addClass(variants) %}
 {% endif %}
 
 {% if url or attributes.href %}
-  {% set url = url ?: attributes.href %}
+  {% set url = url|default(attributes.href) %}
   <a {{ attributes.addClass('badge').setAttribute('href', url) }}>{{ label }}</a>
 {% else %}
   <span {{ attributes.addClass('badge') }}>{{ label }}</span>

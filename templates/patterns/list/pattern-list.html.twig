@@ -2,7 +2,7 @@
   {% set attributes = attributes.addClass('list-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
-{% set list_type = list_type ?: 'ul' %}
+{% set list_type = list_type|default('ul') %}
 
 <{{ list_type }}{{ attributes }}>
   {% for item in items %}

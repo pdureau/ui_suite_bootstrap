@@ -1,8 +1,5 @@
 {% if variant != '' and variant|lower != 'default' %}
-  {% set variants = variant|split('__') %}
-  {% for variant in variants %}
-    {% set attributes = attributes.addClass('list-group-item-' ~ variant|lower|replace({'_': '-'})) %}
-  {% endfor %}
+  {% set attributes = attributes.addClass('list-group-item-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
 {% set attributes = attributes.addClass('list-group-item') %}
@@ -10,7 +7,7 @@
 {% set attributes = active ? attributes.addClass('active').setAttribute("aria-current", "true") : attributes %}
 
 {% if url or attributes.href %}
-  {% set url = url ?: attributes.href %}
+  {% set url = url|default(attributes.href) %}
   <a{{ attributes.addClass('list-group-item-action').setAttribute('href', url) }}>{{ content }}</a>
 {% else %}
   <span{{ attributes }}>{{ content }}</span>
