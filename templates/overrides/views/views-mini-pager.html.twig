@@ -16,12 +16,14 @@
  * @ingroup themeable
  */
 #}
-{% set items = items|merge({
-  pages: {
-    (items.current): items.current  
-  }
-}) %}
-{{ pattern('pagination', {
-  'items': items,
-  'current': items.current
-}) }}
+{% if items.previous or items.next %}
+  {% set items = items|merge({
+    pages: {
+      (items.current): items.current
+    }
+  }) %}
+  {{ pattern('pagination', {
+    'items': items,
+    'current': items.current
+  }) }}
+{% endif %}
