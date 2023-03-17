@@ -16,7 +16,7 @@ progress:
       preview: "Label"
   settings:
     aria_label:
-      type: "textfield"
+      type: "token"
       label: "Aria label"
       description: "Name of the progress bar for assistive technology."
       allow_token: true

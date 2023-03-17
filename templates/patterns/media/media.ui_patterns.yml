@@ -2,6 +2,10 @@ media:
   label: "Media Object"
   description: "Complex and repetitive components where some media is positioned alongside content that doesn’t wrap around said media. https://getbootstrap.com/docs/4.6/components/media-object/"
   settings:
+    image_url:
+      type: url
+      label: "Image URL"
+      preview: "https://bulma.io/images/placeholders/64x64.png"
     image_position:
       type: select
       label: "Image position"
@@ -19,10 +23,6 @@ media:
         3: 3
       preview: 3
   fields:
-    image_url:
-      type: text
-      label: "Image URL"
-      preview: "https://bulma.io/images/placeholders/64x64.png"
     body:
       type: "render"
       label: "Body"

@@ -30,7 +30,7 @@
 
     <div class="pattern-preview pattern-preview__{{ pattern.definition.id }}">
       {# Pattern name and description. #}
-      <a name="{{ pattern_name }}"></a>
+      <h3 class="pattern-preview__label display-3" id="{{ pattern_name }}">{{ pattern.label }}</h3>
       {{ pattern.meta }}
 
       {# Link to standalone pattern preview page.#}

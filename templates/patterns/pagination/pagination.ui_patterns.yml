@@ -36,8 +36,9 @@ pagination:
           3:
             href: "#"
             text: "3"
+  settings:
     current:
-      type: "integer"
+      type: number
       label: "Current page number"
       description: "The page number of the current page."
       preview: 2

@@ -62,10 +62,9 @@ button:
     label:
       type: text
       label: Label
-      description: The button label
       preview: Submit
+  settings:
     url:
-      type: text
+      type: url
       label: URL
-      description: The button URL. Optional.
       preview: http://example.com

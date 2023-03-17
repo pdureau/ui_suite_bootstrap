@@ -40,10 +40,9 @@ badge:
     label:
       type: text
       label: Label
-      description: The badge label
       preview: New
+  settings:
     url:
-      type: text
+      type: url
       label: URL
-      description: The badge URL. Optional.
       preview: ""

@@ -19,6 +19,9 @@ list_group_item:
     dark:
       label: Dark
   settings:
+    url:
+      type: url
+      label: URL
     active:
       type: boolean
       label: Active?
@@ -35,7 +38,3 @@ list_group_item:
       label: Content
       description: "Plain text, or any kind of content."
       preview: "An item"
-    url:
-      type: text
-      label: URL
-      description: The button URL. Optional.
