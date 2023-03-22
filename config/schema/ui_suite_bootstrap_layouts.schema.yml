@@ -1,0 +1,65 @@
+ui_suite_bootstrap_layout_options_layout_options:
+  type: layout_plugin.settings
+  label: "UI Suite Bootstrap layout options"
+  mapping:
+    with_container:
+      type: layout_options.single_valued_option
+    gutters:
+      type: layout_options.single_valued_option
+    gutters_horizontal:
+      type: layout_options.single_valued_option
+    gutters_vertical:
+      type: layout_options.single_valued_option
+
+ui_suite_bootstrap_layout_options_region_options:
+  type: mapping
+  label: "UI Suite Bootstrap region options"
+  mapping:
+    col_xs:
+      type: layout_options.single_valued_option
+    col_sm:
+      type: layout_options.single_valued_option
+    col_md:
+      type: layout_options.single_valued_option
+    col_lg:
+      type: layout_options.single_valued_option
+    col_xl:
+      type: layout_options.single_valued_option
+    col_xxl:
+      type: layout_options.single_valued_option
+
+layout_plugin.settings.bootstrap_grid_row_1:
+  type: ui_suite_bootstrap_layout_options_layout_options
+  mapping:
+    main:
+      type: ui_suite_bootstrap_layout_options_region_options
+
+layout_plugin.settings.bootstrap_grid_row_2:
+  type: ui_suite_bootstrap_layout_options_layout_options
+  mapping:
+    main:
+      type: ui_suite_bootstrap_layout_options_region_options
+    second:
+      type: ui_suite_bootstrap_layout_options_region_options
+
+layout_plugin.settings.bootstrap_grid_row_3:
+  type: ui_suite_bootstrap_layout_options_layout_options
+  mapping:
+    main:
+      type: ui_suite_bootstrap_layout_options_region_options
+    second:
+      type: ui_suite_bootstrap_layout_options_region_options
+    third:
+      type: ui_suite_bootstrap_layout_options_region_options
+
+layout_plugin.settings.bootstrap_grid_row_4:
+  type: ui_suite_bootstrap_layout_options_layout_options
+  mapping:
+    main:
+      type: ui_suite_bootstrap_layout_options_region_options
+    second:
+      type: ui_suite_bootstrap_layout_options_region_options
+    third:
+      type: ui_suite_bootstrap_layout_options_region_options
+    fourth:
+      type: ui_suite_bootstrap_layout_options_region_options
