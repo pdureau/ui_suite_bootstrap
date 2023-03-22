@@ -66,6 +66,35 @@ class ElementInfoAlter {
   ];
 
   /**
+   * List of additional properties for floating label feature.
+   */
+  public const FLOATING_LABEL_PROPERTIES = [
+    'floating_label' => FALSE,
+  ];
+
+  /**
+   * List of form elements supporting floating label.
+   */
+  public const FLOATING_LABEL_ELEMENTS = [
+    'date',
+    'email',
+    'entity_autocomplete',
+    'language_select',
+    'machine_name',
+    'number',
+    'password',
+    'password_confirm',
+    'search',
+    'select',
+    'tel',
+    'text_format',
+    'textarea',
+    'textfield',
+    'url',
+    'weight',
+  ];
+
+  /**
    * Alter form element info.
    *
    * @param array $info
@@ -115,6 +144,17 @@ class ElementInfoAlter {
         ElementProcessInputGroup::class,
         'processInputGroup',
       ];
+    }
+
+    // Floating label.
+    foreach (static::FLOATING_LABEL_ELEMENTS as $form_element_id) {
+      if (!isset($info[$form_element_id])) {
+        continue;
+      }
+
+      foreach (static::FLOATING_LABEL_PROPERTIES as $property => $property_default_value) {
+        $info[$form_element_id]["#{$property}"] = $property_default_value;
+      }
     }
   }
 

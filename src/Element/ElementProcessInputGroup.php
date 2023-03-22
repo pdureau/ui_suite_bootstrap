@@ -20,13 +20,13 @@ class ElementProcessInputGroup {
   public static function processInputGroup(array &$element, FormStateInterface $form_state, array &$complete_form): array {
     $element_object = Element::create($element);
     if (
-      $element_object->getProperty('input') &&
-      (
-        $element_object->getProperty('field_prefix') ||
-        $element_object->getProperty('field_suffix') ||
-        $element_object->getProperty('input_group_after') ||
-        $element_object->getProperty('input_group_before') ||
-        $element_object->getProperty('input_group_button')
+      $element_object->getProperty('input')
+      && (
+        $element_object->getProperty('field_prefix')
+        || $element_object->getProperty('field_suffix')
+        || $element_object->getProperty('input_group_after')
+        || $element_object->getProperty('input_group_before')
+        || $element_object->getProperty('input_group_button')
       )
     ) {
       static::processAddon($element_object, 'field_prefix', 'input_group_before');
@@ -75,6 +75,7 @@ class ElementProcessInputGroup {
     if (empty($addons)) {
       return;
     }
+    $processed_addons = [];
     foreach ($addons as $addon) {
       // Allow to inject renderable array for advanced implementations.
       if (\is_array($addon)) {

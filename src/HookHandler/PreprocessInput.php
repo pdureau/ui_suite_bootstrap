@@ -88,10 +88,34 @@ class PreprocessInput {
       $this->variables->offsetSet('label', $this->element->getProperty('value'));
     }
 
+    $this->floatingLabel();
+
     // Map the element properties.
     $this->variables->map([
       'attributes' => 'attributes',
     ]);
+  }
+
+  /**
+   * Ensure the element has a placeholder. Otherwise, fallback to the label.
+   */
+  protected function floatingLabel(): void {
+    if (!$this->element) {
+      return;
+    }
+
+    if (
+      (
+        (
+          $this->element->hasProperty('floating_label')
+          && $this->element->getProperty('floating_label')
+        )
+        || $this->element->getProperty('title_display') == 'floating'
+      )
+      && !$this->element->hasAttribute('placeholder')
+    ) {
+      $this->element->setAttribute('placeholder', $this->element->getProperty('title'));
+    }
   }
 
 }

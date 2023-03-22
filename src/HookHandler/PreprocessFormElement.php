@@ -4,6 +4,7 @@ declare(strict_types = 1);
 
 namespace Drupal\ui_suite_bootstrap\HookHandler;
 
+use Drupal\Core\Template\Attribute;
 use Drupal\ui_suite_bootstrap\Utility\Element;
 use Drupal\ui_suite_bootstrap\Utility\Variables;
 
@@ -22,9 +23,9 @@ class PreprocessFormElement {
   /**
    * An element object provided in the variables array, may not be set.
    *
-   * @var \Drupal\ui_suite_bootstrap\Utility\Element
+   * @var \Drupal\ui_suite_bootstrap\Utility\Element|false
    */
-  protected Element $element;
+  protected $element;
 
   /**
    * Preprocess form element.
@@ -39,6 +40,9 @@ class PreprocessFormElement {
 
     $this->variables = Variables::create($variables);
     $this->element = $this->variables->element;
+    if (!$this->element) {
+      return;
+    }
     $label = Element::create($variables['label']);
 
     // See https://getbootstrap.com/docs/5.2/forms/checks-radios
@@ -65,9 +69,10 @@ class PreprocessFormElement {
 
     // Input group.
     // Create variables for input_group flags.
-    $this->variables->offsetSet('input_group',
-      $this->element->getProperty('input_group_after') ||
-      $this->element->getProperty('input_group_before')
+    $this->variables->offsetSet(
+      'input_group',
+      $this->element->getProperty('input_group_after')
+      || $this->element->getProperty('input_group_before')
     );
     // Get input group attributes.
     // Cannot use map directly because of the attributes' management.
@@ -79,7 +84,23 @@ class PreprocessFormElement {
       'input_group_before' => 'input_group_before',
     ]);
 
-
+    // Floating label.
+    // Override title_display if using #floating_label.
+    if ($this->element->hasProperty('floating_label') && $this->element->getProperty('floating_label')) {
+      $this->element->setProperty('title_display', 'floating');
+      $this->variables->map([
+        'title_display' => 'title_display',
+      ]);
+      $this->variables->map([
+        'title_display' => 'label_display',
+      ]);
+    }
+    $this->variables->offsetSet('floating_label_attributes', new Attribute([
+      'class' => [
+        'form-floating',
+        ($this->variables->offsetGet('input_group') && $this->element->getProperty('errors')) ? 'is-invalid' : '',
+      ],
+    ]));
   }
 
 }

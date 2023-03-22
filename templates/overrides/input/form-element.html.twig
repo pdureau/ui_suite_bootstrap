@@ -90,7 +90,16 @@
     {{ input_group_before }}
   {% endif %}
 
+  {% if label_display == 'floating' %}
+    <div{{ floating_label_attributes }}>
+  {% endif %}
+
   {{ children }}
+
+  {% if label_display == 'floating' %}
+      {{ label }}
+    </div>
+  {% endif %}
 
   {% if input_group_after %}
     {{ input_group_after }}

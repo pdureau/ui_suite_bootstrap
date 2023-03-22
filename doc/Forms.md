@@ -401,3 +401,142 @@ $form['input_group_file'] = [
   '#field_prefix' => $this->t('Upload'),
 ];
 ```
+
+## Floating labels
+
+https://getbootstrap.com/docs/5.2/forms/floating-labels.
+
+We handle a new value for `#title_display`: `floating`.
+
+UI Suite Bootstrap introduces a new property: `#floating_label`.
+
+When this property is set to `TRUE`, it has the same behavior as setting
+`#title_display` to `floating`.
+
+This is useful for example in Webform UI, which let you set `#title_display` but
+as there won't be the `floating` option, you can enter `#floating_label` in the
+YAML of its advanced options.
+
+Also if no placeholder attributes is set. UI Suite Bootstrap will fallback to
+the label itself.
+
+### Example
+
+https://getbootstrap.com/docs/5.2/forms/floating-labels/#example:
+
+```php
+$form['floating_label_property'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('With #floating_label property'),
+  '#floating_label' => TRUE,
+];
+
+$form['floating_label_email'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email address'),
+  '#title_display' => 'floating',
+  '#attributes' => [
+    'placeholder' => $this->t('name@example.com'),
+  ],
+];
+
+$form['floating_label_password'] = [
+  '#type' => 'password',
+  '#title' => $this->t('Password'),
+  '#title_display' => 'floating',
+  '#attributes' => [
+    'placeholder' => $this->t('Password'),
+  ],
+];
+
+$form['floating_label_value'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Input with value'),
+  '#title_display' => 'floating',
+  '#default_value' => 'test@example.com',
+  '#attributes' => [
+    'placeholder' => $this->t('name@example.com'),
+  ],
+];
+```
+
+### Textareas
+
+https://getbootstrap.com/docs/5.2/forms/floating-labels/#textareas:
+
+```php
+$form['floating_label_textarea'] = [
+  '#type' => 'textarea',
+  '#title' => $this->t('Comments'),
+  '#title_display' => 'floating',
+  '#attributes' => [
+    'placeholder' => $this->t('Leave a comment here'),
+  ],
+];
+```
+
+### Selects
+
+https://getbootstrap.com/docs/5.2/forms/floating-labels/#selects:
+
+```php
+$form['floating_label_select'] = [
+  '#type' => 'select',
+  '#title' => $this->t('Works with selects'),
+  '#title_display' => 'floating',
+  '#options' => [
+    'option_1' => $this->t('Option 1'),
+    'option_2' => $this->t('Option 2'),
+    'option_3' => $this->t('Option 3'),
+  ],
+];
+```
+
+### Readonly plaintext
+
+https://getbootstrap.com/docs/5.2/forms/floating-labels/#readonly-plaintext:
+
+```php
+$form['floating_label_readonly'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Empty input'),
+  '#title_display' => 'floating',
+  '#attributes' => [
+    'placeholder' => $this->t('name@example.com'),
+    'class' => [
+      'form-control-plaintext',
+    ],
+    'readonly' => TRUE,
+  ],
+];
+
+$form['floating_label_readonly_value'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Input with value'),
+  '#title_display' => 'floating',
+  '#default_value' => 'name@example.com',
+  '#attributes' => [
+    'placeholder' => $this->t('name@example.com'),
+    'class' => [
+      'form-control-plaintext',
+    ],
+    'readonly' => TRUE,
+  ],
+];
+```
+
+### Input groups
+
+https://getbootstrap.com/docs/5.2/forms/floating-labels/#input-groups:
+
+```php
+$form['floating_label_input_group'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Username'),
+  '#title_display' => 'floating',
+  '#attributes' => [
+    'placeholder' => $this->t('Username'),
+  ],
+  '#field_prefix' => '@',
+];
+```
