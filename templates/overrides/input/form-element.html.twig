@@ -57,10 +57,7 @@
     'js-form-item-' ~ name|clean_class,
     title_display not in ['after', 'before'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
-    is_form_group ? 'form-group',
-    is_autocomplete ? 'form-autocomplete',
-    has_error ? 'error has-error',
-    floating_label ? 'form-floating'
+    errors ? 'form-item--error',
   ]
 %}
 {%
@@ -75,20 +72,44 @@
     {{ label }}
   {% endif %}
 
+  {% if prefix is not empty %}
+    <span class="field-prefix">{{ prefix }}</span>
+  {% endif %}
+
   {% if description_display == 'before' and description.content %}
     <div{{ description.attributes.addClass(description_classes) }}>
       {{ description.content }}
     </div>
   {% endif %}
 
+  {% if input_group %}
+    <div{{ input_group_attributes }}>
+  {% endif %}
+
+  {% if input_group_before %}
+    {{ input_group_before }}
+  {% endif %}
+
   {{ children }}
+
+  {% if input_group_after %}
+    {{ input_group_after }}
+  {% endif %}
+
+  {% if input_group %}
+    </div>
+  {% endif %}
+
+  {% if suffix is not empty %}
+    <span class="field-suffix">{{ suffix }}</span>
+  {% endif %}
 
   {% if label_display == 'after' %}
     {{ label }}
   {% endif %}
 
   {% if errors %}
-    <div class="form-item--error-message alert alert-danger alert-sm">
+    <div class="form-item--error-message invalid-feedback">
       {{ errors }}
     </div>
   {% endif %}

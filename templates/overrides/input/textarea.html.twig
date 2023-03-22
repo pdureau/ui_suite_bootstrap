@@ -25,23 +25,5 @@
 %}
 
 {% apply spaceless %}
-  <div{{ wrapper_attributes.addClass('form-textarea-wrapper') }}>
-    {% if input_group %}
-      <div{{ input_group_attributes }}>
-    {% endif %}
-
-    {% if prefix %}
-      {{ prefix }}
-    {% endif %}
-
-    <textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>
-
-    {% if suffix %}
-      {{ suffix }}
-    {% endif %}
-
-    {% if input_group %}
-      </div>
-    {% endif %}
-  </div>
+  <textarea{{ attributes.addClass(classes) }}>{{ value }}</textarea>
 {% endapply %}

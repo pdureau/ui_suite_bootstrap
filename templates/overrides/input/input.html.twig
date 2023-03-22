@@ -20,25 +20,9 @@
  */
 #}
 {% apply spaceless %}
-  {% if input_group %}
-    <div{{ input_group_attributes }}>
-  {% endif %}
-
-  {% if prefix %}
-    {{ prefix }}
-  {% endif %}
-
   {% block input %}
     <input{{ attributes }} />
   {% endblock %}
-
-  {% if suffix %}
-    {{ suffix }}
-  {% endif %}
-
-  {% if input_group %}
-    </div>
-  {% endif %}
 
   {{ children }}
 {% endapply %}

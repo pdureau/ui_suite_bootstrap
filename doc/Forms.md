@@ -179,6 +179,22 @@ Not supported out-of-the-box.
 
 https://getbootstrap.com/docs/5.2/forms/input-group.
 
+Drupal core has two form element properties `#field_prefix` and `#field_suffix`.
+
+UI Suite Bootstrap introduces 2 new properties (among others, see the examples):
+* `#input_group_after`
+* `#input_group_before`
+
+If a form element only provides `#field_prefix`, it is used to populate
+`#input_group_before`. If a form element provides both `#field_prefix` and
+`#input_group_before`, only `#input_group_before` will be used.
+
+`#field_prefix` is expected to be a string while `#input_group_before` is
+expected to be an array (of strings or other render elements) to allow for more
+complex usage (multiple addons, submit buttons).
+
+The same logic applies for `#field_suffix` and `#input_group_after`.
+
 ### Examples
 
 https://getbootstrap.com/docs/5.2/forms/input-group/#basic-example:
@@ -191,10 +207,7 @@ $form['input_group_example_1'] = [
   '#attributes' => [
     'placeholder' => $this->t('Username'),
   ],
-  '#input_group' => TRUE,
-  '#field_prefix' => [
-    '@',
-  ],
+  '#field_prefix' => '@',
 ];
 
 $form['input_group_example_2'] = [
@@ -204,42 +217,28 @@ $form['input_group_example_2'] = [
   '#attributes' => [
     'placeholder' => $this->t("Recipient's username"),
   ],
-  '#input_group' => TRUE,
-  '#field_suffix' => [
-    '@example.com',
-  ],
+  '#field_suffix' => '@example.com',
 ];
 
 $form['input_group_example_3'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Your vanity URL'),
-  '#input_group' => TRUE,
-  '#field_prefix' => [
-    'https://example.com/users/',
-  ],
+  '#field_prefix' => 'https://example.com/users/',
 ];
 
 $form['input_group_example_4'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
-  '#field_prefix' => [
-    '$',
-  ],
-  '#field_suffix' => [
-    '.00',
-  ],
+  '#field_prefix' => '$',
+  '#field_suffix' => '.00',
 ];
 
 $form['input_group_example_5'] = [
   '#type' => 'textarea',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
-  '#field_prefix' => [
-    $this->t('With textarea'),
-  ],
+  '#field_prefix' => $this->t('With textarea'),
 ];
 ```
 
@@ -252,30 +251,31 @@ $form['input_group_sizing_sm'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
   '#input_group_attributes' => [
     'class' => [
       'input-group-sm',
     ],
   ],
-  '#field_prefix' => [
-    'Small',
-  ],
+  '#field_prefix' => $this->t('Small'),
+];
+
+$form['input_group_sizing'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Example'),
+  '#title_display' => 'hidden',
+  '#field_prefix' => $this->t('Default'),
 ];
 
 $form['input_group_sizing_lg'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
   '#input_group_attributes' => [
     'class' => [
       'input-group-lg',
     ],
   ],
-  '#field_prefix' => [
-    'Large',
-  ],
+  '#field_prefix' => $this->t('Large'),
 ];
 ```
 
@@ -294,8 +294,7 @@ $form['input_group_multiple_addons_prefix'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
-  '#field_prefix' => [
+  '#input_group_before' => [
     '$',
     '0.00',
   ],
@@ -305,8 +304,7 @@ $form['input_group_multiple_addons_suffix'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
-  '#field_suffix' => [
+  '#input_group_after' => [
     '$',
     '0.00',
   ],
@@ -324,8 +322,7 @@ $form['input_group_button_addons'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
-  '#field_prefix' => [
+  '#input_group_before' => [
     [
       '#type' => 'submit',
       '#value' => $this->t('Button'),
@@ -349,7 +346,7 @@ Automatic detection:
 $form['example_automatic_input_group_button'] = [
   '#type' => 'textfield',
   '#title' => $this->t('Example'),
-  '#field_prefix' => [
+  '#input_group_before' => [
     'Test',
     'Test 2'
   ],
@@ -388,10 +385,7 @@ $form['input_group_select'] = [
     'option_2' => $this->t('Option 2'),
     'option_3' => $this->t('Option 3'),
   ],
-  '#input_group' => TRUE,
-  '#field_prefix' => [
-    $this->t('Options'),
-  ],
+  '#field_prefix' => $this->t('Options'),
 ];
 ```
 
@@ -404,9 +398,6 @@ $form['input_group_file'] = [
   '#type' => 'file',
   '#title' => $this->t('Example'),
   '#title_display' => 'hidden',
-  '#input_group' => TRUE,
-  '#field_prefix' => [
-    $this->t('Upload'),
-  ],
+  '#field_prefix' => $this->t('Upload'),
 ];
 ```

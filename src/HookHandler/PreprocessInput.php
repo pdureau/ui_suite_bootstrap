@@ -82,25 +82,15 @@ class PreprocessInput {
       $this->element->addClass('form-range');
     }
 
-    // Colorize button.
+    // Button.
     if ($this->element->isButton()) {
       $this->element->colorize();
       $this->variables->offsetSet('label', $this->element->getProperty('value'));
     }
 
-    // Create variables for #input_group and #input_group_button flags.
-    $variables['input_group'] = $this->element->getProperty('input_group') || $this->element->getProperty('input_group_button');
-
-    // Get input group attributes.
-    // Cannot use map directly because of the attributes management.
-    $this->variables->offsetSet('input_group_attributes', $this->element->getProperty('input_group_attributes'));
-
     // Map the element properties.
     $this->variables->map([
       'attributes' => 'attributes',
-      'field_prefix' => 'prefix',
-      'field_suffix' => 'suffix',
-      'type' => 'type',
     ]);
   }
 

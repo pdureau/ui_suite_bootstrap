@@ -4,7 +4,9 @@ declare(strict_types = 1);
 
 namespace Drupal\ui_suite_bootstrap\HookHandler;
 
-use Drupal\ui_suite_bootstrap\Element\ElementProcess;
+use Drupal\ui_suite_bootstrap\Element\ElementProcessCheckboxes;
+use Drupal\ui_suite_bootstrap\Element\ElementProcessInputGroup;
+use Drupal\ui_suite_bootstrap\Element\ElementProcessRadios;
 
 /**
  * Element Info Alter.
@@ -32,10 +34,9 @@ class ElementInfoAlter {
    * List of additional properties for input group feature.
    */
   public const INPUT_GROUP_PROPERTIES = [
-    'field_prefix' => [],
-    'field_suffix' => [],
-    'input_group' => FALSE,
     'input_group_attributes' => [],
+    'input_group_after' => [],
+    'input_group_before' => [],
     'input_group_button' => FALSE,
   ];
 
@@ -86,7 +87,7 @@ class ElementInfoAlter {
         $info['checkboxes']["#{$property}"] = $property_default_value;
       }
       $info['checkboxes']['#process'][] = [
-        ElementProcess::class,
+        ElementProcessCheckboxes::class,
         'processCheckboxes',
       ];
     }
@@ -96,7 +97,7 @@ class ElementInfoAlter {
         $info['radios']["#{$property}"] = $property_default_value;
       }
       $info['radios']['#process'][] = [
-        ElementProcess::class,
+        ElementProcessRadios::class,
         'processRadios',
       ];
     }
@@ -111,7 +112,7 @@ class ElementInfoAlter {
         $info[$form_element_id]["#{$property}"] = $property_default_value;
       }
       $info[$form_element_id]['#process'][] = [
-        ElementProcess::class,
+        ElementProcessInputGroup::class,
         'processInputGroup',
       ];
     }
