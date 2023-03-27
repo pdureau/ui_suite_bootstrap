@@ -89,6 +89,7 @@ class PreprocessInput {
     }
 
     $this->floatingLabel();
+    $this->validation();
 
     // Map the element properties.
     $this->variables->map([
@@ -115,6 +116,25 @@ class PreprocessInput {
       && !$this->element->hasAttribute('placeholder')
     ) {
       $this->element->setAttribute('placeholder', $this->element->getProperty('title'));
+    }
+  }
+
+  /**
+   * Set validation class.
+   */
+  protected function validation(): void {
+    if (!$this->element) {
+      return;
+    }
+
+    // This is the same test as in RenderElement::setAttributes().
+    if ($this->element->getProperty('parents') && $this->element->getProperty('validated')) {
+      if ($this->element->getProperty('errors')) {
+        $this->element->addClass('is-invalid');
+      }
+      else {
+        $this->element->addClass('is-valid');
+      }
     }
   }
 

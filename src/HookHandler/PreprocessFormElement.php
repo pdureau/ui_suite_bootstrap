@@ -75,8 +75,15 @@ class PreprocessFormElement {
       || $this->element->getProperty('input_group_before')
     );
     // Get input group attributes.
+    /** @var array $input_group_attributes */
+    $input_group_attributes = $this->element->getProperty('input_group_attributes', []);
+    // Validation.
+    if ($this->element->getProperty('errors')) {
+      $input_group_attributes = new Attribute($input_group_attributes);
+      $input_group_attributes->addClass('has-validation');
+    }
     // Cannot use map directly because of the attributes' management.
-    $this->variables->offsetSet('input_group_attributes', $this->element->getProperty('input_group_attributes'));
+    $this->variables->offsetSet('input_group_attributes', $input_group_attributes);
 
     // Map the element properties.
     $this->variables->map([
@@ -98,9 +105,22 @@ class PreprocessFormElement {
     $this->variables->offsetSet('floating_label_attributes', new Attribute([
       'class' => [
         'form-floating',
+        // Validation.
         ($this->variables->offsetGet('input_group') && $this->element->getProperty('errors')) ? 'is-invalid' : '',
       ],
     ]));
+
+    // Validation.
+    $errors_display = $this->element->getProperty('errors_display', 'feedback');
+    $this->variables->offsetSet('errors_attributes', new Attribute([
+      'class' => [
+        'form-item--error-message',
+        'invalid-' . $errors_display,
+      ],
+    ]));
+    if ($errors_display == 'tooltip') {
+      $this->variables->addClass('position-relative');
+    }
   }
 
 }

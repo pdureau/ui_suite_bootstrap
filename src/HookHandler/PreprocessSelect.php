@@ -7,9 +7,9 @@ namespace Drupal\ui_suite_bootstrap\HookHandler;
 use Drupal\ui_suite_bootstrap\Utility\Variables;
 
 /**
- * Pre-processes variables for the "textarea" theme hook.
+ * Pre-processes variables for the "select" theme hook.
  */
-class PreprocessTextarea extends PreprocessInput {
+class PreprocessSelect extends PreprocessInput {
 
   /**
    * Prepare variables.
@@ -28,7 +28,6 @@ class PreprocessTextarea extends PreprocessInput {
       return;
     }
 
-    $this->floatingLabel();
     $this->validation();
 
     // Map the element properties.

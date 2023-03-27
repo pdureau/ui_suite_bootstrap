@@ -37,9 +37,9 @@ class ElementProcessInputGroup {
       }
 
       // Prepare input group attributes.
-      /** @var array $input_group_attributes */
+      /** @var array|\Drupal\Core\Template\Attribute $input_group_attributes */
       $input_group_attributes = $element_object->getProperty('input_group_attributes', []);
-      $input_group_attributes = new Attribute($input_group_attributes);
+      $input_group_attributes = \is_array($input_group_attributes) ? new Attribute($input_group_attributes) : $input_group_attributes;
       $input_group_attributes->addClass('input-group');
       $element_object->setProperty('input_group_attributes', $input_group_attributes);
     }

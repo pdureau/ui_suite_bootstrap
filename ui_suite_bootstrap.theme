@@ -26,6 +26,7 @@ use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbar;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavbarNav;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternNavItem;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination;
+use Drupal\ui_suite_bootstrap\HookHandler\PreprocessSelect;
 use Drupal\ui_suite_bootstrap\HookHandler\PreprocessTextarea;
 use Drupal\ui_suite_bootstrap\HookHandler\ThemeSuggestionsAlter;
 
@@ -186,6 +187,16 @@ function ui_suite_bootstrap_preprocess_pattern_pagination(array &$variables): vo
   /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessPatternPagination $instance */
   $instance = \Drupal::service('class_resolver')
     ->getInstanceFromDefinition(PreprocessPatternPagination::class);
+  $instance->preprocess($variables);
+}
+
+/**
+ * Implements hook_preprocess_HOOK() for 'select'.
+ */
+function ui_suite_bootstrap_preprocess_select(array &$variables): void {
+  /** @var \Drupal\ui_suite_bootstrap\HookHandler\PreprocessSelect $instance */
+  $instance = \Drupal::service('class_resolver')
+    ->getInstanceFromDefinition(PreprocessSelect::class);
   $instance->preprocess($variables);
 }
 
