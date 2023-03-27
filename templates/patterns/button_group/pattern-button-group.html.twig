@@ -1,8 +1,8 @@
-{% if variant != '' and variant|lower != 'default' %}
+{% if variant and variant|lower != 'default' %}
   {% set attributes = attributes.addClass('btn-group-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
-{% if variant != '' and variant|lower != 'vertical' %}
+{% if variant and variant|lower != 'vertical' %}
   {% set attributes = attributes.addClass('btn-group') %}
 {% endif %}
 

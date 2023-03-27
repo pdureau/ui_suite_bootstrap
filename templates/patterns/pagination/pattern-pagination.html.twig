@@ -1,4 +1,4 @@
-{% if variant != '' and variant|lower != 'default' %}
+{% if variant and variant|lower != 'default' %}
   {% set attributes = attributes.addClass('pagination-' ~ variant|lower|replace({'_': '-'})) %}
 {% endif %}
 
@@ -49,7 +49,7 @@
   {% set attributes = attributes ?: create_attribute() %}
   {% set attributes = aria_label ? attributes.setAttribute('aria-label', aria_label) : attributes %}
   <a{{ attributes.addClass('page-link').setAttribute('href', href) }}>
-    {% if aria_label is not empty %}
+    {% if aria_label %}
     <span aria-hidden="true">{{ text }}</span>
     {% else %}
     {{ text }}

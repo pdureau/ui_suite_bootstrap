@@ -1,9 +1,8 @@
-{% if variant != '' and variant|lower != 'default' %}
-  {% set variants = variant|split('__') %}
-  {% for variant in variants %}
-    {% set attributes = attributes.addClass('navbar-' ~ variant|lower|replace({'_': '-'})) %}
-  {% endfor %}
+{% if variant and variant|lower != 'default' %}
+  {% set variants = variant|split('__')|map(v => v|lower|replace({(v): 'navbar-' ~ v})|replace({'_': '-'})) %}
+  {% set attributes = attributes.addClass(variants) %}
 {% endif %}
+
 {% set attributes = attributes.addClass('navbar') %}
 
 {% set placement = placement|default('default') %}

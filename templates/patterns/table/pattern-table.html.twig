@@ -4,11 +4,9 @@
 {% set tfoot_attributes = create_attribute() %}
 
 {% set attributes = attributes.addClass('table') %}
-{% if variant != '' and variant|lower != 'default' %}
-  {% set variants = variant|split('__') %}
-  {% for variant in variants %}
-    {% set attributes = attributes.addClass('table-' ~ variant|lower|replace({'_': '-'})) %}
-  {% endfor %}
+{% if variant and variant|lower != 'default' %}
+  {% set variants = variant|split('__')|map(v => v|lower|replace({(v): 'table-' ~ v})|replace({'_': '-'})) %}
+  {% set attributes = attributes.addClass(variants) %}
 {% endif %}
 
 {% if stripes %}
@@ -44,7 +42,7 @@
  * be applied to the correct table group.
  */
 #}
-{% if divider is not empty %}
+{% if divider %}
   {% if 'thead' in divider %}
     {% set thead_attributes = thead_attributes.addClass('table-group-divider') %}
   {% endif %}
