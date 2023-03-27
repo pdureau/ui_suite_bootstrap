@@ -15,7 +15,7 @@
 {% endif %}
 
 {% if url or attributes.href %}
-  {% set url = url ?: attributes.href %}
+  {% set url = url|default(attributes.href) %}
   {% set attributes = attributes.setAttribute('href', url) %}
   {% if disabled %}
     {% set attributes = attributes.setAttribute('href', false).setAttribute('tabindex', '-1').setAttribute('aria-disabled', 'true').addClass('disabled') %}

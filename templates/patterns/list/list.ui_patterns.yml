@@ -18,6 +18,7 @@ list:
       options:
         ul: "ul (Default)"
         ol: "ol"
+      default: ul
       preview: "ul"
       allow_expose: true
       allow_token: true
