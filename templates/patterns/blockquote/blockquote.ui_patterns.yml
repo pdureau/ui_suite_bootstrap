@@ -22,5 +22,4 @@ blockquote:
           tag: "cite"
           value: "Source Title"
           attributes:
-            title:
-              - "Source Title"
+            title: "Source Title"

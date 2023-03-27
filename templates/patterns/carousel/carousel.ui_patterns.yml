@@ -52,8 +52,8 @@ carousel:
           id: "carousel_item"
           fields:
             image:
-              - theme: "image"
-                uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogRmlyc3Qgc2xpZGUiPjx0aXRsZT5QbGFjZWhvbGRlcjwvdGl0bGU+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjNTU1IiBkeT0iLjNlbSI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+Cg=="
+              theme: "image"
+              uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogRmlyc3Qgc2xpZGUiPjx0aXRsZT5QbGFjZWhvbGRlcjwvdGl0bGU+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzc3NyI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjNTU1IiBkeT0iLjNlbSI+Rmlyc3Qgc2xpZGU8L3RleHQ+PC9zdmc+Cg=="
             caption:
               - type: "html_tag"
                 tag: "h5"
@@ -65,8 +65,8 @@ carousel:
           id: "carousel_item"
           fields:
             image:
-              - theme: "image"
-                uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogU2Vjb25kIHNsaWRlIj48dGl0bGU+UGxhY2Vob2xkZXI8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiM2NjYiPjwvcmVjdD48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzQ0NCIgZHk9Ii4zZW0iPlNlY29uZCBzbGlkZTwvdGV4dD48L3N2Zz4K"
+              theme: "image"
+              uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogU2Vjb25kIHNsaWRlIj48dGl0bGU+UGxhY2Vob2xkZXI8L3RpdGxlPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9IiM2NjYiPjwvcmVjdD48dGV4dCB4PSI1MCUiIHk9IjUwJSIgZmlsbD0iIzQ0NCIgZHk9Ii4zZW0iPlNlY29uZCBzbGlkZTwvdGV4dD48L3N2Zz4K"
             caption:
               - type: "html_tag"
                 tag: "h5"
@@ -78,8 +78,8 @@ carousel:
           id: "carousel_item"
           fields:
             image:
-              - theme: "image"
-                uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogVGhpcmQgc2xpZGUiPjx0aXRsZT5QbGFjZWhvbGRlcjwvdGl0bGU+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMzMzIiBkeT0iLjNlbSI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+Cg=="
+              theme: "image"
+              uri: "data:image/svg+xml;base64,PHN2ZyBzdHlsZT0iZm9udC1zaXplOiAzLjVyZW07IHRleHQtYW5jaG9yOiBtaWRkbGU7IHVzZXItc2VsZWN0OiBub25lIiB3aWR0aD0iODAwIiBoZWlnaHQ9IjQwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCBzbGljZSIgZm9jdXNhYmxlPSJmYWxzZSIgcm9sZT0iaW1nIiBhcmlhLWxhYmVsPSJQbGFjZWhvbGRlcjogVGhpcmQgc2xpZGUiPjx0aXRsZT5QbGFjZWhvbGRlcjwvdGl0bGU+PHJlY3Qgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0iIzU1NSI+PC9yZWN0Pjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmaWxsPSIjMzMzIiBkeT0iLjNlbSI+VGhpcmQgc2xpZGU8L3RleHQ+PC9zdmc+Cg=="
             caption:
               - type: "html_tag"
                 tag: "h5"

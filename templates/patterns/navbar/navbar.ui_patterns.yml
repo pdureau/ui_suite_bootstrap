@@ -89,20 +89,20 @@ navbar:
       label: "Navigation"
       description: "Navigation elements (brand, text, etc.) displayed even on small screens."
       preview:
-        - type: "html_tag"
-          tag: "span"
-          attributes:
-            class:
-              - navbar-text
-          value: "Text"
+        type: "html_tag"
+        tag: "span"
+        attributes:
+          class:
+            - navbar-text
+        value: "Text"
     navigation_collapsible:
       type: "render"
       label: "Navigation collapsible"
       description: "Navigation elements (menu links, etc.) displayed on collapsible dropdown on small screens."
       preview:
-        - type: "pattern_preview"
-          id: "navbar_nav"
-          variant: "default"
+        type: "pattern_preview"
+        id: "navbar_nav"
+        variant: "default"
     offcanvas_label:
       type: "text"
       label: "Offcanvas label"

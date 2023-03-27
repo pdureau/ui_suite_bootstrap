@@ -36,11 +36,11 @@ card_body:
       label: "Content"
       description: "Free content outside of any wrapper."
       preview:
-        - type: "pattern"
-          id: "button"
-          variant: "primary"
-          fields:
-            label: "Go somewhere"
+        type: "pattern"
+        id: "button"
+        variant: "primary"
+        fields:
+          label: "Go somewhere"
     links:
       type: "render"
       label: "Links"
