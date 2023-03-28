@@ -33,3 +33,5 @@ libraries-extend:
     - ui_suite_bootstrap/drupal.dialog.off_canvas
   core/drupal.progress:
     - ui_suite_bootstrap/drupal.progress
+  clientside_validation_jquery/jquery.validate:
+    - ui_suite_bootstrap/jquery.validate

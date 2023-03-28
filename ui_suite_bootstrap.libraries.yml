@@ -44,3 +44,10 @@ form:
   css:
     component:
       assets/css/form/form-required.css: { }
+
+jquery.validate:
+  js:
+    assets/js/jquery-validation/validate.js: { minified: true }
+  dependencies:
+    - core/drupal
+    - core/jquery
