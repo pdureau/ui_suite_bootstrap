@@ -11,6 +11,21 @@
   <h3 class="pattern-preview__label display-3">{{ pattern.label }}</h3>
   <p class="pattern-preview__description">{{ pattern.description }}</p>
 
+  {% if pattern.tags %}
+    <p class="pattern-preview__tags">
+      {% for tag in pattern.tags %}
+        {{ pattern('badge', {
+          'label': tag,
+          'attributes': create_attribute({
+            'class': [
+              'bg-secondary'
+            ]
+          }),
+        }) }}
+      {% endfor %}
+    </p>
+  {% endif %}
+
   {# Pattern fields descriptions. #}
   {% if pattern.fields or pattern.additional.settings %}
   <table class="pattern-preview__fields table">
