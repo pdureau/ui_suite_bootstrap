@@ -1,4 +1,3 @@
-{% extends "block--bare.html.twig" %}
 {#
 /**
  * @file
@@ -15,10 +14,11 @@
  * @ingroup templates
  */
 #}
+{% extends "block--bare.html.twig" %}
 {% block content %}
   {% if site_logo %}
     <a class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
-      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" width="40px" height="32px" />
+      <img src="{{ site_logo }}" alt="{{ 'Home'|t }}" />
     </a>
   {% endif %}
   {% if site_name %}
