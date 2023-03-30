@@ -121,6 +121,17 @@ class PreprocessFormElement {
     if ($errors_display == 'tooltip') {
       $this->variables->addClass('position-relative');
     }
+
+    // Layout: horizontal form.
+    if ($this->element->getProperty('title_display') == 'inline') {
+      $this->variables->offsetSet('inner_wrapper', TRUE);
+      $label->addClass('col-form-label');
+      /** @var array $inner_wrapper_attributes */
+      $inner_wrapper_attributes = $this->element->getProperty('inner_wrapper_attributes', []);
+      $inner_wrapper_attributes = new Attribute($inner_wrapper_attributes);
+      // Cannot use map directly because of the attributes' management.
+      $this->variables->offsetSet('inner_wrapper_attributes', $inner_wrapper_attributes);
+    }
   }
 
 }

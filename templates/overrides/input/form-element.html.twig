@@ -55,7 +55,7 @@
     'js-form-type-' ~ type|clean_class,
     'form-item-' ~ name|clean_class,
     'js-form-item-' ~ name|clean_class,
-    title_display not in ['after', 'before'] ? 'form-no-label',
+    title_display not in ['after', 'before', 'inline'] ? 'form-no-label',
     disabled == 'disabled' ? 'form-disabled',
     errors ? 'form-item--error',
   ]
@@ -68,11 +68,15 @@
   ]
 %}
 <div{{ attributes.addClass(classes) }}>
-  {% if label_display in ['before', 'invisible'] %}
+  {% if label_display in ['before', 'invisible', 'inline'] %}
     {{ label }}
   {% endif %}
 
-  {% if prefix is not empty %}
+  {% if inner_wrapper %}
+    <div{{ inner_wrapper_attributes }}>
+  {% endif %}
+
+  {% if prefix %}
     <span class="field-prefix">{{ prefix }}</span>
   {% endif %}
 
@@ -114,7 +118,7 @@
     </div>
   {% endif %}
 
-  {% if suffix is not empty %}
+  {% if suffix %}
     <span class="field-suffix">{{ suffix }}</span>
   {% endif %}
 
@@ -131,6 +135,10 @@
   {% if description_display in ['after', 'invisible'] and description.content %}
     <div{{ description.attributes.addClass(description_classes) }}>
       {{ description.content }}
+    </div>
+  {% endif %}
+
+  {% if inner_wrapper %}
     </div>
   {% endif %}
 </div>

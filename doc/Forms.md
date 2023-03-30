@@ -406,7 +406,7 @@ $form['input_group_file'] = [
 
 https://getbootstrap.com/docs/5.2/forms/floating-labels.
 
-We handle a new value for `#title_display`: `floating`.
+We handle a new value for `#title_display: floating`.
 
 UI Suite Bootstrap introduces a new property: `#floating_label`.
 
@@ -708,7 +708,7 @@ public function validateForm(array &$form, FormStateInterface $form_state) {
 
 ### Tooltips
 
-https://getbootstrap.com/docs/5.2/forms/validation/#tooltips
+https://getbootstrap.com/docs/5.2/forms/validation/#tooltips:
 
 ```php
 $form['validation_textfield_tooltip'] = [
@@ -717,3 +717,437 @@ $form['validation_textfield_tooltip'] = [
   '#errors_display' => 'tooltip',
 ];
 ```
+
+## Layout
+
+https://getbootstrap.com/docs/5.2/forms/layout.
+
+### Utilities
+
+https://getbootstrap.com/docs/5.2/forms/layout/#utilities:
+
+Currently out of the box, `mb-3` is added automatically.
+
+To do in custom implementations.
+
+### Form grid
+
+https://getbootstrap.com/docs/5.2/forms/layout/#form-grid.
+
+To do in custom implementations.
+
+See Gutters' example.
+
+### Gutters
+
+https://getbootstrap.com/docs/5.2/forms/layout/#gutters.
+
+To do in custom implementations.
+
+Example of custom implementation:
+
+```php
+$form['#attributes'] = [
+  'class' => [
+    'row',
+    'g-3',
+  ],
+];
+
+$form['layout_gutters_email'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-md-6',
+    ],
+  ],
+];
+
+$form['layout_gutters_password'] = [
+  '#type' => 'password',
+  '#title' => $this->t('Password'),
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-md-6',
+    ],
+  ],
+];
+
+$form['layout_gutters_address_1'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Address'),
+  '#attributes' => [
+    'placeholder' => $this->t('1234 Main St'),
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-12',
+    ],
+  ],
+];
+
+$form['layout_gutters_address_2'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Address 2'),
+  '#attributes' => [
+    'placeholder' => $this->t('Apartment, studio, or floor'),
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-12',
+    ],
+  ],
+];
+
+$form['layout_gutters_city'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('City'),
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-md-6',
+    ],
+  ],
+];
+
+$form['layout_gutters_state'] = [
+  '#type' => 'select',
+  '#title' => $this->t('State'),
+  '#empty_option' => $this->t('Choose...'),
+  '#options' => [
+    'choice_1' => $this->t('Choice 1'),
+    'choice_2' => $this->t('Choice 2'),
+    'choice_3' => $this->t('Choice 3'),
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-md-4',
+    ],
+  ],
+];
+
+$form['layout_gutters_zip'] = [
+  '#type' => 'textfield',
+  '#title' => $this->t('Zip'),
+  '#wrapper_attributes' => [
+    'class' => [
+      'col-md-2',
+    ],
+  ],
+];
+
+$form['layout_gutters_checkbox_wrapper'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => [
+      'col-12',
+    ],
+  ],
+];
+
+$form['layout_gutters_checkbox_wrapper']['layout_gutters_checkbox'] = [
+  '#type' => 'checkbox',
+  '#title' => $this->t('Check me out'),
+];
+
+$form['layout_gutters_submit_wrapper'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => [
+      'col-12',
+    ],
+  ],
+];
+
+$form['layout_gutters_submit_wrapper']['layout_gutters_submit'] = [
+  '#type' => 'submit',
+  '#value' => $this->t('Sign in'),
+  '#attributes' => [
+    'class' => [
+      'btn-primary',
+    ],
+  ],
+];
+```
+
+### Horizontal form
+
+When using `#title_display: inline`, the `col-form-label` is automatically added
+on the label.
+
+You will have to control the alignment using `#wrapper_attributes`,
+`#label_attributes` and `#inner_wrapper_attributes` properties.
+
+The last property, `#inner_wrapper_attributes`, is a new one used in UI Suite
+Bootstrap form handling.
+
+https://getbootstrap.com/docs/5.2/forms/layout/#horizontal-form:
+
+```php
+$form['layout_horizontal_email'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#title_display' => 'inline',
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+
+$form['layout_horizontal_password'] = [
+  '#type' => 'password',
+  '#title' => $this->t('Password'),
+  '#title_display' => 'inline',
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+
+$form['layout_horizontal_radios'] = [
+  '#type' => 'radios',
+  '#title' => $this->t('Radios'),
+  '#title_display' => 'inline',
+  '#options' => [
+    'choice_1' => $this->t('First radio'),
+    'choice_2' => $this->t('Second radio'),
+    'choice_3' => $this->t('Third disabled radio'),
+  ],
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+      'pt-0',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+  'choice_3' => [
+    '#disabled' => TRUE,
+  ],
+];
+
+
+$form['layout_horizontal_checkbox_wrapper_row'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => [
+      'row',
+      'mb-3',
+    ],
+  ],
+];
+
+$form['layout_horizontal_checkbox_wrapper_row']['layout_horizontal_checkbox_wrapper_col'] = [
+  '#type' => 'container',
+  '#attributes' => [
+    'class' => [
+      'col-sm-10',
+      'offset-sm-2',
+    ],
+  ],
+];
+
+$form['layout_horizontal_checkbox_wrapper_row']['layout_horizontal_checkbox_wrapper_col']['layout_horizontal_checkbox'] = [
+  '#type' => 'checkbox',
+  '#title' => $this->t('Example checkbox'),
+];
+
+$form['layout_horizontal_submit'] = [
+  '#type' => 'submit',
+  '#value' => $this->t('Sign in'),
+  '#attributes' => [
+    'class' => [
+      'btn-primary',
+    ],
+  ],
+];
+```
+
+With description:
+
+```php
+$form['layout_horizontal_description'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#title_display' => 'inline',
+  '#description' => $this->t('Description'),
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+
+$form['layout_horizontal_description_before'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#title_display' => 'inline',
+  '#description' => $this->t('Description'),
+  '#description_display' => 'before',
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+```
+
+#### Horizontal form label sizing
+
+https://getbootstrap.com/docs/5.2/forms/layout/#horizontal-form-label-sizing:
+
+```php
+$form['layout_horizontal_email_sizing_sm'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#title_display' => 'inline',
+  '#attributes' => [
+    'placeholder' => 'col-form-label-sm',
+    'class' => [
+      'form-control-sm',
+    ],
+  ],
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+      'col-form-label-sm',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+
+$form['layout_horizontal_email_sizing_normal'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#title_display' => 'inline',
+  '#attributes' => [
+    'placeholder' => 'col-form-label',
+  ],
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+
+$form['layout_horizontal_email_sizing_lg'] = [
+  '#type' => 'email',
+  '#title' => $this->t('Email'),
+  '#title_display' => 'inline',
+  '#attributes' => [
+    'placeholder' => 'col-form-label-lg',
+    'class' => [
+      'form-control-lg',
+    ],
+  ],
+  '#label_attributes' => [
+    'class' => [
+      'col-sm-2',
+      'col-form-label-lg',
+    ],
+  ],
+  '#wrapper_attributes' => [
+    'class' => [
+      'row',
+    ],
+  ],
+  '#inner_wrapper_attributes' => [
+    'class' => [
+      'col-sm-10',
+    ],
+  ],
+];
+```
+
+### Column sizing
+
+https://getbootstrap.com/docs/5.2/forms/layout/#column-sizing.
+
+To do in custom implementations.
+
+See Gutters' example.
+
+### Auto-sizing
+
+https://getbootstrap.com/docs/5.2/forms/layout/#auto-sizing.
+
+To do in custom implementations.
+
+See Gutters' example.
+
+### Inline forms
+
+https://getbootstrap.com/docs/5.2/forms/layout/#inline-forms.
+
+To do in custom implementations.
+
+See Gutters' example.
