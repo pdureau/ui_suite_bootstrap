@@ -26,6 +26,13 @@ class DrupalAttributes extends ArrayObject {
   public const DESCRIPTION = 'description_attributes';
 
   /**
+   * Defines the "inner_wrapper_attributes" storage type constant.
+   *
+   * @var string
+   */
+  public const INNER_WRAPPER = 'inner_wrapper_attributes';
+
+  /**
    * Defines the "input_group_attributes" storage type constant.
    *
    * @var string

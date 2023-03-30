@@ -64,7 +64,10 @@ class PreprocessFormElement {
     // For all other form elements add 'form-label' class.
     else {
       $label->addClass('form-label');
-      $this->variables->addClass('mb-3');
+      // If the element is a sub-element of a text_format do not add the class.
+      if (!$this->element->hasProperty('format')) {
+        $this->variables->addClass('mb-3');
+      }
     }
 
     // Input group.

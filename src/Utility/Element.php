@@ -64,7 +64,8 @@ class Element extends DrupalAttributes {
     if (CoreElement::property($key)) {
       throw new \InvalidArgumentException('Cannot dynamically retrieve element property. Please use  \Drupal\ui_suite_bootstrap\Utility\Element::getProperty instead.');
     }
-    return new self($this->offsetGet($key, []), $this->formState);
+    $instance = new self($this->offsetGet($key, []), $this->formState);
+    return $instance;
   }
 
   /**

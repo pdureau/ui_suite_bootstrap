@@ -7,6 +7,7 @@ namespace Drupal\ui_suite_bootstrap\HookHandler;
 use Drupal\ui_suite_bootstrap\Element\ElementProcessCheckboxes;
 use Drupal\ui_suite_bootstrap\Element\ElementProcessInputGroup;
 use Drupal\ui_suite_bootstrap\Element\ElementProcessRadios;
+use Drupal\ui_suite_bootstrap\Element\ElementProcessTextFormat;
 
 /**
  * Element Info Alter.
@@ -155,6 +156,14 @@ class ElementInfoAlter {
       foreach (static::FLOATING_LABEL_PROPERTIES as $property => $property_default_value) {
         $info[$form_element_id]["#{$property}"] = $property_default_value;
       }
+    }
+
+    // Text format.
+    if (isset($info['text_format'])) {
+      $info['text_format']['#process'][] = [
+        ElementProcessTextFormat::class,
+        'processTextFormat',
+      ];
     }
   }
 
