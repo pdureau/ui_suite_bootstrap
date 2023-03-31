@@ -16,7 +16,7 @@
 {% if dropdown_navbar %}
   {% set button_variant = default %}
 {% else %}
-  {% set button_variant = button_size == 'default' ? button_color : button_color ~ '__' ~ button_size %}
+  {% set button_variant = (button_size == 'default') ? button_color : button_color ~ '__' ~ button_size %}
 {% endif %}
 
 {% set button_attributes = create_attribute({
@@ -29,7 +29,7 @@
   'data-bs-auto-close': auto_close,
   'aria-expanded': 'false'
 }) %}
-{% set button_attributes = button_type == 'a' ? button_attributes.setAttribute('href', '#') : button_attributes %}
+{% set button_attributes = (button_type == 'a') ? button_attributes.setAttribute('href', '#') : button_attributes %}
 
 {% set list_attributes = create_attribute({
   'class': [

@@ -9,7 +9,7 @@
 {% set toggler_position = toggler_position|default('start') %}
 {% set toggle_action = toggle_action|default('collapse') %}
 {% set offcanvas_position = offcanvas_position|default('end') %}
-{% set attributes = placement != 'default' ? attributes.addClass(placement) : attributes %}
+{% set attributes = (placement != 'default') ? attributes.addClass(placement) : attributes %}
 
 <nav{{ attributes }}>
   <div class="container-fluid">

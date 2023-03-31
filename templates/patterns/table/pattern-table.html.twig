@@ -34,7 +34,8 @@
   {% set tfoot_attributes = tfoot_attributes.addClass('table-' ~ footer_color|lower|replace({'_': '-'})) %}
 {% endif %}
 
-{% set header_columns = header_columns ? header_columns : header ? header|length : 0 %}
+{% set header_length = header ? header|length : 0 %}
+{% set header_columns = header_columns|default(header_length) %}
 
 {#
 /**
