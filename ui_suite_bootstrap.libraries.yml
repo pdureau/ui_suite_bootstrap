@@ -35,6 +35,11 @@ drupal.progress:
     - core/drupal
     - core/jquery
 
+drupal.user:
+  css:
+    component:
+      assets/css/user/password.css: {}
+
 example_carousel:
   css:
     theme:
