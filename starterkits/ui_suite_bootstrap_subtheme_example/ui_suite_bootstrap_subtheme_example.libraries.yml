@@ -2,3 +2,8 @@ bootstrap:
   css:
     theme:
       assets/css/styles.css: { minified: true }
+
+form:
+  css:
+    component:
+      assets/css/form/form-required.css: { minified: true }

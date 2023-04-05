@@ -29,3 +29,5 @@ libraries-override:
 libraries-extend:
   ui_suite_bootstrap/bootstrap:
     - ui_suite_bootstrap_subtheme_example/bootstrap
+  ui_suite_bootstrap/form:
+    - ui_suite_bootstrap_subtheme_example/form
