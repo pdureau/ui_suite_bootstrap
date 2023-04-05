@@ -22,7 +22,6 @@
       // Set default css classes for element (input, normally)
       // and the label created after to display the error.
       $("form").validate({
-        debug: true,
         errorElement: "div",
         // Default behavior is to add the same classes to both the element and
         // the error message.
