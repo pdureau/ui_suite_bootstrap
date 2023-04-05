@@ -10,8 +10,8 @@ layout_option_definitions:
     regions: false
     inline: true
     options:
-      "with-container": "True"
-      "": "False"
+      "with-container": "Yes"
+      "": "No"
   gutters:
     title: "Gutters"
     description: "The gutters between columns in our predefined grid classes can be removed with .no-gutters. This removes the negative margins from .row and the horizontal padding from all immediate children columns."
