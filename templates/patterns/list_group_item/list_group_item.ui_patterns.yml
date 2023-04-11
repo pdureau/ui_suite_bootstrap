@@ -3,6 +3,8 @@ list_group_item:
   description: "Internal: to be used in the 'List Group' component. https://getbootstrap.com/docs/5.2/components/list-group/"
   category: "List group"
   variants:
+    default:
+      label: "Default"
     primary:
       label: "Primary"
     secondary:
