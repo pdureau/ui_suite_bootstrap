@@ -345,7 +345,6 @@ spacing_padding:
     p-3: "3"
     p-4: "4"
     p-5: "5"
-    p-auto: "Auto"
   previewed_with:
     - border
     - bg-light
@@ -361,7 +360,6 @@ spacing_padding_top:
     pt-3: "3"
     pt-4: "4"
     pt-5: "5"
-    pt-auto: "Auto"
   previewed_with:
     - border
     - bg-light
@@ -377,7 +375,6 @@ spacing_padding_bottom:
     pb-3: "3"
     pb-4: "4"
     pb-5: "5"
-    pb-auto: "Auto"
   previewed_with:
     - border
     - bg-light
@@ -393,7 +390,6 @@ spacing_padding_start:
     ps-3: "3"
     ps-4: "4"
     ps-5: "5"
-    ps-auto: "Auto"
   previewed_with:
     - border
     - bg-light
@@ -409,7 +405,6 @@ spacing_padding_end:
     pe-3: "3"
     pe-4: "4"
     pe-5: "5"
-    pe-auto: "Auto"
   previewed_with:
     - border
     - bg-light
