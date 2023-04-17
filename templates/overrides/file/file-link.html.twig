@@ -1,0 +1,53 @@
+{#
+/**
+ * @file
+ * Default theme implementation for a link to a file.
+ *
+ * Available variables:
+ * - attributes: The HTML attributes for the containing element.
+ * - link: A link to the file.
+ * - file_size: The size of the file.
+ *
+ * @see template_preprocess_file_link()
+ *
+ * @ingroup themeable
+ */
+#}
+{%
+  set classes = [
+    'd-table',
+    'my-2',
+    'w-100',
+    'border',
+    'border-2',
+    'text-primary',
+  ]
+%}
+{% set link_wrapper_attributes = create_attribute() %}
+{%
+  set link_wrapper_classes = [
+    'd-table-cell',
+    'py-1',
+    'ps-2',
+    file_size ? 'pe-2',
+    'w-100',
+    'align-middle',
+  ]
+%}
+{% set file_size_wrapper_attributes = create_attribute() %}
+{%
+  set file_size_wrapper_classes = [
+    'd-table-cell',
+    'py-1',
+    'pe-2',
+    'align-middle',
+    'text-end',
+    'text-nowrap',
+  ]
+%}
+<span{{ attributes.addClass(classes) }}>
+  <span{{ link_wrapper_attributes.addClass(link_wrapper_classes) }}>{{ link }}</span>
+  {% if file_size %}
+    <span{{ file_size_wrapper_attributes.addClass(file_size_wrapper_classes) }}>({{ file_size }})</span>
+  {% endif %}
+</span>
