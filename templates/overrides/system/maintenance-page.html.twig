@@ -1,0 +1,52 @@
+{#
+/**
+ * @file
+ * Theme override to display a single Drupal page while offline.
+ *
+ * All available variables are mirrored in page.html.twig.
+ * Some may be blank but they are provided for consistency.
+ *
+ * @see template_preprocess_maintenance_page()
+ */
+#}
+{% set container = theme.settings.fluid_container ? 'container-fluid' : 'container' %}
+{# Navbar #}
+{% block navbar %}
+<div class="{{ container }}">
+  <nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid">
+      <div>
+        {% if logo %}
+          <a class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">
+            <img src="{{ logo }}" alt="{{ 'Home'|t }}" />
+          </a>
+        {% endif %}
+
+        {% if site_name %}
+         <a class="navbar-brand" href="{{ path('<front>') }}" title="{{ 'Home'|t }}" rel="home">{{ site_name }}</a>
+        {% endif %}
+        {% if site_slogan %}
+          <span class="navbar-text">{{ site_slogan }}</span>
+        {% endif %}
+      </div>
+    </div>
+  </nav>
+</div>
+{% endblock %}
+
+{# Main #}
+<main role="main" class="{{ container }}">
+  <div class="row">
+    <section class="col-sm-12">
+      {% if title %}
+        <h1>{{ title }}</h1>
+      {% endif %}
+
+      {# Content #}
+      {% block content %}
+        <a id="main-content"></a>
+        {{ page.content }}
+      {% endblock %}
+    </section>
+  </div>
+</main>
